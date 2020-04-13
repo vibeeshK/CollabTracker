@@ -4,16 +4,6 @@
 	<artifactId>ColbTrkerProj</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<modules>
-		<module>CommonOpenCldFns</module>
-		<module>ColbTrker</module>
-		<module>ColbTrkXtdSrvrComp</module>
-		<module>XtdCommonOpenCldFns</module>
-		<module>ColbTrkRemoteAccessers</module>
-		<module>ColbTrkCntHandlers</module>
-		<module>ColbTrkXtndHandlers</module>
-		<module>ColbTrkOsHandlers</module>
-	</modules>
   
 	<properties>
     	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -184,4 +174,14 @@
 		</dependencies>
 	</dependencyManagement>
   
+	<modules>
+		<module>ColbTrkCntHandlers</module>
+		<module>ColbTrk</module>
+		<module>CommonOpenCldFns</module>
+		<module>ColbTrkOsHandlers</module>
+		<module>ColbTrkRemoteAccessers</module>
+		<module>ColbTrkXtndHandlers</module>
+		<module>XtdCommonOpenCldFns</module>
+		<module>ColbTrkXtdSrvrComp</module>
+	</modules>
 </project>
