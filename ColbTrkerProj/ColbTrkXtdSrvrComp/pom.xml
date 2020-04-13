@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>ColbTrkerProj</groupId>
+    <artifactId>ColbTrkerProj</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>ColbTrkXtdSrvrComp</artifactId>
+  
+  <dependencies>
+	<!-- https://mvnrepository.com/artifact/org.junit/org.junit -->
+
+	<!--   
+    <dependency>
+	  <groupId>ESPoT</groupId>
+	  <artifactId>ESPoT</artifactId>
+	  <version>0.0.1-SNAPSHOT</version>
+	  <scope>system</scope>	  
+	  <systemPath>C:/Kannan/Java/ESPoT/mainJar64Bit/ESPoT_CatalogDisplay.jar</systemPath>
+    </dependency>
+	-->
+	<dependency>
+		<groupId>ColbTrkerProj</groupId>
+		<artifactId>ColbTrk</artifactId>
+	</dependency>
+
+	<dependency>
+		<groupId>ColbTrkerProj</groupId>
+		<artifactId>XtdCommonOpenCldFns</artifactId>
+	</dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>3.1.1</version>
+	    <executions>
+	        <execution>
+	            <phase>package</phase>
+	            <goals>
+	                <goal>single</goal>
+	            </goals>        
+	        <configuration>
+	          <archive>
+	            <manifest>
+	              <mainClass>xtdSrvrComp.XtdProjTrackingSrvrOrchestrator</mainClass>
+	            </manifest>	            
+	          </archive>
+	          <descriptorRefs>
+	            <descriptorRef>jar-with-dependencies</descriptorRef>
+	          </descriptorRefs>
+              <outputDirectory>${execsFolder}</outputDirectory>
+	        </configuration>
+	        </execution>
+	    </executions>        
+      </plugin>        
+    </plugins>
+  </build>
+    
+</project>
