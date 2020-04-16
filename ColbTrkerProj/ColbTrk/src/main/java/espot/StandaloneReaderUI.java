@@ -1,0 +1,246 @@
+package espot;
+
+import java.io.IOException;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.CCombo;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.FileDialog;
+import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.widgets.MessageBox;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
+
+public class StandaloneReaderUI implements Runnable {
+
+	CommonUIData commonUIData = null;
+	Commons commons = null;
+
+	CCombo relevanceList;	
+	Text artifactNameText;
+	Button btnFileSelectButton;
+	
+	private Shell mainShell = null;
+	
+	ContentHandlerSpecs contentHandlerSpecs = null;
+
+	public StandaloneReaderUI(CommonUIData inCommonUIData) {
+		System.out.println("At start of StandaloneReaderUI");
+
+		commonUIData = inCommonUIData ;
+		commons = commonUIData.getCommons();
+
+	}
+
+	public void run() {
+		if (mainShell == null) {
+			System.out.println("mainShell being set. prev value: " + mainShell);
+
+			mainShell = new Shell(commonUIData.getESPoTDisplay(), SWT.APPLICATION_MODAL | SWT.CLOSE
+					| SWT.TITLE | SWT.BORDER | SWT.RESIZE);
+			mainShell.setImage(new Image(commonUIData.getESPoTDisplay(), commonUIData.getCommons().applicationIcon));
+		} else {
+			System.out.println("mainShell already set. prev value: "
+					+ mainShell);
+		}
+		mainShell.setText("ArtifactWrapperUI");
+		//mainShell.setLayout(new FillLayout());
+		mainShell.setLayout(new GridLayout());
+		displayContent();
+	}
+
+	public void displayContent() {
+		/*
+		 * For the authors of the artifacts, it provides ability to view as well
+		 * as edit, upload, backup on cloud, make clone For non-authors, it
+		 * provides ability to view, make clone
+		 */
+		Composite childCompositeOfLeftView = new Composite(
+				mainShell, SWT.NONE);
+		childCompositeOfLeftView.setLayout(new FillLayout(SWT.VERTICAL));
+
+		GridData gridDataLeft = new GridData(SWT.FILL, SWT.FILL, true, true);
+
+		childCompositeOfLeftView.setLayoutData(gridDataLeft);		
+
+		Image bg = new Image(commonUIData.getESPoTDisplay(),
+				commonUIData.getCommons().backgroundImagePathFileName);
+
+		bg = new Image(commonUIData.getESPoTDisplay(),
+				commonUIData.getCommons().backgroundImagePathFileName);
+
+		childCompositeOfLeftView.setBackgroundImage(bg);
+		// displayContent() - base set up ends
+
+		// displayContent() - ideaGroup Splitting Starts
+		Group artifactDetailGroup = new Group(childCompositeOfLeftView,
+				SWT.SHADOW_NONE);
+		artifactDetailGroup.setText("ArtifactDetail");
+		artifactDetailGroup.setLayout(new FillLayout(SWT.VERTICAL));
+		// displayContent() - ideaGroup Splitting ends
+
+		// displayContent() - ArtifactNameGroup display starts
+		Group artifactNameGroup = new Group(artifactDetailGroup, SWT.LEFT);
+		artifactNameGroup.setLayout(new FillLayout());
+		artifactNameGroup.setText("ArtifactName");
+
+		// displayContent() - ArtifactName display starts
+		artifactNameText = new Text(artifactNameGroup, SWT.NONE);
+		artifactNameText.setEnabled(false);
+		// displayContent() - ArtifactName display ends
+
+		// fileSelect button starts
+		btnFileSelectButton = new Button(artifactNameGroup, SWT.NONE);
+		btnFileSelectButton.setText("FileSelect");
+		btnFileSelectButton.setToolTipText("Click to select a file via dialog");
+
+		btnFileSelectButton.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				System.out.println("FileSelect selected");
+
+				String filename = null;
+				
+				FileDialog dialog = new FileDialog(mainShell, SWT.SAVE);
+				dialog.setFilterExtensions(new String[]{ "*.*" });
+				filename = dialog.open();
+				
+				if (filename == null) return;
+
+		    	if (!commons.doesFileExist(filename)){
+					MessageBox noFileMsgBox = new MessageBox(mainShell, SWT.OK);
+					noFileMsgBox.setMessage("file doesn't exist : " + filename);
+					int noFileMsgBoxRC = noFileMsgBox.open();
+					if (noFileMsgBoxRC != SWT.YES) {
+						return;
+					}
+		    	}
+				System.out.println("File being viewed : " + filename);
+				artifactNameText.setText(filename);
+			}
+		});
+		btnFileSelectButton.pack();
+		// fileSelect button ends
+		// displayContent() - ArtifactNameGroup display ends
+		
+		
+		// displayContent() - ContentType display starts
+		Group contentTypeGroup = new Group(artifactDetailGroup, SWT.LEFT);
+		contentTypeGroup.setLayout(new FillLayout());
+		contentTypeGroup.setText("ContentType");
+		CCombo contentTypeList = new CCombo(contentTypeGroup,
+				SWT.DROP_DOWN | SWT.READ_ONLY);
+
+		contentTypeList
+				.setItems(commonUIData.getContentTypes());
+		contentTypeList.select(0);
+		// displayContent() - ContentType display ends
+
+
+		// view as well as edit, upload, backup on cloud, make clone
+		// For non-authors, it provides ability to view, make clone
+		//final Group actionsGrp = new Group(childCompositeOfLeftView, SWT.SHADOW_NONE);
+		Group actionsGrp = new Group(artifactDetailGroup, SWT.SHADOW_NONE);		
+		actionsGrp.setText("Actions");
+		actionsGrp.setLayout(new FillLayout());
+
+		// displayContent() - view button process starts
+
+		System.out.println("ArtifactWrapperUI displayContent() - view button process starts");
+
+		Button btnViewButton = new Button(actionsGrp, SWT.CENTER);
+		btnViewButton.setText("View");
+		btnViewButton.setToolTipText("View the artifact details");
+		
+		btnViewButton.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+
+				System.out.println("btnViewButton - widgetSelected");
+				
+		    	if (artifactNameText.getText().isEmpty()){
+
+		    		MessageBox noFileMsgBox = new MessageBox(mainShell, SWT.OK);
+					noFileMsgBox.setMessage("Select the filename you want to view");
+					int noFileMsgBoxRC = noFileMsgBox.open();
+					if (noFileMsgBoxRC != SWT.YES) {
+						btnFileSelectButton.setFocus();
+						return;
+					}		    		
+		    	}
+				
+		    	if (contentTypeList.getSelectionIndex() == -1){
+
+		    		MessageBox noFileMsgBox = new MessageBox(mainShell, SWT.OK);
+					noFileMsgBox.setMessage("Select the contentType associated with the file");
+					int noFileMsgBoxRC = noFileMsgBox.open();
+					if (noFileMsgBoxRC != SWT.YES) {
+						contentTypeList.setFocus();
+						return;
+					}			    		
+		    	}
+
+		    	String selectedContentType = commonUIData.getContentTypes()[contentTypeList.getSelectionIndex()];
+		    	contentHandlerSpecs = commonUIData.getContentHandlerSpecsMap().get(selectedContentType);
+		    	
+				if (!contentHandlerSpecs.hasSpecialHandler) {
+					try {
+						commonUIData.getCommons().openFileToView(artifactNameText.getText());
+					} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+							| IOException e1) {
+						ErrorHandler.showErrorAndQuit(commons, "Error in ARtifactWrapperUI displayContent ", e1);
+					}
+				} else {
+					ContentHandlerInterface contentHandlerObjectInterface = null;
+					
+					try {
+
+						System.out.println("before initializing ContentHandler fullPathFileNameString = " + artifactNameText.getText());
+						System.out.println("contentHandlerSpecs " + contentHandlerSpecs);
+						System.out.println("contentHandlerSpecs.className " + contentHandlerSpecs.handlerClass);
+						System.out.println("commons " + commonUIData.getCommons());
+
+						contentHandlerObjectInterface = ContentHandlerManager.getInstance(commonUIData.getCommons(), commonUIData.getCatelogPersistenceManager(), selectedContentType);
+
+						System.out.println("contentHandlerObjectInterface : " + contentHandlerObjectInterface);
+
+						System.out.println("About to initialize for view file. contentHandlerObjectInterface = " + contentHandlerObjectInterface);
+						contentHandlerObjectInterface
+						.initializeContentHandlerForStandaloneReader(commonUIData, artifactNameText.getText(), selectedContentType);
+						System.out.println("Initialized for standalone view");
+						contentHandlerObjectInterface.viewContentsAtDesk();
+
+					} catch (IOException e2) {
+						//e2.printStackTrace();
+						ErrorHandler.showErrorAndQuit(commons, "Error in ARtifactWrapperUI displayContent ", e2);							
+					}
+				}
+			}
+		});
+		// displayContent() - view button process ends
+
+		childCompositeOfLeftView.pack();
+		mainShell.pack();
+		//mainShell.layout(true);
+		mainShell.open();
+		while (!mainShell.isDisposed()) {
+			if (!commonUIData.getESPoTDisplay().readAndDispatch()) {
+				if (commonUIData.getArtifactDisplayOkayToContinue()) {
+					commonUIData.getESPoTDisplay().sleep();
+				} else {
+					break;
+				}
+			}
+		}
+		System.out.println("end of......displayContent");
+		// displayContent() - final prep before display ends
+	}
+
+}

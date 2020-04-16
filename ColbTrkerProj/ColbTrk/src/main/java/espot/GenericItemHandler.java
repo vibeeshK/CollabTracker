@@ -40,6 +40,7 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 	DownloadedReviewsHandler downloadedReviewsHandler = null;
 	
 	public boolean invokedForEdit = false;
+	public boolean standaloneReadingMode = false;
 
 	public Shell mainShell = null;
 	private ScrolledComposite scrolledComposite_1 = null;
@@ -58,6 +59,25 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 	public GenericItemHandler() {
 	}
 
+	public void initializeContentHandlerForStandaloneReader(CommonUIData inCommonUIData,String inFilePath, String inContentType){
+		System.out.println("GenericGrouper initiated for initializeContentHandlerForStandaloneReader");
+		System.out.println("File name passed : " + inFilePath);
+
+		commonData = inCommonUIData;
+		commons = commonData.getCommons();
+		contentHandlerSpecs = commonData.getContentHandlerSpecsMap().get(inContentType);
+		
+		standaloneReadingMode = true;
+		ArtifactMover artifactMover = ArtifactMover.getInstance(commonData);
+		contentPathFileName = artifactMover.getPrimeFilePathForStandAloneRead(inFilePath);
+		if (artifactMover.lastProcessStatus != ArtifactMover.PROCESSED_OK) {
+			ErrorHandler.displayError(mainShell, commonData.getCommons(), "Error at GenericGrouper doCommontInit " + artifactMover.lastProcessStatus + " while dealing with : " + inFilePath);
+			return;
+		}
+		readPrimerFile();
+		doCommonUIInit(inCommonUIData, null);
+	}
+	
 	public void initializeContentHandlerWithMinimumSetup(CommonData inCommonData){
 		commonData = inCommonData;
 		commons = commonData.getCommons();
@@ -97,12 +117,15 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 
 		contentPathFolderName = commonData.getCommons().getFolderNameFromFullPath(contentPathFileName);
 
-		try {
-			primerDoc = (GenericItemDocPojo) commonData.getCommons().getJsonDocFromFile(contentPathFileName,getPrimerDocClass());
-		} catch (FileNotFoundException | UnsupportedEncodingException e) {
-			e.printStackTrace();
-			ErrorHandler.showErrorAndQuit(mainShell, commonData.getCommons(), "Error at GenericItemHandler doCommonInit " + inArtifactPojo.artifactKeyPojo.artifactName, e);
-		}
+		readPrimerFile();
+		
+		//try {
+		//	primerDoc = (GenericItemDocPojo) commonData.getCommons().getJsonDocFromFile(contentPathFileName,getPrimerDocClass());
+		//} catch (FileNotFoundException | UnsupportedEncodingException e) {
+		//	e.printStackTrace();
+		//	ErrorHandler.showErrorAndQuit(mainShell, commonData.getCommons(), "Error at GenericItemHandler doCommonInit while reading " + contentPathFolderName, e);
+		//}
+		
 		System.out.println("primerDoc = " + primerDoc);
 		System.out.println("primerDoc item = " + primerDoc.getItem());
 		System.out.println("primerDoc title = " + primerDoc.getItem().title);
@@ -126,6 +149,14 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 
 		addlCommonInit();
 	}
+	public void readPrimerFile(){
+		try {
+			primerDoc = (GenericItemDocPojo) commonData.getCommons().getJsonDocFromFile(contentPathFileName,getPrimerDocClass());
+		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+			e.printStackTrace();
+			ErrorHandler.showErrorAndQuit(mainShell, commonData.getCommons(), "Error at GenericItemHandler doCommonInit while reading " + contentPathFolderName, e);
+		}
+	}
 	
 	public void setInitialCoreFields(){
 		ItemPojo itemPojo = primerDoc.getItem();
@@ -141,7 +172,6 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 	public void doCommonUIInit(CommonUIData inCommonUIData, ArtifactPojo inArtifactPojo) {
 
 		System.out.println("doCommonUIInit is inCommonUIData " + inCommonUIData);
-		System.out.println("doCommonUIInit is artifactName " + inArtifactPojo.artifactKeyPojo.artifactName);
 		System.out.println("doCommonUIInit is mainShell " + mainShell);
 
 		mainShell = new Shell(inCommonUIData.getESPoTDisplay(), SWT.APPLICATION_MODAL | SWT.CLOSE
@@ -150,10 +180,11 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 		System.out.println("doCommonUIInit mainShell created " + mainShell);
 		mainShell.setLayout(new GridLayout(1, false));
 		//mainShell.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-		
-		doCommonInit(inCommonUIData, inArtifactPojo);
-
-		downloadedReviewsHandler = new DownloadedReviewsHandler(inCommonUIData, invokedArtifactPojo.artifactKeyPojo);
+		if (!standaloneReadingMode) {
+			System.out.println("doCommonUIInit is artifactName " + inArtifactPojo.artifactKeyPojo.artifactName);
+			doCommonInit(inCommonUIData, inArtifactPojo);
+			downloadedReviewsHandler = new DownloadedReviewsHandler(inCommonUIData, invokedArtifactPojo.artifactKeyPojo);
+		}
 	}
 
 	public void initializeContentHandlerForDraftArtifact(CommonUIData inCommonUIData, SelfAuthoredArtifactpojo inSelfAuthoredArtifactspojo) {
@@ -274,8 +305,13 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 	public void viewContentsAtDesk() throws IOException
 	{
 		invokedForEdit = false;
-		mainShell.setText("Item Generator: <viewContentsAtDesk> for " + invokedArtifactPojo.artifactKeyPojo.artifactName);
-	
+		if (standaloneReadingMode){
+			mainShell.setText("Item Generator <viewContentAtDesk> for " + contentPathFileName);
+			System.out.println("Item Generator <viewContentAtDesk> for " + contentPathFileName);			
+		} else {
+			mainShell.setText("Item Generator: <viewContentsAtDesk> for " + invokedArtifactPojo.artifactKeyPojo.artifactName);			
+			System.out.println("Item Generator: <viewContentsAtDesk> for " + invokedArtifactPojo.artifactKeyPojo.artifactName);
+		}
 		System.out.println("before displayItemUI()");
 		displayItemUI();
 		System.out.println("after displayItemUI()");
@@ -292,13 +328,14 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 		System.out.println("author :2: " + primerDoc.getItem().author);
 
 		scrolledComposite_1 = new ScrolledComposite(mainShell, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
+		scrolledComposite_1.setLayout(new GridLayout(2, false));
 		
 		GridData gridData = new GridData(SWT.FILL, SWT.FILL, true, true);
 		gridData.minimumHeight = 100;
-		gridData.heightHint = 200;
+		//gridData.heightHint = 200;
 		scrolledComposite_1.setLayoutData(gridData);
 		
-		final Composite childCompositeOfSingleView = new Composite(scrolledComposite_1, SWT.WRAP); 
+		final Composite childCompositeOfSingleView = new Composite(scrolledComposite_1, SWT.NONE); 
 		scrolledComposite_1.setContent(childCompositeOfSingleView);
 
 		Group lastGroup = null;
@@ -475,7 +512,7 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 		});
 		lastGroup = actionButtonGrp;
 
-		if (downloadedReviewsHandler.canBeReviewed()) {
+		if (!standaloneReadingMode && downloadedReviewsHandler.canBeReviewed()) {
 			Group reviewGrp = new Group(childCompositeOfSingleView, SWT.RIGHT | SWT.WRAP);
 			reviewGrp.setText("ReviewContent");
 	
@@ -495,8 +532,9 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 		childCompositeOfSingleView.pack();
 		scrolledComposite_1.pack();
 
+		mainShell.pack();
 		mainShell.open();
-		mainShell.layout(true);
+		//mainShell.layout(true);
 		System.out.println("before looping for mainshell dispose check");
 		while (!mainShell.isDisposed()) {
 			if (!((CommonUIData) commonData).getESPoTDisplay().readAndDispatch()) {

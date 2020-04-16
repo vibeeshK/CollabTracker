@@ -169,8 +169,19 @@ public class ArtifactPrepper {
 																		targetArtifactKeyPojo.artifactName,
 																		targetArtifactKeyPojo.contentType);
 				}
-
-				if (uptoDateERLItemPojo!=null) {
+				// check author conflict
+				if (commons.processMode == Commons.CLIENT_MACHINE) {
+					if (!((CommonUIData) commonData).getCurrentUserPojo().hasAdminPrivilege() 
+						&& !((CommonUIData) commonData).getCurrentUserPojo().hasTeamLeaderPrivilege() 
+						&& !((CommonUIData) commonData).getUsersHandler().
+								doesUserHaveRightsOverMember(commons.userName, uptoDateERLItemPojo.author)){
+						ErrorHandler.infoPopup(((CommonUIData) commonData).getESPoTDisplay(),
+								"You dont have authorization to update the item artifact " + uptoDateERLItemPojo.artifactName);
+						errorEncountered = true;
+					}					
+				}
+				//
+				if (!errorEncountered && uptoDateERLItemPojo!=null) {
 					uptoDateERLExists = true;
 					localDraftActive = false;	// as there is a newer erl item, the local draft cannot be used anymore
 					baseDocContentBytes = contentHandlerInterfaceOfParent.getBaseItemDocBytes(uptoDateERLItemPojo);

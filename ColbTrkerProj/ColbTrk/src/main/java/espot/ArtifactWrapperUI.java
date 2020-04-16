@@ -328,9 +328,7 @@ public class ArtifactWrapperUI {
 		 * provides ability to view, make clone
 		 */
 		// displayContent() - base set up starts
-		scrolledComposite_1 = new ScrolledComposite(mainShell, SWT.BORDER
-				| SWT.H_SCROLL | SWT.V_SCROLL);
-
+		scrolledComposite_1 = new ScrolledComposite(mainShell, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
 		scrolledComposite_1.setLayout(new GridLayout(2, false));
 
 		GridData gridDataSrol = new GridData(SWT.FILL, SWT.FILL, true, true);

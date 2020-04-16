@@ -57,6 +57,8 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 	DownloadedReviewsHandler downloadedReviewsHandler = null;
 	
 	public boolean invokedForEdit = false;
+	public boolean standaloneReadingMode = false;
+
 	protected HashMap <Integer, ArrayList> displayedItemMap = null;
 	
 	protected Shell mainShell = null;
@@ -158,7 +160,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 			//ErrorHandler.displayError(mainShell, commonData.getCommons(), "Error at GenericGrouper doCommontInit " + artifactMover.lastProcessStatus + " while dealing with : " + contentPathFileName);
 			//return;
 			if (commons.processMode == Commons.CLIENT_MACHINE) {
-				ErrorHandler.displayError(mainShell, commonData.getCommons(), "Error at GenericGrouper doCommontInit " + artifactMover.lastProcessStatus + " while dealing with : " + contentPathFileName);
+				ErrorHandler.displayError(mainShell, commonData.getCommons(), "Error at GenericGrouper doCommontInit " + artifactMover.lastProcessStatus + " while dealing with artifactName :" + inArtifactPojo.artifactKeyPojo.artifactName);
 				return;
 			} else {
 				ErrorHandler.showErrorAndQuit(commons, "Error at GenericGrouper doCommonInit artifactMover " + artifactMover.lastProcessStatus + " while dealing with artifactName :" + inArtifactPojo.artifactKeyPojo.artifactName);
@@ -213,9 +215,11 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		mainShell.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 		
 		System.out.println("At doCommonUIInit mainShell = " + mainShell);
-		doCommonInit(inCommonUIData, inArtifactPojo);
-
-		downloadedReviewsHandler = new DownloadedReviewsHandler(inCommonUIData, invokedArtifactPojo.artifactKeyPojo);
+		
+		if (!standaloneReadingMode){
+			doCommonInit(inCommonUIData, inArtifactPojo);
+			downloadedReviewsHandler = new DownloadedReviewsHandler(inCommonUIData, invokedArtifactPojo.artifactKeyPojo);
+		}
 		
 		///////////
 		///////////
@@ -234,6 +238,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		//create pane for control ribbon ends		
 		///////////
 		///////////
+		
 		setSelectionFilters();
 
 		additionalRibbonButtons();
@@ -272,6 +277,29 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		catelogPersistenceManager = commonData.getCatelogPersistenceManager();
 	}
 
+	public void initializeContentHandlerForStandaloneReader(CommonUIData inCommonUIData,String inFilePath, String inContentType){
+		System.out.println("GenericGrouper initiated for initializeContentHandlerForStandaloneReader");
+		System.out.println("File name passed : " + inFilePath);
+		commonData = inCommonUIData;
+		commons = commonData.getCommons();
+		contentHandlerSpecs = commonData.getContentHandlerSpecsMap().get(inContentType);
+
+		standaloneReadingMode = true;
+
+		ArtifactMover artifactMover = ArtifactMover.getInstance(commonData);
+		contentPathFileName = artifactMover.getPrimeFilePathForStandAloneRead(inFilePath);
+		if (artifactMover.lastProcessStatus != ArtifactMover.PROCESSED_OK) {
+			if (commons.processMode == Commons.CLIENT_MACHINE) {
+				ErrorHandler.displayError(mainShell, commonData.getCommons(), "Error at GenericGrouper doCommontInit " + artifactMover.lastProcessStatus + " while dealing with : " + inFilePath);
+				return;
+			} else {
+				ErrorHandler.showErrorAndQuit(commons, "Error at GenericGrouper doCommonInit artifactMover " + artifactMover.lastProcessStatus + " while dealing with inFilePath :" + inFilePath);
+			}
+		}
+		readPrimerFile();
+		doCommonUIInit(inCommonUIData, null);
+	}
+	
 	public void initializeContentHandlerForDraftArtifact(CommonUIData inCommonUIData, 
 							SelfAuthoredArtifactpojo inSelfAuthoredArtifactspojo) {
 
@@ -342,8 +370,13 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 
 		invokedForEdit = false;
 		System.out.println("mainShell = " + mainShell);
-		mainShell.setText(invokedArtifactPojo.artifactKeyPojo.contentType + " <viewContentsAtDesk> for " + invokedArtifactPojo.artifactKeyPojo.artifactName);
-		System.out.println("invokedArtifactPojo artifactKeyPojo artifactName is = " + invokedArtifactPojo.artifactKeyPojo.artifactName);
+		if (standaloneReadingMode){
+			mainShell.setText("Grouper <viewContentAtDesk> for " + contentPathFileName);
+			System.out.println("Grouper <viewContentAtDesk> for " + contentPathFileName);
+		} else {
+			mainShell.setText(invokedArtifactPojo.artifactKeyPojo.contentType + " <viewContentsAtDesk> for " + invokedArtifactPojo.artifactKeyPojo.artifactName);
+			System.out.println("invokedArtifactPojo artifactKeyPojo artifactName is = " + invokedArtifactPojo.artifactKeyPojo.artifactName);
+		}
 
 		System.out.println("before displayContent");
 		displayMultiContent();
@@ -397,8 +430,12 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		System.out.println("itemPojo.itemID:"+inItemPojoScrolled.itemID);
 		System.out.println("set data = " + inMaintenanceButton.getData("screenRowNum"));
 
-		checkIfItemOnRowHasALocalDraft(inItemPojoScrolled,inMaintenanceButton);
-		maintenanceButtonProcess(inMaintenanceButton);
+		if (!standaloneReadingMode) {	
+			checkIfItemOnRowHasALocalDraft(inItemPojoScrolled,inMaintenanceButton);
+			maintenanceButtonProcess(inMaintenanceButton);
+		} else {
+			inMaintenanceButton.setEnabled(false);
+		}
 		inMaintenanceButton.pack();
 		
 		TableEditor maintenanceButtonEditor = new TableEditor(inTable);
@@ -578,15 +615,13 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		table.setHeaderVisible(true);
 		table.setLinesVisible(true);
 		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-		coreLeftColumnHeaders = new String[] { 
-				"Artifact"
-				//,"Title"
-				};
-		coreRightColumnHeaders = new String[] { 
-				"Review"
-				//,"Approve"
-				//,"Reject"
-				};
+		
+		coreLeftColumnHeaders = new String[] {"Artifact"};
+		if (standaloneReadingMode) {
+			coreRightColumnHeaders = new String[] {};			
+		} else {
+			coreRightColumnHeaders = new String[] {"Review"};
+		}
 		setAddlColumnHeaders();
 
 		if (addlLeftColumnHeaders == null) { addlLeftColumnHeaders = new String[]{};}
@@ -669,7 +704,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		
 		//childCompositeOfMultiView.pack();
 
-	    if (downloadedReviewsHandler.canBeReviewed()){
+	    if (!standaloneReadingMode && downloadedReviewsHandler.canBeReviewed()){
 	    	showArtifactReview();
 	    }
 
@@ -715,11 +750,12 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 			lastColLocation = addlLeftColumnHeaders.length + coreLeftColumnHeaders.length + centerBaseColHeaders.length - 1;
 			setDisplayItemsCenterAddlFieldsInMultiDisplay(editor,table,tableItem,lastColLocation,itemPojoScrolled);
 
-			lastColLocation = addlLeftColumnHeaders.length + coreLeftColumnHeaders.length + centerBaseColHeaders.length + centerAddlColHeaders.length - 1;
-			setDisplayItemscoreRightFieldsInMultiDisplay(editor,table,tableItem,lastColLocation,itemPojoScrolled,screenRowNum);
+			if (!standaloneReadingMode) {
+				lastColLocation = addlLeftColumnHeaders.length + coreLeftColumnHeaders.length + centerBaseColHeaders.length + centerAddlColHeaders.length - 1;
+				setDisplayItemscoreRightFieldsInMultiDisplay(editor,table,tableItem,lastColLocation,itemPojoScrolled,screenRowNum);
+			}
 
 			if (itemPojoScrolled.equals(viewFocusItemPojo)) {
-
 				maintenanceButton.setFocus();
 			}
 			
@@ -1211,7 +1247,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		btnExportToSpreadSh.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				System.out.println("Export to Excel selected");
+				System.out.println("Export to Excel selected ");
 
 				String filename = null;
 				
@@ -1221,6 +1257,9 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 				
 				if (filename == null) return;
 
+				System.out.println("Export to Excel selected commons " + commons);
+				System.out.println("Export to Excel selected filename " + filename);
+				
 		    	if (commons.doesFileExist(filename)){
 					MessageBox fileOverwriteMsgBox = new MessageBox(mainShell, SWT.YES | SWT.NO);
 					fileOverwriteMsgBox.setMessage("file exists. overwrite? " + filename);

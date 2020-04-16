@@ -156,6 +156,10 @@ public class GenlRequest extends GenericItemHandler {
 				}
 			} else if (genlRequestPojo.requestStartDate != null && !genlRequestPojo.requestStartDate.isEmpty()) {
 				try {
+					System.out.println("commons is " + commons);
+					System.out.println("genlRequestPojo is " + genlRequestPojo);
+					System.out.println("genlRequestPojo.requestStartDate is " + genlRequestPojo.requestStartDate);
+					System.out.println("requestStartDateDisplay is " + requestStartDateDisplay);
 					commons.setDateOnDisplay(requestStartDateDisplay, genlRequestPojo.requestStartDate);
 				} catch (ParseException e) {
 					// TODO Auto-generated catch block

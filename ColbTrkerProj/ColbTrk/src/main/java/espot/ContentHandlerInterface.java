@@ -14,6 +14,7 @@ public interface ContentHandlerInterface {
 	public void initializeContentHandlerForDraftArtifact(CommonUIData inCommonUIData, SelfAuthoredArtifactpojo inSelfAuthoredArtifactspojo);
 	public void initializeContentHandlerForDownloadedArtifact(CommonUIData inCommonUIData, ERLDownload inERLDownload);
 	public void initializeContentHandlerForERLDownloadAndItemFocus(CommonUIData inCommonUIData,ERLDownload inERLDownload, ItemPojo inItemPojo);	
+	public void initializeContentHandlerForStandaloneReader(CommonUIData inCommonUIData,String inFilePath,String inContentType);
 	public void initNonUIContentHandlerForDownloadedArtifact(CommonData inCommonData, ERLDownload inERLDownload);
 	public void initNonUIContentHandlerForDraftArtifact(CommonData inCommonData, SelfAuthoredArtifactpojo inSelfAuthoredArtifactspojo);	
 	public ItemPojo getUptoDateERLItem(ItemPojo inItemPojo);

@@ -1,5 +1,6 @@
 package espot;
 
+import java.io.File;
 import java.io.IOException;
 
 public class ArtifactMover {
@@ -7,6 +8,7 @@ public class ArtifactMover {
 	 * Common process to build artifacts from different sources
 	 */
 
+    public static String TMPDIRPROP = "java.io.tmpdir";
 	public int lastProcessStatus;
 	public static int PROCESSED_OK = 0;
 	public static int ERROR_INCORRECT_ARTIFACTTYPE = 1;
@@ -14,6 +16,7 @@ public class ArtifactMover {
 	public static int ERROR_IN_FILE_CREATION = 3;
 	public static int NO_SOURCE_FILE = 4;
 	public static int ERROR_FILE_NOT_DOWNLOADEDYET = 5;
+	public static int ERROR_STANDALONETEMPFILEALREADYEXISTS = 6;
 	public String sourcePath;
 	public String destPath;
 	public CommonData commonData;
@@ -174,8 +177,11 @@ public class ArtifactMover {
 				
 				//contentHandlerInterfaceForNewPrimeFileCreation.createNewStartupPrimer(artifactMover.getPrimeFilePath(inDestSelfAuthoredArtifactpojo),
 				//		inDestSelfAuthoredArtifactpojo.artifactKeyPojo.contentType);
+				
+				String primeFilePath = getPrimeFilePath(inDestSelfAuthoredArtifactpojo);
+				
 				contentHandlerInterfaceForNewPrimeFileCreation.createNewStartupPrimer(
-																	getPrimeFilePath(inDestSelfAuthoredArtifactpojo),
+																	primeFilePath,
 																	inDestSelfAuthoredArtifactpojo);
 				System.out.println("At moveFromTemplate 8 lastProcessStatus = " + lastProcessStatus);
 				if (lastProcessStatus == NO_SOURCE_FILE) {
@@ -334,36 +340,110 @@ public class ArtifactMover {
 
 		lastProcessStatus = PROCESSED_OK;
 		String artifactPath = getFullFilePath(inSrcArtifactPojo);
+
+		//String primeFilePath = null;
+		//String primeFolder = null;
+		//
+		//System.out.println("checkpoint1 artifactPath = " + artifactPath);
+		//
+		//FileChecker createFileChecker = null;
+		//
+		//if (lastProcessStatus == PROCESSED_OK) {
+		//	createFileChecker = FileChecker.getFileChecker(commons, artifactPath);
+		//	System.out.println("checkpoint2 createFileChecker = " + createFileChecker);
+		//	
+		//	if (!createFileChecker.fileOrDirExists && !createFileChecker.isZipFile) {
+		//		System.out.println("Warning - File Not Available/Not downloaded yet : " + artifactPath);
+		//		lastProcessStatus = NO_SOURCE_FILE;
+		//		//This may not be an error. Hence not Returning			
+		//	}
+		//	System.out.println("checkpoint3 createFileChecker.fileOrDirExists = " + createFileChecker.fileOrDirExists);
+		//	System.out.println("checkpoint3 createFileChecker.isZipFile = " + createFileChecker.isZipFile);
+		//	if (createFileChecker.isZipFile) {
+		//		System.out.println("It is isZipFile " + artifactPath);
+		//		primeFolder = commons.getFileNameWithoutExtension(artifactPath);
+		//		primeFilePath = commons.getAbsolutePathFromDirAndFileNm(primeFolder,Commons.ARTIFACT_PRIME_FILE);
+		//
+		//	} else if (createFileChecker.isDirectory) {
+		//		System.out.println("It is isDirectory " + artifactPath);
+		//		primeFolder = artifactPath;
+		//		primeFilePath = commons.getAbsolutePathFromDirAndFileNm(primeFolder,Commons.ARTIFACT_PRIME_FILE);
+		//	} else {
+		//		System.out.println("It is neither zip file nor dir " + artifactPath);
+		//		primeFilePath = artifactPath;
+		//	}
+		//}
+		//return primeFilePath;
+		
+		return getPrimeFilePathFromArtifactPath(artifactPath);
+	}
+
+	public String getPrimeFilePathFromArtifactPath(String inArtifactPath){
+		return getPrimeFilePathWithStandAloneChk(inArtifactPath,false);		
+	}
+	
+	public String getPrimeFilePathForStandAloneRead(String inArtifactPath){
+		return getPrimeFilePathWithStandAloneChk(inArtifactPath,true);		
+	}
+		
+	private String getPrimeFilePathWithStandAloneChk(String inArtifactPath,boolean inStandAloneFlag){
 		String primeFilePath = null;
 		String primeFolder = null;
 
-		System.out.println("checkpoint1 artifactPath = " + artifactPath);
+		System.out.println("checkpoint1 getPrimeFilePathFromArtifactPath artifactPath = " + inArtifactPath);
 
 		FileChecker createFileChecker = null;
 
 		if (lastProcessStatus == PROCESSED_OK) {
-			createFileChecker = FileChecker.getFileChecker(commons, artifactPath);
+			createFileChecker = FileChecker.getFileChecker(commons, inArtifactPath);
 			System.out.println("checkpoint2 createFileChecker = " + createFileChecker);
 			
 			if (!createFileChecker.fileOrDirExists && !createFileChecker.isZipFile) {
-				System.out.println("Warning - File Not Available/Not downloaded yet : " + artifactPath);
+				System.out.println("Warning - File Not Available/Not downloaded yet : " + inArtifactPath);
 				lastProcessStatus = NO_SOURCE_FILE;
 				//This may not be an error. Hence not Returning			
 			}
 			System.out.println("checkpoint3 createFileChecker.fileOrDirExists = " + createFileChecker.fileOrDirExists);
 			System.out.println("checkpoint3 createFileChecker.isZipFile = " + createFileChecker.isZipFile);
 			if (createFileChecker.isZipFile) {
-				System.out.println("It is isZipFile " + artifactPath);
-				primeFolder = commons.getFileNameWithoutExtension(artifactPath);
-				primeFilePath = commons.getAbsolutePathFromDirAndFileNm(primeFolder,Commons.ARTIFACT_PRIME_FILE);
-	
+				if (inStandAloneFlag){
+				// standalone zip file reading requires sourcefile to be unzipped into temporary folder first
+			    	String sourceFileName = commons.getFileNameFromFullPath(inArtifactPath, File.separator);
+			        String tempDir = System.getProperty(TMPDIRPROP);
+					String tempFileName = commons.getAbsolutePathFromDirAndFileNm(tempDir,sourceFileName);
+					String tempUnzipFolder = commons.getDirectoryOfZipFile(tempFileName);
+					if (commons.doesFileExist(tempUnzipFolder)){
+						if (!ErrorHandler.confirmationPopup(
+								((CommonUIData) commonData).getESPoTDisplay(), 
+								"TempUnzipFolder " + tempUnzipFolder + " already exists. Overwrite?")) {							
+							lastProcessStatus = ERROR_STANDALONETEMPFILEALREADYEXISTS;
+						}
+					}
+					if (lastProcessStatus == PROCESSED_OK) {
+						try {
+							commons.UnZip(sourcePath, tempUnzipFolder);
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							ErrorHandler.showErrorAndQuit(commons, 
+								"Error while unzipping " + sourceFileName + " into " + tempUnzipFolder, e);
+						}
+					}					
+					if (lastProcessStatus == PROCESSED_OK) {				
+						primeFilePath = commons.getAbsolutePathFromDirAndFileNm(tempUnzipFolder,Commons.ARTIFACT_PRIME_FILE);
+					}					
+				} else {
+					System.out.println("It is ZipFile " + inArtifactPath);
+					
+					primeFolder = commons.getFileNameWithoutExtension(inArtifactPath);
+					primeFilePath = commons.getAbsolutePathFromDirAndFileNm(primeFolder,Commons.ARTIFACT_PRIME_FILE);
+				}
 			} else if (createFileChecker.isDirectory) {
-				System.out.println("It is isDirectory " + artifactPath);
-				primeFolder = artifactPath;
+				System.out.println("It is isDirectory " + inArtifactPath);
+				primeFolder = inArtifactPath;
 				primeFilePath = commons.getAbsolutePathFromDirAndFileNm(primeFolder,Commons.ARTIFACT_PRIME_FILE);
 			} else {
-				System.out.println("It is neither zip file nor dir " + artifactPath);
-				primeFilePath = artifactPath;
+				System.out.println("It is neither zip file nor dir " + inArtifactPath);
+				primeFilePath = inArtifactPath;
 			}
 		}
 		return primeFilePath;
@@ -371,9 +451,12 @@ public class ArtifactMover {
 	
 	public String getChildFilePath(ArtifactPojo inSrcArtifactPojo, String inChildFileName) {
 		lastProcessStatus = PROCESSED_OK;
+		String childFilePath = "";
 		String primeFilePath = getPrimeFilePath(inSrcArtifactPojo);
-		String primeFolder = commons.getFolderNameFromFullPath(primeFilePath);
-		String childFilePath = commons.getAbsolutePathFromDirAndFileNm(primeFolder,inChildFileName);
+		if (lastProcessStatus == PROCESSED_OK) {
+			String primeFolder = commons.getFolderNameFromFullPath(primeFilePath);
+			childFilePath = commons.getAbsolutePathFromDirAndFileNm(primeFolder,inChildFileName);
+		}
 		return childFilePath;
 	}
 }
