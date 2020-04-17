@@ -59,7 +59,8 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 	public GenericItemHandler() {
 	}
 
-	public void initializeContentHandlerForStandaloneReader(CommonUIData inCommonUIData,String inFilePath, String inContentType){
+	public boolean initializeContentHandlerForStandaloneReader(CommonUIData inCommonUIData,String inFilePath, String inContentType){
+		boolean initOK = true;
 		System.out.println("GenericGrouper initiated for initializeContentHandlerForStandaloneReader");
 		System.out.println("File name passed : " + inFilePath);
 
@@ -71,11 +72,15 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 		ArtifactMover artifactMover = ArtifactMover.getInstance(commonData);
 		contentPathFileName = artifactMover.getPrimeFilePathForStandAloneRead(inFilePath);
 		if (artifactMover.lastProcessStatus != ArtifactMover.PROCESSED_OK) {
-			ErrorHandler.displayError(mainShell, commonData.getCommons(), "Error at GenericGrouper doCommontInit " + artifactMover.lastProcessStatus + " while dealing with : " + inFilePath);
-			return;
+			//if (artifactMover.lastProcessStatus != ArtifactMover.ERROR_STANDALONETEMPFILEALREADYEXISTS) {
+			//	ErrorHandler.displayError(mainShell, commonData.getCommons(), "Error at GenericGrouper doCommontInit " + artifactMover.lastProcessStatus + " while dealing with : " + inFilePath);
+			//}
+			initOK = false;
+			return initOK;
 		}
 		readPrimerFile();
 		doCommonUIInit(inCommonUIData, null);
+		return initOK;
 	}
 	
 	public void initializeContentHandlerWithMinimumSetup(CommonData inCommonData){

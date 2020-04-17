@@ -190,7 +190,7 @@ public class ColbTrkClientUI {
 	public void btnStandaloneReaderUI(){
 		if (standaloneReaderThread != null && standaloneReaderThread.isAlive()){
 			MessageBox messageBox1 = new MessageBox(mainShell, SWT.ICON_WARNING | SWT.OK);
-			messageBox1.setMessage("StandaloneReaderThread already open");
+			messageBox1.setMessage("StandaloneReader already open");
 			messageBox1.open();
 			return;
 		}

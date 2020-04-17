@@ -277,7 +277,8 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		catelogPersistenceManager = commonData.getCatelogPersistenceManager();
 	}
 
-	public void initializeContentHandlerForStandaloneReader(CommonUIData inCommonUIData,String inFilePath, String inContentType){
+	public boolean initializeContentHandlerForStandaloneReader(CommonUIData inCommonUIData,String inFilePath, String inContentType){
+		boolean initOK = true;
 		System.out.println("GenericGrouper initiated for initializeContentHandlerForStandaloneReader");
 		System.out.println("File name passed : " + inFilePath);
 		commonData = inCommonUIData;
@@ -289,15 +290,13 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		ArtifactMover artifactMover = ArtifactMover.getInstance(commonData);
 		contentPathFileName = artifactMover.getPrimeFilePathForStandAloneRead(inFilePath);
 		if (artifactMover.lastProcessStatus != ArtifactMover.PROCESSED_OK) {
-			if (commons.processMode == Commons.CLIENT_MACHINE) {
-				ErrorHandler.displayError(mainShell, commonData.getCommons(), "Error at GenericGrouper doCommontInit " + artifactMover.lastProcessStatus + " while dealing with : " + inFilePath);
-				return;
-			} else {
-				ErrorHandler.showErrorAndQuit(commons, "Error at GenericGrouper doCommonInit artifactMover " + artifactMover.lastProcessStatus + " while dealing with inFilePath :" + inFilePath);
-			}
+			ErrorHandler.displayError(mainShell, commonData.getCommons(), "Error at GenericGrouper doCommontInit " + artifactMover.lastProcessStatus + " while dealing with : " + inFilePath);
+			initOK = false;
+			return initOK;
 		}
 		readPrimerFile();
 		doCommonUIInit(inCommonUIData, null);
+		return initOK;
 	}
 	
 	public void initializeContentHandlerForDraftArtifact(CommonUIData inCommonUIData, 
@@ -434,6 +433,8 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 			checkIfItemOnRowHasALocalDraft(inItemPojoScrolled,inMaintenanceButton);
 			maintenanceButtonProcess(inMaintenanceButton);
 		} else {
+			inMaintenanceButton
+			.setText(inItemPojoScrolled.artifactName);
 			inMaintenanceButton.setEnabled(false);
 		}
 		inMaintenanceButton.pack();

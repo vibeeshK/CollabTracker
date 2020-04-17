@@ -10,6 +10,8 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.layout.RowData;
+import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.FileDialog;
@@ -23,10 +25,12 @@ public class StandaloneReaderUI implements Runnable {
 	CommonUIData commonUIData = null;
 	Commons commons = null;
 
+	Composite childCompositeOfLeftView = null;
+	Group artifactDetailGroup = null;
 	CCombo relevanceList;	
 	Text artifactNameText;
 	Button btnFileSelectButton;
-	
+	CCombo contentTypeList;
 	private Shell mainShell = null;
 	
 	ContentHandlerSpecs contentHandlerSpecs = null;
@@ -62,7 +66,7 @@ public class StandaloneReaderUI implements Runnable {
 		 * as edit, upload, backup on cloud, make clone For non-authors, it
 		 * provides ability to view, make clone
 		 */
-		Composite childCompositeOfLeftView = new Composite(
+		childCompositeOfLeftView = new Composite(
 				mainShell, SWT.NONE);
 		childCompositeOfLeftView.setLayout(new FillLayout(SWT.VERTICAL));
 
@@ -79,28 +83,32 @@ public class StandaloneReaderUI implements Runnable {
 		childCompositeOfLeftView.setBackgroundImage(bg);
 		// displayContent() - base set up ends
 
-		// displayContent() - ideaGroup Splitting Starts
-		Group artifactDetailGroup = new Group(childCompositeOfLeftView,
+		// displayContent() - artifactDetail Starts
+		artifactDetailGroup = new Group(childCompositeOfLeftView,
 				SWT.SHADOW_NONE);
 		artifactDetailGroup.setText("ArtifactDetail");
+		
 		artifactDetailGroup.setLayout(new FillLayout(SWT.VERTICAL));
-		// displayContent() - ideaGroup Splitting ends
 
 		// displayContent() - ArtifactNameGroup display starts
 		Group artifactNameGroup = new Group(artifactDetailGroup, SWT.LEFT);
 		artifactNameGroup.setLayout(new FillLayout());
 		artifactNameGroup.setText("ArtifactName");
+	    RowLayout rowLayout = new RowLayout();
+	    rowLayout.pack = true;
+	    rowLayout.justify = true;
+	    artifactNameGroup.setLayout(rowLayout);
+	    artifactNameGroup.pack();
 
 		// displayContent() - ArtifactName display starts
-		artifactNameText = new Text(artifactNameGroup, SWT.NONE);
-		artifactNameText.setEnabled(false);
+		artifactNameText = new Text(artifactNameGroup, SWT.READ_ONLY);
 		// displayContent() - ArtifactName display ends
 
 		// fileSelect button starts
 		btnFileSelectButton = new Button(artifactNameGroup, SWT.NONE);
 		btnFileSelectButton.setText("FileSelect");
 		btnFileSelectButton.setToolTipText("Click to select a file via dialog");
-
+		btnFileSelectButton.setFocus();
 		btnFileSelectButton.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -124,9 +132,21 @@ public class StandaloneReaderUI implements Runnable {
 		    	}
 				System.out.println("File being viewed : " + filename);
 				artifactNameText.setText(filename);
+				artifactNameText.setToolTipText(filename);
+				
+				contentTypeList.setFocus();
+				
+				//artifactNameText.pack();
+				//btnFileSelectButton.pack();
+				artifactNameGroup.pack();
+				artifactDetailGroup.pack();
+				childCompositeOfLeftView.pack();
+				mainShell.pack();
 			}
 		});
-		btnFileSelectButton.pack();
+		//btnFileSelectButton.pack();
+		artifactNameGroup.pack();
+		artifactDetailGroup.pack();
 		// fileSelect button ends
 		// displayContent() - ArtifactNameGroup display ends
 		
@@ -135,7 +155,7 @@ public class StandaloneReaderUI implements Runnable {
 		Group contentTypeGroup = new Group(artifactDetailGroup, SWT.LEFT);
 		contentTypeGroup.setLayout(new FillLayout());
 		contentTypeGroup.setText("ContentType");
-		CCombo contentTypeList = new CCombo(contentTypeGroup,
+		contentTypeList = new CCombo(contentTypeGroup,
 				SWT.DROP_DOWN | SWT.READ_ONLY);
 
 		contentTypeList
@@ -212,10 +232,11 @@ public class StandaloneReaderUI implements Runnable {
 						System.out.println("contentHandlerObjectInterface : " + contentHandlerObjectInterface);
 
 						System.out.println("About to initialize for view file. contentHandlerObjectInterface = " + contentHandlerObjectInterface);
-						contentHandlerObjectInterface
-						.initializeContentHandlerForStandaloneReader(commonUIData, artifactNameText.getText(), selectedContentType);
-						System.out.println("Initialized for standalone view");
-						contentHandlerObjectInterface.viewContentsAtDesk();
+						if (contentHandlerObjectInterface
+						.initializeContentHandlerForStandaloneReader(commonUIData, artifactNameText.getText(), selectedContentType)) {
+							System.out.println("Initialized for standalone view");
+							contentHandlerObjectInterface.viewContentsAtDesk();
+						}
 
 					} catch (IOException e2) {
 						//e2.printStackTrace();

@@ -17,7 +17,7 @@ public class ArtifactMover {
 	public static int NO_SOURCE_FILE = 4;
 	public static int ERROR_FILE_NOT_DOWNLOADEDYET = 5;
 	public static int ERROR_STANDALONETEMPFILEALREADYEXISTS = 6;
-	public String sourcePath;
+	//public String sourcePath;
 	public String destPath;
 	public CommonData commonData;
 	Commons commons;
@@ -29,7 +29,7 @@ public class ArtifactMover {
 		commonData = inCommonData;
 		commons = inCommonData.getCommons();
 		lastProcessStatus = 0;
-		sourcePath = null;
+		//sourcePath = null;
 		destPath = null;
 	}
 	public static ArtifactMover getInstance(CommonData inCommonData) {
@@ -84,7 +84,7 @@ public class ArtifactMover {
 	public void moveArtifact(ArtifactPojo inSrcArtifactPojo, ArtifactPojo inDestArtifactPojo) {
 		lastProcessStatus = PROCESSED_OK;
 
-		sourcePath = getFullFilePath(inSrcArtifactPojo);
+		String sourcePath = getFullFilePath(inSrcArtifactPojo);
 		System.out.println("At moveArtifact sourcePath is " + sourcePath);
 
 		if (lastProcessStatus == PROCESSED_OK) {
@@ -139,7 +139,7 @@ public class ArtifactMover {
 		System.out.println("At moveFromTemplate inTemplateFileName = " + inTemplateFileName);
 		System.out.println("At moveFromTemplate 1 lastProcessStatus = " + lastProcessStatus);
 
-		sourcePath = commons.getTemplateFileName(inTemplateFileName);
+		String sourcePath = commons.getTemplateFileName(inTemplateFileName);
 
 		System.out.println("At moveFromTemplate 2 lastProcessStatus = " + lastProcessStatus);
 		
@@ -296,7 +296,7 @@ public class ArtifactMover {
 	public void archiveDraft(ArtifactPojo inSrcArtifactPojo) {
 		lastProcessStatus = PROCESSED_OK;
 
-		sourcePath = getFullFilePath(inSrcArtifactPojo);
+		String sourcePath = getFullFilePath(inSrcArtifactPojo);
 		System.out.println("At moveArtifact sourcePath is " + sourcePath);
 
 		if (lastProcessStatus == PROCESSED_OK) {
@@ -412,6 +412,13 @@ public class ArtifactMover {
 			        String tempDir = System.getProperty(TMPDIRPROP);
 					String tempFileName = commons.getAbsolutePathFromDirAndFileNm(tempDir,sourceFileName);
 					String tempUnzipFolder = commons.getDirectoryOfZipFile(tempFileName);
+					
+					System.out.println("checkpoint3.1 sourceFileName = " + sourceFileName);
+					System.out.println("checkpoint3.1 tempDir = " + tempDir);
+					System.out.println("checkpoint3.1 tempFileName = " + tempFileName);
+					System.out.println("checkpoint3.1 tempUnzipFolder = " + tempUnzipFolder);
+					System.out.println("checkpoint3.1 inArtifactPath = " + inArtifactPath);
+					
 					if (commons.doesFileExist(tempUnzipFolder)){
 						if (!ErrorHandler.confirmationPopup(
 								((CommonUIData) commonData).getESPoTDisplay(), 
@@ -421,10 +428,13 @@ public class ArtifactMover {
 					}
 					if (lastProcessStatus == PROCESSED_OK) {
 						try {
-							commons.UnZip(sourcePath, tempUnzipFolder);
+							commons.UnZip(inArtifactPath, tempUnzipFolder);
 						} catch (IOException e) {
+							lastProcessStatus = ERROR_IN_FILE_CREATION; 
 							// TODO Auto-generated catch block
-							ErrorHandler.showErrorAndQuit(commons, 
+							System.out.println("at ArtifactMover about to go to display error");
+							
+							ErrorHandler.displayError(commons, 
 								"Error while unzipping " + sourceFileName + " into " + tempUnzipFolder, e);
 						}
 					}					
