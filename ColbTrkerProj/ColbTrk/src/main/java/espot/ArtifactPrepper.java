@@ -174,7 +174,7 @@ public class ArtifactPrepper {
 					if (!((CommonUIData) commonData).getCurrentUserPojo().hasAdminPrivilege() 
 						&& !((CommonUIData) commonData).getCurrentUserPojo().hasTeamLeaderPrivilege() 
 						&& !((CommonUIData) commonData).getUsersHandler().
-								doesUserHaveRightsOverMember(commons.userName, uptoDateERLItemPojo.author)){
+								doesUserHaveUpdateRightsOverMember(commons.userName, uptoDateERLItemPojo.author)){
 						ErrorHandler.infoPopup(((CommonUIData) commonData).getESPoTDisplay(),
 								"You dont have authorization to update the item artifact " + uptoDateERLItemPojo.artifactName);
 						errorEncountered = true;

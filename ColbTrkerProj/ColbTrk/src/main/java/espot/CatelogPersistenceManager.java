@@ -466,7 +466,7 @@ public class CatelogPersistenceManager {
 		return readERLsWithConstraint(inactiveERLConstraint);
 	}
 	
-	public ArrayList<ERLpojo> readERLsWithConstraint(String inConstraintString) {
+	private ArrayList<ERLpojo> readERLsWithConstraint(String inConstraintString) {
 		synchronized (syncLock) {
 			ArrayList<ERLpojo> erlPojoList = new ArrayList<ERLpojo>();
 	
@@ -650,7 +650,7 @@ public class CatelogPersistenceManager {
 		}
 	}
 	
-	public ArrayList<ERLDownload> readERLDownLoadsOfRootWithConstraint(String inConstraintString) {
+	private ArrayList<ERLDownload> readERLDownLoadsOfRootWithConstraint(String inConstraintString) {
 
 		synchronized (syncLock) {
 

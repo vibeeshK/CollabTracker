@@ -767,7 +767,7 @@ public class RequestProcessor {
 						|| (inRequestProcesserPojo.prevERLPojo != null 
 							&& (requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(inRequestProcesserPojo.prevERLPojo.author)
 								|| requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(inRequestProcesserPojo.prevERLPojo.requestor)
-								|| commonData.getUsersHandler().doesUserHaveRightsOverMember(requestAuthorsDetail.rootSysLoginID, inRequestProcesserPojo.prevERLPojo.author)
+								|| commonData.getUsersHandler().doesUserHaveUpdateRightsOverMember(requestAuthorsDetail.rootSysLoginID, inRequestProcesserPojo.prevERLPojo.author)
 						))) {
 						
 						if (incomingItemNewReviewPojo.reassignedRequestor != null && !incomingItemNewReviewPojo.reassignedRequestor.isEmpty()) {

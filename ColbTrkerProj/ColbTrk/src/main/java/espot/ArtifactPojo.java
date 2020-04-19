@@ -12,6 +12,7 @@ public class ArtifactPojo {
 	public static final String ERLSTAT_REVIEWRQACK = "REVIEWRQACK";
 	public static final String ERLSTAT_APPROVED = "APPROVED";
 	public static final String ERLSTAT_INACTIVE = "INACTIVE";
+	public static final String ERLSTAT_DELETE_ROLLUPITEM = "DELETE_ROLLUPITEM";
 	
 	public static final String[] REQUESTOR_VALID_ACTIONS = {
 																ERLSTAT_DRAFTREQ,
@@ -19,11 +20,24 @@ public class ArtifactPojo {
 																ERLSTAT_APPROVED,
 																ERLSTAT_INACTIVE
 															};
+	public static final String[] REQUESTOR_VALID_ROLLUPITEM_ACTIONS = {
+																ERLSTAT_DRAFTREQ,
+																ERLSTAT_REVIEWRQACK,
+																ERLSTAT_APPROVED,
+																ERLSTAT_INACTIVE,
+																ERLSTAT_DELETE_ROLLUPITEM
+		};
+	
 	public static final String[] AUTHOR_VALID_ACTIONS = {
 																ERLSTAT_DRAFTRQACK,
 																ERLSTAT_DRAFT,
 																ERLSTAT_REVIEWREQ
 															};
+	public static final String[] AUTHOR_VALID_ROLLUPITEM_ACTIONS = {
+																ERLSTAT_DRAFTRQACK,
+																ERLSTAT_DRAFT,
+																ERLSTAT_REVIEWREQ
+	};
 	//public static final String[] LEADER_VALID_ACTIONS = {
 	//															ERLSTAT_DRAFTREQ,
 	//															ERLSTAT_DRAFTRQACK,
@@ -42,6 +56,16 @@ public class ArtifactPojo {
 																ERLSTAT_APPROVED,
 																ERLSTAT_INACTIVE
 															};
+	public static final String[] ADMIN_VALID_ROLLUPITEM_ACTIONS = {
+																ERLSTAT_DRAFTREQ,
+																ERLSTAT_DRAFTRQACK,
+																ERLSTAT_DRAFT,
+																ERLSTAT_REVIEWREQ,
+																ERLSTAT_REVIEWRQACK,
+																ERLSTAT_APPROVED,
+																ERLSTAT_INACTIVE,
+																ERLSTAT_DELETE_ROLLUPITEM	// extra action for rollup items that requestor/teamliead/admin can perform
+	};
 	public ArtifactKeyPojo artifactKeyPojo = null;
 	public String requestor;
 	public boolean hasSpecialHandler;

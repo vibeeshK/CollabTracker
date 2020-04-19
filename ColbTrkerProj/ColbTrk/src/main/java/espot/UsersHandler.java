@@ -104,8 +104,35 @@ public class UsersHandler {
 	public int getUsersCount(){
 		return usersList.size();
 	}
-	public boolean doesUserHaveRightsOverMember(String inSuperuser, String inMember){		
-	// check if the mentioned super user has rights over the member
+	//public boolean doesUserHaveRightsOverMember(String inSuperuser, String inMember){		
+	//// check if the mentioned super user has rights over the member
+	//	boolean superuser = false;
+	//	UserPojo superUsersUserPojo = getUserDetailsFromRootSysLoginID(inSuperuser);
+	//	UserPojo memberUserPojo = getUserDetailsFromRootSysLoginID(inMember);
+	//
+	//	if (superUsersUserPojo != null && memberUserPojo != null
+	//		&& (superUsersUserPojo.hasAdminPrivilege() || 
+	//			superUsersUserPojo.hasTeamLeaderPrivilege() ||
+	//			memberUserPojo.leadID.equals(inSuperuser) ||
+	//			inMember.equals(inSuperuser))){
+	//		superuser = true;
+	//	}		
+	//	return superuser;
+	//}
+	public boolean doesUserHaveUpdateRightsOverMember(String inSuperuser, String inMember){		
+	// check if the mentioned super user has update rights over the member
+		boolean hasRightsOverMember = false;
+
+		if (inSuperuser != null && inMember != null
+			&& (doesUserHaveSuperuserRightsOverMember(inSuperuser, inMember)
+				|| inMember.equals(inSuperuser))){
+			hasRightsOverMember = true;
+		}
+		return hasRightsOverMember;
+	}
+	public boolean doesUserHaveSuperuserRightsOverMember(String inSuperuser, String inMember){		
+	// check if the mentioned super user user rights over member.
+	// This doesn't consider the same member as superuser for oneself
 		boolean superuser = false;
 		UserPojo superUsersUserPojo = getUserDetailsFromRootSysLoginID(inSuperuser);
 		UserPojo memberUserPojo = getUserDetailsFromRootSysLoginID(inMember);
@@ -113,10 +140,10 @@ public class UsersHandler {
 		if (superUsersUserPojo != null && memberUserPojo != null
 			&& (superUsersUserPojo.hasAdminPrivilege() || 
 				superUsersUserPojo.hasTeamLeaderPrivilege() ||
-				memberUserPojo.leadID.equals(inSuperuser) ||
-				inMember.equals(inSuperuser))){
+				memberUserPojo.leadID.equals(inSuperuser))){
 			superuser = true;
 		}		
 		return superuser;
 	}
+	
 }

@@ -1130,7 +1130,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 							|| requestAuthorsDetail.hasTeamLeaderPrivilege() 
 							|| ((requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(itemPojoToUpdate.author)
 								|| requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(itemPojoToUpdate.requestor)
-								|| commonData.getUsersHandler().doesUserHaveRightsOverMember(requestAuthorsDetail.rootSysLoginID, itemPojoToUpdate.author)
+								|| commonData.getUsersHandler().doesUserHaveUpdateRightsOverMember(requestAuthorsDetail.rootSysLoginID, itemPojoToUpdate.author)
 							))) {
 							if (inRequestProcesserPojo.itemReassignedRequestor != null && !inRequestProcesserPojo.itemReassignedRequestor.isEmpty()){
 								itemPojoToUpdate.requestor = inRequestProcesserPojo.itemReassignedRequestor;
@@ -1156,7 +1156,16 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 					//	itemPojoToUpdate.status = inRequestProcesserPojo.newERLPojo.erlStatus;
 					//}
 					
-					documentToUpdate.absorbIncomingItemPojo(itemPojoToUpdate);
+					if (inRequestProcesserPojo.contentHandlerSpecs.rollupType
+						&& itemPojoToUpdate.status!= null 
+						&& itemPojoToUpdate.status.equalsIgnoreCase(
+									ArtifactPojo.ERLSTAT_DELETE_ROLLUPITEM)) {
+					// Providing a clean up process for rollup artifacts that may clutter in a long period.
+					// The autoarchival process only look at Artifact level status for archiving
+						documentToUpdate.removeItemByItemNumber(itemPojoToUpdate.itemNumber);
+					} else {
+						documentToUpdate.absorbIncomingItemPojo(itemPojoToUpdate);						
+					}
 				}
 			} else {
 				System.out.println("At processContentAtWeb not a ContentHandlerSpecs.ROLLUP_ADDUP_TYPE_ROLLUP or addup" );

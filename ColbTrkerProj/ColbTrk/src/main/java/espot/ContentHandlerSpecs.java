@@ -33,9 +33,11 @@ public class ContentHandlerSpecs {
 	public CntProcInstrucDoc cntProcInstrucDoc = null;
 
 	public boolean rollupAddupType = false;
+	public boolean rollupType = false;
 	
 	public ContentHandlerSpecs(Commons inCommons){
 		rollupAddupType = false;
+		rollupType = false;
 		commons = inCommons;
 	}
 
@@ -56,7 +58,7 @@ public class ContentHandlerSpecs {
 		personified = (inPersonified != null) ? inPersonified: false;
 		handlerClass = (inHandlerClass != null) ? inHandlerClass : "";
 		extdHandlerCls = (inExtdHandlerCls != null) ? inExtdHandlerCls : "";
-		rollupOrAddup = inRollupOrAddup;
+		rollupOrAddup = (inRollupOrAddup != null) ? inRollupOrAddup : "";
 		rollAddSeparator = (inRollAddSeparator != null) ? inRollAddSeparator : "";
 		replOptRelevance = (inReplOptRelevance != null) ? inReplOptRelevance : "";
 		replOptArtifact = (inReplOptArtifact != null) ? inReplOptArtifact : "";
@@ -81,15 +83,16 @@ public class ContentHandlerSpecs {
 		System.out.println("@ setContentHandlerSpecs rollupContentType : " + rollAddContentType);
 		System.out.println("@ setContentHandlerSpecs hasSpecialHandler : " + hasSpecialHandler);
 
-		//if (rollupOrAddup == null || rollupOrAddup.equalsIgnoreCase("") || rollupOrAddup.equalsIgnoreCase(ROLLUP_ADDUP_TYPE_NONE)){
-		//	rollupAddupType = true;			
-		//}		
-		
-		if (rollupOrAddup != null && !rollupOrAddup.isEmpty() && !rollupOrAddup.equalsIgnoreCase(ROLLUP_ADDUP_TYPE_NONE)){
-			rollupAddupType = true;
+		if (!rollupOrAddup.isEmpty()){
+			if (rollupOrAddup.equalsIgnoreCase(ROLLUP_ADDUP_TYPE_ROLLUP)){
+				rollupType = true;
+				rollupAddupType = true;		// rollupAddup is a superset of rollup anyway
+			} else if (rollupOrAddup.equalsIgnoreCase(ROLLUP_ADDUP_TYPE_ADDUP)){
+				rollupAddupType = true;
+			}
 		}
-
 		System.out.println("@ setContentHandlerSpecs rollupAddupType : " + rollupAddupType);
+		System.out.println("@ setContentHandlerSpecs rollupType : " + rollupType);
 	}
 	
 	public ArtifactKeyPojo getFinalArtifactKeyPojo(String inChildRootNick, String inChildRelevance, String inChildArtifactName, String inSeparator) {

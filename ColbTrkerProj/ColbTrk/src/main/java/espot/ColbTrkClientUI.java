@@ -36,11 +36,11 @@ public class ColbTrkClientUI {
 	Button btnClientOrchestrator;
 
 	Thread catalogDisplayThread;
-	Thread standaloneReaderThread;
 	Thread espotClientOrchestratorThread;
-
+	
 	ColbTrkClientOrchestrator espotClientOrchestrator;
-	StandaloneReaderUI standaloneReaderUI;
+	//StandaloneReaderUI standaloneReaderUI;
+	ArrayList<StandaloneReaderUI> standaloneRdrUIs;
 	CatalogDisplay catalogDisplay;
 	
 	Commons commons;
@@ -90,18 +90,6 @@ public class ColbTrkClientUI {
 		btnCatalogUI.setToolTipText("Bring Up Catalog UI");
 		btnCatalogUI.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 
-		btnStandaloneReaderUI = new Button(mainShell, SWT.NONE);
-		btnStandaloneReaderUI.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				System.out.println("Standalone Reader UI selected");
-				btnStandaloneReaderUI();
-			}
-		});
-		btnStandaloneReaderUI.setText("Standalone Reader UI");
-		btnStandaloneReaderUI.setToolTipText("Bring Up Standalone Reader UI");
-		btnStandaloneReaderUI.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-
 		btnClientOrchestrator = new Button(mainShell, SWT.NONE);
 		btnClientOrchestrator.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -114,6 +102,18 @@ public class ColbTrkClientUI {
 		btnClientOrchestrator.setToolTipText("Start Client Orchestrator");
 		btnClientOrchestrator.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 		
+		btnStandaloneReaderUI = new Button(mainShell, SWT.NONE);
+		btnStandaloneReaderUI.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				System.out.println("Standalone Reader UI selected");
+				btnStandaloneReaderUI();
+			}
+		});
+		btnStandaloneReaderUI.setText("Standalone Reader UI");
+		btnStandaloneReaderUI.setToolTipText("Bring Up Standalone Reader UI");
+		btnStandaloneReaderUI.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+
 		mainShell.pack();
 		mainShell.open();
 
@@ -145,8 +145,10 @@ public class ColbTrkClientUI {
 		}
 		System.out.println("here disposing....");
 
-		if (standaloneReaderUI != null) {
-			standaloneReaderUI.commonUIData.setArtifactDisplayOkayToContinue(false);
+		if (standaloneRdrUIs != null) {
+			for (StandaloneReaderUI standaloneReaderUI : standaloneRdrUIs) {
+				standaloneReaderUI.commonUIData.setArtifactDisplayOkayToContinue(false);
+			}
 		}
 		if (catalogDisplay != null) {
 			catalogDisplay.commonUIData.setArtifactDisplayOkayToContinue(false);
@@ -188,19 +190,25 @@ public class ColbTrkClientUI {
 	}
 
 	public void btnStandaloneReaderUI(){
-		if (standaloneReaderThread != null && standaloneReaderThread.isAlive()){
-			MessageBox messageBox1 = new MessageBox(mainShell, SWT.ICON_WARNING | SWT.OK);
-			messageBox1.setMessage("StandaloneReader already open");
-			messageBox1.open();
-			return;
-		}
+		//if (standaloneReaderThread != null && standaloneReaderThread.isAlive()){
+		//	MessageBox messageBox1 = new MessageBox(mainShell, SWT.ICON_WARNING | SWT.OK);
+		//	messageBox1.setMessage("StandaloneReader already open");
+		//	messageBox1.open();
+		//	return;
+		//}
 
 		commons.logger.info("Catalog Display Started at " + commons.getCurrentTimeStamp());
 
 		CommonUIData commonUIData = (CommonUIData) CommonUIData.getUIInstance(commons);
-		standaloneReaderUI = new StandaloneReaderUI(commonUIData);
-		standaloneReaderThread = new Thread(standaloneReaderUI);
+
+		StandaloneReaderUI standaloneReaderUI = new StandaloneReaderUI(commonUIData);
+		Thread standaloneReaderThread = new Thread(standaloneReaderUI);
 		standaloneReaderThread.start();
+
+		if (standaloneRdrUIs == null) {
+			standaloneRdrUIs = new ArrayList<StandaloneReaderUI>();
+		}
+		standaloneRdrUIs.add(standaloneReaderUI);
 	}
 	
 	public void btnClientOrchestratorProcess() {

@@ -111,7 +111,7 @@ public class Uploader {
 				selfAuthoredArtifactpojo.artifactKeyPojo.relevance,
 				selfAuthoredArtifactpojo.artifactKeyPojo.artifactName,
 				"",	// itemName
-				"",	// ERLStatus
+				//"",	// ERLStatus
 				"",	// ReviewID
 				selfAuthoredArtifactpojo.artifactKeyPojo.contentType,
 				//commons.userName,				
@@ -210,7 +210,7 @@ public class Uploader {
 					reviewPojo.artifactKeyPojo.relevance,
 					reviewPojo.artifactKeyPojo.artifactName,
 					reviewPojo.itemName,
-					"",					// ERLStatus
+					//"",					// ERLStatus
 					reviewID,
 					reviewPojo.artifactKeyPojo.contentType, 
 					commons.userName, 	// Requester of this request

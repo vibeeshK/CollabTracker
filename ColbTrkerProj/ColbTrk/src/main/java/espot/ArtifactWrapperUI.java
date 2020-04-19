@@ -213,7 +213,7 @@ public class ArtifactWrapperUI {
 			//if (!commonUIData.getCommons().userName.equalsIgnoreCase(erlDownload.author)) {
 			if (commonUIData.getCurrentUserPojo().hasAdminPrivilege() 
 				|| commonUIData.getCurrentUserPojo().hasTeamLeaderPrivilege() 
-				|| commonUIData.getUsersHandler().doesUserHaveRightsOverMember(
+				|| commonUIData.getUsersHandler().doesUserHaveUpdateRightsOverMember(
 						commonUIData.getCommons().userName, erlDownload.author)) {
 				authorCanEdit = true;
 			} else {
@@ -242,7 +242,7 @@ public class ArtifactWrapperUI {
 			if (inProgressSelfAuthoredArtifactpojo != null 
 				&& (commonUIData.getCurrentUserPojo().hasAdminPrivilege() 
 					|| commonUIData.getCurrentUserPojo().hasTeamLeaderPrivilege() 
-					|| commonUIData.getUsersHandler().doesUserHaveRightsOverMember(
+					|| commonUIData.getUsersHandler().doesUserHaveUpdateRightsOverMember(
 						commonUIData.getCommons().userName, newestDBSelfAuthoredArtifactspojo.author))) {
 				authorCanEdit = true;
 			} else {

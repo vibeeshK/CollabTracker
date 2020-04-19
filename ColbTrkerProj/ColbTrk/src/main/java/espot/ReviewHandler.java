@@ -53,7 +53,7 @@ public class ReviewHandler {
 	private boolean reviewVisible = true;
 	private Group hideReviewGrp = null;	
 	private Text newCommentText = null;
-	//private ContentHandlerSpecs contentHandlerSpecs = null;
+	private ContentHandlerSpecs reviewERLContentHandlerSpecs = null;
 
 	//private ArtifactPojo reviewArtifactPojo = null;
 	private ArtifactKeyPojo reviewArtifactKeyPojo = null;
@@ -66,7 +66,7 @@ public class ReviewHandler {
 	private String reviewERLStatus = "";
 	private String reviewERLRequestor = "";
 	private String reviewERLAuthor = "";
-	private boolean doesUserHaveUpdateRights = false;
+	//private boolean doesUserHaveUpdateRights = false;
 
 	public ReviewHandler(CommonUIData inCommonUIData,
 			Composite inWrappingComposite,
@@ -147,19 +147,24 @@ public class ReviewHandler {
 		}
 		
 		downloadedReviewsHandler = new DownloadedReviewsHandler(inCommonUIData, reviewArtifactKeyPojo);
+		reviewERLContentHandlerSpecs = commonUIData.getContentHandlerSpecs(reviewERLContentType);
 
-		//contentHandlerSpecs = commonUIData.getContentHandlerSpecs(artifactPojo.artifactKeyPojo.contentType);
-
-		UserPojo deskUserDetail = commonUIData.getUsersHandler().getUserDetailsFromRootSysLoginID(commonUIData.getCommons().userName);
-		
-		if (deskUserDetail.hasAdminPrivilege() 
-			|| deskUserDetail.hasTeamLeaderPrivilege()
-			|| commonUIData.getUsersHandler().doesUserHaveRightsOverMember(
-					commonUIData.getCommons().userName, reviewERLAuthor)) {
-			doesUserHaveUpdateRights = true;
-		} else {
-			doesUserHaveUpdateRights = false;
-		}
+		//UserPojo deskUserDetail = commonUIData.getUsersHandler().getUserDetailsFromRootSysLoginID(commonUIData.getCommons().userName);		
+		//if (deskUserDetail.hasAdminPrivilege() 
+		//	|| deskUserDetail.hasTeamLeaderPrivilege()
+		//	|| commonUIData.getUsersHandler().doesUserHaveRightsOverMember(
+		//			commonUIData.getCommons().userName, reviewERLAuthor)) {
+		//	doesUserHaveUpdateRights = true;
+		//} else {
+		//	doesUserHaveUpdateRights = false;
+		//}
+		//if (commonUIData.getUsersHandler().doesUserHaveUpdateRightsOverMember(
+		//												commonUIData.getCommons().userName,
+		//												reviewERLAuthor)) {
+		//		doesUserHaveUpdateRights = true;
+		//	} else {
+		//		doesUserHaveUpdateRights = false;
+		//}
 
 		outerMainShell = inMainShell;
 		System.out.println("@ReviewHandler reviewArtifactKeyPojo = " + reviewArtifactKeyPojo);
@@ -397,8 +402,10 @@ public class ReviewHandler {
 		//			commonUIData.getCommons().userName, artifactPojo.requestor))) {
 		//		//commonUIData.getCommons().userName.equalsIgnoreCase(artifactPojo.requestor) || deskUserDetail.hasAdminPrivilege() || deskUserDetail.hasTeamLeaderPrivilege())) { 
 		////Only requestor can reassign. Later enhance to allow admins to change as well
-		if (doesUserHaveUpdateRights) {
-			
+		//if (doesUserHaveUpdateRights) {
+		if (commonUIData.getUsersHandler().doesUserHaveUpdateRightsOverMember(
+												commonUIData.getCommons().userName,
+												reviewERLAuthor)) {			
 			if (newReviewPojo != null) {
 				if (newReviewPojo.reassignedAuthor != null) {
 					System.out.println("before reassign display2: reviewPojo.reassignedAuthor is " + newReviewPojo.reassignedAuthor);
@@ -434,15 +441,58 @@ public class ReviewHandler {
 		ERLStatusDisplay currentERLStatusDisplay = new ERLStatusDisplay(null, erlStatusGroup, reviewERLStatus, false, ERLStatusDisplay.CURR_STATUS_TEXT);
 		
 		String[] validActions = null;
-		if (doesUserHaveUpdateRights) {
-			validActions = ArtifactPojo.ADMIN_VALID_ACTIONS;
-		} else if (commonUIData.getCommons().userName.equalsIgnoreCase(reviewERLRequestor)){
-			validActions = ArtifactPojo.REQUESTOR_VALID_ACTIONS;
-		} else if (commonUIData.getCommons().userName.equalsIgnoreCase(reviewERLAuthor)){
-			validActions = ArtifactPojo.AUTHOR_VALID_ACTIONS;
+		
+		boolean rollupItemInDeleteAllowedState = false;
+		
+		System.out.println("About to check the delete allowed status for rollup child. Curr state " + reviewERLStatus);
+
+		
+		if (reviewERLStatus!= null && reviewERLStatus.equalsIgnoreCase(ArtifactPojo.ERLSTAT_INACTIVE)) {
+		// Providing a clean up process for rollup artifacts that may clutter in a long period.
+		// The autoarchival process only look at Artifact level status for archiving
+			rollupItemInDeleteAllowedState = true;
 		}
 
-		if (doesUserHaveUpdateRights) {
+		System.out.println("After check of delete allowed status for rollup child. rollupItemInDeleteAllowedState " + rollupItemInDeleteAllowedState);
+		System.out.println("Requestor check true for user " + commonUIData.getCommons().userName);
+		System.out.println("Requestor check true for requestor " + reviewERLRequestor);
+		
+		if (commonUIData.getUsersHandler().doesUserHaveSuperuserRightsOverMember(
+													commonUIData.getCommons().userName,
+													reviewERLAuthor)) {
+			System.out.println("taking path 1 ");
+			if (reviewERLContentHandlerSpecs.rollupType && rollupItemInDeleteAllowedState) {
+				System.out.println("taking path 2 ");
+				validActions = ArtifactPojo.ADMIN_VALID_ROLLUPITEM_ACTIONS;
+			} else {				
+				System.out.println("taking path 3 ");
+				validActions = ArtifactPojo.ADMIN_VALID_ACTIONS;				
+			}
+		} else if (commonUIData.getCommons().userName.equalsIgnoreCase(reviewERLRequestor)){
+			System.out.println("taking path 4 ");
+			if (reviewERLContentHandlerSpecs.rollupType && rollupItemInDeleteAllowedState) {
+				System.out.println("taking path 5 ");
+				validActions = ArtifactPojo.REQUESTOR_VALID_ROLLUPITEM_ACTIONS;
+			} else {				
+				System.out.println("taking path 6 ");
+				validActions = ArtifactPojo.REQUESTOR_VALID_ACTIONS;
+			}
+		} else if (commonUIData.getCommons().userName.equalsIgnoreCase(reviewERLAuthor)){
+			System.out.println("taking path 7 ");
+			if (reviewERLContentHandlerSpecs.rollupType && rollupItemInDeleteAllowedState) {
+				System.out.println("taking path 8 ");
+				validActions = ArtifactPojo.AUTHOR_VALID_ROLLUPITEM_ACTIONS;
+			} else {
+				System.out.println("taking path 9 ");
+				validActions = ArtifactPojo.AUTHOR_VALID_ACTIONS;				
+			}				
+		}
+		System.out.println("taking path 10 validActions " + validActions);
+
+		//if (doesUserHaveUpdateRights) {
+		if (commonUIData.getUsersHandler().doesUserHaveUpdateRightsOverMember(
+													commonUIData.getCommons().userName,
+													reviewERLAuthor)) {			
 			if (newReviewPojo !=null) {
 				if (newReviewPojo.newERLStatus != null) {
 					erlStatusDisplay = new ERLStatusDisplay(validActions, erlStatusGroup, newReviewPojo.newERLStatus, false, ERLStatusDisplay.STATUS_ASSIGN_TEXT);
