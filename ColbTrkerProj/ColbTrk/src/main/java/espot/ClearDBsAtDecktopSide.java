@@ -3,13 +3,16 @@ package espot;
 import java.io.IOException;
 import java.text.ParseException;
 
+/**
+ * Deletes all records for a fresh start
+ * CAUTION: YOU WILL LOOSE ALL DATA IF YOU INVOKE THIS CLASS.
+ * 			DONT INVOKE BEFORE BACKING UP CURRENT DATA
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ClearDBsAtDecktopSide {
-	/*
-	 * Deletes all records for a fresh start
-	 * CAUTION: YOU WILL LOOSE ALL DATA IF YOU INVOKE THIS CLASS.
-	 * 			DONT INVOKE BEFORE BACKING UP CURRENT DATA
-	 */
-	
+
 	CommonUIData commonUIData;
 	CatelogPersistenceManager catelogPersistenceManager;
 
@@ -18,6 +21,7 @@ public class ClearDBsAtDecktopSide {
 	public void clearClientDBs() throws IOException, ParseException{
 		Commons commons = Commons.getInstance(Commons.CLIENT_MACHINE);
 		CommonUIData commonUIData = CommonUIData.getUIInstance(commons);
+		Commons.logger.info("ClearDBsAtDecktopSide clearClientDBs start " + commons.getCurrentTimeStamp());
 		
 		catelogPersistenceManager = commonUIData.getCatelogPersistenceManager();
 		
@@ -32,6 +36,9 @@ public class ClearDBsAtDecktopSide {
 	public void clearServerDBs() throws IOException, ParseException{
 		Commons commons = Commons.getInstance(Commons.BASE_CATALOG_SERVER);
 		CommonUIData commonUIData = CommonUIData.getUIInstance(commons);
+
+		Commons.logger.info("ClearDBsAtDecktopSide clearServerDBs start " + commons.getCurrentTimeStamp());
+
 		catelogPersistenceManager = commonUIData.getCatelogPersistenceManager();
 		catelogPersistenceManager.neverCallMe_DeleteERLs();		
 		RootPojo rootPojo = commonUIData.getCurrentRootPojo();

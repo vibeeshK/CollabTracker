@@ -29,11 +29,14 @@ import org.eclipse.swt.widgets.Text;
 
 import com.google.gson.Gson;
 
+/**
+ * Content handler abstraction for non-grouping types
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public abstract class GenericItemHandler extends SelectionAdapter implements
 		ContentHandlerInterface {
-	/*
-	 * Content handler abstraction for non-grouping types
-	 */
 
 	public static final int PREFERED_ITEM_PANEL_WIDTH = 600;
 	public ArtifactPojo invokedArtifactPojo = null;

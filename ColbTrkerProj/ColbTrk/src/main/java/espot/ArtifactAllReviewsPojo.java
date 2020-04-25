@@ -11,10 +11,14 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+/**
+ * Provides an object view of the reviews of an artifact's items
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ArtifactAllReviewsPojo {
-	/*
-	 * Provides an object view of the reviews of an artifact's items
-	 */
+
 	final static String ItemRejected = "Rejected";
 	final static String ItemApproved = "Approved";
 	final static String ItemToBeAmended = "ToBeAmended";
@@ -43,7 +47,7 @@ public class ArtifactAllReviewsPojo {
 		itemsReviews = new HashMap<String,String>();
 		artifactAllReviewsDocumentBuilt = true;
 		
-		System.out.println("@1 artifactAllReviewsDocument=" + artifactAllReviewsDocument);
+		Commons.logger.info("At buildArtifactAllReviewsPojoFromFromDoc start " + artifactAllReviewsDocument);	
 
 		if (artifactAllReviewsDocument == null) {
 			numberOfItems = 0;
@@ -51,14 +55,9 @@ public class ArtifactAllReviewsPojo {
 		}
 
 		artifactItemReviewsElement = artifactAllReviewsDocument.getDocumentElement();
-		System.out.println("@2");
-		
-		System.out.println("???artifactItemReviewsElement = " + artifactItemReviewsElement.getNodeName());
-		System.out.println("@3");
-		
+
 		NodeList itemNodesList = artifactItemReviewsElement.getChildNodes();
-		System.out.println("@4");
-		
+
 		numberOfItems = itemNodesList.getLength();
 		for (int itemCount = 0; itemCount<numberOfItems;itemCount++) {
 			String itemID = itemNodesList.item(itemCount).getNodeName();
@@ -68,6 +67,7 @@ public class ArtifactAllReviewsPojo {
 	}
 
 	public void initiateArtifactReviewsDoc() throws ParserConfigurationException {
+		Commons.logger.info("At initiateArtifactReviewsDoc start ");	
 		
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = null;
@@ -90,6 +90,8 @@ public class ArtifactAllReviewsPojo {
 
 	public void appendItemReviewsDoc(String inItemID, String inCondensedNewItemReview){
 		System.out.println("Appending:::: " + inItemID + " new review:::: " + inCondensedNewItemReview);
+		Commons.logger.info("At appendItemReviewsDoc start " + "Appending:::: " 
+								+ inItemID + " new review:::: " + inCondensedNewItemReview);	
 		
 		Node currentItemReviewsNode = null;
 		if (itemsReviews == null || !itemsReviews.containsKey(inItemID)) {
@@ -117,6 +119,7 @@ public class ArtifactAllReviewsPojo {
 	}
 	
 	public void appendItemReviewsPojo(String inItemID, String inCondensedNewItemReview){
+		Commons.logger.info("At appendItemReviewsPojo start for inItemID: " + inItemID + " inCondensedNewItemReview: " + inCondensedNewItemReview);	
 		String itemAllReviews = "";
 		if (itemsReviews == null) { 
 			itemsReviews = new HashMap<String,String>();
@@ -130,7 +133,6 @@ public class ArtifactAllReviewsPojo {
 			itemAllReviews = inCondensedNewItemReview;
 		} else {
 			// reviews are more readable if recent on top
-			//itemAllReviews = itemAllReviews + "\n" + inCondensedNewItemReview;			
 			itemAllReviews = inCondensedNewItemReview + "\n" + itemAllReviews;
 			
 		}
@@ -140,6 +142,7 @@ public class ArtifactAllReviewsPojo {
 	}
 	
 	public String getItemAllReviews(String inItemID){
+		Commons.logger.info("At getItemAllReviews start for inItemID: " + inItemID);	
 		String itemAllReviews = "";
 		if (itemsReviews != null && itemsReviews.containsKey(inItemID)) {
 			itemAllReviews = itemsReviews.get(inItemID);

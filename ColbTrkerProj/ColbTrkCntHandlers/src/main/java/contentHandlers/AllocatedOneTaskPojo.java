@@ -2,12 +2,15 @@ package contentHandlers;
 
 import java.util.Date;
 
+/**
+ * Convenience class for holding each allocated task
+ * Note: this data resides within an allocated task item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class AllocatedOneTaskPojo{
-	/*
-	 * Convenience class for holding each allocated task
-	 * Note: this data resides within an allocated task item
-	 */
-	
+
 	public String taskID = "";
 	public String team = "";
 	public String teamRelevance = "";

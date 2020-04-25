@@ -8,10 +8,13 @@ import org.eclipse.swt.widgets.Shell;
 
 import commonTechs.DisplayKeeper;
 
+/**
+ * Handles error situation - displays message box / quits as asked
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ErrorHandler {
-	/*
-	 * Handles error situation - displays message box / quits as asked
-	 */			
 
 	public static synchronized void displayError(Commons inCommons, String inMsg, Exception inException) {
 		System.out.println("at displayError start aa");
@@ -48,12 +51,12 @@ public class ErrorHandler {
 		System.out.println("Error Handler displayError");
 		try {
 			if (inException == null) {
-				inCommons.logger.error(inMsg);
+				Commons.logger.error(inMsg + " at "+ inCommons.getCurrentTimeStamp());
 				System.out.println("throwing exception at 1");
 				throw new Exception(inMsg);
 			} else {
-				inCommons.logger.error(inMsg);
-				inCommons.logger.error(inException);
+				Commons.logger.error(inMsg + " at "+ inCommons.getCurrentTimeStamp());
+				Commons.logger.error(inException);
 				System.out.println("throwing exception at 2");
 				throw new Exception(inException);
 			}
@@ -61,7 +64,7 @@ public class ErrorHandler {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.out.println("caught error at 3");
-			inCommons.logger.error(e);
+			Commons.logger.error(e  + " at "+ inCommons.getCurrentTimeStamp());
 		}
 		
 		int rc1 = messageBox1.open();

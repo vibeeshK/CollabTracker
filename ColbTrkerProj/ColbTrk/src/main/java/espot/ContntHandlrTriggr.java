@@ -9,11 +9,14 @@ import javax.xml.transform.TransformerException;
 
 import org.xml.sax.SAXException;
 
+/**
+ * This class processes the auto triggered contents related to the users such as timesheet capture
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ContntHandlrTriggr implements Runnable {
-	/* 
-	 * This class processes the auto triggered contents related to the users such as timesheet capture
-	 */
-	
+
 	private CommonData commonData;
 	private CatelogPersistenceManager catelogPersistenceManager;
 	private Commons commons;
@@ -38,6 +41,7 @@ public class ContntHandlrTriggr implements Runnable {
 		rootSysLoginID = inRootSysLoginID;			
 
 		commons = Commons.getInstance(inCommonData.getCommons().processMode,rootPojo.rootNick);
+		Commons.logger.info("ContntHandlrTriggr constructed at " + commons.getCurrentTimeStamp());
 		
 		System.out.println("in ContntHandlrTriggr rootNick " +  rootPojo.rootNick);
 		System.out.println("in ContntHandlrTriggr rootSysLoginID " +  rootSysLoginID);

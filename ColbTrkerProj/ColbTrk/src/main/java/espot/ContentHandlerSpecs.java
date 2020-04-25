@@ -2,10 +2,13 @@ package espot;
 
 import org.apache.commons.lang.StringUtils;
 
+/**
+ * Provides the object view of a content type's specifications 
+ *  
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ContentHandlerSpecs {
-	/*
-	 * Provides the object view of a content type's specifications 
-	 */
 	final static String ROLLUP_ADDUP_TYPE_NONE = "NONE";
 	final static String ROLLUP_ADDUP_TYPE_ROLLUP = "ROLLUP";
 	final static String ROLLUP_ADDUP_TYPE_ADDUP = "ADDUP";

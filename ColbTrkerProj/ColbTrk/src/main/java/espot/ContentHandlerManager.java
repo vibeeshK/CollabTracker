@@ -5,10 +5,14 @@ import java.util.HashMap;
 
 import commonTechs.CustomClassLoader;
 
+/**
+ * This is a singleton class that dynamically loads content handler classes and provides mapping
+ *  
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ContentHandlerManager {
-	/*
-	 * This is a singleton class that dynamically loads content handler classes and provides mapping
-	 */
+
 	private static ContentHandlerManager contentHanlderMgr = null;
 	private Commons commons = null;
 	private HashMap<String,ContentHandlerInterface> contentHandlerInterfaceMap = null;
@@ -18,6 +22,8 @@ public class ContentHandlerManager {
 		contentHandlerInterfaceMap = new HashMap<String,ContentHandlerInterface>();
 		commons = inCommons;
 		contentHandlerSpecsMap = inCatelogPersistenceManager.getContentHandlerSpecsMap();
+
+		Commons.logger.info("ContentHandlerManager singleton class built at " + commons.getCurrentTimeStamp());
 	}
 	
 	public static synchronized ContentHandlerInterface getInstance(Commons inCommons, CatelogPersistenceManager inCatelogPersistenceManager, String inContentType){

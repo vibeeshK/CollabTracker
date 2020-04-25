@@ -10,10 +10,14 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeItem;
 
+/**
+ * UI that lets the user to choose the relevance of interest for catalog display
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class RelevancePickUI {
-	/*
-	 * UI that lets the user to choose the relevance of interest for catalog display
-	 */	
+
 	private Shell mainShell = null;
 	ArrayList<RelevancePojo> relevancePojoList = null;
 	CommonUIData commonUIData = null;
@@ -166,17 +170,30 @@ public class RelevancePickUI {
 			public void handleEvent(Event event) {
 				if (event.detail == SWT.CHECK) {
 					TreeItem item = (TreeItem) event.item;
-					boolean checked = item.getChecked();
+					//boolean checked = item.getChecked();
+					//if (item.getData("RelevancePojo") != null) {
+					//	if (checked) {
+					//		commonUIData.getCatelogPersistenceManager()
+					//				.pickRelevance((RelevancePojo) item
+					//						.getData("RelevancePojo"));
+					//	} else {
+					//		commonUIData.getCatelogPersistenceManager()
+					//				.unPickRelevance((RelevancePojo) item
+					//						.getData("RelevancePojo"));
+					//	}
+					//	Commons.logger.info("RelevancePickUI checked " + checked);						
+					//}
 					if (item.getData("RelevancePojo") != null) {
+						RelevancePojo relevancePojo = (RelevancePojo) item.getData("RelevancePojo");
+						boolean checked = item.getChecked();
 						if (checked) {
 							commonUIData.getCatelogPersistenceManager()
-									.pickRelevance((RelevancePojo) item
-											.getData("RelevancePojo"));
+									.pickRelevance(relevancePojo);
 						} else {
 							commonUIData.getCatelogPersistenceManager()
-									.unPickRelevance((RelevancePojo) item
-											.getData("RelevancePojo"));
+									.unPickRelevance(relevancePojo);
 						}
+						Commons.logger.info("RelevancePickUI Relevance selection set as " + checked + " for " + relevancePojo.relevance);
 					}
 				}
 			}

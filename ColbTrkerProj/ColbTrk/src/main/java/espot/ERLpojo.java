@@ -2,10 +2,14 @@ package espot;
 
 import org.w3c.dom.Element;
 
+/**
+ * Convenience class for holding the parameters of a specific ERL viewed at Server side
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ERLpojo extends ArtifactPojo{
-	/*
-	 * Convenience class for holding the parameters of a specific ERL viewed at Server side
-	 */	
+
 	public String contentFileName;
 	public String uploadedTimeStamp;
 	public String reviewTimeStamp;

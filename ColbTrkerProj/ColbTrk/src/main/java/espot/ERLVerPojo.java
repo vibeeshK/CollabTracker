@@ -1,9 +1,13 @@
 package espot;
 
+/**
+ * Convenience class for reflecting the version details of ERL
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ERLVerPojo {
-	/*
-	 * Convenience class for reflecting the version details of ERL
-	 */
+
 	public String relevance;
 	public String artifactName;
 	public String versionedFileName;

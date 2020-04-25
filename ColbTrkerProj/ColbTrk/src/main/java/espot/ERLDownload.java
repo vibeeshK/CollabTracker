@@ -4,10 +4,13 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 
+/**
+ * Convenience class for holding the parameters of a specific ERL viewed at Desktop side
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ERLDownload extends ERLpojo{
-	/*
-	 * Convenience class for holding the parameters of a specific ERL viewed at Desktop side
-	 */
 
 	public String subscriptionStatus = "";
 

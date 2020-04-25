@@ -8,10 +8,13 @@ import java.util.HashMap;
 import commonTechs.OrchestrationData;
 import commonTechs.OrchestrationUI;
 
+/**
+ * Client side Orchestrator that syncs up catalogs and contents between desktop and server
+ *  
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ColbTrkClientOrchestrator implements Runnable {
-	/*
-	 * Client side Orchestrator that syncs up catalogs and contents between desktop and server
-	 */			
 
 	public OrchestrationData orchestrationData; 
 	OrchestrationUI orchestrationUI;
@@ -28,8 +31,8 @@ public class ColbTrkClientOrchestrator implements Runnable {
 		
 		SysCompRefresh.compRefresh(commons);
 
-		Commons.logger.info("ColbTrkClientOrchestrator starting up - logging set to info");
-		System.out.println("ColbTrkClientOrchestrator starting up; printing directly via sysout");
+		Commons.logger.info("ColbTrkClientOrchestrator being set up - logging set to info at " + commons.getCurrentTimeStamp());
+		System.out.println("ColbTrkClientOrchestrator being set up ; printing directly via sysout");
 
 		//System.out.println("Display value in client orchestrator constructor is " + commonUIData.getESPoTDisplay());
 
@@ -45,7 +48,8 @@ public class ColbTrkClientOrchestrator implements Runnable {
 
 		orchestrationUIThread.start();
 		
-		Commons.logger.info("ColbTrkClientOrchestrator started2 - logging set to info");
+		Commons.logger.info("ColbTrkClientOrchestrator started2 - logging set to info at " + commons.getCurrentTimeStamp());
+		
 		System.out.println("ColbTrkClientOrchestrator started2 printing directly via sysout");
 
 		try {

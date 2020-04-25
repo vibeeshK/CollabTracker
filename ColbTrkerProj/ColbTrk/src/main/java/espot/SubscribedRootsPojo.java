@@ -12,10 +12,13 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
+/**
+ * This class holds details of the subscribed roots and lets user to update subscriptions
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class SubscribedRootsPojo {
-	/*
-	 * This class holds details of the subscribed roots and lets to update subscriptions
-	 */
 
 	private CatelogPersistenceManager catelogPersistenceManager; // referred only during add/remove of subcriptions
 	private Commons commons;

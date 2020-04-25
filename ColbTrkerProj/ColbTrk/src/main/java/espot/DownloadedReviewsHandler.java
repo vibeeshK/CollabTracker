@@ -7,6 +7,12 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
+/**
+ * Simplifier for pastreviews handling
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class DownloadedReviewsHandler {
 
 	CommonUIData commonUIData = null;

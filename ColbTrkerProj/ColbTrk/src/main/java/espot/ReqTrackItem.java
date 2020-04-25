@@ -1,9 +1,13 @@
 package espot;
 
+/**
+ * Holder of request status data within the request process doc
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ReqTrackItem {
-	/*
-	 * Holder of request status data within the request process doc
-	 */
+
 	//reqFileName would be the key for this object maintained outside
 	public RequestProcesserPojo requestProcesserPojo;
 	public boolean artifactMoveComplete;

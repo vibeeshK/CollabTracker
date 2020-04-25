@@ -2,10 +2,14 @@ package espot;
 
 import java.util.HashMap;
 
+/**
+ * This class holds key data required by all process
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class CommonData {
-	/*
-	 * This class holds key data required by all process
-	 */
+
 	public static int PROC_STAT_OK = 0;
 	public static int PROC_STAT_ERROR = 8;
 	public static int PROC_STAT_WARN = 4;

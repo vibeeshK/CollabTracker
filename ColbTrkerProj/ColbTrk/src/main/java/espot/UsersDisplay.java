@@ -1,7 +1,5 @@
 package espot;
 
-import java.util.ArrayList;
-
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.CCombo;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -10,6 +8,12 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Text;
 
+/**
+ * Simplifier class for UsersDisplay with short name and full name listing with option for update
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class UsersDisplay {
 
 	public final static String AUTHOR_LIT = "Author";

@@ -1,9 +1,13 @@
 package espot;
 
+/**
+ * Decodes the given instruction
+ *  
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ContentInstrDecoder {
-	/*
-	 * Decodes the given instruction
-	 */
+
 	private final static String Recurence_ForEachUser = "ForEachUser";
 	private final static String Recurence_None = "None";
 	private CommonData commonData = null;

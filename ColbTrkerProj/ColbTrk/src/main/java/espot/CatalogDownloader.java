@@ -6,6 +6,12 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * This class downloads the catalog of the specified root
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class CatalogDownloader {
 	/*
 	 * This class downloads the catalog of the specified root
@@ -24,6 +30,7 @@ public class CatalogDownloader {
 
 	public synchronized void downloadCatalog() throws IOException {
 		System.out.println("At start of downloadCatalog");
+		Commons.logger.info("CatalogDownloader start of downloadCatalog root :" + rootPojo.rootNick + " at " + commons.getCurrentTimeStamp());
 		
 		if (!CatalogDownloadDtlsHandler.getInstance(commons).isFreshDownLoadAllowed(rootPojo.rootNick)) {
 			System.out.println("Fresh Download not allowed");
@@ -125,7 +132,7 @@ public class CatalogDownloader {
 
 	public String OLDdownCatalogToTempFolderIfNew(String inFileName) throws 
 			IOException {
-		// This method is not used. It was initially used to get latest catalog
+		// This method is NOT USED. It was initially used to get latest catalog
 		// by sorting the downloaded file names directly each time.
 		String downloadedTempDbPathFile = "";
 		System.out.println("at downloadCat1111");

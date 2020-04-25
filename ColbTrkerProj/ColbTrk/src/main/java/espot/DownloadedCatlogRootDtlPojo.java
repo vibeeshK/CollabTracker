@@ -1,9 +1,13 @@
 package espot;
 
+/**
+ * Convenience object to hold root details in the catalogDownloadDetail file
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class DownloadedCatlogRootDtlPojo {
-	/*
-	 * Convenience object to hold root details in the catalogDownloadDetail file
-	 */
+
 	public String downloadedFileName;
 	public String downloadedTime;
 	DownloadedCatlogRootDtlPojo(){

@@ -8,16 +8,20 @@ import java.util.HashMap;
 import commonTechs.OrchestrationData;
 import commonTechs.OrchestrationUI;
 
+/**
+ * Server side Orchestrator that processes the incoming requests for content updates and publishes new catalog
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ColbTrkServerOrchestrator {
-	/*
-	 * Server side Orchestrator that processes the incoming requests for content updates and publishes new catalog
-	 */			
+
 	public static void main(String[] args) throws IOException, ParseException {
 		
-		Commons.logger.info("ColbTrkServerOrchestrator starting up - logging set to info");
 		System.out.println("ColbTrkServerOrchestrator starting up; printing directly via sysout");
 		
 		Commons commons = Commons.getInstance(Commons.BASE_CATALOG_SERVER);
+		Commons.logger.info("ColbTrkServerOrchestrator starting up at " + commons.getCurrentTimeStamp());
 		
 		HashMap<String, RootPojo> publishedRootsMap = PublishedRootsHandler.getPublishedRoots(commons);
 		SysCompRefresh.compRefresh(commons);

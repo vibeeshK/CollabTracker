@@ -7,10 +7,14 @@ import org.w3c.dom.Element;
 
 import commonTechs.CommonTechs;
 
+/**
+ * Holds New Review created by the user
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class NewReviewPojo {
-	/*
-	 * Holds New Review created by the user
-	 */
+
 	final static String ItemRejected = "Rejected";
 	final static String ItemApproved = "Approved";
 	final static String ItemToBeAmended = "ToBeAmended";
@@ -127,6 +131,8 @@ public class NewReviewPojo {
 			newReviewElement.setAttribute(NEW_ERLSTATUS_TX,newERLStatus);
 		}
 		newReviewDocumentBuilt = true;
+
+		Commons.logger.info("NewReviewPojo createNewReviewDocument newReviewElement text: " + newReviewElement.getTextContent());		
 	}
 	
 	public Document getNewReviewDocument(){

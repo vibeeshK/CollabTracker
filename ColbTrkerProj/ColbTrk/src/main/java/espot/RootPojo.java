@@ -1,9 +1,13 @@
 package espot;
 
+/**
+ * Holder of root's details
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class RootPojo {
-	/*
-	 * Holder of root's details
-	 */
+
 	public static String SysRootType="System";
 	public static String RegRootType="Regular";
 

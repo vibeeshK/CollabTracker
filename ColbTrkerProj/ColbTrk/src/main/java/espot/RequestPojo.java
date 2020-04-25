@@ -1,9 +1,13 @@
 package espot;
 
+/**
+ * Holder of each request record while processing at server side
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class RequestPojo {
-	/*
-	 * Holder of each request record
-	 */
+
 	final static String ARTIFACT = "artifact";
 	final static String REVIEW = "review";
 	

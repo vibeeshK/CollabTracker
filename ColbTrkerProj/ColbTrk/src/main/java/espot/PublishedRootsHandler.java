@@ -8,10 +8,14 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
+/**
+ * Holder of content from the published roots xml
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class PublishedRootsHandler {
-	/*
-	 * Holder of content from the published roots xml
-	 */	
+
 	Commons commons = null;
 	Document pubishedRootsDoc = null;
 	HashMap<String, RootPojo> publishedRootsMap = null;
@@ -50,15 +54,27 @@ public class PublishedRootsHandler {
 			RootType="System"
 			RootString="D:\Kannan\Java\ESPoT\Controller" 
 			RemoteAccesserType="remoteAccessers.WindowsAccesser"
+			FileSeparator
+			RequiresInternet="Yes"
 			 */
 
-			rootPojo.rootNick = ((Element) pubishedRootsDoc.getElementsByTagName("Root").item(rootCount)).getAttribute("RootNick");
-			rootPojo.rootType = ((Element) pubishedRootsDoc.getElementsByTagName("Root").item(rootCount)).getAttribute("RootType");
-			rootPojo.rootString = ((Element) pubishedRootsDoc.getElementsByTagName("Root").item(rootCount)).getAttribute("RootString");
-			rootPojo.remoteAccesserType = ((Element) pubishedRootsDoc.getElementsByTagName("Root").item(rootCount)).getAttribute("RemoteAccesserType");
-			rootPojo.fileSeparator = ((Element) pubishedRootsDoc.getElementsByTagName("Root").item(rootCount)).getAttribute("FileSeparator");
+			//rootPojo.rootNick = ((Element) pubishedRootsDoc.getElementsByTagName("Root").item(rootCount)).getAttribute("RootNick");
+			//rootPojo.rootType = ((Element) pubishedRootsDoc.getElementsByTagName("Root").item(rootCount)).getAttribute("RootType");
+			//rootPojo.rootString = ((Element) pubishedRootsDoc.getElementsByTagName("Root").item(rootCount)).getAttribute("RootString");
+			//rootPojo.remoteAccesserType = ((Element) pubishedRootsDoc.getElementsByTagName("Root").item(rootCount)).getAttribute("RemoteAccesserType");
+			//rootPojo.fileSeparator = ((Element) pubishedRootsDoc.getElementsByTagName("Root").item(rootCount)).getAttribute("FileSeparator");
+			//String requiresInternetAsTx = ((Element) pubishedRootsDoc.getElementsByTagName("Root").item(rootCount)).getAttribute("RequiresInternet");
 
-			String requiresInternetAsTx = ((Element) pubishedRootsDoc.getElementsByTagName("Root").item(rootCount)).getAttribute("RequiresInternet");
+			
+			Element rootElement = ((Element) pubishedRootsDoc.getElementsByTagName("Root").item(rootCount));
+			
+			rootPojo.rootNick = rootElement.getAttribute("RootNick");
+			rootPojo.rootType = rootElement.getAttribute("RootType");
+			rootPojo.rootString = rootElement.getAttribute("RootString");
+			rootPojo.remoteAccesserType = rootElement.getAttribute("RemoteAccesserType");
+			rootPojo.fileSeparator = rootElement.getAttribute("FileSeparator");
+
+			String requiresInternetAsTx = rootElement.getAttribute("RequiresInternet");
 			if (requiresInternetAsTx.equalsIgnoreCase("Yes")) {
 				rootPojo.requiresInternet = true;
 			}
@@ -79,6 +95,8 @@ public class PublishedRootsHandler {
 			System.out.println("@ Added rootPojo.rootString = " + rootPojo.rootString);
 			System.out.println("@ Added rootPojo.fileSeparator = " + rootPojo.fileSeparator);
 			System.out.println("@ Added rootPojo.rootPrefix = " + rootPojo.rootPrefix);
+			Commons.logger.info("PublishedRootsHandler rootCount " + rootCount + "; rootPojo.rootPrefix is " + rootPojo.rootPrefix);			
+			Commons.logger.info("PublishedRootsHandler rootPojo.rootString is " + rootPojo.rootString);	
 		}
 	}
 }

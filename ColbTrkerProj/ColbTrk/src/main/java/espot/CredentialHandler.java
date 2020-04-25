@@ -12,11 +12,14 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
+/**
+ * Captures user credentials for accessing a specific root
+ * note: it doesn't persist the credentials
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class CredentialHandler {
-	/*
-	 * Captures user credentials for accessing a specific root
-	 * note: it doesn't persist the credentials
-	 */
 
 	private static HashMap<String, CredentialsPojo> credentialMap = null;
 

@@ -4,6 +4,12 @@ import java.io.*;
 import java.util.*;
 import java.util.zip.*;
 
+/**
+ * Not used
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class Zip {
    static final int BUFFER = 2048;
    public static void main (String argv[]) {

@@ -10,10 +10,15 @@ import org.xml.sax.SAXException;
 
 import commonTechs.OrchestrationData;
 
+/**
+ * This processor syncs-up subscribed contents / updated drafts
+ * between the desktop of user with doc-central
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class DesktopRootProcessor implements Runnable {
-	/*
-	 * This processor syncs-up contents between the desktop of users with doc-central
-	 */
+
 	CatelogPersistenceManager catelogPersistenceManager = null;
 	Commons commons = null;
 	CommonUIData commonUIData = null;	
@@ -35,11 +40,10 @@ public class DesktopRootProcessor implements Runnable {
 		System.out.println("initiating DesktopRootProcessor rootNick11a: " +  inRootPojo.rootNick);
 		rootPojo = inRootPojo;
 		commons = Commons.getInstance(Commons.CLIENT_MACHINE,rootPojo.rootNick);
-		System.out.println("in DesktopRootProcessor commons : " +  commons);
 
-		//commonUIData = 	CommonUIData.getUIInstance(commons);
-		//catelogPersistenceManager = commonUIData.getCatelogPersistenceManager();
-		//orchestrationData = inOrchestrationData;
+		Commons.logger.info("DesktopRootProcessor contructed at " + commons.getCurrentTimeStamp());
+
+		System.out.println("in DesktopRootProcessor commons : " +  commons);
 
 		System.out.println("initiating RootProcessor at 11x1 rootNick11a: " +  inRootPojo.rootNick);
 		System.out.println("commons 123: " +  commons);
@@ -102,7 +106,7 @@ public class DesktopRootProcessor implements Runnable {
 
 		while (orchestrationData.getOkayToContinue()) {
 			if (rootPojo.requiresInternet && !commons.isInternetAvailable()){
-				commons.logger.warn(" Internet umavailable, hence skipping DesktopRootProcess for " + rootPojo.rootNick);	
+				Commons.logger.warn(" Internet umavailable, hence skipping DesktopRootProcess for " + rootPojo.rootNick);	
 				System.out.println(" Internet umavailable, hence skipping DesktopRootProcess for " + rootPojo.rootNick);
 				break;
 			}

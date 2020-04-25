@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.apache.commons.lang.StringUtils;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.TableEditor;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -12,7 +13,6 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
@@ -20,12 +20,14 @@ import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 import org.w3c.dom.Document;
-import org.apache.commons.lang.StringUtils;
 
+/**
+ * UI for the maintenance of root subscription and default root setting
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class RootsSubsciptionsUI {
-	/*
-	 * UI for the maintenance of root subscription and default root setting
-	 */
 
 	CommonUIData commonUIData = null;
 	private Shell mainShell = null;
@@ -41,6 +43,8 @@ public class RootsSubsciptionsUI {
 	public RootsSubsciptionsUI(CommonUIData inCommonUIData) {
 		commonUIData = inCommonUIData;
 		subscribedRootsPojo = new SubscribedRootsPojo(commonUIData);
+
+		Commons.logger.info("RootsSubsciptionsUI started at " + commonUIData.getCommons().getCurrentTimeStamp());
 	}
 
 	public void refreshRootsSubsriptionsUI() {
@@ -59,7 +63,7 @@ public class RootsSubsciptionsUI {
 		mainShell.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 
 		System.out.println("RootsSubsriptionsUI.displayRootsSubsriptionsUI() bef");
-		//publishedRootsMap = PublishedRootsHandler.getPublishedRoots(commonUIData.getCommons());
+
 		publishedRootsMap = commonUIData.getRootPojoMap();
 		
 		allRootNicksList = new ArrayList<String>();
@@ -69,18 +73,14 @@ public class RootsSubsciptionsUI {
 
 		mainShell.setLayout(new GridLayout(1, false));
 
-		//final Composite composite = new Composite(mainShell, SWT.NONE);
-		//composite.setLayout(new GridLayout(1,false));
-	    //composite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-
 		Table table = new Table(mainShell, SWT.BORDER);
-		//Table table = new Table(composite, SWT.BORDER | SWT.V_SCROLL | SWT.H_SCROLL);
+
 		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 
 		table.setHeaderVisible(true);
 		table.setLinesVisible(true);
 
-		String[] columnHeaders = new String[] { "RootNick", "RootString",
+		String[] columnHeaders = new String[] {"RootNick", "RootString",
 				"RootType", "RemoteAccesserType", "FileSeparator", "SysLogin", "SaveID", 
 				"Subscriptions", "Default", "RelevancePick" };
 
@@ -139,7 +139,6 @@ public class RootsSubsciptionsUI {
 
 			editor = new TableEditor(table);
 			Text remoteAccessorTx = new Text(table, SWT.READ_ONLY);
-			//remoteAccessorTx.setText(dbRootPojo.remoteAccesserType);
 			//removing the first node in display as its same for all accessers
 			remoteAccessorTx.setText(StringUtils.split(dbRootPojo.remoteAccesserType,".")[1]);
 			editor.grabHorizontal = true;
@@ -156,7 +155,6 @@ public class RootsSubsciptionsUI {
 			if (dbRootPojo.rootType.equalsIgnoreCase(RootPojo.RegRootType)) {
 				// "SysLogin" starts
 
-				//editor = new TableEditor(table);
 				rootSysLoginIDs_TableEditors[ScreenRowNum] = new TableEditor(table);
 				Text sysLoginTx = new Text(table, SWT.NONE);
 				
@@ -164,8 +162,6 @@ public class RootsSubsciptionsUI {
 				try {
 					rootSysLoginID = commonUIData.getCommons().readRootSysLoginIDFromClienSideProperties(dbRootPojo.rootNick);
 				} catch (IOException e2) {
-					// TODO Auto-generated catch block
-					e2.printStackTrace();
 					ErrorHandler.showErrorAndQuit(commonUIData.getCommons(), "Error in RootsSubsriptionsUI displayRootsSubsriptionsUI reading rootSysLoginID of " + dbRootPojo.rootNick, e2);
 				}
 				sysLoginTx.setText(rootSysLoginID!=null?rootSysLoginID:"");
@@ -213,12 +209,10 @@ public class RootsSubsciptionsUI {
 							return;
 						}
 						
-						saveRootNickOfSelectedRow(screenRowNum);						
+						saveRootNickOfSelectedRow(screenRowNum);
 					}
 				});
-				
-				
-				
+
 				// "Save" Ends
 				
 				// Subscriptions related process starts
@@ -255,6 +249,11 @@ public class RootsSubsciptionsUI {
 									
 									subscribedRootsPojo.removeSubscription(allRootNicksList
 											.get(screenRowNum));
+									
+									Commons.logger.info("RootsSubsciptionsUI displayRootsSubsriptionsUI subscription removed for "
+											+ allRootNicksList.get(screenRowNum)
+											+ " at " + commonUIData.getCommons().getCurrentTimeStamp());
+									
 									refreshRootsSubsriptionsUI();
 								}
 							});
@@ -263,7 +262,7 @@ public class RootsSubsciptionsUI {
 					maintainRootButton.setText("Subscribe");
 					maintainRootButton
 							.addSelectionListener(new SelectionAdapter() {
-								@Override
+
 								public void widgetSelected(SelectionEvent e) {
 									Button eventButton = (Button) e.getSource();
 									System.out.println("eventButton = "
@@ -298,6 +297,9 @@ public class RootsSubsciptionsUI {
 									subscribedRootsPojo.addSubscription(allRootNicksList
 											.get(screenRowNum));
 
+									Commons.logger.info("RootsSubsciptionsUI displayRootsSubsriptionsUI subscription added for "
+											+ allRootNicksList.get(screenRowNum)
+											+ " at " + commonUIData.getCommons().getCurrentTimeStamp());
 									
 									refreshRootsSubsriptionsUI();
 								}
@@ -313,8 +315,6 @@ public class RootsSubsciptionsUI {
 				
 				// Subscriptions related process ends
 
-				
-				
 				// Default rootnick setting starts
 				if (!commonUIData.getCurrentRootNick()
 						.equalsIgnoreCase(dbRootPojo.rootNick)) {
@@ -333,7 +333,7 @@ public class RootsSubsciptionsUI {
 					defaultNickSettingButton.setText("Set as Default");
 					defaultNickSettingButton
 							.addSelectionListener(new SelectionAdapter() {
-								@Override
+
 								public void widgetSelected(SelectionEvent e) {
 									Button eventButton = (Button) e.getSource();
 									System.out.println("eventButton = "
@@ -363,7 +363,7 @@ public class RootsSubsciptionsUI {
 										e1.printStackTrace();
 										ErrorHandler.showErrorAndQuit(commonUIData.getCommons(), "Error in RootsSubsriptionsUI displayRootsSubsriptionsUI", e1);													
 									}
-									//commonUIData.initBaseData();
+
 									commonUIData.refresh();
 									refreshRootsSubsriptionsUI();
 								}
@@ -408,7 +408,7 @@ public class RootsSubsciptionsUI {
 							+ relevancebutton.getData(Commons.SCREENROWNUMLIT));
 	
 					relevancebutton.addSelectionListener(new SelectionAdapter() {
-						@Override
+
 						public void widgetSelected(SelectionEvent e) {
 							Button eventButton = (Button) e.getSource();
 
@@ -430,7 +430,6 @@ public class RootsSubsciptionsUI {
 			}
 		}
 
-		//composite.pack();
 		mainShell.pack();
 		mainShell.layout(true);
 		mainShell.open();
@@ -453,10 +452,10 @@ public class RootsSubsciptionsUI {
 		String selectedRootSysLoginID = ((Text) rootSysLoginIDs_TableEditors[inScreenRowNum].getEditor()).getText();
 		System.out
 		.println("selected SysLoginID of screenRow is "
-		+ selectedRootSysLoginID);
+					+ selectedRootSysLoginID);
 		System.out
 		.println("selected RootNick of screenRow is "
-		+ selectedRootNick);
+					+ selectedRootNick);
 
 		MessageBox messageBox4 = new MessageBox(mainShell, SWT.ICON_WARNING | SWT.OK);
 		messageBox4.setMessage("Ensure to validate your RootSysLoginID in UserListing");
@@ -467,13 +466,13 @@ public class RootsSubsciptionsUI {
 					selectedRootNick,
 					selectedRootSysLoginID);
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+
 			ErrorHandler.showErrorAndQuit(commonUIData.getCommons(), 
 					"Error in RootsSubsriptionsUI saveRootNickOfSelectedRow while saving " + selectedRootSysLoginID 
 					+ " for rootNick " + selectedRootNick, e1);
 		}
-		
-	}
-	
+		Commons.logger.info("RootsSubsciptionsUI selectedRootSysLoginID " + selectedRootSysLoginID
+								+ " set for selectedRootNick " + selectedRootNick
+								+ " at " + commonUIData.getCommons().getCurrentTimeStamp());
+	}	
 }

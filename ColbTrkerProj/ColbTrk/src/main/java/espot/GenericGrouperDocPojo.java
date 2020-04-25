@@ -2,10 +2,13 @@ package espot;
 
 import java.util.ArrayList;
 
+/**
+ * Data holder base for Grouping type content persistence
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public abstract class GenericGrouperDocPojo implements PrimerDocInterface{
-	/*
-	 * Data holder base for Grouping type content persistence
-	 */
 
 	int maxItemNumber;	// its necessary to hold an independent maxNum outside mere list size since
 						// an intermediate item can get deleted and a valid gap can be formed resulting
@@ -19,7 +22,6 @@ public abstract class GenericGrouperDocPojo implements PrimerDocInterface{
 
 		if (getItemList()==null) {
 			createItemList();
-		//maxItemNumber = -1;
 		}
 		if (getItemList().size() == 0) {
 			maxItemNumber = -1;
@@ -47,20 +49,6 @@ public abstract class GenericGrouperDocPojo implements PrimerDocInterface{
 		}		
 		return location;
 	}
-
-	//public ItemPojo getItemByChildArtifactName(String inChildRelevance, String inChildArtifactName) {
-	//	ItemPojo childItemPojo = null;
-	//	ArrayList<?> items = getItemList();
-	//	for (int itemLocation=0; itemLocation<items.size();itemLocation++) {
-	//		ItemPojo itemPojo = (ItemPojo) items.get(itemLocation);
-	//		if (itemPojo.artifactName.equals(inChildArtifactName) 
-	//				&& itemPojo.relevance.equals(inChildRelevance)) {
-	//			childItemPojo = itemPojo;
-	//			break;
-	//		}
-	//	}
-	//	return childItemPojo;
-	//}
 	
 	public ItemPojo getItemByChildArtifactName(String inChildRelevance, String inChildArtifactName, String inChildContentType) {
 		ItemPojo childItemPojo = null;

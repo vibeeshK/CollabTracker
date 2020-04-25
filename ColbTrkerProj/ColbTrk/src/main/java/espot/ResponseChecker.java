@@ -8,15 +8,19 @@ import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import org.xml.sax.SAXException;
 
+/**
+ * Checks responses from the server processor for the requests sent
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ResponseChecker {
-	/*
-	 * Checks responses from the server processor for the requests sent
-	 */
+
 	private CommonData commonData;
 	private CatelogPersistenceManager catelogPersistenceManager;
 	private Commons commons;
 	private RemoteAccesser remoteAccesser;
-	private  RootPojo rootPojo = null;
+	private RootPojo rootPojo = null;
 
 	public ResponseChecker(CommonData inCommonData, RemoteAccesser inRemoteAccesser) {
 		commonData = inCommonData;
@@ -33,7 +37,6 @@ public class ResponseChecker {
 
 		checkResponsesOfArtifactsOfOneRoot();
 		checkResponsesOfReviewsOfOneRoot();
-
 	}
 
 	public void checkResponsesOfArtifactsOfOneRoot()
@@ -71,9 +74,11 @@ public class ResponseChecker {
 				catelogPersistenceManager.updateArtifactStatus(
 						selfAuthoredArtifactpojoList.get(k),
 						SelfAuthoredArtifactpojo.ArtifactStatusProcessed);
+				Commons.logger.info("ResponseChecker checkResponsesOfArtifactsOfOneRoot complete for "
+						+ selfAuthoredArtifactpojoList.get(k).artifactKeyPojo.artifactName);
 			}
 		}
-		System.out.println("Uploads successful");
+		System.out.println("Update successful");
 	}
 	
 	public void checkResponsesOfReviewsOfOneRoot()
@@ -113,6 +118,9 @@ public class ResponseChecker {
 				reviewItemPojoList.get(k).processStatus = SelfAuthoredArtifactpojo.ArtifactStatusProcessed;
 				catelogPersistenceManager.updateReviewProcessStatus(
 						reviewItemPojoList.get(k));
+				
+				Commons.logger.info("ResponseChecker checkResponsesOfReviewsOfOneRoot complete for "
+						+ reviewItemPojoList.get(k).itemName + " of " + reviewItemPojoList.get(k).artifactKeyPojo.artifactName);
 			}
 		}
 		System.out.println("Uploads successful");
@@ -144,7 +152,6 @@ public class ResponseChecker {
 				System.out.println("uploaded file is yet to be processed : " + remoteResponseFileString);
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in ResponseChecker downloadResponseFile_v2 " + " " + inReqRespFileName, e);
 		}
 		return uploadedFileProcessed;

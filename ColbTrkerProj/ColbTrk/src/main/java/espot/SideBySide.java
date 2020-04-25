@@ -13,10 +13,14 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
+/**
+ * Not used. Intended to test how to display panes side by side
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class SideBySide {
-	/*
-	 * Not used. Intended to test how to display panes side by side
-	 */
+
     public static void main(String[] args) {
         new SideBySide().start();
     }

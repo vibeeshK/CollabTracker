@@ -3,6 +3,12 @@ package espot;
 import com.google.gson.Gson; 
 import com.google.gson.GsonBuilder;  
 
+/**
+ * Not used
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class GsonTester { 
 	/*
 	 * Not used

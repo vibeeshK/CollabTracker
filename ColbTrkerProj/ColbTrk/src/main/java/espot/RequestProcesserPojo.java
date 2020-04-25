@@ -2,10 +2,14 @@ package espot;
 
 import java.io.InputStream;
 
+/**
+ * Data holder for the requests coming from clients to the ESPoT server processor
+ * along with the details of previous and new artifact meta data
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class RequestProcesserPojo {
-	/*
-	 * Data holder for the requests coming from clients to the ESPoT server processor
-	 */
 
 	public RequestPojo requestPojo;
 	public ERLpojo prevERLPojo;

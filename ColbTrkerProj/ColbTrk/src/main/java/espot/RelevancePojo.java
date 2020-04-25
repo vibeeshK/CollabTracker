@@ -1,9 +1,13 @@
 package espot;
 
+/**
+ * Convenience class to hold each available relevance
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class RelevancePojo {
-	/*
-	 * Convenience class to hold each available relevance
-	 */	
+
 	public String rootNick;
 	public String relevance;
 	public boolean RelevancePicked;

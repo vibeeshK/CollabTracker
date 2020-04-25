@@ -3,10 +3,13 @@ package espot;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Simplifier to build artifacts from different sources
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ArtifactMover {
-	/*
-	 * Common process to build artifacts from different sources
-	 */
 
     public static String TMPDIRPROP = "java.io.tmpdir";
 	public int lastProcessStatus;
@@ -41,6 +44,8 @@ public class ArtifactMover {
 	}
 
 	private String getFullFilePath(ArtifactPojo inArtifactPojo) {
+		Commons.logger.info("At ArtifactMover getFullFilePath start inArtifactPojo " + inArtifactPojo.artifactKeyPojo.artifactName);
+		
 		lastProcessStatus = PROCESSED_OK;
 
 		String filePath = null;
@@ -67,6 +72,7 @@ public class ArtifactMover {
 	}
 
 	public void createDraftFromBaseContent(byte[] inBaseDocBytes, ArtifactPojo inDestArtifactPojo) {
+		Commons.logger.info("At ArtifactMover createDraftFromBaseContent start inDestArtifactPojo is " + inDestArtifactPojo.artifactKeyPojo.artifactName);
 		lastProcessStatus = PROCESSED_OK;
 		
 		destPath = getFullFilePath(inDestArtifactPojo);
@@ -82,10 +88,11 @@ public class ArtifactMover {
 	}
 
 	public void moveArtifact(ArtifactPojo inSrcArtifactPojo, ArtifactPojo inDestArtifactPojo) {
+		Commons.logger.info("At ArtifactMover moveArtifact start inSrcArtifactPojo is " + inSrcArtifactPojo.artifactKeyPojo.artifactName + " inDestArtifactPojo is " + inDestArtifactPojo.artifactKeyPojo.artifactName);
 		lastProcessStatus = PROCESSED_OK;
 
 		String sourcePath = getFullFilePath(inSrcArtifactPojo);
-		System.out.println("At moveArtifact sourcePath is " + sourcePath);
+		System.out.println("At ArtifactMover moveArtifact sourcePath is " + sourcePath);
 
 		if (lastProcessStatus == PROCESSED_OK) {
 
@@ -127,13 +134,14 @@ public class ArtifactMover {
 					commons.copyFolderViaName(createFileChecker.folderNamePostZipStrip, targetCreateDirName);
 				}
 			} catch (IOException e) {
-				//e.printStackTrace();
+
 				ErrorHandler.showErrorAndQuit(commons, "Error ArtifactMover moveArtifact " + inSrcArtifactPojo.artifactKeyPojo.artifactName + " " + inDestArtifactPojo.artifactKeyPojo.artifactName, e);
 			}
 		}
 	}
 
 	public void moveFromTemplate(String inTemplateFileName, SelfAuthoredArtifactpojo inDestSelfAuthoredArtifactpojo) {
+		Commons.logger.info("At ArtifactMover moveFromTemplate start inTemplateFileName is " + inTemplateFileName + " inDestSelfAuthoredArtifactpojo is " + inDestSelfAuthoredArtifactpojo.artifactKeyPojo.artifactName);
 		lastProcessStatus = PROCESSED_OK;
 		
 		System.out.println("At moveFromTemplate inTemplateFileName = " + inTemplateFileName);
@@ -174,10 +182,7 @@ public class ArtifactMover {
 	
 				contentHandlerInterfaceForNewPrimeFileCreation.initializeContentHandlerWithMinimumSetup(commonData);
 				System.out.println("At moveFromTemplate 7 lastProcessStatus = " + lastProcessStatus);
-				
-				//contentHandlerInterfaceForNewPrimeFileCreation.createNewStartupPrimer(artifactMover.getPrimeFilePath(inDestSelfAuthoredArtifactpojo),
-				//		inDestSelfAuthoredArtifactpojo.artifactKeyPojo.contentType);
-				
+
 				String primeFilePath = getPrimeFilePath(inDestSelfAuthoredArtifactpojo);
 				
 				contentHandlerInterfaceForNewPrimeFileCreation.createNewStartupPrimer(
@@ -213,7 +218,7 @@ public class ArtifactMover {
 				}
 			}
 		} catch (IOException e) {
-			//e.printStackTrace();
+
 			ErrorHandler.showErrorAndQuit(commons, "Error ArtifactMover moveFromTemplate " + 
 					inTemplateFileName + " " + inDestSelfAuthoredArtifactpojo.artifactKeyPojo.artifactName, e);
 		}
@@ -222,6 +227,7 @@ public class ArtifactMover {
 	}
 
 	public void downloadTo(String inSourceFilePath, ERLDownload inDestERLDownload) {
+		Commons.logger.info("At ArtifactMover downloadTo start inSourceFilePath is " + inSourceFilePath + " inDestERLDownload is " + inDestERLDownload.artifactKeyPojo.artifactName);
 		lastProcessStatus = PROCESSED_OK;
 
 		String downLoadedFile = "";
@@ -242,7 +248,7 @@ public class ArtifactMover {
 			try {
 				commons.UnZip(inSourceFilePath,unZippedFilePathString);
 			} catch (IOException e) {
-				//e.printStackTrace();
+
 				ErrorHandler.showErrorAndQuit(commons, "Error ArtifactMover downloadTo " + inSourceFilePath + " " + inDestERLDownload.artifactKeyPojo.artifactName, e);				
 			}
 			
@@ -256,6 +262,7 @@ public class ArtifactMover {
 	}
   
 	public void prepForUpload(SelfAuthoredArtifactpojo inDestSelfAuthoredArtifactpojo, String inFileExtn) {
+		Commons.logger.info("At ArtifactMover prepForUpload start inDestSelfAuthoredArtifactpojo is " + inDestSelfAuthoredArtifactpojo.artifactKeyPojo.artifactName + " inFileExtn is " + inFileExtn);
 		lastProcessStatus = PROCESSED_OK;
 		//ZIP processor required 4 of 4 starts. Zip for uploading
 		
@@ -284,7 +291,7 @@ public class ArtifactMover {
 			try {
 				commons.Zip(uploadFileChecker.folderNamePostZipStrip, fullPathUploadFileNameString);
 			} catch (IOException e) {
-				//e.printStackTrace();
+
 				ErrorHandler.showErrorAndQuit(commons, "Error ArtifactMover prepForUpload " + inDestSelfAuthoredArtifactpojo.artifactKeyPojo.artifactName + " " + inFileExtn, e);
 			}
 			System.out.println("Uploading dir zippped");
@@ -294,6 +301,7 @@ public class ArtifactMover {
 	}
 
 	public void archiveDraft(ArtifactPojo inSrcArtifactPojo) {
+		Commons.logger.info("At ArtifactMover archiveDraft start inSrcArtifactPojo is " + inSrcArtifactPojo.artifactKeyPojo.artifactName);
 		lastProcessStatus = PROCESSED_OK;
 
 		String sourcePath = getFullFilePath(inSrcArtifactPojo);
@@ -336,45 +344,11 @@ public class ArtifactMover {
 	
 	
 	public String getPrimeFilePath(ArtifactPojo inSrcArtifactPojo) {
-		System.out.println("At getPrimeFilePath ");
+		Commons.logger.info("At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is " + inSrcArtifactPojo.artifactKeyPojo.artifactName);
 
 		lastProcessStatus = PROCESSED_OK;
 		String artifactPath = getFullFilePath(inSrcArtifactPojo);
 
-		//String primeFilePath = null;
-		//String primeFolder = null;
-		//
-		//System.out.println("checkpoint1 artifactPath = " + artifactPath);
-		//
-		//FileChecker createFileChecker = null;
-		//
-		//if (lastProcessStatus == PROCESSED_OK) {
-		//	createFileChecker = FileChecker.getFileChecker(commons, artifactPath);
-		//	System.out.println("checkpoint2 createFileChecker = " + createFileChecker);
-		//	
-		//	if (!createFileChecker.fileOrDirExists && !createFileChecker.isZipFile) {
-		//		System.out.println("Warning - File Not Available/Not downloaded yet : " + artifactPath);
-		//		lastProcessStatus = NO_SOURCE_FILE;
-		//		//This may not be an error. Hence not Returning			
-		//	}
-		//	System.out.println("checkpoint3 createFileChecker.fileOrDirExists = " + createFileChecker.fileOrDirExists);
-		//	System.out.println("checkpoint3 createFileChecker.isZipFile = " + createFileChecker.isZipFile);
-		//	if (createFileChecker.isZipFile) {
-		//		System.out.println("It is isZipFile " + artifactPath);
-		//		primeFolder = commons.getFileNameWithoutExtension(artifactPath);
-		//		primeFilePath = commons.getAbsolutePathFromDirAndFileNm(primeFolder,Commons.ARTIFACT_PRIME_FILE);
-		//
-		//	} else if (createFileChecker.isDirectory) {
-		//		System.out.println("It is isDirectory " + artifactPath);
-		//		primeFolder = artifactPath;
-		//		primeFilePath = commons.getAbsolutePathFromDirAndFileNm(primeFolder,Commons.ARTIFACT_PRIME_FILE);
-		//	} else {
-		//		System.out.println("It is neither zip file nor dir " + artifactPath);
-		//		primeFilePath = artifactPath;
-		//	}
-		//}
-		//return primeFilePath;
-		
 		return getPrimeFilePathFromArtifactPath(artifactPath);
 	}
 
@@ -387,6 +361,7 @@ public class ArtifactMover {
 	}
 		
 	private String getPrimeFilePathWithStandAloneChk(String inArtifactPath,boolean inStandAloneFlag){
+		Commons.logger.info("At getPrimeFilePathWithStandAloneChk start inArtifactPath is " + inArtifactPath + " inStandAloneFlag " + inStandAloneFlag);
 		String primeFilePath = null;
 		String primeFolder = null;
 
@@ -460,6 +435,7 @@ public class ArtifactMover {
 	}
 	
 	public String getChildFilePath(ArtifactPojo inSrcArtifactPojo, String inChildFileName) {
+		Commons.logger.info("At ArtifactMover getChildFilePath start inSrcArtifactPojo is " + inSrcArtifactPojo.artifactKeyPojo.artifactName + " inChildFileName " + inChildFileName);
 		lastProcessStatus = PROCESSED_OK;
 		String childFilePath = "";
 		String primeFilePath = getPrimeFilePath(inSrcArtifactPojo);

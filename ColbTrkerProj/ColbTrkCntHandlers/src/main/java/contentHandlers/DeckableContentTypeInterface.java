@@ -1,9 +1,13 @@
 package contentHandlers;
 
+/**
+ * Interface requirements which all Deckable content types shall adhere to
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public interface DeckableContentTypeInterface extends DeckerLiteContentTypeInterface {
-	/*
-	 * Interface requirements which all Deckable content types shall adhere to
-	 */
+
 	public String getDetailSheetName();
 	public String getSummarySheetName();
 	public String getSummaryShKeyColumnHdr();

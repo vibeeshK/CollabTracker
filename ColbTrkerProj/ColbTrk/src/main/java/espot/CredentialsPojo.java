@@ -1,9 +1,13 @@
 package espot;
 
+/**
+ * Convenience class to hold credentials data
+ * note: it doesn't persist the credentials
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class CredentialsPojo {
-	/*
-	 * Convenience class to hold credentials data
-	 */
 
 	public String userName;
 	public String password;

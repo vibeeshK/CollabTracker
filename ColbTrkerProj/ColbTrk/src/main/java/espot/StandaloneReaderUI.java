@@ -10,7 +10,6 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.layout.RowData;
 import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
@@ -20,6 +19,13 @@ import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
+/**
+ * Reader for standalone artifacts, just in case user wants to move the physical content 
+ * outside the application and view
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class StandaloneReaderUI implements Runnable {
 
 	CommonUIData commonUIData = null;
@@ -55,17 +61,13 @@ public class StandaloneReaderUI implements Runnable {
 					+ mainShell);
 		}
 		mainShell.setText("ArtifactWrapperUI");
-		//mainShell.setLayout(new FillLayout());
+
 		mainShell.setLayout(new GridLayout());
 		displayContent();
 	}
 
 	public void displayContent() {
-		/*
-		 * For the authors of the artifacts, it provides ability to view as well
-		 * as edit, upload, backup on cloud, make clone For non-authors, it
-		 * provides ability to view, make clone
-		 */
+
 		childCompositeOfLeftView = new Composite(
 				mainShell, SWT.NONE);
 		childCompositeOfLeftView.setLayout(new FillLayout(SWT.VERTICAL));
@@ -116,8 +118,8 @@ public class StandaloneReaderUI implements Runnable {
 
 				String filename = null;
 				
-				FileDialog dialog = new FileDialog(mainShell, SWT.SAVE);
-				dialog.setFilterExtensions(new String[]{ "*.*" });
+				FileDialog dialog = new FileDialog(mainShell, SWT.OPEN);
+
 				filename = dialog.open();
 				
 				if (filename == null) return;
@@ -136,15 +138,13 @@ public class StandaloneReaderUI implements Runnable {
 				
 				contentTypeList.setFocus();
 				
-				//artifactNameText.pack();
-				//btnFileSelectButton.pack();
 				artifactNameGroup.pack();
 				artifactDetailGroup.pack();
 				childCompositeOfLeftView.pack();
 				mainShell.pack();
 			}
 		});
-		//btnFileSelectButton.pack();
+
 		artifactNameGroup.pack();
 		artifactDetailGroup.pack();
 		// fileSelect button ends
@@ -239,7 +239,7 @@ public class StandaloneReaderUI implements Runnable {
 						}
 
 					} catch (IOException e2) {
-						//e2.printStackTrace();
+
 						ErrorHandler.showErrorAndQuit(commons, "Error in ARtifactWrapperUI displayContent ", e2);							
 					}
 				}
@@ -249,8 +249,8 @@ public class StandaloneReaderUI implements Runnable {
 
 		childCompositeOfLeftView.pack();
 		mainShell.pack();
-		//mainShell.layout(true);
 		mainShell.open();
+		
 		while (!mainShell.isDisposed()) {
 			if (!commonUIData.getESPoTDisplay().readAndDispatch()) {
 				if (commonUIData.getArtifactDisplayOkayToContinue()) {
@@ -263,5 +263,4 @@ public class StandaloneReaderUI implements Runnable {
 		System.out.println("end of......displayContent");
 		// displayContent() - final prep before display ends
 	}
-
 }

@@ -8,10 +8,14 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Text;
 
+/**
+ * Convenience class that derives the ERL Status text to be displayed
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ERLStatusDisplay {
-	/*
-	 * Convenience class that derives the ERL Status text to be displayed
-	 */
+
 	public final static String STATUS_ASSIGN_TEXT = "New ERLStatus";
 	public final static String CURR_STATUS_TEXT = "Current ERLStatus";
 	CCombo statusList = null;

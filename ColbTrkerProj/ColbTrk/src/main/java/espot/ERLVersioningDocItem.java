@@ -2,10 +2,14 @@ package espot;
 
 import java.util.ArrayList;
 
+/**
+ * Convenience class for holding a specific ERL's version details within the versioning file
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ERLVersioningDocItem {
-	/*
-	 * Convenience class for holding the ERL details within the versioning file
-	 */	
+
 	final static String OLD_PREFIX = "old_";
 	final static String VER_NODE_SEPARATOR = "_";
 

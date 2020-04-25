@@ -5,10 +5,14 @@ import java.util.HashMap;
 
 import commonTechs.CustomClassLoader;
 
+/**
+ * This is a singleton class that dynamically loads remote accesser classes and provides mapping
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class RemoteAccessManager {
-	/*
-	 * This is a singleton class that dynamically loads remote accesser classes and provides mapping
-	 */
+
 	private static RemoteAccessManager remoteAccessManager = null;
 	private Commons commons = null;
 	private HashMap<String,RemoteAccesser> transportHandlerMap = null;
@@ -44,6 +48,8 @@ public class RemoteAccessManager {
 			}
 			remoteAccessManager.transportHandlerMap.put(rootPojo.rootNick,remoteAccesser);
 			remoteAccesser.intiateCommunications(rootPojo,commons);
+
+			Commons.logger.info("RemoteAccessManager getRemoteAccesser set for inRootText " + inRootText);
 		}
 		remoteAccesser = remoteAccessManager.transportHandlerMap.get(inRootText);
 		return remoteAccesser;

@@ -1,5 +1,11 @@
 package espot;
 
+/**
+ * Helper class
+ *  
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ClientSideNew_ReviewPojo extends NewReviewPojo{
 	/*
 	 * Helper class

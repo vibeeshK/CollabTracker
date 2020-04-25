@@ -6,11 +6,14 @@ import java.io.InputStream;
 import java.text.ParseException;
 import java.util.ArrayList;
 
+/**
+ * This class downloads the subscribed contents
+ *  
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ContentDownloader {
-	/*
-	 * This class downloads the subscribed contents
-	 */
-	
+
 	private CommonData commonData;
 
 	private CatelogPersistenceManager catelogPersistenceManager;
@@ -26,6 +29,9 @@ public class ContentDownloader {
 		commonData = inCommonData;
 		rootPojo = commonData.getCurrentRootPojo();
 		commons = commonData.getCommons();
+		
+		Commons.logger.info("ContentDownloader Started at " + commons.getCurrentTimeStamp());
+		
 		catelogPersistenceManager = commonData.getCatelogPersistenceManager();
 		remoteAccesser = inRemoteAccesser;
 		
@@ -34,13 +40,13 @@ public class ContentDownloader {
 		System.out.println("@ContentDownloader " + rootPojo.rootString);
 		System.out.println("@ContentDownloader " + rootPojo.remoteAccesserType);
 		System.out.println("@ContentDownloader " + remoteAccesser);
-		
-		
 	}
 
 	public void downloadContentFilesForOneRoot()
 			throws IOException, ClassNotFoundException {
 
+		Commons.logger.info("ContentDownloader downloadContentFilesForOneRoot Started at " + commons.getCurrentTimeStamp());
+		
 		ArrayList<ERLDownload> subscribedERLpojoList = null;
 
 		System.out.println("@123411");
@@ -120,6 +126,8 @@ public class ContentDownloader {
 	public void downloadRemarksFilesForOneRoot()
 	throws IOException, ClassNotFoundException, ParseException {
 
+		Commons.logger.info("ContentDownloader downloadRemarksFilesForOneRoot Started at " + commons.getCurrentTimeStamp());
+		
 		ArrayList<ERLDownload> erlpojoList = null;
 			
 		ArrayList<ERLDownload> subscribedERLpojoList = null;
@@ -203,23 +211,7 @@ public class ContentDownloader {
 			ArrayList<ERLDownload> inErlpojoList) throws ParseException {
 		ArrayList<ERLDownload> updatedRemarksERLpojoList = new ArrayList<ERLDownload>();
 		System.out.println("inErlpojoList.get(erlpojoCount).size = " + inErlpojoList.size());
-
-		//for (int erlpojoCount = 0; erlpojoCount < inErlpojoList.size(); erlpojoCount++) {
-		//	System.out.println("erlpojoCount = " + erlpojoCount);
-		//	System.out.println("inErlpojoList.get(erlpojoCount).contentName = " + inErlpojoList.get(erlpojoCount).artifactKeyPojo.artifactName);
-		//	System.out.println("inErlpojoList.get(erlpojoCount).SubscriptionStatus = " + inErlpojoList.get(erlpojoCount).subscriptionStatus);
-		//	
-		//	if (inErlpojoList.get(erlpojoCount).subscriptionStatus
-		//			.equalsIgnoreCase(ERLDownload.CURRENTLY_SUBSCRIBED) ||
-		//		inErlpojoList.get(erlpojoCount).subscriptionStatus
-		//			.equalsIgnoreCase(ERLDownload.AvailableStatus)
-		//		)
-		//	{
-		//		updatedRemarksERLpojoList.add(inErlpojoList.get(erlpojoCount));
-		//		System.out.println(inErlpojoList.get(erlpojoCount).artifactKeyPojo.artifactName + "'s remarks will be downloaded");
-		//	}
-		//}
-
+		
 		for (ERLDownload erlWithRemark : inErlpojoList) {
 			System.out.println("erlWithRemark.contentName = " + erlWithRemark.artifactKeyPojo.artifactName);
 			System.out.println("erlWithRemark.SubscriptionStatus = " + erlWithRemark.subscriptionStatus);
@@ -242,10 +234,7 @@ public class ContentDownloader {
 			}
 			
 		}
-		
-		//commons.isThisLeftDateLater(inLeftDate, inRightDate))
-			
-		
+
 		return updatedRemarksERLpojoList;
 	}	
 }

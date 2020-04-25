@@ -2,10 +2,14 @@ package espot;
 
 import java.io.File;
 
+/**
+ * Checks the given file's availability, whether a folder or a zip file
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class FileChecker {
-	/*
-	 * Checks the given file's availability, whether a folder or a zip file
-	 */
+
 	public boolean fileOrDirExists = false;
 	public boolean isDirectory = false;
 	public boolean isZipFile = false;

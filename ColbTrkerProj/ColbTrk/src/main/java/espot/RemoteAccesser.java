@@ -5,14 +5,17 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Interface mandate for the remote accessers which help to access various doc centers
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public interface RemoteAccesser {
-	/*
-	 * Interface mandate for the remote accessors which help to access various doc centers
-	 */
+
 	public void intiateCommunications(RootPojo inRootPojo,Commons inCommons);
 	public boolean exists(String inRemoteURL) throws IOException;
 	public InputStream getRemoteFileStream(String inRemoteFileName);
-	//public List<String> getList(String inRemoteURL);	
 	public ArrayList<String> getRemoteList(String inRemoteDropBox);
 	public void put(String inRemoteURL, byte[] inBytes);
 	public void putInStreamIntoRemoteLocation(String inNewContentRemoteLocation, InputStream inUpdatedContentByteArray);

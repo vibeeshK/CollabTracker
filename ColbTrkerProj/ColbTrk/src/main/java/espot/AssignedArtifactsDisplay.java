@@ -13,11 +13,14 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
+/**
+ * Displays all ERL artifacts assigned to the user as the author
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class AssignedArtifactsDisplay extends ArtifactsDisplay{
-	/*
-	 * Displays all ERL artifacts assigned to the user as the author
-	 */
-	
+
 	private String catalogDisplayTitle = "Assigned Artifacts";
 	
 	public AssignedArtifactsDisplay(CommonUIData inCommonUIData) {

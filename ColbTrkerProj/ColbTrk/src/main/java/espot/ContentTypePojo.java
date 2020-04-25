@@ -1,9 +1,13 @@
 package espot;
 
+/**
+ * Holds the key specifications of a content type
+ *  
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ContentTypePojo {
-	/*
-	 * Holds the key specifications of a content type
-	 */
+
 	public String contentType = null;
 	public String template = null;
 	public String extension = null;
@@ -17,14 +21,14 @@ public class ContentTypePojo {
 	}
 
 	public ContentTypePojo(String inContentType, String inTemplate, String inExtension) {
-		System.out.println("5Oct_ContentTypePojo");
+		System.out.println("ContentTypePojo starts");
 		
 		setContentTypePojo(inContentType, inTemplate, inExtension);
 	}
 	
 	public void setContentTypePojo(String inContentType, String inTemplate, String inExtension) {
 		
-		System.out.println("5Oct_setContentTypePojo1 " + "inContentType=" + inContentType + " Template= " + inTemplate + " inExtension=" + inExtension);
+		System.out.println("setContentTypePojo starts inContentType=" + inContentType + " Template= " + inTemplate + " inExtension=" + inExtension);
 		
 		contentType = inContentType;
 		template = inTemplate;

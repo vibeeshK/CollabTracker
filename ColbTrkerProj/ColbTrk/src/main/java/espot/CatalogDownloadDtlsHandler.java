@@ -5,10 +5,14 @@ import java.text.ParseException;
 import java.util.Calendar;
 import java.util.HashMap;
 
+/**
+ * This class helps absorbing the catalog download details into the application object
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class CatalogDownloadDtlsHandler {
-	/*
-	 * This class helps absorbing the catalog download details into the application object
-	 */
+
 	private final int mapRefreshGap = 5; // time seconds to refresh hashMap
 	private Commons commons;
 	private static CatalogDownloadDtlsHandler catalogDownloadsHandler = null;
@@ -34,6 +38,7 @@ public class CatalogDownloadDtlsHandler {
 	}
 	
 	public synchronized void refreshCatalogDownloadDetailsMap(){
+		Commons.logger.info("CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at " + commons.getCurrentTimeStamp());
 		System.out.println("starting refreshCatalogDownloadDetailsMap mapRefreshedTime is " + mapRefreshedTime);
 		System.out.println("starting refreshCatalogDownloadDetailsMap mapRefreshGap is " + mapRefreshGap);
 		
@@ -61,6 +66,7 @@ public class CatalogDownloadDtlsHandler {
 	// This method reads for downloadedFileName and aborts if unavailable present
 	// This method shall be called if there is subsequent process expects a downloaded file
 		System.out.println("starting getCatalogDownLoadedFileName for inRootNick " + inRootNick);
+		Commons.logger.info("CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick " + inRootNick);
 
 		String catalogDownLoadedFileName = getCatalogDownLoadedFileNameIfAvailable(inRootNick);
 		if (catalogDownLoadedFileName == null) {
@@ -73,6 +79,7 @@ public class CatalogDownloadDtlsHandler {
 	public synchronized String getCatalogDownLoadedFileNameIfAvailable(String inRootNick){
 	// This method reads the downloadedFileName and returns null if there is none		
 		System.out.println("starting getCatalogDownLoadedFileNameIfAvailable for inRootNick " + inRootNick);
+		Commons.logger.info("CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : " + inRootNick);
 		refreshCatalogDownloadDetailsMap();
 		String catalogDownLoadedFileName = null;
 		if (catlogDownlodedDtlDocPojo.catalogDownlodedRootPojoMap.containsKey(inRootNick)){
@@ -106,6 +113,7 @@ public class CatalogDownloadDtlsHandler {
 	public synchronized void updateCatalogDownloadDetail(String inRootNick, String inDownloadedFileName, String inDownloadedTime) {
 		System.out.println("at updateCatalogDownloadDetail for inRootNick " + inRootNick);
 		System.out.println("at updateCatalogDownloadDetail for inDownloadedFileName " + inDownloadedFileName);
+		Commons.logger.info("CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick " + inRootNick + " at " + commons.getCurrentTimeStamp());
 
 		try {
 			DownloadedCatlogRootDtlPojo downloadedCatlogRootDtlPojo;

@@ -8,7 +8,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -16,7 +15,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.nio.channels.FileChannel;
 import java.text.ParseException;
@@ -34,13 +32,9 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Result;
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
@@ -65,15 +59,17 @@ import org.xml.sax.SAXException;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
+/**
+ * All common generic functions re-usable in other projects are placed here 
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class CommonTechs {
-	/*
-	 * Repository of commonly required functions
-	 */
 
 	public static final Logger logger = LogManager.getLogger("CommonLogger");
 	public static String SIMPL_DTE_FORMAT = "yyyyMMddHHmmss";
 	public static String SIMPL_DTEONLY_FORMAT = "yyyyMMdd";
-	//public static DocumentBuilder documentBuilder = null;
 	public static Gson gson = null;
 	
 	public static String setUniqueSubfix(String inName, ArrayList<String> inOutCurrentNames, String inAppendStub){
@@ -103,8 +99,7 @@ public class CommonTechs {
 			
 			if (inOutCurrentNames.contains(appendedName)) {
 				System.out.println("appendedName already present as " + appendedName);
-				//appendedName = inName + inAppendStub + ++subfixIncrement;
-				// increment and append a subfix until a new name is found
+
 				appendedName = nameWithoutExtension + inAppendStub + ++subfixIncrement + fileExtension;
 				System.out.println("new appendedName is " + appendedName);
 				
@@ -247,11 +242,9 @@ public class CommonTechs {
 				+ dest.getParentFile().exists());
 		createFolderOfFileIfDontExist(dest);
 		
-		//inputChannel = new FileInputStream(source).getChannel();
 		FileInputStream fileInStr = new FileInputStream(source);
 		inputChannel = fileInStr.getChannel();
 		
-		//outputChannel = new FileOutputStream(dest).getChannel();
 		FileOutputStream fileOutStr = new FileOutputStream(dest);
 		outputChannel = fileOutStr.getChannel();
 		
@@ -288,7 +281,7 @@ public class CommonTechs {
 		System.out.println("getTimeStamp inDate=" + inDate);
 		System.out.println("getTimeStamp timeStamp=" + timeStamp);
 		return timeStamp;
-	}	
+	}
 
 	public synchronized String getDateString() {
 		// get date string in a simple date only format
@@ -318,18 +311,6 @@ public class CommonTechs {
 		SimpleDateFormat simpl_dteonly_format = new SimpleDateFormat(SIMPL_DTEONLY_FORMAT);
 		return simpl_dteonly_format.parse(inDateOnlyString);
 	}
-
-	//public synchronized String getCalendarTS(Calendar inClndrDate) {
-	//	String timeStamp = null;
-	//	//timeStamp = SIMPL_DTE_FORMAT.format(inClndrDate);	// replaced by local variable
-	//														// as it was not threadsafe
-	//
-	//	SimpleDateFormat simple_dte_format = new SimpleDateFormat(SIMPL_DTE_FORMAT);
-	//	timeStamp = simple_dte_format.format(inClndrDate);
-	//	
-	//	System.out.println("timeStamp=" + timeStamp);
-	//	return timeStamp;
-	//}	
 
 	public String getCurrentTimeStamp() {
 		return getTimeStamp(null);
@@ -460,26 +441,6 @@ public class CommonTechs {
 		System.out.println("Days elapsed");
 		return true;
 	}
-
-//	public String getDocumentAsXml(Document doc)
-//			throws TransformerConfigurationException, TransformerException {
-//		DOMSource domSource = new DOMSource(doc);
-//		TransformerFactory tf = TransformerFactory.newInstance();
-//		Transformer transformer = tf.newTransformer();
-//
-//		transformer.setOutputProperty(OutputKeys.METHOD, "xml");
-//		transformer.setOutputProperty(OutputKeys.ENCODING, "ISO-8859-1");
-//		// we want to pretty format the XML output
-//		// note : this is broken in jdk1.5 beta!
-//		transformer.setOutputProperty(
-//				"{http://xml.apache.org/xslt}indent-amount", "4");
-//		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-//		//
-//		java.io.StringWriter sw = new java.io.StringWriter();
-//		StreamResult sr = new StreamResult(sw);
-//		transformer.transform(domSource, sr);
-//		return sw.toString();
-//	}
 
 	public String getFileNameFromFullPath(String inFullPath, String inFileSeperator) {
 		return getLastNodeFromFullFilePath(inFullPath, inFileSeperator);
@@ -664,16 +625,6 @@ public class CommonTechs {
 		return doc;
 	}
 
-//	public BufferedReader getReaderForFile(String inFileName) throws FileNotFoundException {
-//	   BufferedReader br = new BufferedReader(new FileReader(inFileName));
-//	   return br;
-//	}
-//
-//	public BufferedWriter getWriterForFile(String inFileName) throws IOException {
-//		BufferedWriter bw = new BufferedWriter(new FileWriter(inFileName));
-//		return bw;
-//	}
-	
 	public Gson getGson(){
 		if (gson == null) {
 			gson = new Gson();
@@ -681,17 +632,7 @@ public class CommonTechs {
 		return gson;
 	}
 
-//	public Object sysGetXMLObjFromFile(String inFileName, Class inClass) throws FileNotFoundException, JAXBException {
-//        JAXBContext jaxbContext = JAXBContext.newInstance(inClass);    
-//        
-//        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();    
-//        Object unMarshalledObject = jaxbUnmarshaller.unmarshal(new File(inFileName));    
-//		Object jsonDocObj = getGson().fromJson(getReaderForFile(inFileName), inClass);
-//		return unMarshalledObject;
-//	}
-	
 	public Object sysGetJsonDocObjFromFile(String inFileName, Class inClass) throws IOException {
-		//Object jsonDocObj = getGson().fromJson(getReaderForFile(inFileName), inClass);
 	
 		FileReader fileRdr = new FileReader(inFileName);
 		BufferedReader br = new BufferedReader(fileRdr);
@@ -708,8 +649,6 @@ public class CommonTechs {
 	}
 
 	public Object sysGetJsonDocObjFromInputStream(InputStream inputStream, Class inClass) throws IOException {
-		
-		//JsonReader reader = new JsonReader(new InputStreamReader(inputStream, "UTF-8"));
 
 		InputStreamReader strRdr = new InputStreamReader(inputStream, "UTF-8");
 		JsonReader reader = new JsonReader(strRdr);
@@ -738,7 +677,6 @@ public class CommonTechs {
 		System.out.println("gonna write json :: " + jsonDocString);
 		System.out.println("object passed was :: " + inGsonDocObj);
 		System.out.println("inFileName :: " + inFileName);
-		//BufferedWriter bw = getWriterForFile(inFileName);
 
 		FileWriter fw = new FileWriter(inFileName);		
 		BufferedWriter bw = new BufferedWriter(fw);		

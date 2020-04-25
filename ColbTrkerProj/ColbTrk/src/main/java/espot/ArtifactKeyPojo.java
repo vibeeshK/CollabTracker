@@ -1,9 +1,13 @@
 package espot;
 
+/**
+ * Provides an object view of the composite key of an artifact
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ArtifactKeyPojo {
-	/*
-	 * Provides an object view of the composite key of an artifact
-	 */
+
 	public String rootNick;
 	public String relevance;
 	public String artifactName;

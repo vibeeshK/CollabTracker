@@ -1,9 +1,12 @@
 package espot;
 
+/**
+ * Data holder base for Non-grouping type content persistence
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public abstract class GenericItemDocPojo implements  PrimerDocInterface{
-	/*
-	 * Data holder base for Non-grouping type content persistence
-	 */
 
 	public GenericItemDocPojo(ItemPojo inItemPojo){
 		setItem(inItemPojo);

@@ -17,10 +17,14 @@ import org.xml.sax.SAXException;
 
 import commonTechs.CommonTechs;
 
+/**
+ * Helps to upload the contents and while doing so creates and uploads a request file as well
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class Uploader {
-	/*
-	 * Helps to upload the contents and while doing so creates and uploads a request file as well
-	 */
+
 	final static String LOCKING_RESOURCE = "LOCK";
 	final static String FILEUNIQUEAPPENDSTUB = "_";
 	private CatelogPersistenceManager catelogPersistenceManager;
@@ -246,5 +250,7 @@ public class Uploader {
 		System.out.println("before Putting Request");
 		remoteAccesser.put(remoteRequestPathFile, requestString.getBytes());
 		System.out.println("after Putting Request");
+
+		Commons.logger.info("Uploader uploadContenAndRequestFiles complete for " + inLocalPathFileName);		
 	}
 }

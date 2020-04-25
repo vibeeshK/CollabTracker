@@ -1,5 +1,11 @@
 package espot;
 
+/**
+ * User details registered on the specific root
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class UserPojo {	
 	public final static int TEAMMEMBER_PRVLLEVEL = 10;
 	public final static int TEAMMLEADER_PRVLLEVEL = 30;

@@ -2,10 +2,14 @@ package espot;
 
 import java.util.HashMap;
 
+/**
+ * Holder of request processing status doc data
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ReqProcDocPojo {
-	/*
-	 * Holder of request processing status doc data
-	 */
+
 	boolean dbTobeRenewed;
 	public HashMap<String,ReqTrackItem> reqTrackItems;
 

@@ -22,22 +22,25 @@ import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
+/**
+ * This is the entry screen for maintaining artifacts before invoking using
+ * their own content handlers' viewers.
+ * For the authors of the artifacts, it provides ability
+ * to view as well as edit, upload, make clone etc.
+ * For non-authors, it provides ability to view, make clone.
+ * It has two constructors for a) calling using ERLPojo (from CatelogDisplay)
+ * and b) SelfAuthoredArtifactspojo (from CreateArtifact)
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ArtifactWrapperUI {
-	/*
-	 * This is an entry screen for maintaining artifacts before invoking using
-`	 * their own viewers using specific content handlers.
- 	 * For the authors of the artifacts, it provides ability
-	 * to view as well as edit, upload, backup on cloud, make clone etc.
-	 * For non-authors, it provides ability to view, make clone.
-	 * It has two constructors for a) calling using ERLPojo (from CatelogDisplay)
-	 * and b) SelfAuthoredArtifactspojo (from CreateArtifact)
-	 */
 
-	String calledFor = "";
 	final public static String CALLED_For_NewDraftSetup = "CALLED_For_NewDraftSetup";
 	final public static String CALLED_ForCloning = "CALLED_For_Cloning";
 	final public static String CALLED_After_DraftCreation = "CALLED_For_Returning";
 	final public static String CALLED_For_DisplayItemFocused = "CALLED_For_DisplayItemFocused";
+	String calledFor = "";
 
 	CommonUIData commonUIData = null;
 	Commons commons = null;
@@ -98,31 +101,55 @@ public class ArtifactWrapperUI {
 	}
 	
 
-	/* Constructor for call using ERLPojo (from CatelogDisplay) */
+	/**
+	 * Constructor for call using ERLPojo (from CatelogDisplay)
+	 * 
+	 * @param inCommonUIData
+	 * @param inERLDownload
+	 */
 	public ArtifactWrapperUI(CommonUIData inCommonUIData,ERLDownload inERLDownload) {
 		System.out.println("At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload");
+		Commons.logger.info("At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload");
 		doCommonInit(inCommonUIData,inERLDownload,null);
 		System.out.println("editingArtifactWrapperArtifactKeyPojo1: " + processingArtifactKeyPojo);		
 	}
 
-	/*
+	/**
 	 * Constructor for call using SelfAuthoredArtifactspojo (from
 	 * CreateArtifact & Grouper/Lister)
+	 * 
+	 * @param inCommonUIData
+	 * @param inSelfAuthoredArtifactspojo
 	 */
 	public ArtifactWrapperUI(CommonUIData inCommonUIData, SelfAuthoredArtifactpojo inSelfAuthoredArtifactspojo) {
-		System.out.println("At xx0 ArtifactWrapperUI invoke CommonUIData inCommonUIData, SelfAuthoredArtifactpojo inSelfAuthoredArtifactspojo");
+		Commons.logger.info("At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload");
+		System.out.println("At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload");
 		doCommonInit(inCommonUIData,inSelfAuthoredArtifactspojo, null);
 	}
 
-	/* Constructor for new draft set up (from CreateArtifact) */
+	/**
+	 * Constructor for new draft set up (from CreateArtifact)
+	 * 
+	 * @param inCreateArtifactKeyPojo
+	 * @param inCommonUIData
+	 */
 	public ArtifactWrapperUI(ArtifactKeyPojo inCreateArtifactKeyPojo, CommonUIData inCommonUIData) {
-		System.out.println("At xx1 ArtifactWrapperUI invoke ArtifactKeyPojo inCloneToArtifactKeyPojo, CommonUIData inCommonUIData");
+		Commons.logger.info("At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload");
+		System.out.println("At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload");
 		calledFor = CALLED_For_NewDraftSetup;
 		doCommonInit(inCommonUIData,null, inCreateArtifactKeyPojo);
 	}
 
-	/* Constructor for cloning (from Catalog Display) */
+	/**
+	 * Constructor for cloning (from Catalog Display) 
+	 * 
+	 * @param inCalledFor
+	 * @param inERLDownload
+	 * @param inCommonUIData
+	 * @param inCloneToArtifactKeyPojo
+	 */
 	public ArtifactWrapperUI(String inCalledFor, ERLDownload inERLDownload, CommonUIData inCommonUIData, ArtifactKeyPojo inCloneToArtifactKeyPojo) {
+		Commons.logger.info("At xx2 ArtifactWrapperUI invoke with String inCalledFor, ERLDownload inERLDownload, CommonUIData inCommonUIData, ArtifactKeyPojo inCloneToArtifactKeyPojo");
 		System.out.println("At xx2 ArtifactWrapperUI invoke with String inCalledFor, ERLDownload inERLDownload, CommonUIData inCommonUIData, ArtifactKeyPojo inCloneToArtifactKeyPojo");
 		calledFor = inCalledFor; //(CALLED_For_Cloning)
 		doCommonInit(inCommonUIData,inERLDownload, inCloneToArtifactKeyPojo);
@@ -130,7 +157,15 @@ public class ArtifactWrapperUI {
 		cloningERLDownload = inERLDownload;
 	}
 
+	/**
+	 * Constructor to view a specific item within rolledup ERL artifact
+	 * 
+	 * @param inCommonUIData
+	 * @param inERLDownload
+	 * @param inERLItemPojo i.e. inViewFocusItemPojo
+	 */
 	public ArtifactWrapperUI(CommonUIData inCommonUIData, ERLDownload inERLDownload, ItemPojo inERLItemPojo) {
+		Commons.logger.info("At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload,ItemPojo inERLItemPojo");
 		System.out.println("At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload,ItemPojo inERLItemPojo");
 		calledFor = CALLED_For_DisplayItemFocused;
 		doCommonInit(inCommonUIData,inERLDownload,null,inERLItemPojo);
@@ -142,6 +177,7 @@ public class ArtifactWrapperUI {
 		processingArtifactKeyPojo = invokedArtifactPojo.artifactKeyPojo;
 		contentHandlerSpecs = commonUIData.getContentHandlerSpecsMap().get(invokedArtifactPojo.artifactKeyPojo.contentType);
 		
+		Commons.logger.info("At start of startupWithERLpojo " + processingArtifactKeyPojo.artifactName);
 		System.out.println("within startupWithERLpojo invoked ERL remarksFileName=" + invokedArtifactPojo.reviewFileName);
 		System.out.println("editingArtifactWrapperArtifactKeyPojo221: " + processingArtifactKeyPojo);
 
@@ -327,6 +363,7 @@ public class ArtifactWrapperUI {
 		 * as edit, upload, backup on cloud, make clone For non-authors, it
 		 * provides ability to view, make clone
 		 */
+		Commons.logger.info("At xxa displayContent");
 		// displayContent() - base set up starts
 		scrolledComposite_1 = new ScrolledComposite(mainShell, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
 		scrolledComposite_1.setLayout(new GridLayout(2, false));
@@ -971,7 +1008,8 @@ public class ArtifactWrapperUI {
 	}
 
 	private void openArtifactForEdit(String inFileName) {
-		System.out.println("ArtifactWrapperUI openArtifactForEdit");
+		System.out.println("ArtifactWrapperUI openArtifactForEdit " + inFileName);
+		Commons.logger.info("ArtifactWrapperUI openArtifactForEdit " + inFileName);
 		if (!contentHandlerSpecs.hasSpecialHandler) {
 			try {
 				commonUIData.getCommons().openFileToView(inFileName);
@@ -1031,6 +1069,12 @@ public class ArtifactWrapperUI {
 	}
 }
 
+/**
+ * Inline class to help refer to multiple available versions via dropdown
+ * 
+ * @author kvasavaiah
+ *
+ */
 class ArtifactVersionPojo {
 	String displayName = "";
 	boolean publishedVersion = false;

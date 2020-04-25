@@ -4,10 +4,14 @@ import java.util.ArrayList;
 
 import espot.ItemPojo;
 
+/**
+ * Grouping Doc data holder for allocated tasks on a project for a team member
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class AllocatedTasksPojo extends ItemPojo{
-	/*
-	 * Grouping Doc data holder for allocated tasks on a project for a team member
-	 */
+
 	public ArrayList<AllocatedOneTaskPojo> allocations = null;
 	
 	public AllocatedTasksPojo(int inItemNumber){

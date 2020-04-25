@@ -2,10 +2,14 @@ package espot;
 
 import java.util.ArrayList;
 
+/**
+ * Helps to subscribe the artifacts where user is marked as the author
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class AssignedContentSubscriber {
-	/*
-	 * Helps to subscribe the erl contents where user is marked as the author
-	 */
+
 	private CatelogPersistenceManager catelogPersistenceManager = null;
 	private Commons commons = null;
 	private CommonData commonData = null;
@@ -17,7 +21,9 @@ public class AssignedContentSubscriber {
 	}
 
 	public void subscribeToAssignedContent(){
-		System.out.println("at subscribeToDeckerParents start" );
+		System.out.println("at AssignedContentSubscriber subscribeToAssignedContent start" );
+		Commons.logger.info("at AssignedContentSubscriber subscribeToAssignedContent start");
+		
 		ArrayList<ERLDownload> dbAssignedERLDownloadsList = catelogPersistenceManager.readERLDownLoadsOfAssignedContent(commons.userName);
 		System.out.println("at subscribeToDeckerParents 123 dbAssignedERLDownloadsList.size() is " + dbAssignedERLDownloadsList.size() );
 		for (int erlCount = 0; erlCount < dbAssignedERLDownloadsList.size(); erlCount++) {

@@ -14,10 +14,14 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
+/**
+ * Diplays catalogs under the relevance is opted by user
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class CatalogDisplay extends ArtifactsDisplay implements Runnable {
-	/*
-	 * Diplays catalogs where the relevance is marked as interested
-	 */	
+
 	private String catalogDisplayTitle = "Catalog Display";
 
 	public CatalogDisplay(CommonUIData inCommonUIData) {
@@ -26,6 +30,7 @@ public class CatalogDisplay extends ArtifactsDisplay implements Runnable {
 	}
 
 	public void setData(){
+		Commons.logger.info("CatelogPersistenceManager in setData start");
 		System.out.println("catelogPersistenceManager in setData is " + commonUIData.getCatelogPersistenceManager());
 
 		ArrayList<ERLDownload> allERLDownLoads = catelogPersistenceManager.readActiveERLDownLoadsOfRoot();
@@ -410,7 +415,7 @@ public class CatalogDisplay extends ArtifactsDisplay implements Runnable {
 		CommonUIData commonUIData = (CommonUIData) CommonUIData.getUIInstance(commons);
 		System.out.println("after setting commonUIData : " + commonUIData);
 
-		commons.logger.info(" Catalog Display Started ");
+		Commons.logger.info(" Catalog Display Started ");
 
 		CatalogDisplay catalogDisplay = new CatalogDisplay(commonUIData);
 		catalogDisplay.displayArtifact();

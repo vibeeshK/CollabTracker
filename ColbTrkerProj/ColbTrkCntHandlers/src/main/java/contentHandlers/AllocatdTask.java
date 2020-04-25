@@ -6,11 +6,14 @@ import espot.ContentHandlerSpecs;
 import espot.GenericItemHandler;
 import espot.ItemPojo;
 
+/**
+ * This content handler helps to allocate a new task item to a content creator 
+ * by providing a template and author assignment
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class AllocatdTask extends GenericItemHandler {
-	/*
-	 * This content handler helps to allocate a new task item to a content creator 
-	 * by providing a template and assigning
-	 */
 
 	public static String getAllocatdTaskArtifactName(String inUserName, ContentHandlerSpecs inContentHandlerSpecs, String inProjID, String inTaskID) {
 		return inUserName + inContentHandlerSpecs.rollAddSeparator 

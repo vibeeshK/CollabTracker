@@ -3,10 +3,16 @@ package espot;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * Simplifier to build new artifacts from different sources
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ArtifactPrepper {
 	/*
-	 * Finds out where to get the source for creating a new draft
-	 * out of the below options
+	   Finds out where to get the source for creating a new draft
+	   out of the below options
 		use template
 		use active draft
 		use erl download - stand alone
@@ -68,6 +74,12 @@ public class ArtifactPrepper {
 		catelogPersistenceManager = commonData.getCatelogPersistenceManager();
 		contentHandlerSpecsMap = commonData.getContentHandlerSpecsMap();
 		currentRootPojo = commonData.getCurrentRootPojo();
+
+		Commons.logger.info("At ArtifactPrepper initProcess start targetArtifactKeyPojo " + targetArtifactKeyPojo.artifactName 
+				+ " inItemID " + inItemID
+				+ " inNewAuthor " + inNewAuthor				
+			);
+		
 		setFlags();
 	}
 	
@@ -239,9 +251,16 @@ public class ArtifactPrepper {
 			System.out.println("at setFlags useErlDownloadStandalone " + useErlDownloadStandalone);
 			System.out.println("at setFlags useTemplate " + useTemplate);
 		}
+		
+		Commons.logger.info("At ArtifactPrepper initProcess end " 
+						+ " useErlDownloadRolledupChild " + useErlDownloadRolledupChild
+						+ " useActiveDraft " + useActiveDraft
+						+ " useErlDownloadStandalone " + useErlDownloadStandalone
+						+ " useTemplate " + useTemplate);
 	}
 	
 	public SelfAuthoredArtifactpojo createDraft() {
+		Commons.logger.info("At ArtifactPrepper createDraft start ");
 		ArtifactMover artifactMover = ArtifactMover.getInstance(commonData);
 
 		int maxLocalVerionNumber;
@@ -272,6 +291,14 @@ public class ArtifactPrepper {
 						+ "; versionNum: " + oneVersionOfSelfAuthoredArtifact.unpulishedVerNum
 						+ ". draftingState: " + oneVersionOfSelfAuthoredArtifact.draftingState
 				);
+
+				Commons.logger.info( 
+						  " At ArtifactPrepper createDraft old draft archived successfully."
+						+ " root: " + oneVersionOfSelfAuthoredArtifact.artifactKeyPojo.rootNick
+						+ "; relevance: " + oneVersionOfSelfAuthoredArtifact.artifactKeyPojo.relevance
+						+ "; artifact: " + oneVersionOfSelfAuthoredArtifact.artifactKeyPojo.artifactName
+						+ "; versionNum: " + oneVersionOfSelfAuthoredArtifact.unpulishedVerNum
+						+ ". draftingState: " + oneVersionOfSelfAuthoredArtifact.draftingState);
 			}
 			// clear old drafts ends
 

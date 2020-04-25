@@ -9,7 +9,7 @@
 
     <!-- Rolling File Appender -->
     <RollingFile name="RollingFile">
-      <FileName>log/espot.log</FileName>
+      <FileName>log/colbtrk.log</FileName>
       <FilePattern>log/size-based-logs/%d{yyyy-MM-dd-hh}-%i.log.zip</FilePattern>
       <PatternLayout>
         <Pattern>%d{yyyy-MMM-dd HH:mm:ss a} [%t] %-5level %logger{36} - %msg%n</Pattern>
@@ -22,11 +22,11 @@
 
   </Appenders>
   <Loggers>
-    <Logger name="ESPoTLogger" level="info" additivity="false">
+    <Logger name="CommonLogger" level="info" additivity="false">
       <AppenderRef ref="RollingFile" />
       <AppenderRef ref="Console" />
     </Logger>
-    <Root level="warn">
+    <Root level="info">
       <AppenderRef ref="Console" />
       <AppenderRef ref="RollingFile" />
     </Root>

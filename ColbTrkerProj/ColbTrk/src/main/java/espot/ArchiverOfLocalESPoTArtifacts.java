@@ -3,12 +3,15 @@ package espot;
 import java.io.IOException;
 import java.text.ParseException;
 
+/**
+ * Deletes all local drafts and artifacts of all roots at user's desktop
+ * CAUTION: YOU WILL LOOSE ALL DATA IF YOU INVOKE THIS CLASS.
+ * 			DONT INVOKE BEFORE BACKING UP CURRENT DATA
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ArchiverOfLocalESPoTArtifacts {
-	/*
-	 * Deletes all local drafts and artifacts of all roots at user's desktop
-	 * CAUTION: YOU WILL LOOSE ALL DATA IF YOU INVOKE THIS CLASS.
-	 * 			DONT INVOKE BEFORE BACKING UP CURRENT DATA
-	 */
 
 	private CommonUIData commonUIData;
 	private Commons commons;
@@ -27,8 +30,7 @@ public class ArchiverOfLocalESPoTArtifacts {
 		catelogPersistenceManager.neverCallMe_DeleteAllTriggers();
 
 		try {
-
-			//Catalog downloads are very small and clearing it will require a manual rerun of client archestrator
+			//Catalog downloads are very small and clearing it will require a manual rerun of client orchestrator
 			//and updating the tracker file. Hence not archiving it.
 			//commons.archiveLocalFolder(commons.getClientSideCatalogDbReceiveFolderOfRoot());
 			
@@ -48,8 +50,6 @@ public class ArchiverOfLocalESPoTArtifacts {
 			commons.archiveLocalFolder(commons.getDownloadedReviewsFolder());
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in ArchiverOfLocalESPoTArtifacts archiveLocalESPoTArtifacts of " + commons.getCurrentRootNick(), e);
 		}	
 	}

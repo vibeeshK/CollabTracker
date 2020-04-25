@@ -3,10 +3,14 @@ package contentHandlers;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for Allocated task item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class AllocatdTaskItemDoc extends GenericItemDocPojo {
-	/*
-	 * json doc holder for Allocated task item
-	 */	
+
 	AllocatdTaskItemPojo allocatedTaskItemPojo;
 
 	public AllocatdTaskItemDoc(ItemPojo inItemPojo) {

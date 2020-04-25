@@ -2,11 +2,17 @@ package espot;
 
 import java.util.Date;
 
+/**
+ * Base class for item details
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ItemPojo {
-	/*
-	 * This item pojo is created only for checking existence againts a rolled up artifact with same key
-	 */
+
 	public static ItemPojo getStartUpItemPojo(String inItemID, String inArtifactName, String inContentType, String inRelevance) {
+		 // This start up item pojo was initially designed only for 
+		// checking existence against a rolled up artifact with same key
 		
 		ItemPojo startUpItemPojo = new ItemPojo(-1);
 		startUpItemPojo.itemID = inItemID;

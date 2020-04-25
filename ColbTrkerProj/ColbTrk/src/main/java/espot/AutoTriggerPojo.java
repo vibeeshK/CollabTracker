@@ -1,9 +1,13 @@
 package espot;
 
+/**
+ * Simplifier object of AutoTrigger record
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class AutoTriggerPojo {
-	/*
-	 * Pojo of AutoTrigger record
-	 */
+
 	final public static String PROCESS_STAT_NEW = "New";
 	final public static String PROCESS_STAT_CONTINUE = "Continue";
 	final public static String PROCESS_STAT_DISCONTINUE = "Discontinue";

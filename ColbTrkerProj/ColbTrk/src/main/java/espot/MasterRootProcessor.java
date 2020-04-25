@@ -7,12 +7,15 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import commonTechs.OrchestrationData;
 
+/**
+ * Called by Serverside Orchestrator to periodically execute the requests processor 
+ * for the given root
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class MasterRootProcessor implements Runnable {
-	/*
-	 * Called by Serverside Orchestrator to periodically execute the requests processor for the given root
-	 */
 
-	//private HashMap<String, ContentHandlerSpecs>  contentHandlerSpecsMap = null;
 	private CommonData commonData;			
 	private Commons commons;			
 	private RootPojo rootPojo;
@@ -25,6 +28,9 @@ public class MasterRootProcessor implements Runnable {
 	public MasterRootProcessor(RootPojo inRootPojo, OrchestrationData inOrchestrationData) throws IOException, ParseException {
 		rootPojo = inRootPojo;
 		Commons commons = Commons.getInstance(Commons.BASE_CATALOG_SERVER,rootPojo.rootNick);
+		
+		Commons.logger.info("MasterRootProcessor constructor starting up at " + commons.getCurrentTimeStamp());
+		
 		orchestrationData = inOrchestrationData;
 		
 		System.out.println("going to create the Sardine object1 for MasterRootProcessor");
@@ -34,8 +40,6 @@ public class MasterRootProcessor implements Runnable {
 
 		System.out.println("created sardine");
 
-		//contentHandlerSpecsMap = commonData.getCatelogPersistenceManager().getContentHandlerSpecsMap();
-		
 		requestProcessor = new RequestProcessor(commonData, remoteAccesser);
 			
 		System.out.println("at 4");
@@ -45,7 +49,7 @@ public class MasterRootProcessor implements Runnable {
 
 		while (orchestrationData.getOkayToContinue()) {
 			if (rootPojo.requiresInternet && !commons.isInternetAvailable()){
-				commons.logger.warn(" Internet umavailable, hence skipping MasterRootProcess for " + rootPojo.rootNick);	
+				Commons.logger.warn(" Internet umavailable, hence skipping MasterRootProcess for " + rootPojo.rootNick);	
 				System.out.println(" Internet umavailable, hence skipping MasterRootProcess for " + rootPojo.rootNick);
 				break;
 			}
@@ -53,9 +57,7 @@ public class MasterRootProcessor implements Runnable {
 			try {
 				System.out.println("inside masterRootProcessr for = "
 						+ rootPojo.rootString);
-				//HashMap<String, ContentHandlerSpecs> contentHandlerSpecsMap = null;
-				//contentHandlerSpecsMap = commonData.getCatelogPersistenceManager().getContentHandlerSpecsMap();
-				
+
 				requestProcessor.processRequestsOfOneRoot();
 			} catch (IOException | ClassNotFoundException | TransformerException | ParserConfigurationException e) {
 				e.printStackTrace();

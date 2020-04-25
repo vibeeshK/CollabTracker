@@ -1,9 +1,13 @@
 package espot;
 
+/**
+ * This class holds details about the draft content which user working on
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class SelfAuthoredArtifactpojo extends ArtifactPojo {
-	/*
-	 * This class holds details about the draft content
-	 */
+
 	final public static String ArtifactStatusDraft = "Draft";
 	final public static String ArtifactStatusToBeUploaded = "ToBeUploaded";
 	final public static String ArtifactStatusUploaded = "Uploaded";

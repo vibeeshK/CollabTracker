@@ -40,11 +40,15 @@ import org.eclipse.swt.widgets.Text;
 
 import commonTechs.ExportSWTTableToExcel;
 
+/**
+ * Content handler abstraction for Grouping Types
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public abstract class GenericGrouper extends SelectionAdapter implements
 		ContentHandlerInterface {
-	/*
-	 * Content handler abstraction for Grouping Types
-	 */
+
 	public final static String SCREENROWNUMLIT = "screenRowNum";
 	public final static String ItemOnRowHasALocalDraftLIT = "ItemOnRowHasALocalDraftFlag";
 	
@@ -70,7 +74,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 	
 	public ScrolledComposite ribbonScrollPane = null;	
 	public ScrolledComposite artifactRwScrollPane = null;
-	//public ScrolledComposite scrolledComposite_main = null;
 	public CommonData commonData = null;
 	public Commons commons = null;
 	public CatelogPersistenceManager catelogPersistenceManager = null;
@@ -99,7 +102,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 	private static final String hidefiltersLIT = "HideFilters";
 	protected Composite filtersGroup;
 	protected List statusSelList;
-	//protected Text allSelectedStatusText;
+
 	protected boolean hideShowFilter;
 	
 	private Button showOrHideFiltersButton;
@@ -150,15 +153,17 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 	public void doCommonInit(CommonData inCommonData, ArtifactPojo inArtifactPojo) {
 		commonData = inCommonData;
 		invokedArtifactPojo = inArtifactPojo;
-		commons = commonData.getCommons();		
+		commons = commonData.getCommons();
+
+		Commons.logger.info("GenericGrouper doCommonInit starting up at " + commons.getCurrentTimeStamp());
+		
 		catelogPersistenceManager = commonData.getCatelogPersistenceManager();
 		contentHandlerSpecs = commonData.getContentHandlerSpecsMap().get(invokedArtifactPojo.artifactKeyPojo.contentType);
 		
 		ArtifactMover artifactMover = ArtifactMover.getInstance(commonData);
 		contentPathFileName = artifactMover.getPrimeFilePath(inArtifactPojo);
 		if (artifactMover.lastProcessStatus != ArtifactMover.PROCESSED_OK) {
-			//ErrorHandler.displayError(mainShell, commonData.getCommons(), "Error at GenericGrouper doCommontInit " + artifactMover.lastProcessStatus + " while dealing with : " + contentPathFileName);
-			//return;
+
 			if (commons.processMode == Commons.CLIENT_MACHINE) {
 				ErrorHandler.displayError(mainShell, commonData.getCommons(), "Error at GenericGrouper doCommontInit " + artifactMover.lastProcessStatus + " while dealing with artifactName :" + inArtifactPojo.artifactKeyPojo.artifactName);
 				return;
@@ -190,7 +195,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		try {
 			primerDoc = (GenericGrouperDocPojo) commonData.getCommons().getJsonDocFromFile(contentPathFileName,getPrimerDocClass());
 		} catch (FileNotFoundException | UnsupportedEncodingException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commonData.getCommons(), "Error at GenericGrouper doCommontInit while reading " + contentPathFileName, e);
 		}
 
@@ -450,12 +454,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		System.out.println("linkTextButton cellEditor.horizontalAlignment = " + maintenanceButtonEditor.horizontalAlignment);
 		System.out.println("maint button absoluteColumnPosition = " + inLastColLocation);
 
-		//inEditor = new TableEditor(inTable);
-		//Text title_Tx = new Text(inTable, SWT.READ_ONLY);
-		//title_Tx.setText(inItemPojoScrolled.title);
-		//inEditor.grabHorizontal = true;
-		//inEditor.setEditor(title_Tx, inTableItem, ++inLastColLocation);
-		//inTableItem.setText(inLastColLocation, inItemPojoScrolled.title);
 	}
 
 	public void setDisplayItemscoreRightFieldsInMultiDisplay(TableEditor inEditor, Table inTable, TableItem inTableItem, int inLastColLocation, ItemPojo itemPojoScrolled, int screenRowNum) {
@@ -490,7 +488,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 				ArrayList itemsObjects = new ArrayList();
 				displayedItemMap.put(selectedItemRow, itemsObjects);
 				
-				//ItemPojo selectedItemPojo  = (ItemPojo) itemList.get(selectedItemRow);
 				ItemPojo selectedItemPojo  = (ItemPojo) filteredItems.get(selectedItemRow);
 				
 				System.out.println("This item is being viewed = " + selectedItemPojo.title);
@@ -524,80 +521,11 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		
 		System.out.println("xxx reviewButton button rightColumnStartLocation = " + inLastColLocation);
 		System.out.println("xxx reviewButton button reviews for itemPojoScrolled.itemID below " + itemPojoScrolled.itemID);
-		//System.out.println("xxx reviewButton button reviews = " + downloadedReviewsHandler.getArtifactAllReviewsPojo().getItemAllReviews(itemPojoScrolled.itemID));
 		
 		System.out.println("reviewButtonEditor.minimumWidth = " + reviewButtonEditor.minimumWidth);
 		System.out.println("reviewButton text = " + reviewButton.getText());
 		System.out.println("reviewButton reviewButton.horizontalAlignment = " + reviewButtonEditor.horizontalAlignment);
 		System.out.println("reviewButton @ lastColLocation = " + inLastColLocation);
-
-		//if (commonData.getCommons().userName.equals("reviewer")) {
-		//	
-		//	System.out.println("Got inside the reviewer path");
-		//
-		//	// Approve & Reject Buttons
-		//	TableEditor approveButtonEditor = new TableEditor(inTable);
-		//	Button approveButton = new Button(inTable, SWT.PUSH);
-		//	approveButton
-		//			.setText("Approve");
-		//	approveButton.setData(SCREENROWNUMLIT, screenRowNum);
-		//
-		//	System.out.println("set data = "
-		//			+ approveButton.getData("screenRowNum"));
-		//
-		//	approveButton.addSelectionListener(new SelectionAdapter() {
-		//		@Override
-		//		public void widgetSelected(SelectionEvent e) {
-		//			Button eventButton = (Button) e.getSource();
-		//			System.out.println("eventButton = " + eventButton);
-		//			Integer i = (Integer) eventButton
-		//					.getData("screenRowNum");
-		//			System.out.println("selected screenRowNum = "
-		//					+ i);
-		//			ItemPojo selectedItemPojo  = (ItemPojo) itemList.get(i);
-		//
-		//			System.out.println("This item is passed = " + selectedItemPojo.title);
-		//
-		//		}
-		//	});
-		//
-		//	approveButton.pack();
-		//	approveButtonEditor.minimumWidth = approveButton.getSize().x;
-		//	approveButtonEditor.horizontalAlignment = SWT.LEFT;
-		//	approveButtonEditor.setEditor(approveButton, inTableItem,++inLastColLocation);
-		//	System.out.println("approve button lastColLocation = " + inLastColLocation);
-		//
-		//	TableEditor rejectButtonEditor = new TableEditor(inTable);
-		//	Button rejectButton = new Button(inTable, SWT.PUSH);
-		//	rejectButton
-		//			.setText("Reject");
-		//	rejectButton.setData(SCREENROWNUMLIT, screenRowNum);
-		//
-		//	System.out.println("set data = "
-		//			+ rejectButton.getData("screenRowNum"));
-		//
-		//	rejectButton.addSelectionListener(new SelectionAdapter() {
-		//		@Override
-		//		public void widgetSelected(SelectionEvent e) {
-		//			Button eventButton = (Button) e.getSource();
-		//			System.out.println("eventButton = " + eventButton);
-		//			Integer i = (Integer) eventButton
-		//					.getData("screenRowNum");
-		//			System.out.println("selected screenRowNum = "
-		//					+ i);
-		//			ItemPojo selectedItemPojo  = (ItemPojo) itemList.get(i);
-		//
-		//			System.out.println("This item is rejected = " + selectedItemPojo.title);
-		//		}
-		//	});
-		//
-		//	rejectButton.pack();
-		//	rejectButtonEditor.minimumWidth = rejectButton.getSize().x;
-		//	rejectButtonEditor.horizontalAlignment = SWT.LEFT;
-		//	rejectButtonEditor.setEditor(rejectButton, inTableItem,++inLastColLocation);
-		//	System.out.println("reject button rightColumnStartLocation = " + inLastColLocation);
-		//	
-		//}		
 	}
 	
 	public void displayMultiContent() {
@@ -641,53 +569,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		System.out.println("screen rows filling starts");
 
 		populateScreenItems();
-		
-		//ArrayList<ItemPojo> filteredItems = getFilteredItemList();
-		//
-		////for (int screenRowNum = 0; screenRowNum < itemList.size(); screenRowNum++) {
-		//for (int screenRowNum = 0; screenRowNum < filteredItems.size(); screenRowNum++) {
-		//
-		//	System.out.println("screenRowNum = " + screenRowNum);
-		//	int lastColLocation = -1;
-		//	
-		//	//ItemPojo itemPojoScrolled = (ItemPojo) itemList.get(screenRowNum);
-		//	ItemPojo itemPojoScrolled = (ItemPojo) filteredItems.get(screenRowNum);
-		//	
-		//
-		//	TableItem tableItem = new TableItem(table, SWT.NONE);
-		//
-		//	TableEditor editor = new TableEditor(table);
-		//
-		//	setDisplayItemsAddlLeftFieldsInMultiDisplay(editor,table,tableItem,lastColLocation,itemPojoScrolled);
-		//	lastColLocation = addlLeftColumnHeaders.length - 1;
-		//
-		//	Button maintenanceButton = new Button(table, SWT.PUSH);			
-		//	setDisplayCoreLeftFieldsInMultiDisplay(editor,table,tableItem,lastColLocation,itemPojoScrolled, maintenanceButton, screenRowNum);
-		//
-		//	lastColLocation = addlLeftColumnHeaders.length + coreLeftColumnHeaders.length - 1;
-		//	setDisplayItemsCenterBaseFieldsInMultiDisplay(editor,table,tableItem,lastColLocation,itemPojoScrolled);
-		//	
-		//	lastColLocation = addlLeftColumnHeaders.length + coreLeftColumnHeaders.length + centerBaseColHeaders.length - 1;
-		//	setDisplayItemsCenterAddlFieldsInMultiDisplay(editor,table,tableItem,lastColLocation,itemPojoScrolled);
-		//
-		//	lastColLocation = addlLeftColumnHeaders.length + coreLeftColumnHeaders.length + centerBaseColHeaders.length + centerAddlColHeaders.length - 1;
-		//	setDisplayItemscoreRightFieldsInMultiDisplay(editor,table,tableItem,lastColLocation,itemPojoScrolled,screenRowNum);
-		//
-		//	if (itemPojoScrolled.equals(viewFocusItemPojo)) {
-		//
-		//		maintenanceButton.setFocus();
-		//	}
-		//	
-		//}
-
-		////create pane for individual items start1
-		//scrolledComposite_main = new ScrolledComposite(mainShell, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
-		//
-		//GridData gridData2 = new GridData(SWT.FILL, SWT.FILL, true, true);
-		//scrolledComposite_main.setLayoutData(gridData2);
-		//
-		//itemsMainCompositeInMultiConentView = new Composite(scrolledComposite_main, SWT.NONE); 
-		//scrolledComposite_main.setContent(itemsMainCompositeInMultiConentView);
 
 		itemsMainCompositeInMultiConentView = new Composite(mainShell, SWT.NONE); 		
 		itemsReviewGridData = new GridData(SWT.FILL, SWT.FILL, true, true);
@@ -702,15 +583,13 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 	    itemsMainCompositeInMultiConentView.setBackgroundImage(bg);
 	    itemsMainCompositeInMultiConentView.pack();		
 		////create pane for individual items end1
-		
-		//childCompositeOfMultiView.pack();
 
 	    if (!standaloneReadingMode && downloadedReviewsHandler.canBeReviewed()){
 	    	showArtifactReview();
 	    }
 
 		itemsMainCompositeInMultiConentView.pack();
-		//scrolledComposite_main.pack();
+
 		mainShell.pack();		
 		mainShell.open();
 	}
@@ -730,8 +609,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 
 			System.out.println("screenRowNum = " + screenRowNum);
 			int lastColLocation = -1;
-			
-			//ItemPojo itemPojoScrolled = (ItemPojo) itemList.get(screenRowNum);
+
 			ItemPojo itemPojoScrolled = (ItemPojo) filteredItems.get(screenRowNum);
 			
 
@@ -779,7 +657,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 						.getData("screenRowNum");
 				System.out.println("selected screenRowNum = "
 						+ selectedItemRow);
-				//ItemPojo selectedItemPojo  = (ItemPojo) itemList.get(selectedItemRow);
+
 				ItemPojo selectedItemPojo  = (ItemPojo) filteredItems.get(selectedItemRow);
 				
 				System.out.println("This item is being taken for maintenance = " + selectedItemPojo.title);
@@ -805,17 +683,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 				ArtifactPrepper artifactPrepper = new ArtifactPrepper(selectedArtifactKeyPojo,selectedItemPojo.itemID,commonData);
 
 				if (artifactPrepper.errorEncountered) { return;}
-
-				//SelfAuthoredArtifactpojo maintenanceArtifactPojo = null;
-				//if (!artifactPrepper.localDraftActive) {
-				//
-				//	maintenanceArtifactPojo = artifactPrepper.createDraft();
-				//	commonData.getCatelogPersistenceManager().insertArtifactUI(maintenanceArtifactPojo);
-				//} else {
-				//	maintenanceArtifactPojo = artifactPrepper.localDraft;
-				//}
-				//ArtifactWrapperUI artifactWrapperUI = 
-				//		new ArtifactWrapperUI((CommonUIData) commonData, maintenanceArtifactPojo);
 
 				ContentHandlerSpecs childContentHandlerSpecs = commonData.getContentHandlerSpecsMap().get(selectedItemPojo.contentType);
 				System.out.println("at GenericGrouper maintenance button process childContentHandlerSpecs rollAdd is " + childContentHandlerSpecs.rollupOrAddup);
@@ -844,8 +711,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 					System.out.println("at4 maintenanceButtonProcess ItemOnRowHasALocalDraftLIT not true to start with");
 					checkIfItemOnRowHasALocalDraft(selectedItemPojo, eventButton);
 					eventButton.redraw();
-					//mainShell.pack();					
-					//mainShell.layout(true);
 				} else {
 					System.out.println("at4 maintenanceButtonProcess ItemOnRowHasALocalDraftLIT true upfront");					
 				}
@@ -899,7 +764,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 				}
 				
 				itemsMainCompositeInMultiConentView.pack();
-				//scrolledComposite_main.pack();
 				mainShell.pack();
 				
 				mainShell.layout(true);
@@ -978,14 +842,11 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 
 		itemContentGroup.pack();
 
- 		//ReviewHandler reviewHander = new ReviewHandler((CommonUIData) commonData,reviewGrp, invokedArtifactPojo,reviewItemPojo.itemID,mainShell);
  		ReviewHandler reviewHander = new ReviewHandler((CommonUIData) commonData,reviewGrp, invokedArtifactPojo,reviewItemPojo,mainShell);
 		reviewHander.displayContent();
 		reviewGrp.pack();
 		childCompositeOfSingleView.pack();
-		//scrolledComposite_1.pack();	// though this got commented, the scrolling result is still good!!!
 		itemsMainCompositeInMultiConentView.pack();
-		//mainShell.pack(); // commented this mainshell pack since it resizes even when screen in maxed
 
 		mainShell.layout(true);
 
@@ -1040,36 +901,16 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		GenericGrouperDocPojo documentToUpdate = null;
 		
 		try {
-		
-//			if (inRequestProcesserPojo.prevERLPojo == null) {
-//				documentToUpdate = getNewPrimerDoc();
-//			} else {
-//				InputStream prevFileStream = null;
-//				System.out.println("inRequestProcesserPojo.prevERLPojo is " + inRequestProcesserPojo.prevERLPojo);
-//				System.out.println("inRequestProcesserPojo.prevERLPojo.artifactKeyPojo is " + inRequestProcesserPojo.prevERLPojo.artifactKeyPojo);
-//				System.out.println("inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance is " + inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance);
-//				System.out.println("inRequestProcesserPojo.prevERLPojo.contentFileName is " + inRequestProcesserPojo.prevERLPojo.contentFileName);
-//	
-//				prevFileStream = inRemoteAccesser.getRemoteFileStream(commonData.getCommons().getRemotePathFileName(inRootPojo.rootString, 
-//						inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance, inRequestProcesserPojo.prevERLPojo.contentFileName,inRootPojo.fileSeparator));
-//				documentToUpdate = (GenericGrouperDocPojo) commonData.getCommons().getJsonDocFromInputStream(prevFileStream,getPrimerDocClass());
-//				prevFileStream.close();
-//				System.out.println("At processContentAtWeb closing the instream prevFileStream " + prevFileStream);
-//			}
 	
 			System.out.println("At processContentAtWeb inRequestProcesserPojo.prevERLPojo.contentFileName is " + inRequestProcesserPojo.incomingContentFullPath);
 
 			InputStream incomingFileStream = null;
 			InputStream prevFileStream = null;
-			
-			//incomingFileStream = inRemoteAccesser.getRemoteFileStream(inRequestProcesserPojo.incomingContentFullPath);
-			
+
 			System.out.println("At processContentAtWeb incomingFileStream is " + incomingFileStream);
 			System.out.println("At processContentAtWeb ContentHandlerSpecs.ROLLUP_ADDUP_TYPE_ROLLUP is " + inRequestProcesserPojo.contentHandlerSpecs.rollupOrAddup);
 			System.out.println("At processContentAtWeb contenttype is " + inRequestProcesserPojo.contentHandlerSpecs.contentType);
 			
-			//if ((inRequestProcesserPojo.contentHandlerSpecs.rollupOrAddup.equalsIgnoreCase(ContentHandlerSpecs.ROLLUP_ADDUP_TYPE_ROLLUP))
-			//	|| (inRequestProcesserPojo.contentHandlerSpecs.rollupOrAddup.equalsIgnoreCase(ContentHandlerSpecs.ROLLUP_ADDUP_TYPE_ADDUP))) {
 			if (inRequestProcesserPojo.contentHandlerSpecs.rollupAddupType) {
 				//For rollup contents such as innovations we need to absorb 'single item' from base content type
 				//For other types just need to refresh whole list as both incoming and prev will be both 'group items'
@@ -1108,11 +949,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 					additionalRollAddWebProcess(incomingDoc.getItem());
 
 				} else {
-					//incomingFileStream = inRemoteAccesser.getRemoteFileStream(commonData.getCommons().getRemotePathFileName(inRootPojo.rootString, 
-					//		inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance, inRequestProcesserPojo.prevERLPojo.contentFileName,inRootPojo.fileSeparator));
-					//documentToUpdate = (GenericGrouperDocPojo) commonData.getCommons().getJsonDocFromInputStream(incomingFileStream,getPrimerDocClass());
-					//incomingFileStream.close();
-
 ///////////////////
 ///////////////////
 					ItemPojo itemPojoToUpdate = documentToUpdate.getItemByChildArtifactName(
@@ -1145,16 +981,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 					}
 ///////////////////					
 ///////////////////					
-					//ItemPojo itemPojoToUpdate = documentToUpdate.getItemByChildArtifactName(
-					//		inRequestProcesserPojo.newERLPojo.artifactKeyPojo.relevance, 
-					//		inRequestProcesserPojo.newERLPojo.artifactKeyPojo.artifactName);
-					//
-					//if (!inRequestProcesserPojo.newERLPojo.author.isEmpty()) {
-					//	itemPojoToUpdate.author = inRequestProcesserPojo.newERLPojo.author;
-					//}
-					//if (!inRequestProcesserPojo.newERLPojo.erlStatus.isEmpty()) {
-					//	itemPojoToUpdate.status = inRequestProcesserPojo.newERLPojo.erlStatus;
-					//}
 					
 					if (inRequestProcesserPojo.contentHandlerSpecs.rollupType
 						&& itemPojoToUpdate.status!= null 
@@ -1314,8 +1140,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 	    filtersRibbonData = new GridData(SWT.FILL, SWT.FILL, true, true);
 	    filtersGroup.setLayoutData(filtersRibbonData);
 
-		//statusSelList = new List(filtersGroup, SWT.BORDER | SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL);
-
 		if (!contentHandlerSpecs.userInitiated){
 		// The artifacts not originated from rollup child via items wouldn't have non-essential details at item level
 		// Hence suppressing status filter for them
@@ -1428,13 +1252,13 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 	}
 	
 	public int getTriggerInterval(){
-		/* default dummy process as its not a required function for all contents*/
+		// default dummy process as its not a required function for all contents
 		commonData.getCommons().logger.info(" default getTriggerInterval is called which is unexexpected. Invoked artifactname is " + invokedArtifactPojo.artifactKeyPojo.artifactName);
 
 		return -1;
 	}
 	public void triggeredProcess(){
-		/* default dummy process as its not a required function for all contents*/
+		// default dummy process as its not a required function for all contents
 		commonData.getCommons().logger.info(" default getTriggerInterval is called which is unexexpected. Invoked artifactname is " + invokedArtifactPojo.artifactKeyPojo.artifactName);
 	}
 
@@ -1456,11 +1280,11 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		System.out.println("writeJSON Stored the xml file : " + contentPathFileName);
 	}
 	
-	//public void createNewStartupPrimer(String inNewPrimerFilePath, String inContentType) {
 	public void createNewStartupPrimer(String inNewPrimerFilePath, ArtifactPojo inArtifactpojo) {
 		System.out.println("At createNewStartupPrimer json file name passed : " + inNewPrimerFilePath);
-		//GenericGrouperDocPojo newPrimerDoc = getNewPrimerDoc();
+
 		primerDoc = getNewPrimerDoc();
+		
 		try {
 			commons.putJsonDocToFile(inNewPrimerFilePath,primerDoc);
 		} catch (IOException e) {
@@ -1489,7 +1313,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 			artifactRwScrollPane.dispose();	//artifact review pane dispose;
 		}
 		itemsMainCompositeInMultiConentView.dispose();
-		//scrolledComposite_main.dispose();	// item review pane dispose
 		displayMultiContent();	// redraw screen below ribbon
 	}
 
@@ -1513,7 +1336,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 				List dropDownList = (List) e.getSource();
 				int[] comboSelection = dropDownList.getSelectionIndices();
 				if (comboSelection != null) {
-					//System.out.println("selected items are " + dropDownList.getSelection()inDropDownItems[dropDownList.getSelectionIndices()[0]]);
 					System.out.println("selected items are " + dropDownList.getSelection());
 				}
 				applyFilterButton.setVisible(true);
@@ -1583,16 +1405,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 				if (hideShowFilter) {
 
 					System.out.println("hideShowFilterVisible");
-											
-					//MessageBox WarningMessageBox = new MessageBox(mainShell,
-					//			SWT.ICON_WARNING | SWT.OK | SWT.CANCEL);
-					//	WarningMessageBox.setMessage("The keyed in text will be lost if hidden. Proceed?");
-					//if (WarningMessageBox.open() == SWT.CANCEL) {
-					//	System.out.println("Cancel chosen. returning");
-					//	return;
-					//} else {
-					//	System.out.println("Hide confirmed. Proceeding");
-					//}
+
 					((Button) event.getSource()).setText("ShowFilters");
 					System.out.println("Hiding Filter");
 					hideShowFilter = false;

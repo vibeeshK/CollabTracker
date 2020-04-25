@@ -1,8 +1,12 @@
 package espot;
 
+/**
+ * Interface mandates for OS handlers
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public interface OSHandler {
-	/*
-	 * Interface mandates for OS handlers
-	 */
+
 	public void openFileToView(String inFileString);
 }

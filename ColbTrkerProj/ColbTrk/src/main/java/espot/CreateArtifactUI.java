@@ -1,11 +1,7 @@
 package espot;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
-
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.custom.CCombo;
 import org.eclipse.swt.custom.TableEditor;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -23,10 +19,13 @@ import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
+/**
+ * UI to create a new artifact
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class CreateArtifactUI {
-	/*
-	 * UI to create a new artifact
-	 */
 
 	private Shell mainShell = null;
 	private ERLDownload cloneERLDownload = null;
@@ -38,7 +37,7 @@ public class CreateArtifactUI {
 	public CreateArtifactUI(CommonUIData inCommonData) {
 		commonUIData = inCommonData;
 		commons = commonUIData.getCommons();
-		System.out.println("In the constructor of CreateArtifactUI commonUIData : " + commonUIData);
+		System.out.println("At the constructor of CreateArtifactUI commonUIData : " + commonUIData);
 	}
 
 	public void refreshScreen() {
@@ -72,6 +71,7 @@ public class CreateArtifactUI {
 
 	public void displayContent() {
 		System.out.println("In displayContent of CreateArtifactUI commonUIData : " + commonUIData);
+		Commons.logger.info("CreateArtifactUI displayContent started at " + commons.getCurrentTimeStamp());
 
 		System.out.println("testtest mainShell : " + mainShell);
 
@@ -369,7 +369,6 @@ public class CreateArtifactUI {
 
 		SelfAuthoredArtifactpojo dbSelfAuthoredArtifactspojo = null;
 
-		//for (int ScreenRowNum = 1, inProgressArtifactNum = 0; ScreenRowNum < screenMaxNum; ScreenRowNum++, inProgressArtifactNum++) {
 		for (int ScreenRowNum = 0; ScreenRowNum < screenMaxNum; ScreenRowNum++) {
 			dbSelfAuthoredArtifactspojo = selfAuthoredArtifactLists
 					.get(ScreenRowNum);
@@ -415,19 +414,17 @@ public class CreateArtifactUI {
 			maintainButton.setToolTipText("Navigate to view " + dbSelfAuthoredArtifactspojo.artifactKeyPojo.artifactName);
 			
 			maintainButton.setData(Commons.SCREENROWNUMLIT, ScreenRowNum);
-			//maintainButton.setData("inProgressArtifactNum",
-			//		ScreenRowNum);
+
 
 			System.out.println("set data = "
 					+ maintainButton.getData(Commons.SCREENROWNUMLIT));
 
 			maintainButton.addSelectionListener(new SelectionAdapter() {
-				@Override
+
 				public void widgetSelected(SelectionEvent e) {
 					Button eventButton = (Button) e.getSource();
 					System.out.println("eventButton = " + eventButton);
-					//Integer i = (Integer) eventButton
-					//		.getData("inProgressArtifactNum");
+
 					Integer i = (Integer) eventButton
 							.getData(Commons.SCREENROWNUMLIT);
 					
@@ -447,9 +444,7 @@ public class CreateArtifactUI {
 			maintainButton.pack();
 			maintainButtoneditor.minimumWidth = maintainButton.getSize().x;
 			maintainButtoneditor.horizontalAlignment = SWT.CENTER;
-			//changed the modify button to artifact maintenance and moved to leftmost
-			//maintainButtoneditor.setEditor(maintainButton, items[ScreenRowNum],
-			//		5);
+
 			maintainButtoneditor.setEditor(maintainButton, items[ScreenRowNum],
 			0);
 			
@@ -464,9 +459,7 @@ public class CreateArtifactUI {
 				.setToolTipText("Delete " + dbSelfAuthoredArtifactspojo.artifactKeyPojo.artifactName);
 
 				delButn.setData(Commons.SCREENROWNUMLIT, ScreenRowNum);
-				//delButn.setData("inProgressArtifactNum",
-				//		ScreenRowNum);
-	
+
 				System.out.println("set data = "
 						+ delButn.getData(Commons.SCREENROWNUMLIT));
 	
@@ -475,8 +468,7 @@ public class CreateArtifactUI {
 					public void widgetSelected(SelectionEvent e) {
 						Button eventButton = (Button) e.getSource();
 						System.out.println("eventButton = " + eventButton);
-						//Integer i = (Integer) eventButton
-						//		.getData("inProgressArtifactNum");
+
 						Integer i = (Integer) eventButton
 								.getData(Commons.SCREENROWNUMLIT);
 						

@@ -37,10 +37,14 @@ import commonTechs.CommonTechs;
 import commonTechs.CompareForLaterName;
 import commonTechs.CustomClassLoader;
 
+/**
+ * All common functions specific to this application placed here
+ *  
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class Commons extends CommonTechs {
-	/*
-	 * This class consolidates the commonly used functions to avoid redundancy
-	 */
+
 	public final static String CONFIGFOLDERPREFIX = "config/";
 	public final static String commonPropertiesFILENAME = CONFIGFOLDERPREFIX + "commons.properties";
 	public final static String clientPropertiesFILENAME = CONFIGFOLDERPREFIX + "client.properties";

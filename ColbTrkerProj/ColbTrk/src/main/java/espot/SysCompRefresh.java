@@ -8,11 +8,15 @@ import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 import commonTechs.TransferObject;
 
+/**
+ * Checks the syscomp refresh log and renews any outdated component.
+ * Run only once till next shut down
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class SysCompRefresh {
-	/*
-	 * Checks the syscomp refresh log and renews any outdated component.
-	 * Run only once till next shut down
-	 */
+
 	private static SysCompRefresh sysCompRefresh = null;
 
 	Commons commons = null;
@@ -37,10 +41,8 @@ public class SysCompRefresh {
 			return;
 		}
 
-		
 		HashMap<String,RootPojo> rootPojoMap = PublishedRootsHandler.getPublishedRoots(commons);
-		//sysRootPojo = rootPojoMap.get("PlatformRoot");
-		
+
 		System.out.println("commons.platformRoot is = " + commons.platformRoot);
 		
 		sysRootPojo = rootPojoMap.get(commons.platformRoot);
@@ -72,7 +74,9 @@ public class SysCompRefresh {
 				System.out.println("localFileLocation = " + localFileLocation);
 				commons.archiveLocalFile(localFileLocation);
 				remoteAccesser.downloadFile(commons,sysRootPojo.rootString, remoteFileLocation, localFileLocation);
-				commons.logger.info(" Downloaded " + remoteFileLocation + " into " + localFileLocation);
+				Commons.logger.info(" Downloaded " + remoteFileLocation 
+											+ " into " + localFileLocation
+											+ " at " + commons.getCurrentTimeStamp());
 			}
 			if (updatesLogPojo.lastUpdateTm != null) {
 				System.out.println("SysComp updates done");

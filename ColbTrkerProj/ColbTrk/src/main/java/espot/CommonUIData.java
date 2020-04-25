@@ -4,10 +4,13 @@ import org.eclipse.swt.widgets.Display;
 
 import commonTechs.DisplayKeeper;
 
+/**
+ * This class holds key data required by all UI process
+ *  
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class CommonUIData extends CommonData{
-	/*
-	 * This class holds key data required by all UI process
-	 */
 
 	private boolean artifactDisplayOkayToContinue;
 	private UserPojo currentUserDetail = null;

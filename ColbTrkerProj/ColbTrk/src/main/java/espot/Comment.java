@@ -1,9 +1,13 @@
 package espot;
 
+/**
+ * Convenience class
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 class Comment {
-	/*
-	 * Convenience class
-	 */
+
 	final static String CommentToBeUploaded = "CommentToBeUploaded";
 	final static String CommentToBeProcessed = "CommentToBeProcessed";
 	final static String CommentProcessed = "CommentProcessed";

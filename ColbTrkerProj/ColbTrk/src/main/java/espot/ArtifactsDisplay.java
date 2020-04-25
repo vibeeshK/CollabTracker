@@ -13,9 +13,7 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
-import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
@@ -24,10 +22,13 @@ import org.eclipse.swt.widgets.Text;
 
 import commonTechs.SysTrayHanlder;
 
+/**
+ * Foundation for displaying artifact list
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public abstract class ArtifactsDisplay {
-	/*
-	 * Foundation for displaying artifact list
-	 */
 
 	Shell mainShell;
 	Label lblMessageToUser;
@@ -57,11 +58,13 @@ public abstract class ArtifactsDisplay {
 	
 	public void setArtifactValues(ArrayList inArtifacts) {
 		System.out.println("inArtifactPojos at setArtifactValues is " + inArtifacts);
+		Commons.logger.info("inArtifactPojos at setArtifactValues is " + inArtifacts);
 		artifactPojos = inArtifacts;
 		System.out.println("artifactPojos after setting is " + artifactPojos);
 	}
 	
 	public void displayArtifact() {
+		Commons.logger.info("At ArtifactsDisplay displayArtifact start ");
 		mainShell = new Shell(commonUIData.getESPoTDisplay(),SWT.APPLICATION_MODAL
 								|SWT.CLOSE|SWT.TITLE|SWT.BORDER|SWT.RESIZE|SWT.MAX|SWT.MIN);
 		mainShell.setLayout(new GridLayout(1, false));
@@ -82,8 +85,15 @@ public abstract class ArtifactsDisplay {
 	public abstract void setAddlRibbonButtons();
 
 	private void displayContent() {
+		/*
+		 * For the authors of the artifacts, it provides ability to view as well
+		 * as edit, upload, make clone
+		 * For non-authors, it provides ability to view, make clone
+		 */
+
 		setData();
 		
+		Commons.logger.info("At ArtifactsDisplay DisplayContent Start");
 		System.out.println("at ArtifactDisplay DisplayContent Startxxx");
 
 		mainShell.setText(displayTitle 
@@ -217,36 +227,6 @@ public abstract class ArtifactsDisplay {
 		mainShell.pack();
 		mainShell.layout(true);
 		mainShell.open();		
-		//table.addListener(SWT.Selection,commonUIData.getCommons().setTableSortListener(table));
-//		mainShell.addListener(SWT.Resize, new Listener () {
-//			@Override
-//			public void handleEvent(Event arg0) {
-//				// TODO Auto-generated method stub
-////				table.pack();
-////				table.layout(true);
-//				if (composite != null && !composite.isDisposed()) {
-//					composite.pack();
-//					composite.layout(true);		
-//				}
-//				System.out.println("resize caught");
-//				
-//			}
-//		  }
-//		);
-//		table.addListener(SWT.Resize, new Listener () {
-//			@Override
-//			public void handleEvent(Event arg0) {
-//				// TODO Auto-generated method stub
-//				table.pack();
-//				table.layout(true);
-//				composite.pack();
-//				composite.layout(true);		
-//				mainShell.pack();
-//				mainShell.layout(true);
-//				System.out.println("resize caught");				
-//			}
-//		  }
-//		);		
 	}
 	
 	private void shellDisposeHolder() {

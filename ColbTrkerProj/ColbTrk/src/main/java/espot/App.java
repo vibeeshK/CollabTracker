@@ -2,7 +2,7 @@ package espot;
 
 /**
  * Hello world!
- *
+ * For testing only
  */
 public class App 
 {

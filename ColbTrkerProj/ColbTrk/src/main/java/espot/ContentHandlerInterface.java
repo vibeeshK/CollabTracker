@@ -3,10 +3,13 @@ package espot;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * This interface describes the base functions each content handler shall adhere to
+ *  
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public interface ContentHandlerInterface {
-	/*
-	 * This interface describes the base functions each content handler shall adhere to
-	 */
 
 	public String prevalidate(CommonData inCommonData,ArtifactKeyPojo inArtifactKeyPojo);
 	public void initializeContentHandlerWithMinimumSetup(CommonData inCommonData);

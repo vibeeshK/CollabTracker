@@ -16,18 +16,21 @@ import javax.xml.transform.TransformerFactoryConfigurationError;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
+/**
+ * Request processor processes the requests submitted by the contributors to progress their content or remark.
+ * The requests are in the form of json files and are stored in the request drop box of remote content repository 
+ * tools (viz Google drive, WebDAV enabled doc repositories, windows file system).
+ * 
+ * To handle the network failures it uses ReqProcTracking file to note down the last update done to any file/db.
+ * It also helps in publishing catelog db just once for the whole set of requests taken at one time
+ * 
+ * To prevent cluttering of old content in the repository, whenever a new content arrives the oldest is moved to 
+ * archive if it crosses the the specified limit 
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class RequestProcessor {
-
-	/* Request processor processes the requests submitted by the contributors to progress their content or remark.
-	 * The requests are in the form of json files and are stored in the request drop box of remote content repository 
-	 * tools (viz Google drive, WebDAV enabled doc repositories).
-	 * 
-	 * The ESPoT server reads and processes the requests from remote. To handle the network failures it uses 
-	 * ReqProcTracking file to note down the last update done to any file/db.
-	 * 
-	 * To prevent cluttering of old content in the repository, whenever a new content arrives the oldest is moved to archive.
-	 * if it crosses the the specified limit 
-	 */
 	
 	private RootPojo rootPojo = null;
 	private HashMap<String, ContentHandlerSpecs> contentHandlerSpecsMap = null;
@@ -55,12 +58,13 @@ public class RequestProcessor {
 				commons.getLocalReqTrackingPathFile(rootPojo.rootNick);
 		System.out.println("reqProcTrackingPathFileName = "
 				+ reqProcTrackingPathFileName);
+		Commons.logger.info("RequestProcessor constructure with reqProcTrackingPathFileName " + reqProcTrackingPathFileName
+				+ " at " + commons.getCurrentTimeStamp());
 		
 		try {
 			reqProcTracking = (ReqProcDocPojo) commonData.getCommons().getJsonDocFromFile(	
 													reqProcTrackingPathFileName,ReqProcDocPojo.class);
 		} catch (FileNotFoundException | UnsupportedEncodingException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in RequestProcessor constr1", e);
 		}
 
@@ -74,7 +78,6 @@ public class RequestProcessor {
 											erlVersionDocPathFileName,
 											ERLVersionDocPojo.class);
 		} catch (FileNotFoundException | UnsupportedEncodingException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in RequestProcessor constr2", e);			
 		}
 		if (erlVersionDetail == null) {
@@ -105,7 +108,7 @@ public class RequestProcessor {
 			System.out.println("before receive of resourceCount : " + resourceCount);
 
 			// Test for right file
-			requestFileExtension = commons.getFileExtention(resourcesStringList.get(
+			requestFileExtension = Commons.getFileExtention(resourcesStringList.get(
 					resourceCount).toString());
 			// skipping files with other extensions
 			if (!requestFileExtension.equalsIgnoreCase(Commons.REQUESTFILE_EXTN)) {
@@ -229,95 +232,6 @@ public class RequestProcessor {
 					System.out.println("3 At processRequestsOfOneRoot requestProcesserPojo = " + requestProcesserPojo);
 	
 					if (requestPojo.artifactOrReview.equalsIgnoreCase(RequestPojo.ARTIFACT)) {
-						//String newContentFileName = 
-						//		finalArtifactKeyPojo.artifactName
-						//		+ "_"
-						//		+ commons.getCurrentTimeStamp()
-						//		+ requestProcesserPojo.contentHandlerSpecs.extension;
-						//
-						//System.out.println("requestPojo.contentFile...="
-						//		+ requestProcesserPojo.requestPojo.contentFileName);
-						//System.out.println("requestProcesserPojo.requestPojo.uploadedTimeStamp...="
-						//		+ requestProcesserPojo.requestPojo.uploadedTimeStamp);
-						//
-						//System.out.println("requestProcesserPojo.contentHandlerSpecs.extension ="
-						//		+ requestProcesserPojo.contentHandlerSpecs.extension);
-						//System.out.println("check if zip is present newContentFileName ="
-						//		+ newContentFileName);
-						//
-						//requestProcesserPojo.newERLPojo = new ERLpojo(finalArtifactKeyPojo,
-						//				//requestProcesserPojo.requestPojo.requestor,
-						//				(requestProcesserPojo.prevERLPojo!=null?
-						//						requestProcesserPojo.prevERLPojo.requestor
-						//						:requestProcesserPojo.requestPojo.requestor),
-						//				//requestProcesserPojo.requestPojo.author,
-						//				(requestProcesserPojo.prevERLPojo!=null?
-						//						requestProcesserPojo.prevERLPojo.author
-						//						:requestProcesserPojo.requestPojo.author),
-						//				requestProcesserPojo.contentHandlerSpecs.hasSpecialHandler,
-						//				requestProcesserPojo.prevERLPojo!=null?requestProcesserPojo.prevERLPojo.reviewFileName:"",
-						//
-						//				//requestProcesserPojo.requestPojo.erlStatus,
-						//				//rollupAddup parents cannot take their child status.
-						//				//Inactive parents will become active if there is any child activity
-						//				requestProcesserPojo.contentHandlerSpecs.rollupAddupType?
-						//					(requestProcesserPojo.prevERLPojo != null
-						//						&& !requestProcesserPojo.prevERLPojo.erlStatus.
-						//							equals(ERLpojo.ERLSTAT_INACTIVE)?
-						//						requestProcesserPojo.prevERLPojo.erlStatus:"")
-						//					:requestProcesserPojo.requestPojo.erlStatus,											
-						//				newContentFileName,	//inContentFileName
-						//				requestProcesserPojo.requestPojo.uploadedTimeStamp,	//Content TimeStamp
-						//				requestProcesserPojo.prevERLPojo!=null?requestProcesserPojo.prevERLPojo.reviewTimeStamp:""	// ReviewTimeStamp
-						//				);
-						//
-						//System.out.println("at 23432 requestProcesserPojo.newERLPojo contentType is " + requestProcesserPojo.newERLPojo.artifactKeyPojo.contentType);
-						//
-						//String newContentRemoteLocation = commons.getRemotePathFileName(rootPojo.rootString,finalArtifactKeyPojo.relevance,newContentFileName,rootPojo.fileSeparator);
-						//System.out.println("@@1 newContentRemoteLocation=" + newContentRemoteLocation);
-						//System.out.println("@@1 finalArtifactKeyPojo.relevance=" + finalArtifactKeyPojo.relevance);
-						//System.out.println("@@1 newContentFileName=" + newContentFileName);
-						//
-						//System.out.println("@@1 requestProcesserPojo.requestPojo.contentPathFile=" + requestProcesserPojo.requestPojo.contentFileName);
-						//System.out.println("@@1 requestProcesserPojo.incomingContentFullPath=" + requestProcesserPojo.incomingContentFullPath);
-						//
-						//if (!requestProcesserPojo.contentHandlerSpecs.hasSpecialHandler) {
-						//	requestProcesserPojo.updatedContentFileLocation = requestProcesserPojo.incomingContentFullPath;
-						//	System.out.println("@@xx1 RequestProcesserPojo");
-						//	System.out.println("@@xx1 requestProcesserPojo.updatedContentFileLocation=" + requestProcesserPojo.updatedContentFileLocation);
-						//	System.out.println("@@xx1 newContentRemoteLocation=" + newContentRemoteLocation);
-						//	
-						//	remoteAccesser.moveToRemoteLocation(requestProcesserPojo.updatedContentFileLocation, newContentRemoteLocation);
-						//
-						//} else {
-						//	System.out.println("at 2143a requestProcesserPojo newERLPojo contentType is " + requestProcesserPojo.newERLPojo.artifactKeyPojo.contentType);
-						//
-						//	ContentHandlerInterface contentHandlerObjectInterface = ContentHandlerManager.getInstance(commons, catelogPersistenceManager, finalArtifactKeyPojo.contentType);
-						//
-						//	System.out.println("at 2143b requestProcesserPojo newERLPojo contentType is " + requestProcesserPojo.newERLPojo.artifactKeyPojo.contentType);
-						//	
-						//	contentHandlerObjectInterface.initializeContentHandlerWithMinimumSetup(commonData);
-						//	
-						//	System.out.println("at 2143c requestProcesserPojo newERLPojo contentType is " + requestProcesserPojo.newERLPojo.artifactKeyPojo.contentType);
-						//
-						//	contentHandlerObjectInterface.processContentAtWeb(rootPojo, remoteAccesser, requestProcesserPojo);
-						//
-						//	System.out.println("at 2143d requestProcesserPojo newERLPojo contentType is " + requestProcesserPojo.newERLPojo.artifactKeyPojo.contentType);
-						//
-						//	System.out.println("newContentRemoteLocation is " + newContentRemoteLocation);
-						//
-						//	remoteAccesser.putInStreamIntoRemoteLocation(newContentRemoteLocation, requestProcesserPojo.updatedContentInputStream);
-						//	requestProcesserPojo.updatedContentInputStream.close();
-						//	System.out.println("At request processer requestProcesserPojo.updatedContentInputStream is closed for " + requestProcesserPojo.updatedContentInputStream);
-						//	
-						//	String remoteContentArchiveFile = rootPojo.rootString
-						//			+ rootPojo.fileSeparator + commons.remoteArchive
-						//			+ rootPojo.fileSeparator
-						//			+ commons.getFileNameFromURL(requestProcesserPojo.incomingContentFullPath,rootPojo.fileSeparator);
-						//
-						//	System.out.println("remoteContentArchiveFile...=" + remoteContentArchiveFile);
-						//	remoteAccesser.moveToRemoteLocation(requestProcesserPojo.incomingContentFullPath, remoteContentArchiveFile);
-						//}
 
 						updateTargetContent(requestProcesserPojo,finalArtifactKeyPojo);
 	
@@ -335,7 +249,7 @@ public class RequestProcessor {
 						System.out.println("requestProcesserPojo.requestPojo.uploadedTimeStamp...="
 								+ requestProcesserPojo.requestPojo.uploadedTimeStamp);
 						if (requestProcesserPojo.prevERLPojo!=null) {
-						System.out.println("requestProcesserPojo.prevERLPojo.uploadedTimeStamp...="
+							System.out.println("requestProcesserPojo.prevERLPojo.uploadedTimeStamp...="
 								+ requestProcesserPojo.prevERLPojo.uploadedTimeStamp);
 						} else {
 							System.out.println("requestProcesserPojo.prevERLPojo is null");
@@ -539,12 +453,17 @@ public class RequestProcessor {
 			reqProcTracking.dbTobeRenewed = false;
 			commons.putJsonDocToFile(reqProcTrackingPathFileName,reqProcTracking);
 
+			Commons.logger.info("RequestProcessor processRequestsOfOneRoot rootNick " + rootPojo.rootNick 
+					+ " completed. New catalogpublishFile " + catalogpublishFile);
+			
 		} else {
 			System.out.println("Nothing new to publish");
+			Commons.logger.info("RequestProcessor processRequestsOfOneRoot rootNick " + rootPojo.rootNick 
+					+ " completed. Nothing new to publish ");
 		}
 		
 		if (reqProcTracking.reqTrackItems.size() > 0) {
-			commons.logger.warn(" rootNick " + rootPojo.rootNick + " has " 
+			Commons.logger.warn(" rootNick " + rootPojo.rootNick + " has " 
 				+ reqProcTracking.reqTrackItems.size()
 				+ " unfinished requests. e.g. " 
 				+ reqProcTracking.reqTrackItems.get(reqProcTracking.reqTrackItems.keySet().toArray()[0]));
@@ -717,11 +636,10 @@ public class RequestProcessor {
 		try {
 			inRequestProcesserPojo.updatedContentInputStream = commons.getInputStreamOfXMLDoc(artifactAllReviewsPojo.artifactAllReviewsDocument);
 		} catch (TransformerException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in RequestProcessor2 constr", e);
 		} catch (TransformerFactoryConfigurationError e3) {
-			e3.printStackTrace();
+			e3.printStackTrace();		// ErrorHandler only handles exceptions and not this Error
+			Commons.logger.error(e3);	// ErrorHandler only handles exceptions and not this Error
 			ErrorHandler.showErrorAndQuit(commons, "TransformerFactoryConfigurationError3 in RequestProcessor constr");
 		}
 		
@@ -783,44 +701,6 @@ public class RequestProcessor {
 							inRequestProcesserPojo.newERLPojo.erlStatus = incomingItemNewReviewPojo.newERLStatus;
 						}
 					}				
-			//	if (!incomingItemNewReviewPojo.reassignedRequestor.isEmpty()
-			//	&& (requestAuthorsDetail.hasAdminPrivilege() 
-			//		|| requestAuthorsDetail.hasTeamLeaderPrivilege() 
-			//		|| (inRequestProcesserPojo.prevERLPojo != null 
-			//			&& (requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(inRequestProcesserPojo.prevERLPojo.author)
-			//				|| requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(inRequestProcesserPojo.prevERLPojo.requestor)
-			//				|| commonData.getUsersHandler().doesUserHaveRightsOverMember(requestAuthorsDetail.rootSysLoginID, inRequestProcesserPojo.prevERLPojo.author)
-			//		)))) {
-			//
-			//		
-			//		System.out.println("reassignment processing for requestor change");
-			//
-			//		inRequestProcesserPojo.newERLPojo.requestor = incomingItemNewReviewPojo.reassignedRequestor;				
-			//	}
-			//	
-			//	if (!incomingItemNewReviewPojo.reassignedAuthor.isEmpty()
-			//		&& (requestAuthorsDetail.hasAdminPrivilege() 
-			//			|| requestAuthorsDetail.hasTeamLeaderPrivilege() 
-			//			|| (inRequestProcesserPojo.prevERLPojo != null 
-			//				&& (requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(inRequestProcesserPojo.prevERLPojo.author)
-			//					|| requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(inRequestProcesserPojo.prevERLPojo.requestor))))) {
-			//		
-			//		System.out.println("reassignment processing for Author change");
-			//
-			//		inRequestProcesserPojo.newERLPojo.author = incomingItemNewReviewPojo.reassignedAuthor;		
-			//	}
-			//
-			//	if (!incomingItemNewReviewPojo.newERLStatus.isEmpty() 
-			//		&& (requestAuthorsDetail.hasAdminPrivilege()
-			//			|| requestAuthorsDetail.hasTeamLeaderPrivilege() 
-			//			|| (inRequestProcesserPojo.prevERLPojo != null
-			//				&& (requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(inRequestProcesserPojo.prevERLPojo.requestor)
-			//					|| requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(inRequestProcesserPojo.prevERLPojo.author))))) {
-			//		System.out.println("erl status upgrades processing");
-			//		System.out.println("erl status being changed from " + inRequestProcesserPojo.newERLPojo.erlStatus + " to " +  incomingItemNewReviewPojo.newERLStatus);
-			//
-			//		inRequestProcesserPojo.newERLPojo.erlStatus = incomingItemNewReviewPojo.newERLStatus;
-			//	}
 			
 			// Archival of incoming remark content. Note: when item fields are to be updated, this archival is deferred and
 			// taken care in the next step
@@ -835,17 +715,8 @@ public class RequestProcessor {
 		System.out.println("end processContentAtWeb");
 	}
 
-//	public void checkIfArtifactAlsoToBeUpdated(RequestProcesserPojo inRequestProcesserPojo){
-//	// whenever a remarks field viz. status, requestor, author is changed for a child artifact 
-//	// the artifact itself to be updated since the values are at item level
-//		if (inRequestProcesserPojo.contentHandlerSpecs.hasSpecialHandler) {
-//			inRequestProcesserPojo.artifactToBeUpdatedForRemarkFields = true;
-//		}
-//	}
-	
 	public static void main(String[] args) throws IOException, ParseException {
 
-		ArrayList<RootMasterPojo> rootMasterPojoList = null;
 		CatelogPersistenceManager catelogPersistenceManager = null;
 		Commons commons = Commons.getInstance(Commons.BASE_CATALOG_SERVER);
 

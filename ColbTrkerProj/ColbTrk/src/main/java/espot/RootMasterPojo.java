@@ -1,9 +1,12 @@
 package espot;
 
+/**
+ * Not used / not fully implemented. This class was intended to hold the mapping of access group.
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class RootMasterPojo {
-	/*
-	 * Not fully implemented. This class was intended to hold the mapping of access group.
-	 */
 
 	public String rootString;
 	public String accessGroup;

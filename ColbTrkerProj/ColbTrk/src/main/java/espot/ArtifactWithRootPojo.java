@@ -1,9 +1,13 @@
 package espot;
 
+/**
+ * Simplifier class
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ArtifactWithRootPojo {
-	/*
-	 * Convenience class
-	 */
+
 	public SelfAuthoredArtifactpojo selfAuthoredArtifactspojo;
 	public RootPojo rootPojo;
 

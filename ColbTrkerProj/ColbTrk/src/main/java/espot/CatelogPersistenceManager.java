@@ -16,10 +16,13 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+/**
+ * Maintains all base SQLs of the application; connections to the specified db files
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class CatelogPersistenceManager {
-	/*
-	 * Maintains connections to the specified db files and SQL interactions
-	 */
 
 	// since the database can easily be corrupted with parallel updates and reads,
 	// synchronizing at class level essential
@@ -69,7 +72,7 @@ public class CatelogPersistenceManager {
 	
 			} else {
 				//commons.logger.error("undefined processMode: " + processMode);
-				System.out.println("undefined processMode: " + processMode);
+				//System.out.println("undefined processMode: " + processMode);
 				ErrorHandler.showErrorAndQuit(commons, "undefined processMode: " + processMode);
 				
 			}

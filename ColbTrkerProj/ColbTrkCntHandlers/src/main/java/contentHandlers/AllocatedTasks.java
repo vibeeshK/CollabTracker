@@ -6,7 +6,6 @@ import org.eclipse.swt.custom.TableEditor;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
-import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
@@ -17,14 +16,14 @@ import espot.GenericGrouperDocPojo;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * This content handler helps to group allocated Tasks against a project for a team member
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class AllocatedTasks extends GenericGrouper {
-	/*
-	 * This content handler helps to group allocated Tasks against a project for a team member
-	 */
-	//Text descriptionText;
-	//Text authorText;
-	//Text statusText;
-	
+
 	protected void setScreenTitle() {
 		mainShell.setText("AllocatedTasksList: <viewContentsAtDesk> on " + invokedArtifactPojo.artifactKeyPojo.artifactName);
 	}
@@ -122,16 +121,6 @@ public class AllocatedTasks extends GenericGrouper {
 
 		return inPrevGroup;
 	}
-	
-	//public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
-	//	AllocatdTaskItemPojo allocatdTaskPojo = (AllocatdTaskItemPojo) inItemPojo;
-	//}
-	
-	//public void setInitialItemPojoAddlFields(ItemPojo inItemPojo){
-	//	AllocatdTaskItemPojo allocatdTaskPojo = (AllocatdTaskItemPojo) inItemPojo;
-	//	allocatdTaskPojo.author = commonData.getCommons().userName;
-	//	allocatdTaskPojo.status = "Draft";
-	//}
 
 	public void getPrimerDocAddlFields() {
 		// from persistence to screen

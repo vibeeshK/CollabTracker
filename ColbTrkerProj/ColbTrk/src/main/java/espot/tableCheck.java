@@ -11,10 +11,13 @@ import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
+/**
+ * Used only as a POC
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class tableCheck {
-	/*
-	 * Used only as a POC
-	 */
 
 	public static void main(String[] args) {
 		final Display display = new Display();

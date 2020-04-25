@@ -10,12 +10,15 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 
+/**
+ * Moves inactive ERLs which were created before 
+ * the inactiveHoldPeriod gap to InactiveArchive folder
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ArchiveInactiveERLs {
 
-	/* ArchiveInactiveERLs moves the inactive ERLs which were created before 
-	 * the inactiveHoldPeriod gap to InactiveArchive folder
-	 */
-	
 	private RootPojo rootPojo = null;
 	private CatelogPersistenceManager catelogPersistenceManager;
 	private Commons commons;
@@ -30,7 +33,7 @@ public class ArchiveInactiveERLs {
 		commons = commonData.getCommons();
 		catelogPersistenceManager = commonData.getCatelogPersistenceManager();
 		remoteAccesser = inRemoteAccesser;
-		commons.logger.info("At ArchiveInactiveERLs start for root " + rootPojo.rootNick);	
+		Commons.logger.info("At ArchiveInactiveERLs start for root " + rootPojo.rootNick);	
 
 		erlVersionDocPathFileName = commons.getLocalERLVersioningPathFile(rootPojo.rootNick);		
 		try {
@@ -38,7 +41,6 @@ public class ArchiveInactiveERLs {
 											erlVersionDocPathFileName,
 											ERLVersionDocPojo.class);
 		} catch (FileNotFoundException | UnsupportedEncodingException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in RequestProcessor constr2", e);			
 		}
 		if (erlVersionDetail == null) {
@@ -54,7 +56,7 @@ public class ArchiveInactiveERLs {
 		
 		for (ERLpojo inactiveERL : allInactiveERLs){			
 			if (!commons.hasDaysElapsed(commons.getDateFromString(inactiveERL.uploadedTimeStamp),commons.inactiveAgingDaysLimit)) {
-				System.out.println("At archiveInactiveERLSOfOneRoot; skipping erl as days not elapsed for inactiveERL = " + inactiveERL.artifactKeyPojo.artifactName);
+				Commons.logger.info("At archiveInactiveERLSOfOneRoot; skipping erl as days not elapsed for inactiveERL = " + inactiveERL.artifactKeyPojo.artifactName);	
 				continue;
 			} else {
 				String erlVersioningReviewItemKey = ERLVersioningDocItem.getERLVersioningItemKey(
@@ -81,13 +83,13 @@ public class ArchiveInactiveERLs {
 						inactiveERLArchivalCount 
 						+ removeVersionsOfERLItem(inactiveERL.artifactKeyPojo, erlVersioningArtifactItemKey);
 				System.out.println("At archiveInactiveERLSOfOneRoot after removing erlVersioningArtifactItemKey inactiveERLArchivalCount = " + inactiveERLArchivalCount);
-				commons.logger.info("At ArchiveInactiveERLs archived ArtifactItemKey = " + erlVersioningArtifactItemKey);
-				commons.logger.info("At ArchiveInactiveERLs the inactiveERLArchivalCount at this point is = " + inactiveERLArchivalCount);
+				Commons.logger.info("At ArchiveInactiveERLs archived ArtifactItemKey = " + erlVersioningArtifactItemKey);
+				Commons.logger.info("At ArchiveInactiveERLs the inactiveERLArchivalCount at this point is = " + inactiveERLArchivalCount);
 			}
 		}
 
 		System.out.println("At archiveInactiveERLSOfOneRoot after all removals inactiveERLArchivalCount = " + inactiveERLArchivalCount);
-		commons.logger.info("At archiveInactiveERLSOfOneRoot after all removals inactiveERLArchivalCount = " + inactiveERLArchivalCount);
+		Commons.logger.info("At archiveInactiveERLSOfOneRoot after all removals inactiveERLArchivalCount = " + inactiveERLArchivalCount);
 		
 		if (inactiveERLArchivalCount > 0) {
 			String catalogpublishFolder = rootPojo.rootString
@@ -98,9 +100,8 @@ public class ArchiveInactiveERLs {
 					+ rootPojo.fileSeparator
 					+ commons.getNewCatalogDbPublishFileName(rootPojo.rootNick);
 
-			System.out.println("new catalogpublishFile = " + catalogpublishFile);
-			
 			remoteAccesser.uploadToRemote(catalogpublishFile, commons.getServersMasterCopyofCatalogDbLocalFileOfRoot(rootPojo.rootNick));			
+			Commons.logger.info("new catalogpublishFile = " + catalogpublishFile);
 		}
 		
 	}
@@ -140,7 +141,7 @@ public class ArchiveInactiveERLs {
 											erlVersionDocPathFileName,
 											erlVersionDetail);
 				inactiveCoreERLArchivalCount++;
-				System.out.println("At removeVersionsOfERLItem inactiveCoreERLArchivalCount " + inactiveCoreERLArchivalCount);
+				Commons.logger.info("At removeVersionsOfERLItem inactiveCoreERLArchivalCount " + inactiveCoreERLArchivalCount);
 			}
 		}
 		
@@ -163,11 +164,8 @@ public class ArchiveInactiveERLs {
 		try {
 			ArchiveInactiveERLs.archiveInactiveERLSOfOneRoot();
 		} catch (ClassNotFoundException | TransformerException | ParserConfigurationException e) {
-			// TODO Auto-generated catch block
 			System.out.println("Error in ArchiveInactiveERLs main");
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in ArchiveInactiveERLs main ", e);
 		}
-	}
-	
+	}	
 }

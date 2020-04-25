@@ -83,3 +83,27 @@ java.io.FileNotFoundException: C:\Users\KVASAV~1\AppData\Local\Temp\ProjTracker1
 2020-Apr-18 01:26:31 AM [Thread-1] ERROR CommonLogger - Error while unzipping ProjTracker1_20200227164238.zip into C:\Users\KVASAV~1\AppData\Local\Temp\ProjTracker1_20200227164238
 2020-Apr-18 01:26:31 AM [Thread-1] ERROR CommonLogger - java.io.FileNotFoundException: C:\Users\KVASAV~1\AppData\Local\Temp\ProjTracker1_20200227164238\ProjTracker1.xlsx (The process cannot access the file because it is being used by another process)
 2020-Apr-18 01:26:31 AM [Thread-1] ERROR CommonLogger - java.lang.Exception: java.io.FileNotFoundException: C:\Users\KVASAV~1\AppData\Local\Temp\ProjTracker1_20200227164238\ProjTracker1.xlsx (The process cannot access the file because it is being used by another process)
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200425210205
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200425210205
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger -  Catalog Display Started at 20200425210205
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200425210205
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-Apr-25 21:02:05 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200425210205
+2020-Apr-25 21:02:07 PM [Thread-1] INFO  CommonLogger - At ArtifactsDisplay displayArtifact start 
+2020-Apr-25 21:02:07 PM [Thread-1] INFO  CommonLogger - CatelogPersistenceManager in setData start
+2020-Apr-25 21:02:07 PM [Thread-1] INFO  CommonLogger - inArtifactPojos at setArtifactValues is [espot.ERLDownload@3b09e096, espot.ERLDownload@5df53845, espot.ERLDownload@4e65b784, espot.ERLDownload@3fc9c2dd, espot.ERLDownload@4b3098e2, espot.ERLDownload@3f73a6d1, espot.ERLDownload@5cc9ff2c, espot.ERLDownload@2d671142]
+2020-Apr-25 21:02:07 PM [Thread-1] INFO  CommonLogger - At ArtifactsDisplay DisplayContent Start

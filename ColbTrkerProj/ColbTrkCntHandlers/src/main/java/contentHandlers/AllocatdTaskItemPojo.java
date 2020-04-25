@@ -4,10 +4,13 @@ import java.util.Date;
 
 import espot.ItemPojo;
 
+/**
+ * Data holder for the allocated task item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class AllocatdTaskItemPojo extends ItemPojo{
-	/*
-	 * Data holder for the allocated task item
-	 */
 
 	public String teamID;	// team ID represents the project or 
 							// the maintenance engagement under which the task is defined 

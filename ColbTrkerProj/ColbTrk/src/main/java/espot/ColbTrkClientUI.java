@@ -24,11 +24,17 @@ import org.eclipse.swt.widgets.Text;
 import commonTechs.DisplayKeeper;
 import commonTechs.SysTrayHanlder;
 
+/**
+ * User's desktop side UI. Provides option for 
+ * 	1) Reading Standalone artifacts previously generated
+ *  2) View Catalog of artifacts available at doc center
+ *  3) initiate Client Orchestrator to sync up with doc center
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ColbTrkClientUI {
-	/*
-	 * Diplays catalogs where the relevance is marked as interested
-	 */	
-	
+
 	Display mainDisplay;
 	Shell mainShell;
 	Button btnCatalogUI;
@@ -39,7 +45,6 @@ public class ColbTrkClientUI {
 	Thread espotClientOrchestratorThread;
 	
 	ColbTrkClientOrchestrator espotClientOrchestrator;
-	//StandaloneReaderUI standaloneReaderUI;
 	ArrayList<StandaloneReaderUI> standaloneRdrUIs;
 	CatalogDisplay catalogDisplay;
 	
@@ -54,8 +59,6 @@ public class ColbTrkClientUI {
 		try {
 			commons = Commons.getInstance(Commons.CLIENT_MACHINE);
 		} catch (IOException | ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 			Commons.logger.error("CollabTrackClientUI error creating commons");
 		}
 
@@ -70,7 +73,6 @@ public class ColbTrkClientUI {
 		mainShell.setText("CollabTracker of " + System.getProperty("user.name"));		
 		mainShell.setToolTipText("CollabTracker of " + System.getProperty("user.name"));
 
-		//mainShell.pack();
 		mainShell.setMinimumSize(
 	            MIN_SHELL_WIDTH,
 	            MIN_SHELL_HEIGHT);		
@@ -129,7 +131,8 @@ public class ColbTrkClientUI {
 				}
 		      }
 		    });
-		
+
+		//comments this auto opens and leaving upto user to choose
 		//btnClientOrchestratorProcess();
 		//btnCatalogUI();
 
@@ -139,7 +142,7 @@ public class ColbTrkClientUI {
 	private void shellDisposeHolder() {
 		while (!mainShell.isDisposed()) {
 			if (mainDisplay.readAndDispatch()) {
-				//System.out.println("something done....");
+
 				mainDisplay.sleep();
 			}
 		}
@@ -168,6 +171,10 @@ public class ColbTrkClientUI {
 			messageBox1.setMessage("CatalogDisplay already open");
 			messageBox1.open();
 			return;
+		} else if (espotClientOrchestratorThread == null || !espotClientOrchestratorThread.isAlive()) {			
+			MessageBox messageBox2 = new MessageBox(mainShell, SWT.ICON_WARNING | SWT.OK);
+			messageBox2.setMessage("Ensure ClientOrchestrator is started to sync up with Doc Center");
+			messageBox2.open();	
 		}
 
 		CatalogDownloadDtlsHandler catalogDownloadDtlsHandler = CatalogDownloadDtlsHandler.getInstance(commons);
@@ -180,7 +187,7 @@ public class ColbTrkClientUI {
 			return;			
 		}		
 
-		commons.logger.info("Catalog Display Started at " + commons.getCurrentTimeStamp());
+		Commons.logger.info(" Catalog Display Started at " + commons.getCurrentTimeStamp());
 
 		CommonUIData commonUIData = (CommonUIData) CommonUIData.getUIInstance(commons);
 		catalogDisplay = new CatalogDisplay(commonUIData);
@@ -190,14 +197,8 @@ public class ColbTrkClientUI {
 	}
 
 	public void btnStandaloneReaderUI(){
-		//if (standaloneReaderThread != null && standaloneReaderThread.isAlive()){
-		//	MessageBox messageBox1 = new MessageBox(mainShell, SWT.ICON_WARNING | SWT.OK);
-		//	messageBox1.setMessage("StandaloneReader already open");
-		//	messageBox1.open();
-		//	return;
-		//}
 
-		commons.logger.info("Catalog Display Started at " + commons.getCurrentTimeStamp());
+		Commons.logger.info("StandaloneReaderUI Started at " + commons.getCurrentTimeStamp());
 
 		CommonUIData commonUIData = (CommonUIData) CommonUIData.getUIInstance(commons);
 
@@ -219,7 +220,7 @@ public class ColbTrkClientUI {
 			return;
 		}
 		
-		commons.logger.info(" ClientOrchestrator Started at " + commons.getCurrentTimeStamp());
+		Commons.logger.info(" ClientOrchestrator Started at " + commons.getCurrentTimeStamp());
 
 		espotClientOrchestrator = new ColbTrkClientOrchestrator(commons);
 		espotClientOrchestratorThread = new Thread(espotClientOrchestrator);

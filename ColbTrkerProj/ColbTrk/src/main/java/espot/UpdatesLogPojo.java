@@ -10,10 +10,14 @@ import org.w3c.dom.NodeList;
 
 import commonTechs.TransferObject;
 
+/**
+ * Holder of updates log of sys components
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class UpdatesLogPojo {
-	/*
-	 * Holder of updates log of sys components
-	 */
+
 	Document updateLogDoc = null;
 	Date boundryDateForPartLoad = null;
 	ArrayList<TransferObject> laterUpdateElements = null;
@@ -51,9 +55,9 @@ public class UpdatesLogPojo {
 				e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(commons, "Error in UpdatesLogPojo setLaterUpdateElements", e);
 			}
-			commons.logger.info(" setLaterUpdateElements. uptd Tm: " + updateTmString);
-			commons.logger.info(" current tm: " + commons.sysCompCurrLocalLogUpdateTm);
-			commons.logger.info(" source location: " + ((Element) allUpdates.item(nodeCount)).getAttribute("FileFromLocation"));
+			Commons.logger.info(" setLaterUpdateElements. uptd Tm: " + updateTmString);
+			Commons.logger.info(" current tm: " + commons.sysCompCurrLocalLogUpdateTm);
+			Commons.logger.info(" source location: " + ((Element) allUpdates.item(nodeCount)).getAttribute("FileFromLocation"));
 
 			if (updateTm.after(commons.sysCompCurrLocalLogUpdateTm)) {
 				if (lastUpdateTm == null || lastUpdateTm.after(updateTm)) lastUpdateTm = updateTm;

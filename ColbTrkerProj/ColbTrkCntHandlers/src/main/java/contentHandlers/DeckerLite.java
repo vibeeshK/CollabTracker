@@ -14,18 +14,13 @@ import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
-import com.google.api.client.util.StringUtils;
-
 import espot.ArtifactKeyPojo;
 import espot.ArtifactPrepper;
-import espot.Commons;
 import espot.ContentHandlerInterface;
 import espot.ContentHandlerManager;
 import espot.ERLDownload;
