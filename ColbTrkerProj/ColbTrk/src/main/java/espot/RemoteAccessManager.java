@@ -43,7 +43,6 @@ public class RemoteAccessManager {
 			try {
 				remoteAccesser = (RemoteAccesser) CustomClassLoader.getInstance(rootPojo.remoteAccesserType,commons.getHandlerJarNames());
 			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | IOException e) {
-				e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(commons, "Error in AccessManager main getRemoteAccesser " + inRootText, e);
 			}
 			remoteAccessManager.transportHandlerMap.put(rootPojo.rootNick,remoteAccesser);

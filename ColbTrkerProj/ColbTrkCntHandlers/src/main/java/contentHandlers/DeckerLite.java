@@ -244,7 +244,6 @@ public class DeckerLite extends GenericGrouper {
 								freeFormText.setText(DECKINGSTAT_YETTOBEDECKED);	
 							}
 						} catch (ParseException e) {
-							e.printStackTrace();
 							ErrorHandler.showErrorAndQuit(commons, 
 								"Error in DeckerLite setDisplayItemsCenterBaseFieldsInMultiDisplay date parsing on last update time of " 
 								+ rowArtifactKeyPojo.artifactName, e);
@@ -485,7 +484,6 @@ public class DeckerLite extends GenericGrouper {
 					try {
 						commonData.getCommons().openFileToView(targetOverallSummaryPath);
 					} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | IOException e1) {
-						e1.printStackTrace();
 						ErrorHandler.showErrorAndQuit(commons, "Error in DeckerLite additionalRibbonButtons", e1);
 					}
 				}

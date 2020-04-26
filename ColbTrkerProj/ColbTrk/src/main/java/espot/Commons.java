@@ -670,7 +670,9 @@ public class Commons extends CommonTechs {
 
 	public static Commons getInstance(int inProcessMode) throws IOException, ParseException {
 		Commons requestedInstance = null;
-		try {
+		try {			// Its better to keep the exception handling catch block here,
+						// since the callers would just be starting up
+						// besides being called by too many.
 			requestedInstance = getInstance(inProcessMode,null);
 		} catch (IOException | ParseException e) {
 			e.printStackTrace();
@@ -819,7 +821,7 @@ public class Commons extends CommonTechs {
 		return responsePojo;
 	}
 	
-	public Object getJsonDocFromFile(String inFileName, Class inClass) throws FileNotFoundException, UnsupportedEncodingException {
+	public Object getJsonDocFromFile(String inFileName, Class inClass) throws IOException {
 		Object jsonDocObj = null;
 		System.out.println("At getJsonDocFromFile inFileName is " + inFileName);
 		System.out.println("At getJsonDocFromFile inClass is " + inClass);
@@ -828,15 +830,17 @@ public class Commons extends CommonTechs {
 		InputStream fileInputStream = null;
 		if (fileToRead.exists()) {
 			fileInputStream = new FileInputStream(fileToRead);
-			try {
-				jsonDocObj = sysGetJsonDocObjFromInputStream(fileInputStream,inClass);
-				fileInputStream.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-				logger.error("Error in Commons getJsonDocFromFile while closing FileName = " + inFileName);
-				System.exit(Commons.FATALEXITCODE);
-			}
+			//try {
+			//	jsonDocObj = sysGetJsonDocObjFromInputStream(fileInputStream,inClass);
+			//	fileInputStream.close();
+			//} catch (IOException e) {
+			//	// TODO Auto-generated catch block
+			//	e.printStackTrace();
+			//	logger.error("Error in Commons getJsonDocFromFile while closing FileName = " + inFileName);
+			//	System.exit(Commons.FATALEXITCODE);
+			//}
+			jsonDocObj = sysGetJsonDocObjFromInputStream(fileInputStream,inClass);
+			fileInputStream.close();
 		}
 		return jsonDocObj;
 	}

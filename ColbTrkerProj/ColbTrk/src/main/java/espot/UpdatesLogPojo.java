@@ -52,7 +52,6 @@ public class UpdatesLogPojo {
 			try {
 				updateTm = commons.getDateFromString(updateTmString);
 			} catch (ParseException e) {
-				e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(commons, "Error in UpdatesLogPojo setLaterUpdateElements", e);
 			}
 			Commons.logger.info(" setLaterUpdateElements. uptd Tm: " + updateTmString);

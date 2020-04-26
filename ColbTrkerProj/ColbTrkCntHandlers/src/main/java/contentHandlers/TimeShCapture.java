@@ -171,7 +171,6 @@ public class TimeShCapture extends GenericItemHandler {
 		try {
 			getAllTimeEntryOptionsRecs();
 		} catch (ParseException e1) {
-			e1.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in TimeShCapture setAddlFieldsForItemDisplay " + " " + inItemPojo.artifactName, e1);
 		}
 
@@ -556,7 +555,6 @@ public class TimeShCapture extends GenericItemHandler {
 		try {
 			viewContentsAtDesk();
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in TimeShCapture triggeredProcess " + " " + inTriggerAt, e);
 		}
 	}

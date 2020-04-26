@@ -747,9 +747,7 @@ public class ProjTask extends GenericItemHandler {
 												expectedEnd_DateDisplay.getHours(),
 												expectedEnd_DateDisplay.getMinutes(),
 												expectedEnd_DateDisplay.getSeconds());
-		} catch (ParseException e) {
-			
-			e.printStackTrace();
+		} catch (ParseException e) {			
 			ErrorHandler.showErrorAndQuit(commons, "Error in ProjTask getAddlFieldsOfItemPojo " + " " + inItemPojo.artifactName, e);
 		}
 		

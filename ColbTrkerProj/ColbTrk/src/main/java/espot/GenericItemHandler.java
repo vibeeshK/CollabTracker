@@ -160,8 +160,7 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 	public void readPrimerFile(){
 		try {
 			primerDoc = (GenericItemDocPojo) commonData.getCommons().getJsonDocFromFile(contentPathFileName,getPrimerDocClass());
-		} catch (FileNotFoundException | UnsupportedEncodingException e) {
-			e.printStackTrace();
+		} catch (IOException e) {
 			ErrorHandler.showErrorAndQuit(mainShell, commonData.getCommons(), "Error at GenericItemHandler doCommonInit while reading " + contentPathFolderName, e);
 		}
 	}
@@ -590,7 +589,6 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 		try {
 			commons.putJsonDocToFile(inNewPrimerFilePath,primerDoc);
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(mainShell, commonData.getCommons(), "Error at GenericItemHandler createNewStartupPrimer " + inNewPrimerFilePath + " " + inArtifactpojo.artifactKeyPojo.artifactName, e);
 		}
 		System.out.println("createNewStartupPrimer Stored the json file at : " + inNewPrimerFilePath);
@@ -605,8 +603,7 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 		try {
 			commonData.getCommons().putJsonDocToFile(contentPathFileName,getPrimerDoc());
 		} catch (IOException e) {
-
-			e.printStackTrace();
+			
 			ErrorHandler.showErrorAndQuit(mainShell, commonData.getCommons(), "Error at GenericItemHandler writePrimer " + contentPathFileName, e);
 		}
 		System.out.println("writeJSON Stored the xml file : " + contentPathFileName);

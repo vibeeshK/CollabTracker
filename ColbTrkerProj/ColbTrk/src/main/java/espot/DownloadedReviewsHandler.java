@@ -60,7 +60,6 @@ public class DownloadedReviewsHandler {
 								+ artifactAllReviewsPojo.getItemAllReviews("GenlReq5"));
 			}
 		} catch (SAXException | IOException | ParserConfigurationException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commonUIData.getCommons(), "Error in DownloadedReviewHandler constructor for " 
 			+ " " + finalArtifactKeyPojo.artifactName, e);
 		}

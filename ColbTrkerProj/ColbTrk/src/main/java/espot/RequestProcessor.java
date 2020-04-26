@@ -64,7 +64,7 @@ public class RequestProcessor {
 		try {
 			reqProcTracking = (ReqProcDocPojo) commonData.getCommons().getJsonDocFromFile(	
 													reqProcTrackingPathFileName,ReqProcDocPojo.class);
-		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+		} catch (IOException e) {
 			ErrorHandler.showErrorAndQuit(commons, "Error in RequestProcessor constr1", e);
 		}
 
@@ -77,7 +77,7 @@ public class RequestProcessor {
 			erlVersionDetail = (ERLVersionDocPojo) commonData.getCommons().getJsonDocFromFile(	
 											erlVersionDocPathFileName,
 											ERLVersionDocPojo.class);
-		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+		} catch (IOException e) {
 			ErrorHandler.showErrorAndQuit(commons, "Error in RequestProcessor constr2", e);			
 		}
 		if (erlVersionDetail == null) {
@@ -582,7 +582,6 @@ public class RequestProcessor {
 		try {
 			incomingReviewDoc = commons.getDocumentFromXMLFileStream(incomingReviewFileStream);
 		} catch (SAXException | ParserConfigurationException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in RequestProcessor processRemarksAtWeb inRequestProcesserPojo", e);
 		}
 			
@@ -609,7 +608,6 @@ public class RequestProcessor {
 			try {
 				artifactAllReviewsPojo.initiateArtifactReviewsDoc();
 			} catch (ParserConfigurationException e) {
-				e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(commons, "Error in RequestProcessor 2 processRemarksAtWeb inRequestProcesserPojo", e);
 			}
 		} else {
@@ -620,8 +618,7 @@ public class RequestProcessor {
 			try {
 				artifactAllReviewsXMLDocument = commons.getDocumentFromXMLFileStream(artifactAllReviewsXMLInputStream);
 			} catch (SAXException | ParserConfigurationException e) {
-				e.printStackTrace();
-				ErrorHandler.showErrorAndQuit(commons, "Error in RequestProcessor 3 processRemarksAtWeb inRequestProcesserPojo", e);				
+				ErrorHandler.showErrorAndQuit(commons, "Error in RequestProcessor 3 processRemarksAtWeb inRequestProcesserPojo", e);
 			}
 			
 			System.out.println("artifactAllReviewsXMLDocument = " + artifactAllReviewsXMLDocument.getTextContent());

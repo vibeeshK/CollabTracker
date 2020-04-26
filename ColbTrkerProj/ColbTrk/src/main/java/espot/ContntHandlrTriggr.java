@@ -71,9 +71,7 @@ public class ContntHandlrTriggr implements Runnable {
 				uploader.uploadReviewsOfOneRoot();
 	 		}		
 		} catch (ClassNotFoundException | IOException | TransformerException | ParserConfigurationException | SAXException | ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			ErrorHandler.showErrorAndQuit(commons, "Error in ContntHandlrTriggr run ", e);			
+			ErrorHandler.showErrorAndQuit(commons, "Error in ContntHandlrTriggr run ", e);
 		}
 		return;
 	}

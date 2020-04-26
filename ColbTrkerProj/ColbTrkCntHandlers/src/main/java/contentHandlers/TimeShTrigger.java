@@ -161,7 +161,6 @@ public class TimeShTrigger extends GenericItemHandler {
 			try {
 				commons.setDateOnDisplay(captureEndDateDisplay, timeShTriggerPojo.captureEndDate);
 			} catch (ParseException e) {
-				e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(commons, "Error in TimeShTrigger setAddlFieldsForItemDisplay EndDate of "
 															+ inItemPojo.artifactName, e);
 			}

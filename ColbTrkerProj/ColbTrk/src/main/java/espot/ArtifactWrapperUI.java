@@ -579,10 +579,8 @@ public class ArtifactWrapperUI {
 						
 						try {
 							commonUIData.getCommons().openFileToView(fullPathViewFileNameString);
-						} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
-								| IOException e1) {
-
-							//e1.printStackTrace();
+						} catch (ClassNotFoundException | InstantiationException 
+								| IllegalAccessException | IOException e1) {
 							ErrorHandler.showErrorAndQuit(commons, "Error in ARtifactWrapperUI displayContent ", e1);
 						}
 					} else {
@@ -633,8 +631,7 @@ public class ArtifactWrapperUI {
 								}
 							}
 						} catch (IOException e2) {
-							//e2.printStackTrace();
-							ErrorHandler.showErrorAndQuit(commons, "Error in ARtifactWrapperUI displayContent ", e2);							
+							ErrorHandler.showErrorAndQuit(commons, "Error in ARtifactWrapperUI displayContent ", e2);
 						}
 					}
 				}
@@ -1014,8 +1011,7 @@ public class ArtifactWrapperUI {
 			try {
 				commonUIData.getCommons().openFileToView(inFileName);
 			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | IOException e) {
-				//e.printStackTrace();
-				ErrorHandler.showErrorAndQuit(commons, "Error in ARtifactWrapperUI openArtifactForEdit " + inFileName, e);				
+				ErrorHandler.showErrorAndQuit(commons, "Error in ARtifactWrapperUI openArtifactForEdit " + inFileName, e);
 			}
 		} else {
 			System.out.println("kkkk at 1");
@@ -1028,7 +1024,6 @@ public class ArtifactWrapperUI {
 			try {
 				contentHandlerObjectInterface.editContentAtDesk();
 			} catch (IOException e) {
-				//e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(commons, "Error in ARtifactWrapperUI openArtifactForEdit ", e);
 			}
 			System.out.println("kkkk at 8");
@@ -1072,7 +1067,7 @@ public class ArtifactWrapperUI {
 /**
  * Inline class to help refer to multiple available versions via dropdown
  * 
- * @author kvasavaiah
+ * @author Vibeesh Kamalakannan
  *
  */
 class ArtifactVersionPojo {

@@ -47,8 +47,7 @@ public class WindowsAccesser extends AbstractRemoteAccesser {
 			System.out.println("end putInStreamIntoRemoteLocation inUpdatedContentByteArray is closed for " + inUpdatedContentByteArray);
 
 		} catch (IOException e) {
-			e.printStackTrace();
-			ErrorHandler.showErrorAndQuit(commons, "error in WindowsAccesser putInStreamIntoRemoteLocation into " + inNewContentRemoteLocation, e);			
+			ErrorHandler.showErrorAndQuit(commons, "error in WindowsAccesser putInStreamIntoRemoteLocation into " + inNewContentRemoteLocation, e);
 		}
 	}
 
@@ -62,7 +61,6 @@ public class WindowsAccesser extends AbstractRemoteAccesser {
 		    outStream.close();
 			System.out.println("end putputByteArrayDataIntoRemoteLocation");
 		} catch (IOException e) {
-		e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in WindowsAccesser putByteArrayDataIntoRemoteLocation into " + inNewContentRemoteLocation, e);
 		}
 	}

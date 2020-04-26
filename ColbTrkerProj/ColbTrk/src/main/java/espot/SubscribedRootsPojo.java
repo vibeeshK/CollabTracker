@@ -69,7 +69,6 @@ public class SubscribedRootsPojo {
 			subscribedRootsDoc = commons
 					.getDocumentFromXMLFile(commons.subscribedRootNicksFileName);
 		} catch (SAXException | IOException | ParserConfigurationException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in SubscribedRootsPojo readSubscribedRoots", e);
 		}
 		int rootsTotal = subscribedRootsDoc.getElementsByTagName("Root")
@@ -122,8 +121,7 @@ public class SubscribedRootsPojo {
 			commons.saveXMLFileFromDocument(subscribedRootsDoc,
 					commons.subscribedRootNicksFileName);
 		} catch (SAXException | IOException | ParserConfigurationException | TransformerException e) {
-			e.printStackTrace();
-			ErrorHandler.showErrorAndQuit(commons, "Error in SubscribedRootsPojo removeSubscription " + " " + inRootNick, e);			
+			ErrorHandler.showErrorAndQuit(commons, "Error in SubscribedRootsPojo removeSubscription " + " " + inRootNick, e);
 		}
 	}
 
@@ -158,8 +156,7 @@ public class SubscribedRootsPojo {
 			commons.saveXMLFileFromDocument(subscribedRootsDoc,
 					commons.subscribedRootNicksFileName);
 		} catch (SAXException | IOException | ParserConfigurationException | TransformerException e) {
-			e.printStackTrace();
-			ErrorHandler.showErrorAndQuit(commons, "Error in SubscribedRootsPojo addSubscription " + " " + inRootNick, e);			
+			ErrorHandler.showErrorAndQuit(commons, "Error in SubscribedRootsPojo addSubscription " + " " + inRootNick, e);
 		}
 		System.out.println("@ addSubscription completed for inRootNick = " + inRootNick);
 	}

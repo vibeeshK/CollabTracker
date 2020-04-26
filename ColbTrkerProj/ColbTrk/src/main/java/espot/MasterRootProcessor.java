@@ -60,7 +60,6 @@ public class MasterRootProcessor implements Runnable {
 
 				requestProcessor.processRequestsOfOneRoot();
 			} catch (IOException | ClassNotFoundException | TransformerException | ParserConfigurationException e) {
-				e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(commons, "Error in MasterRootProcessor run ", e);
 			}
 

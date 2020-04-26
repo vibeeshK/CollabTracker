@@ -37,7 +37,6 @@ public class PublishedRootsHandler {
 			System.out.println("@ PublishedRootsHandler commons.pulishedRootsFile = " + commons.publishedRootsFileName);
 			pubishedRootsDoc = commons.getDocumentFromXMLFile(commons.publishedRootsFileName);
 		} catch (SAXException | IOException | ParserConfigurationException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in PublishedRootsHandler PublishedRootsHandler ", e);
 		}
 

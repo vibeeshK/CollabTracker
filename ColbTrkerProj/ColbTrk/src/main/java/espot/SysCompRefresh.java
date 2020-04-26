@@ -83,7 +83,6 @@ public class SysCompRefresh {
 				commons.setSysCompCurrLocalLogUpdateTm(commons.getTimeStamp(updatesLogPojo.lastUpdateTm));
 			}
 		} catch (IOException | SAXException | ParserConfigurationException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in SysCompRefresh", e);
 		}		
 	}

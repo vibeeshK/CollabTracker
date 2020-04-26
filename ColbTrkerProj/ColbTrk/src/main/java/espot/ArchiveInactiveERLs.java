@@ -40,7 +40,7 @@ public class ArchiveInactiveERLs {
 			erlVersionDetail = (ERLVersionDocPojo) commonData.getCommons().getJsonDocFromFile(	
 											erlVersionDocPathFileName,
 											ERLVersionDocPojo.class);
-		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+		} catch (IOException e) {
 			ErrorHandler.showErrorAndQuit(commons, "Error in RequestProcessor constr2", e);			
 		}
 		if (erlVersionDetail == null) {

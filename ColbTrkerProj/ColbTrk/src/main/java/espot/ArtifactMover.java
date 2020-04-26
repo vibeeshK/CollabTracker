@@ -81,7 +81,6 @@ public class ArtifactMover {
 			try {
 				commons.saveBytesIntoNamedFile(inBaseDocBytes,destPath);
 			} catch (IOException e) {
-				//e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(commons, "Error ArtifactMover createDraftFromBaseContent " + inDestArtifactPojo.artifactKeyPojo.artifactName, e);
 			}
 		}

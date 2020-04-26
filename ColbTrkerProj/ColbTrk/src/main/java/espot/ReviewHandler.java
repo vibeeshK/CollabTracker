@@ -303,7 +303,6 @@ public class ReviewHandler {
 				newCommentText.setEditable(false);
 			}
 		} catch (SAXException | IOException | ParserConfigurationException e1) {
-			e1.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commonUIData.getCommons(), "Error in ReviewHandler displayContent", e1);
 		}
 
@@ -466,7 +465,7 @@ public class ReviewHandler {
 						commonUIData.getCommons().saveXMLFileFromDocument(clientSideNew_ReviewPojo.newReviewDocument, localReviewPathFileName);
 						commonUIData.getCatelogPersistenceManager().insertReview(clientSideNew_ReviewPojo);
 					} catch (SAXException | IOException | ParserConfigurationException | TransformerException e) {
-						e.printStackTrace();
+
 						ErrorHandler.showErrorAndQuit(commonUIData.getCommons(), "Error in ReviewHandler displayContent", e);
 					}
 				}

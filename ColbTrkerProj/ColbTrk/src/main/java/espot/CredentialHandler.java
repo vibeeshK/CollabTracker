@@ -70,7 +70,7 @@ public class CredentialHandler {
 				String credentialFor = (String) eventButton.getData("credentialsFor");
 
 				CredentialsPojo credentialsPojo = new CredentialsPojo(userName.getText(), passwordBox.getText());
-				credentialsPojo.setCredentials("kvasavaiah", "xxxxxxx");
+				credentialsPojo.setCredentials("vibeesh", "xxxxxxx");
 				credentialMap.put(credentialFor, credentialsPojo);
 				shell.close();
 			}

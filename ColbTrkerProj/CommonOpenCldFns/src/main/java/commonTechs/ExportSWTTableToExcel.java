@@ -84,6 +84,5 @@ public class ExportSWTTableToExcel {
 	    sheet.createFreezePane(1, 1);
 	    
 	    return wb;
-	}	
-	
+	}
 }

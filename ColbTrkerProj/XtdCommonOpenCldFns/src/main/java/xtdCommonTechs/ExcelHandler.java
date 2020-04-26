@@ -42,6 +42,9 @@ import commonTechs.StartAndSize;
  * http://www.dev2qa.com/copy-rows-between-excel-sheet-use-apache-poi
  * https://stackoverflow.com/questions/10773961/apache-poi-apply-one-style-to-different-workbooks
  * 
+ * Note: this class uses getCellTypeEnum & setCellType functions which are deprecated but no
+ * clear alternatives. Need to test when upgrading to newer versions of POI archives
+ * 
  * @author Vibeesh Kamalakannan
  *
  */
@@ -112,28 +115,28 @@ public class ExcelHandler {
 		return sheet.getSheetName();
 	}
 	
-	public Sheet getTargetSheet(String inSheetName) {
+	public Sheet getTargetSheet(String inSheetName) throws IOException {
 		FileInputStream targetFileStream = null;
 		Sheet targetSheet = null;
-		try {
+		//try {
 			if (commonTechs.doesFileExist(targetExcelFilePath)) {
 				targetFileStream = new FileInputStream(targetExcelFilePath);
 				targetExcelWB = new XSSFWorkbook(targetFileStream);
 				targetFileStream.close();
 				targetSheet = targetExcelWB.getSheet(inSheetName);
 			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		//} catch (IOException e) {
+		//	// TODO Auto-generated catch block
+		//	e.printStackTrace();
+		//}
 		return targetSheet;
 	}
 
-	public boolean findHeadersMatch(){
+	public boolean findHeadersMatch() throws IOException{
 		return findHeadersMatch(null);
 	}
 
-	public boolean findHeadersMatch(String inSheetName){
+	public boolean findHeadersMatch(String inSheetName) throws IOException{
 		boolean headersMatch = true;
 		String sheetName = null;
 		if (inSheetName == null) {
@@ -1111,7 +1114,6 @@ public class ExcelHandler {
 				+ (removingStartAndSize == null ? "null"
 						: removingStartAndSize.size));
 
-		//int loopMax = 1000000;
 		int loopMax = MAXROWS;
 		int loopCount = 0;
 		while (inSheet != null && removingStartAndSize != null

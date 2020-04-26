@@ -5,8 +5,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import commonTechs.CommonTechs;
-
 /**
  * Holds New Review created by the user
  * 
@@ -100,9 +98,8 @@ public class NewReviewPojo {
 		try {
 			newReviewDocument = commons.getNewDocument();
 		} catch (ParserConfigurationException e) {
-			e.printStackTrace();
-			CommonTechs.logger.error("Error at createNewReviewDocument NewReviewPojo");
-			System.exit(Commons.FATALEXITCODE);;
+
+			ErrorHandler.showErrorAndQuit(commons, "Error at createNewReviewDocument NewReviewPojo", e);		
 		}
 
 		artifactItemOnReview = newReviewDocument.createElement(ARTIFACT_ITEM_ONREVIEW_ELEMENT);

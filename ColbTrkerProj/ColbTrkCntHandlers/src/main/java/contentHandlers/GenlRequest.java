@@ -149,8 +149,6 @@ public class GenlRequest extends GenericItemHandler {
 				try {
 					commons.setCurrentDateOnDisplay(requestEndDateDisplay);
 				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
 					ErrorHandler.showErrorAndQuit(commons, "Error in GenlRequest setAddlFieldsForItemDisplay CurrDate EndDate of " 
 																+ genlRequestPojo.artifactName, e);
 				}

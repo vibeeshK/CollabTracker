@@ -155,11 +155,8 @@ public class DesktopRootProcessor implements Runnable {
 				responseChecker.checkResponsesForOneRoot();
 
 			} catch (IOException | ClassNotFoundException | TransformerException | ParserConfigurationException | SAXException | ParseException e) {
-
-				e.printStackTrace();
-				ErrorHandler.showErrorAndQuit(commons, "Error in DesktopRootProcessor run ", e);
-				
 				System.out.println("EXITING THE CURRENT LOOP3");
+				ErrorHandler.showErrorAndQuit(commons, "Error in DesktopRootProcessor run ", e);
 			}
 			synchronized (this) {
 				System.out.println("GONNA WAIT22");

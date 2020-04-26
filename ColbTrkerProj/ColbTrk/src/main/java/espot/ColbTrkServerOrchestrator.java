@@ -55,8 +55,6 @@ public class ColbTrkServerOrchestrator {
 						try {
 							masterRootProcessr = new MasterRootProcessor(currentRootPojo,orchestrationData);
 						} catch (IOException | ParseException e) {
-
-							e.printStackTrace();
 							ErrorHandler.showErrorAndQuit(commons, "Error in ColbTrkServerOrchestrator main ", e);
 						}
 						rootProcessorMap.put(

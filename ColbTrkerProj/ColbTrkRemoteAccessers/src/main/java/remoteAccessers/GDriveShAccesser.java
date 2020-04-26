@@ -212,7 +212,6 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 	                .setApplicationName(APPLICATION_NAME)
 	                .build();
 		} catch (GeneralSecurityException | IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in GDriveShAccesser intiateCommunications " + inRootPojo.rootNick, e);
 		}
 	}
@@ -302,7 +301,6 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 					    .setFields("id, parents")
 					    .execute();
 				} catch (IOException e) {
-					e.printStackTrace();
 					ErrorHandler.showErrorAndQuit(commons, "error in GDriveAccess createFolderPathFromCanoniPostString " + inCanonicPostBaseString, e);
 				}
 	        	System.out.println("Folder created for : " + node);
@@ -386,7 +384,6 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 			        							// Paginated read is avoided
 			        .setPageToken(pageToken).execute();
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAccess getChildListForNode while finding inFileID " + inFileID, e);
 		}
 
@@ -415,8 +412,7 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 			        							// Paginated read is avoided
 			        .setPageToken(pageToken).execute();
 		} catch (IOException e) {
-			e.printStackTrace();
-			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAccess findChildNSiblingForNode while finding inNode " + inNode, e);		
+			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAccess findChildNSiblingForNode while finding inNode " + inNode, e);
 		}
 
 		System.out.printf("result 22 size" + resultFileList.size());
@@ -458,10 +454,8 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 			fileResourceID = (String) getFileResourceIDFromURL(inRemoteURL);
 			inputStreamOfFile  = service.files().get(fileResourceID).executeMediaAsInputStream();
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAccess get inRemoteURL " + inRemoteURL, e);
 		}
-        
 		return inputStreamOfFile;
 	}
 
@@ -491,7 +485,6 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		try {
 			commons.storeByteArrayIntoFile(inBytes, tempPathFileName);			
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAccess put of inNewContentRemoteLocation " + inNewContentRemoteLocation, e);
 		}
 		uploadToRemote(inNewContentRemoteLocation, tempPathFileName);
@@ -524,7 +517,6 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 			    .execute();
 			System.out.println("File ID: " + file.getId());
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAccess uploadToRemote " + inLocalFileToBeUploaded, e);
 		}
 	}
@@ -537,10 +529,8 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		try {
 			commons.storeInStream(inUpdatedContentByteArray, tempPathFileName);
 		} catch (IOException e) {
-			e.printStackTrace();
-			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAhAccesser putInStreamIntoRemoteLocation inNewContentRemoteLocation " + inNewContentRemoteLocation, e);			
+			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAhAccesser putInStreamIntoRemoteLocation inNewContentRemoteLocation " + inNewContentRemoteLocation, e);
 		}
-
 		uploadToRemote(inNewContentRemoteLocation, tempPathFileName);
 	}
 

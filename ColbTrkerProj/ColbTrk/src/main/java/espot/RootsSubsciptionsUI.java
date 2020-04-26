@@ -360,8 +360,7 @@ public class RootsSubsciptionsUI {
 										commonUIData.getCommons().setDefaultUIRootNick(allRootNicksList
 												.get(screenRowNum));
 									} catch (IOException e1) {
-										e1.printStackTrace();
-										ErrorHandler.showErrorAndQuit(commonUIData.getCommons(), "Error in RootsSubsriptionsUI displayRootsSubsriptionsUI", e1);													
+										ErrorHandler.showErrorAndQuit(commonUIData.getCommons(), "Error in RootsSubsriptionsUI displayRootsSubsriptionsUI", e1);
 									}
 
 									commonUIData.refresh();

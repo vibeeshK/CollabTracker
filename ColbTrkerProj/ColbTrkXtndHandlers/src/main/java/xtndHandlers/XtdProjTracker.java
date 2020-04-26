@@ -275,7 +275,6 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 
 			commonData.getCommons().putJsonDocToFile(contentPathFileName,getPrimerDoc());
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in XtdProjTracker processXtdStdProcessRec " + inXtdProcStatus, e);			
 		}
 		System.out.println("at end of 23454233 processxtdStdProcessRec inArtifactKeyPojo = " + invokedArtifactPojo.artifactKeyPojo.artifactName);
@@ -824,7 +823,6 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 		try {
 			inProjTasksXlJavaObj.setColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_ActualEnd_COLHDR, commons.getDateFromDateOnlyString(inProjTaskItem.actualEnd));
 		} catch (ParseException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error XtdProjTracker moveTaskItemDataIntoPlanShRowObj " + inProjTaskItem.artifactName, e);
 		}
 		inProjTasksXlJavaObj.setColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_BurntHours_COLHDR, inProjTaskItem.burntHours);

@@ -61,7 +61,6 @@ public class ErrorHandler {
 				throw new Exception(inException);
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.out.println("caught error at 3");
 			Commons.logger.error(e  + " at "+ inCommons.getCurrentTimeStamp());

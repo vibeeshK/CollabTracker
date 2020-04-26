@@ -194,7 +194,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 	public void readPrimerFile(){
 		try {
 			primerDoc = (GenericGrouperDocPojo) commonData.getCommons().getJsonDocFromFile(contentPathFileName,getPrimerDocClass());
-		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+		} catch (IOException e) {
 			ErrorHandler.showErrorAndQuit(commonData.getCommons(), "Error at GenericGrouper doCommontInit while reading " + contentPathFileName, e);
 		}
 
@@ -1014,7 +1014,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 			System.out.println("At processContentAtWeb closing the instream incomingFileStream " + incomingFileStream);
 			
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(mainShell, commonData.getCommons(), "Error2 at GenericGrouper processContentAtWeb " + inRequestProcesserPojo.newERLPojo.artifactKeyPojo.artifactName, e);
 		}
 		
@@ -1116,7 +1115,8 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 					MessageBox testMessageBox = new MessageBox(mainShell, SWT.OK);
 					testMessageBox.setMessage("Workbook saved to the file:\n\n" + filename);
 					int erlViewIssueMessageBoxRC = testMessageBox.open();
-			    } catch (IOException ioe) {
+			    } catch (IOException ioe) {	// this exception is could be from outside
+			    							// disruption and not fatal as user can try again.
 			        ioe.printStackTrace();
 			        String msg = ioe.getMessage();
 					MessageBox testMessageBox = new MessageBox(mainShell, SWT.OK);
@@ -1242,7 +1242,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		} catch (IOException e) {
 
 			System.out.println("Exception in GenericGrouper saveItemsXML1212 e is " + e);
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(mainShell, commonData.getCommons(), "Error at GenericGrouper saveItemsJSON", e);
 		}
 		MessageBox testMessageBox = new MessageBox(mainShell, SWT.OK);
@@ -1274,7 +1273,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		try {
 			commonData.getCommons().putJsonDocToFile(contentPathFileName,getPrimerDoc());
 		} catch (IOException e) {
-			e.printStackTrace();			
 			ErrorHandler.showErrorAndQuit(mainShell, commonData.getCommons(), "Error at GenericGrouper writePrimer", e);
 		}
 		System.out.println("writeJSON Stored the xml file : " + contentPathFileName);
@@ -1288,7 +1286,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		try {
 			commons.putJsonDocToFile(inNewPrimerFilePath,primerDoc);
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(mainShell, commonData.getCommons(), "Error at GenericGrouper createNewStartupPrimer " 
 							+ inNewPrimerFilePath + " " + inArtifactpojo.artifactKeyPojo.artifactName, e);
 		}

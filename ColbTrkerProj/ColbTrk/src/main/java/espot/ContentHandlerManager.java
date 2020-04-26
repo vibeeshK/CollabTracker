@@ -55,7 +55,6 @@ public class ContentHandlerManager {
 																	contentHandlerSpecsMap.get(inContentType).handlerClass,
 																	commons.getHandlerJarNames());
 			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | IOException e) {
-				e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(commons, "Error in ContentHandlerManager getContentHandlerInterface " + inContentType, e);
 			}
 			contentHanlderMgr.contentHandlerInterfaceMap.put(inContentType,contentHandlerInterface);

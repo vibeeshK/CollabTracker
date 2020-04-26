@@ -147,9 +147,7 @@ public class ColbTrkClientOrchestrator implements Runnable {
 							rootProcessor = new DesktopRootProcessor(rootPojosFromDBmap
 									.get(rootsNicks[rootCount]),orchestrationData);
 						} catch (IOException | ParseException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-							Commons.logger.error("ColbTrkClientOrchestrator error rootProcessor " + rootsNicks[rootCount]);
+							ErrorHandler.showErrorAndQuit(commons, "ColbTrkClientOrchestrator error rootProcessor " + rootsNicks[rootCount], e);
 						}
 						rootProcessors.put(rootsNicks[rootCount],
 								rootProcessor);
