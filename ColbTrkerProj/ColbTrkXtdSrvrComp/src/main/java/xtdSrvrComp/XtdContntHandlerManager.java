@@ -9,10 +9,14 @@ import espot.Commons;
 import espot.ContentHandlerSpecs;
 import espot.ErrorHandler;
 
+/**
+ * Factory class to create extended content handler instances and provide references
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdContntHandlerManager {
-	/*
-	 * Factory class to create extended content handler instances and provide references
-	 */
+
 	private static XtdContntHandlerManager xtdCntentHanlderMgr = null;
 	private Commons commons = null;
 	private HashMap<String,ExtendedHandler> xtndContntHandlerInterfaceMap = null;
@@ -38,7 +42,6 @@ public class XtdContntHandlerManager {
 			try {
 				extendedHandler = (ExtendedHandler) CustomClassLoader.getInstance(contentHandlerSpecsMap.get(inContentType).extdHandlerCls,commons.getHandlerJarNames());
 			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | IOException e) {
-				e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(commons, "Error in XtdContntHandlerManager getExtendedHandlerInterface " + inContentType, e);
 			}
 			xtdCntentHanlderMgr.xtndContntHandlerInterfaceMap.put(inContentType,extendedHandler);

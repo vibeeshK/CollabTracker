@@ -4,10 +4,14 @@ import java.util.ArrayList;
 
 import espot.ArtifactKeyPojo;
 
+/**
+ * Db record holder for Decking grouper Parent to track status
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ERLGrouperParent {
-	/*
-	 * Db record holder for Decking grouper Parent to track status
-	 */
+
 	public static final String PARENT_NEW = "NEW";
 	public static final String PARENT_UPDATED = "RENEWED";
 	public static final String PARENT_PROCESSED = "PROCESSED";

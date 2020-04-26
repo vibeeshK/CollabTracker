@@ -22,10 +22,13 @@ import xtdSrvrComp.XtdStdProcessRecord;
 import xtdSrvrComp.XtdStdRtCtCatlogPersistenceManager;
 import xtdSrvrComp.XtdTmShCatlogPersistenceMgr;
 
+/**
+ * Handler for TimeShRollup extended processing
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdTimeShRollup extends TimeShRollup implements ExtendedHandler {
-	/*
-	 * Handler for TimeShRollup extended processing
-	 */
 
 	final static String INITIATED_TYPE1CONTENT_ProjTask = "ProjTask";
 	
@@ -80,6 +83,8 @@ public class XtdTimeShRollup extends TimeShRollup implements ExtendedHandler {
 			if (timeDetails.containsKey(personTaskHoursKey)) {
 				existingHours = timeDetails.get(personTaskHoursKey);
 			}
+			// Provision to accumulate hours in specific window, though currently each window
+			// captures a single entry due to the collection's key at seconds level
 			int cumulativeHours = existingHours + timeSheetPojo.hoursLogged;
 			timeDetails.put(personTaskHoursKey,cumulativeHours);
 		}
@@ -147,7 +152,6 @@ public class XtdTimeShRollup extends TimeShRollup implements ExtendedHandler {
 		try {
 			commonData.getCommons().putJsonDocToFile(contentPathFileName,getPrimerDoc());
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in XtdTimeShRollup processXtdStdProcessRec " + inXtdProcStatus, e);
 		}
 		System.out.println("at end of 23454233 processxtdStdProcessRec inArtifactKeyPojo = " + invokedArtifactPojo.artifactKeyPojo.artifactName);

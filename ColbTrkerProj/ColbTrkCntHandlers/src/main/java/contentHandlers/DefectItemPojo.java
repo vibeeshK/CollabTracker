@@ -5,10 +5,14 @@ import java.util.Date;
 
 import espot.ItemPojo;
 
+/**
+ * Data holder for a defect item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class DefectItemPojo extends ItemPojo {
-	/*
-	 * Data holder for a defect item
-	 */
+
 	final static String CONTENT_TYPE = "Defect";
 
 	public final static String DEFECTSTATUSVALUES_YesToStart = "YesToStart";

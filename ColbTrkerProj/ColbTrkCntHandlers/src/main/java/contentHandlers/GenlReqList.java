@@ -7,7 +7,6 @@ import org.eclipse.swt.custom.TableEditor;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
-import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.List;
@@ -22,10 +21,14 @@ import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 import espot.UsersDisplay;
 
+/**
+ * This content handler helps to group genlRequests within a relevance
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class GenlReqList extends GenericGrouper {
-	/*
-	 * This content handler helps to group genlRequests within a relevance
-	 */
+
 	public static final int PREFERED_DESC_WIDTH = 600;
 	public static final int PREFERED_DESC_HEIGHT = 100;
 
@@ -59,13 +62,6 @@ public class GenlReqList extends GenericGrouper {
 
 	public void setDisplayItemsCenterBaseFieldsInMultiDisplay(TableEditor editor, Table inTable, TableItem inTableItem, int inLastColLocation, ItemPojo inItemPojo){
 		GenlRequestPojo genlRequestPojo = (GenlRequestPojo) inItemPojo;
-
-//		requestorShortName = "";
-//		requestFor = "";
-//		requestDesc = "";
-//		requestCategory = "";	
-//		requestStartDate = "";
-//		requestEndDate = "";
 
 		editor = new TableEditor(inTable);
 		Text requestedByShortName_Tx = new Text(inTable, SWT.READ_ONLY);
@@ -162,20 +158,6 @@ public class GenlReqList extends GenericGrouper {
 			inPrevGroup = requestDescInfo;
 		}
 	
-		//{
-		//	Group requestorShortNameInfo = new Group(itemContentGroup, SWT.LEFT);
-		//	requestorShortNameInfo.setText("RequestorShortName");
-		//	requestorShortNameInfo.setLayout(new FillLayout());
-		//	requestorShortNameText = new Text(requestorShortNameInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-		//	requestorShortNameText.setText(genlRequestPojo.requestorShortName);
-		//	
-		//	formData = new FormData();
-		//	formData.top = new FormAttachment(inPrevGroup);
-		//	formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		//	requestorShortNameInfo.setLayoutData(formData);
-		//	inPrevGroup = requestorShortNameInfo;
-		//}
-		
 		{
 			// displayContent() - Users display starts
 			Group authorsGroup = new Group(itemContentGroup, SWT.LEFT);
@@ -188,8 +170,7 @@ public class GenlReqList extends GenericGrouper {
 			formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
 			authorsGroup.setLayoutData(formData);
 			inPrevGroup  = authorsGroup;
-			// displayContent() - Users display ends
-			
+			// displayContent() - Users display ends			
 		}
 
 		{
@@ -215,8 +196,6 @@ public class GenlReqList extends GenericGrouper {
 				try {
 					commons.setDateOnDisplay(requestStartDateDisplay, genlRequestPojo.requestStartDate);
 				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
 					ErrorHandler.showErrorAndQuit(commons, "Error in GenlRequest setAddlFieldsForItemDisplay StartDate of " 
 																+ genlRequestPojo.artifactName, e);
 				}
@@ -238,8 +217,6 @@ public class GenlReqList extends GenericGrouper {
 				try {
 					commons.setDateOnDisplay(requestEndDateDisplay, genlRequestPojo.requestEndDate);
 				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
 					ErrorHandler.showErrorAndQuit(commons, "Error in GenlRequest setAddlFieldsForItemDisplay EndDate of "
 																+ genlRequestPojo.artifactName, e);
 				}

@@ -1,21 +1,17 @@
 package contentHandlers;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
-import espot.GenericGrouperDocPojo;
 import espot.ItemPojo;
-import espot.ScreenPatternFieldPojo;
 
+/**
+ * json doc holder for DeckerGrouper
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class DeckerGrouperDocPojo extends DeckerLiteDocPojo {
-	/*
-	 * json doc holder for DeckerGrouper
-	 */
-//	public String overallSummaryFileName;
-//	public HashMap<String,ScreenPatternFieldPojo> screenAddlFieldPattern;
-//	public HashMap<String,String> screenFieldDefaults;
-//	public ArrayList<String> centerColAddlHeaders;
-	
+
 	private static String DeckerGrprAUTHORCOLHDR = "PM";
 	private static String DeckerGrprKEYCOLHDR = "EngagementID";
 	
@@ -29,7 +25,6 @@ public class DeckerGrouperDocPojo extends DeckerLiteDocPojo {
 		summaryFilePage = "";
 		detailFilePage = "";
 		summaryShKeyColSeqNum = -1;	// zero based
-//		overallSummaryFileName = "";
 
 		authorColHdrName = DeckerGrprAUTHORCOLHDR;
 		keyColHdrName = DeckerGrprKEYCOLHDR;		

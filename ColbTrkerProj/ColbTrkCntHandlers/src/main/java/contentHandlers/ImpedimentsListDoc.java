@@ -4,10 +4,14 @@ import java.util.ArrayList;
 import espot.GenericGrouperDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for Impediment grouper
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ImpedimentsListDoc extends GenericGrouperDocPojo {
-	/*
-	 * json doc holder for Impediment grouper
-	 */	
+
 	ArrayList<ImpedimentItemPojo> impedimentList;
 
 	public ArrayList<ImpedimentItemPojo> getItemList() {

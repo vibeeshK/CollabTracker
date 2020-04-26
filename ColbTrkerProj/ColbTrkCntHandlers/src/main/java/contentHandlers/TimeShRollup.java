@@ -5,7 +5,6 @@ import org.eclipse.swt.custom.TableEditor;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
-import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
@@ -16,16 +15,13 @@ import espot.GenericGrouperDocPojo;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * This content handler helps to group the timesheets of a user
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class TimeShRollup extends GenericGrouper {
-	/*
-	 * This content handler helps to group the timesheets of a user
-	 */
-
-	//These single item fields will be referred when one single item is pulled out
-	//Text applicationText;
-	//Text statusText;
-	//Text reviewerText;
-	//Text authorNameText;
 
 	protected void setScreenTitle() {
 		mainShell.setText("TimeSheetsGrouper: <viewContentsAtDesk> on " + invokedArtifactPojo.artifactKeyPojo.artifactName);
@@ -129,18 +125,6 @@ public class TimeShRollup extends GenericGrouper {
 		return prevGroup;
 	}
 	
-	//public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
-	//	TimeSheetPojo timeSheetPojo = (TimeSheetPojo) inItemPojo;
-	//	timeSheetPojo.status = statusText.getText();
-	//	timeSheetPojo.reviewer = reviewerText.getText();
-	//	timeSheetPojo.relevance = invokedArtifactPojo.artifactKeyPojo.relevance;
-	//}
-	//
-	//public void setInitialItemPojoAddlFields(ItemPojo inItemPojo){
-	//	TimeSheetPojo timeSheetPojo = (TimeSheetPojo) inItemPojo;
-	//	timeSheetPojo.author = commonData.getCommons().userName;
-	//	timeSheetPojo.status = "Draft";
-	//}
 	public void getPrimerDocAddlFields() {
 		// from persistence to screen
 	}

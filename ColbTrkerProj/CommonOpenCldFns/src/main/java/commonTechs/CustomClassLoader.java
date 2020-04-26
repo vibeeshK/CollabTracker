@@ -7,10 +7,13 @@ import java.util.Enumeration;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
+/**
+ * Provides a singleton reference to dynamic classloader which loads the classes packaged in given jars
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class CustomClassLoader extends ClassLoader {
-	/*
-	 * Provides a singleton reference to dynamic classloader which loads the classes packaged in given jars
-	 */
 	private static CustomClassLoader customClassLoader;
 	String[] handlerJarNames = null;
 	private URLClassLoader myClassLoader = null;	

@@ -4,10 +4,14 @@ import java.util.ArrayList;
 import espot.GenericGrouperDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for the Allocated tasks grouper
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class DefectsListDoc extends GenericGrouperDocPojo {
-	/*
-	 * json doc holder for the Allocated tasks grouper
-	 */	
+
 	ArrayList<DefectItemPojo> defectList;
 	public ArrayList<DefectItemPojo> getItemList() {
 		return defectList;

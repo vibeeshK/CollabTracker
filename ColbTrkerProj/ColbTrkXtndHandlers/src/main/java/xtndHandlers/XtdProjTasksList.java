@@ -18,10 +18,13 @@ import xtdSrvrComp.XtdContntHandlerManager;
 import xtdSrvrComp.XtdStdProcessRecord;
 import xtdSrvrComp.XtdStdRtCtCatlogPersistenceManager;
 
+/**
+ * Handler for ProjTasksList extended processing
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdProjTasksList extends ProjTasksList implements ExtendedHandler {
-	/*
-	 * Handler for ProjTasksList extended processing
-	 */
 
 	final static String INITIATED_TYPE1CONTENT_ProjTracker = "ProjTracker";
 
@@ -96,8 +99,7 @@ public class XtdProjTasksList extends ProjTasksList implements ExtendedHandler {
 		try {
 			commonData.getCommons().putJsonDocToFile(contentPathFileName,getPrimerDoc());
 		} catch (IOException e) {
-			e.printStackTrace();
-			ErrorHandler.showErrorAndQuit(commons, "Error in XtdProjTasksList processXtdStdProcessRec " + inXtdProcStatus, e);			
+			ErrorHandler.showErrorAndQuit(commons, "Error in XtdProjTasksList processXtdStdProcessRec " + inXtdProcStatus, e);
 		}
 		System.out.println("at end of 23454233 processxtdStdProcessRec inArtifactKeyPojo = " + invokedArtifactPojo.artifactKeyPojo.artifactName);
 		System.out.println("at 1234AC of process processxtdStdProcessRec processEndingStatus " + processEndingStatus);

@@ -6,10 +6,14 @@ import espot.Commons;
 import espot.ErrorHandler;
 import espot.RootPojo;
 
+/**
+ * Extended Process sequence for deckers
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdDeckerProcMaster extends XtdStdContentProcMaster {
-	/*
-	 * Extended Process sequence for deckers
-	 */
+
 	XtdDeckerProcessor extdDeckrProcessor;
 
 	public XtdDeckerProcMaster(Commons inCommons, RootPojo inRootPojo, String inContentType, XtdCatalogPersistenceManager inXtdCatalogPersistenceManager) {
@@ -19,7 +23,7 @@ public class XtdDeckerProcMaster extends XtdStdContentProcMaster {
 	@Override
 	public void initProcessor() {
 		// overriding for the special processor loading
-		extdDeckrProcessor = new XtdDeckerProcessor(commonData, contentType, remoteAccesser);
+		extdDeckrProcessor = new XtdDeckerProcessor(commonData, contentType);
 	}
 	
 	@Override
@@ -58,8 +62,6 @@ public class XtdDeckerProcMaster extends XtdStdContentProcMaster {
 			System.out.println("@12341");
 			System.out.println("@12343");
 		} catch (IOException | ClassNotFoundException e) {
-			e.printStackTrace();
-			System.out.println("EXITING THE CURRENT LOOP3");
 			ErrorHandler.showErrorAndQuit(commons, "Error ExtdDeckerProcMaster run", e);
 		}
 	}

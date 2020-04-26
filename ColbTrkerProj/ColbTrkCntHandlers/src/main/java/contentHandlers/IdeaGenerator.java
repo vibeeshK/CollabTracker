@@ -10,17 +10,21 @@ import espot.GenericItemHandler;
 import espot.ItemPojo;
 import espot.UsersDisplay;
 
+/**
+ * This content handler helps to let any team member to log the an idea
+ * which will be collated into the grouping content type by the server.
+ * 
+ * The leaders can view the requests, categorize on status and process on rolled up view
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class IdeaGenerator extends GenericItemHandler {
-	/*
-	 * This content handler helps to let any team member to log the an idea
-	 * which will be collated into the grouping content type by the server.
-	 */
+
 	public static final int PREFERED_DESC_WIDTH = 600;
 	public static final int PREFERED_DESC_HEIGHT = 100;
 
 	Text applicationText;
-	//Text statusText;
-	//Text reviewerText;
 	Text descriptionText;
 
 	UsersDisplay reviewerDisplay;
@@ -85,14 +89,8 @@ public class IdeaGenerator extends GenericItemHandler {
 		inPrevGroup = descriptionInfo;
 
 		Group reviewerInfo = new Group(itemContentGroup, SWT.LEFT | SWT.WRAP);
-		//reviewerInfo.setText("Reviewer");
+
 		reviewerInfo.setLayout(new FillLayout());
-//		if (invokedForEdit) {
-//			reviewerText = new Text(reviewerInfo, SWT.WRAP | SWT.CENTER);
-//		} else {
-//			reviewerText = new Text(reviewerInfo, SWT.WRAP | SWT.READ_ONLY | SWT.CENTER);			
-//		}
-//		reviewerText.setText(ideaPojo.reviewer);
 
 		reviewerDisplay = new UsersDisplay(commonData.getUsersHandler(),reviewerInfo,ideaPojo.reviewer,invokedForEdit,UsersDisplay.REVIEWER_LIT);
 
@@ -101,19 +99,6 @@ public class IdeaGenerator extends GenericItemHandler {
 		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
 		reviewerInfo.setLayoutData(formData);
 		inPrevGroup = reviewerInfo;
-	
-//		Group statusInfo = new Group(itemContentGroup, SWT.LEFT
-//				| SWT.WRAP | SWT.READ_ONLY);
-//		statusInfo.setText("Status");
-//		statusInfo.setLayout(new FillLayout());
-//		statusText = new Text(statusInfo, SWT.WRAP | SWT.READ_ONLY | SWT.CENTER);
-//		statusText.setText(ideaPojo.status);
-//		
-//		formData = new FormData();
-//		formData.top = new FormAttachment(inPrevGroup);
-//		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-//		statusInfo.setLayoutData(formData);
-//		inPrevGroup = statusInfo;
 
 		return inPrevGroup;
 	}
@@ -121,10 +106,7 @@ public class IdeaGenerator extends GenericItemHandler {
 	public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
 		IdeaPojo ideaPojo = (IdeaPojo) inItemPojo;
 		ideaPojo.application = applicationText.getText();
-		//ideaPojo.status = statusText.getText();
-		//ideaPojo.reviewer = reviewerText.getText();
 		ideaPojo.reviewer = reviewerDisplay.userText.getText();
-		//ideaPojo.relevance = invokedArtifactPojo.artifactKeyPojo.relevance;
 		ideaPojo.description = descriptionText.getText();
 	}
 	

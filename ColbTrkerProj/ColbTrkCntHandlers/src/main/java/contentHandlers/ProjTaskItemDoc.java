@@ -3,10 +3,14 @@ package contentHandlers;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for Proj task item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ProjTaskItemDoc extends GenericItemDocPojo {
-	/*
-	 * json doc holder for Proj task item
-	 */	
+
 	ProjTaskItemPojo projTaskItemPojo;
 
 	public ProjTaskItemDoc(ItemPojo inItemPojo) {

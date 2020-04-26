@@ -18,10 +18,14 @@ import espot.ResponseChecker;
 import espot.RootPojo;
 import espot.Uploader;
 
+/**
+ * Extended Process sequence for standard processes
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdStdContentProcMaster {
-	/*
-	 * Extended Process sequence for standard processes
-	 */
+
 	XtdCatalogPersistenceManager xtdCatlogPersistenceManager;					
 
 	Commons commons;
@@ -40,6 +44,9 @@ public class XtdStdContentProcMaster {
 		System.out.println("at start XtdStdContentProcMaster inCommons is " + inCommons);		
 		System.out.println("at start XtdStdContentProcMaster inContentType is " + inContentType);		
 		commons = inCommons;		
+		
+		Commons.logger.info(this.getClass().getSimpleName() + " starting up at " + commons.getCurrentTimeStamp());
+		
 		rootPojo = inRootPojo;
 		contentType = inContentType;
 		xtdCatlogPersistenceManager = inXtdCatalogPersistenceManager;
@@ -60,9 +67,7 @@ public class XtdStdContentProcMaster {
 		contentDownloader = new ContentDownloader(commonData,remoteAccesser);
 		responseChecker = new ResponseChecker(commonData,remoteAccesser);
 		uploader = new Uploader(commonData, remoteAccesser);
-		
-		// removed loading of processor from constructor to make it modular for extensions
-		// xtdStdContentProcesor = new XtdStdContentProcessor(commonData,contentType,remoteAccesser);
+
 		initProcessor();
 		
 		System.out.println("at 222221.2" );
@@ -73,7 +78,7 @@ public class XtdStdContentProcMaster {
 	
 	public void initProcessor() {
 		// separating processor loading to make it modular for extensions
-		xtdStdContentProcesor = new XtdStdContentProcessor(commonData,contentType,remoteAccesser);
+		xtdStdContentProcesor = new XtdStdContentProcessor(commonData,contentType);
 	}
 	
 	public void coreProcessOfRecords() {
@@ -116,8 +121,6 @@ public class XtdStdContentProcMaster {
 			System.out.println("@12341");
 			System.out.println("@12343");
 		} catch (IOException | ClassNotFoundException e) {
-			e.printStackTrace();
-			System.out.println("EXITING THE CURRENT LOOP3");
 			ErrorHandler.showErrorAndQuit(commons, "Error XtdStdContentProcMaster coreProcessOfRecords " + rootPojo.rootNick + " " + contentType, e);
 		}
 	}
@@ -130,7 +133,6 @@ public class XtdStdContentProcMaster {
 			responseChecker.checkResponsesForOneRoot();
 			System.out.println("at 222221 4bavartytr" );
 		} catch (ClassNotFoundException | IOException | TransformerException | ParserConfigurationException | SAXException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error XtdStdContentProcMaster endProcessOfRecords " + rootPojo.rootNick + " " + contentType, e);
 		}
 	}

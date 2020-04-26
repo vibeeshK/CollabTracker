@@ -8,10 +8,14 @@ import espot.ArtifactKeyPojo;
 import espot.ErrorHandler;
 import espot.RootPojo;
 
+/**
+ * This class maintains the sql queries for the standard extended processes
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdStdRtCtCatlogPersistenceManager extends XtdCatalogPersistenceManager {
-	/*
-	 * This class maintains the sql queries for the standard extended processes
-	 */
+
 	public XtdStdRtCtCatlogPersistenceManager(RootPojo inRootPojo, XtdCommons inCommons, int inProcessMode)
 			throws ClassNotFoundException {
 		super(inRootPojo, inCommons, inProcessMode);
@@ -47,11 +51,6 @@ public class XtdStdRtCtCatlogPersistenceManager extends XtdCatalogPersistenceMan
 			+ "	    		and GP2.XtdStdrdProcRelevance = erl.Relevance "
 			+ " 	   		and GP2.XtdStdrdProcArtifactName = erl.ArtifactName "
 			+ "    			and GP2.XtdStdrdProcContentType = erl.ContentType "
-//			+ "    			and (GP2.XtdStdrdProcUpdateTimeStamp < erl.UploadedTimeStamp " 
-//			+ " 				or GP2.XtdStdrdProcStatus in ('" 
-//			+ 					XtdStdProcessRecord.ERLRecord_NEW + "','" 
-//			+ 					XtdStdProcessRecord.ERLRecord_UPDATED + "','" 
-//			+ 					XtdStdProcessRecord.ERLRecord_CONTINUE + "'))))"
 			+ "    			and (GP2.XtdStdrdProcUpdateTimeStamp < erl.UploadedTimeStamp " 
 			+ " 				or GP2.XtdStdrdProcStatus in ('" 
 			+ 					XtdStdProcessRecord.ERLRecord_NEW + "','" 
@@ -81,7 +80,6 @@ public class XtdStdRtCtCatlogPersistenceManager extends XtdCatalogPersistenceMan
 		} catch (SQLException e) {
 			// if the error message is "out of memory",
 			// it probably means no database file is found
-			//System.err.println(e.getMessage());
 			ErrorHandler.showErrorAndQuit(commons, "Error XtdStdRtCtCatlogPersistenceManager readUpdatedERLXtdStdProcessTbls" + inRootNick + " " + inContentType, e);
 		}
 		return dbERLGrouperParntList;
@@ -112,7 +110,6 @@ public class XtdStdRtCtCatlogPersistenceManager extends XtdCatalogPersistenceMan
 		} catch (SQLException e) {
 			// if the error message is "out of memory",
 			// it probably means no database file is found
-			//System.err.println(e.getMessage());
 			ErrorHandler.showErrorAndQuit(commons, "Error XtdStdRtCtCatlogPersistenceManager insertDeckerXtdStdrdProc(ArtifactKeyPojo inXtdStdrdProcArtifactKeyPojo" + " " + inXtdStdrdProcUpdateTimeStamp + " " + inXtdStdrdProcStatus, e);
 		}
 	}
@@ -145,7 +142,6 @@ public class XtdStdRtCtCatlogPersistenceManager extends XtdCatalogPersistenceMan
 		} catch (SQLException e) {
 			// if the error message is "out of memory",
 			// it probably means no database file is found
-			//System.err.println(e.getMessage());
 			ErrorHandler.showErrorAndQuit(commons, "Error XtdStdRtCtCatlogPersistenceManager updateDeckerXtdStdrdProc " + inArtifactKeyPojo.artifactName + " " + inXtdStdrdProcUpdateTimeStamp + " " + inXtdStdrdProcStatus, e);
 		}
 	}
@@ -162,7 +158,6 @@ public class XtdStdRtCtCatlogPersistenceManager extends XtdCatalogPersistenceMan
 		} catch (SQLException e) {
 			// if the error message is "out of memory",
 			// it probably means no database file is found
-			//System.err.println(e.getMessage());
 			ErrorHandler.showErrorAndQuit(commons, "Error XtdStdRtCtCatlogPersistenceManager neverCallMe_DeleteXtdStdProcessTbl", e);
 		}
 	}

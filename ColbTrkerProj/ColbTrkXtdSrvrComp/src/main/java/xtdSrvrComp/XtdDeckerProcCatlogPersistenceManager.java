@@ -9,10 +9,14 @@ import espot.ERLDownload;
 import espot.ErrorHandler;
 import espot.RootPojo;
 
+/**
+ * Extended catalog processes for extended decking handler
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdDeckerProcCatlogPersistenceManager extends XtdCatalogPersistenceManager {
-	/*
-	 * Extended catalog processes for extended decking handler
-	 */
+
 	public XtdDeckerProcCatlogPersistenceManager(RootPojo inRootPojo, XtdCommons inCommons, int inProcessMode)
 			throws ClassNotFoundException {
 		super(inRootPojo, inCommons, inProcessMode);

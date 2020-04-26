@@ -34,10 +34,14 @@ import espot.Commons;
 import espot.ErrorHandler;
 import espot.RootPojo;
 
+/**
+ * This class provides the means to access files on a Google Drive
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class GDriveShAccesser extends AbstractRemoteAccesser {
-	/*
-	 * This class provides the means to access files on a Google Drive
-	 */
+
     private static final String APPLICATION_NAME = "Google Drive API Java GoogleDriveAccesser";
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
     private static final String TOKENS_DIRECTORY = "tokens";
@@ -82,8 +86,7 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
         
 		System.out.println("22 proxy host is now set to " + System.getProperty("https.proxyHost"));
 		System.out.println("22 proxy port is now set to " + System.getProperty("https.proxyPort"));
-                
-        
+
         Credential credential = new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
         return credential;
     }
@@ -118,6 +121,7 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 	}
 
     public static void main(String... args) throws IOException, GeneralSecurityException {
+    // this main method is only testing purpose
     	
     	GDriveShAccesser g1 = new GDriveShAccesser();
 
@@ -125,7 +129,6 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		try {
 			commons = Commons.getInstance(Commons.CLIENT_MACHINE);
 		} catch (ParseException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAhAccesser main " , e);
 		}
 
@@ -213,7 +216,6 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 			ErrorHandler.showErrorAndQuit(commons, "error in GDriveShAccesser intiateCommunications " + inRootPojo.rootNick, e);
 		}
 	}
-	
 
 	public void createFolderOfFileIfDontExist(String inFileName) {
 		String parentFolder = commons.getFolderNameFromURL(inFileName, fileSeparator);
@@ -246,7 +248,6 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		}
 		return fileResourceID;
 	}
-
 
 	private String getRemoteFolderID(String inRemoteURL) {
 		String remoteFolderID = null;
@@ -437,7 +438,6 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 	boolean preCheckURL(String inRemoteURL) {
 		boolean preCheckURLPassed = false;
 		if (!StringUtils.startsWith(inRemoteURL, rootPojo.rootString)) {
-			//commons.logger.error("incorrect url passed. " + inRemoteURL + " doesnt strart with rootstring: " + rootPojo.rootString);
 			ErrorHandler.showErrorAndQuit(commons, "incorrect url passed. " + inRemoteURL + " doesnt strart with rootstring: " + rootPojo.rootString);
 
 		} else {
@@ -483,13 +483,6 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		}
 		return arrayListOfFiles;
 	}
-
-	//@Override
-	//public List<String> getList(String inRemoteURL) {
-	//	ArrayList<String> arrayListOfFiles = getRemoteList(inRemoteURL);
-	//	List<String> listOfFiles = commons.getStringListFromObjectList(arrayListOfFiles);
-	//	return listOfFiles;
-	//}
 
 	@Override
 	public void put(String inNewContentRemoteLocation, byte[] inBytes) {

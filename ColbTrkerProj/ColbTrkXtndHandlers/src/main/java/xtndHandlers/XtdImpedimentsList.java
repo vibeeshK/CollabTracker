@@ -18,10 +18,13 @@ import xtdSrvrComp.XtdContntHandlerManager;
 import xtdSrvrComp.XtdStdProcessRecord;
 import xtdSrvrComp.XtdStdRtCtCatlogPersistenceManager;
 
+/**
+ * Handler for ImpedimentsList extended processing
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdImpedimentsList extends ImpedimentsList implements ExtendedHandler {
-	/*
-	 * Handler for ImpedimentsList extended processing
-	 */
 
 	final static String INITIATED_TYPE1CONTENT_ProjTracker = "ProjTracker";
 
@@ -95,7 +98,6 @@ public class XtdImpedimentsList extends ImpedimentsList implements ExtendedHandl
 		try {
 			commonData.getCommons().putJsonDocToFile(contentPathFileName,getPrimerDoc());
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in XtdImpedimentsList processXtdStdProcessRec " + inXtdProcStatus, e);
 		}
 		System.out.println("at end of 23454233 processxtdStdProcessRec inArtifactKeyPojo = " + invokedArtifactPojo.artifactKeyPojo.artifactName);

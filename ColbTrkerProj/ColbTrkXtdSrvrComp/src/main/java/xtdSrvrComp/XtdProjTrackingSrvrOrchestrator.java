@@ -9,11 +9,15 @@ import espot.Commons;
 import espot.ErrorHandler;
 import espot.RootPojo;
 
+/**
+ * This processor invokes extended Project Tracker process sequence at defined intervals
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdProjTrackingSrvrOrchestrator extends AbstractRtCtOrchestrator {
-	/*
-	 * This processor invokes extended Project Tracker process sequence on defined intervals
-	 */
-	final static int ProcessInterval = 1 * 5 * 1000;
+
+	final static int ProcessInterval = 1 * 5 * 1000;	// default interval as 5 Sec
 	final static String ARG_XtdCtlgSrvrPropFileName = Commons.CONFIGFOLDERPREFIX + "extdCtlgSrvrForStdProcessor.properties";
 	
 	public XtdProjTrackingSrvrOrchestrator() throws IOException, ParseException {
@@ -53,7 +57,6 @@ public class XtdProjTrackingSrvrOrchestrator extends AbstractRtCtOrchestrator {
 			xtdCatalogPersistenceMgr = new XtdTmShCatlogPersistenceMgr(inRootPojo, xtdCommon,
 												Commons.EXTENDED_CATALOG_SERVER);
 		} catch (ClassNotFoundException | IOException | ParseException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(initialCommons, "Error XtdProjTrackingSrvrOrchestrator getProcesor " + inRootPojo.rootNick + " " + inProcessingContentType, e);
 		}
 		System.out.println("XtdStdContentProcMaster before return getProcesor commons is " + xtdCommon);

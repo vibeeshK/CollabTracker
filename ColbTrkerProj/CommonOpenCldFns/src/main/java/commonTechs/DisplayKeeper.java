@@ -4,6 +4,12 @@ import java.util.HashMap;
 
 import org.eclipse.swt.widgets.Display;
 
+/**
+ * Holds one version of Display for each thread
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class DisplayKeeper {
 	private static HashMap<String,Display> displaysMap = null;
 	private DisplayKeeper () {}

@@ -3,10 +3,13 @@ package contentHandlers;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for the Simple Tracker
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class SimpleTrackerItemDoc extends GenericItemDocPojo {
-	/*
-	 * json doc holder for the Simple Tracker
-	 */	
 
 	public SimpleTrackerItemDoc(ItemPojo inItemPojo) {
 		super(inItemPojo);

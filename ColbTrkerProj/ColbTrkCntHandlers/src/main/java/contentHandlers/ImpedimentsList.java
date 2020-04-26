@@ -1,4 +1,5 @@
 package contentHandlers;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -7,7 +8,6 @@ import org.eclipse.swt.custom.TableEditor;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
-import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
@@ -18,13 +18,13 @@ import espot.GenericGrouperDocPojo;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * This content handler helps to group impediments of a project
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ImpedimentsList extends GenericGrouper {
-	/*
-	 * This content handler helps to group impediments of a project
-	 */
-	//Text descriptionText;
-	//Text authorText;
-	//Text statusText;
 
 	public static HashMap<String,ArrayList<ImpedimentItemPojo>> getTasksOpenImpediments(ArrayList<ImpedimentItemPojo> inImpedimentsList) {
 		HashMap<String,ArrayList<ImpedimentItemPojo>> tasksOpenImpediments = new HashMap<String,ArrayList<ImpedimentItemPojo>>();
@@ -133,17 +133,11 @@ public class ImpedimentsList extends GenericGrouper {
 
 		return inPrevGroup;
 	}
-	//public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
-	//	ImpedimentItemPojo impedimentPojo = (ImpedimentItemPojo) inItemPojo;
-	//}
-	//public void setInitialItemPojoAddlFields(ItemPojo inItemPojo){
-	//	ImpedimentItemPojo impedimentPojo = (ImpedimentItemPojo) inItemPojo;
-	//	impedimentPojo.author = commonData.getCommons().userName;
-	//	impedimentPojo.status = "Draft";
-	//}
+
 	public void getPrimerDocAddlFields() {
 		// from persistence to screen
 	}
+
 	public void setPrimerDocAddlFields() {
 		// from screen to persistence		
 	}

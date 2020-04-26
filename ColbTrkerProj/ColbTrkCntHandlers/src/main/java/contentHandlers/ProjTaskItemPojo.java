@@ -4,10 +4,14 @@ import java.util.Date;
 
 import espot.ItemPojo;
 
+/**
+ * Data holder for a project task item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ProjTaskItemPojo extends ItemPojo{
-	/*
-	 * Data holder for a project task item
-	 */
+
 	final static String CONTENT_TYPE = "ProjTask";
 
 	public final static String TASKSTATUSVALUES_YesToStart = "YesToStart";

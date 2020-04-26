@@ -3,10 +3,14 @@ package contentHandlers;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for the GenlRequestPojo item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class GenlRequestItemDoc extends GenericItemDocPojo  {
-	/*
-	 * json doc holder for the GenlRequestPojo item
-	 */	
+
 	GenlRequestPojo genlRequestPojo;
 
 	public GenlRequestItemDoc(ItemPojo inItemPojo){

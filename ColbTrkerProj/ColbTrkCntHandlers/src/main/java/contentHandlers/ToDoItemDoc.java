@@ -3,10 +3,14 @@ package contentHandlers;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for ToDo item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ToDoItemDoc extends GenericItemDocPojo {
-	/*
-	 * json doc holder for ToDo item
-	 */
+
 	ToDoPojo toDoPojo;
 	public ToDoItemDoc(ItemPojo inItemPojo){
 		super(inItemPojo);

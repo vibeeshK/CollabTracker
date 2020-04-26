@@ -18,10 +18,13 @@ import xtdSrvrComp.XtdContntHandlerManager;
 import xtdSrvrComp.XtdStdProcessRecord;
 import xtdSrvrComp.XtdStdRtCtCatlogPersistenceManager;
 
+/**
+ * Handler for DefectsList extended processing
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdDefectsList extends DefectsList implements ExtendedHandler {
-	/*
-	 * Handler for DefectsList extended processing
-	 */
 
 	final static String INITIATED_TYPE1CONTENT_ProjTracker = "ProjTracker";
 
@@ -95,7 +98,6 @@ public class XtdDefectsList extends DefectsList implements ExtendedHandler {
 		try {
 			commonData.getCommons().putJsonDocToFile(contentPathFileName,getPrimerDoc());
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in XtdDefectsList processXtdStdProcessRec " + inXtdProcStatus, e);
 		}
 		System.out.println("at end of 23454233 processxtdStdProcessRec inArtifactKeyPojo = " + invokedArtifactPojo.artifactKeyPojo.artifactName);

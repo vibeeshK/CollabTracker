@@ -2,10 +2,13 @@ package contentHandlers;
 
 import espot.ItemPojo;
 
+/**
+ * Data holder for an idea item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class IdeaPojo extends ItemPojo{
-	/* 
-	 * Data holder for an idea item
-	 */
 
 	String description;
 	String application;
@@ -35,7 +38,6 @@ public class IdeaPojo extends ItemPojo{
 		expectedCostSavings = "";
 		expectedMoraleImprovement = "";
 		System.out.println("initializeAdditionalItemPojoFields at ideaPojo class application is " + application);
-
 	}
 }
 

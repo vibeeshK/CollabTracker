@@ -4,10 +4,14 @@ import java.util.Date;
 
 import espot.ItemPojo;
 
+/**
+ * Data holder for time sheet capturing item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class TimeShCapturePojo extends ItemPojo{
-	/*
-	 * Data holder for time sheet capturing item
-	 */
+
 	public int captureInterval;
 	public int allocationInterval;
 	public Date lastTriggeredAt;

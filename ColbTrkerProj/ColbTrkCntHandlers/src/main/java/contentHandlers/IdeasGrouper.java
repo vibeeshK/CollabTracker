@@ -1,87 +1,27 @@
 package contentHandlers;
 
-import espot.*;
-
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList; //import org.eclipse.swt.events.SelectionAdapter;
-import java.util.HashMap;
-
-import java.lang.reflect.Method;
-import java.net.URL;
-import java.net.URLClassLoader;
-import java.nio.channels.FileChannel;
-
-import javax.print.Doc;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.Result;
-import javax.xml.transform.Source;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.TransformerFactoryConfigurationError;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Control;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Event;
-import org.eclipse.swt.widgets.Group;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.List;
-import org.eclipse.swt.widgets.Listener;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.Table;
-import org.eclipse.swt.widgets.TableColumn;
-import org.eclipse.swt.widgets.TableItem;
-import org.eclipse.swt.widgets.Text;
-import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.custom.CCombo;
-import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.custom.TableEditor;
-import org.eclipse.swt.events.ControlAdapter;
-import org.eclipse.swt.events.ControlEvent;
-import org.eclipse.swt.events.ModifyEvent;
-import org.eclipse.swt.events.ModifyListener;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.events.SelectionListener;
-import org.eclipse.swt.graphics.Color;
-import org.eclipse.swt.graphics.FontData;
-import org.eclipse.swt.graphics.FontMetrics;
-import org.eclipse.swt.graphics.GC;
-import org.eclipse.swt.graphics.Image;
-import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
-import org.eclipse.swt.layout.FormLayout;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.layout.RowLayout;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
+import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.widgets.Table;
+import org.eclipse.swt.widgets.TableItem;
+import org.eclipse.swt.widgets.Text;
 
+import espot.GenericGrouper;
+import espot.GenericGrouperDocPojo;
+import espot.GenericItemDocPojo;
+import espot.ItemPojo;
+
+/**
+ * This content handler helps to group ideas within a relevance
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class IdeasGrouper extends GenericGrouper {
-	/*
-	 * This content handler helps to group ideas within a relevance
-	 */
-
-	//These single item fields will be referred when one single item is pulled out
-	//Text applicationText;
-	//Text statusText;
-	//Text reviewerText;
-	//Text authorNameText;
 
 	protected void setScreenTitle() {
 		mainShell.setText("IdeasGrouper: <viewContentsAtDesk> on " + invokedArtifactPojo.artifactKeyPojo.artifactName);
@@ -196,20 +136,6 @@ public class IdeasGrouper extends GenericGrouper {
 		
 		return authorInfo;
 	}
-	
-	//public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
-	//	IdeaPojo ideaPojo = (IdeaPojo) inItemPojo;
-	//	ideaPojo.application = applicationText.getText();
-	//	ideaPojo.status = statusText.getText();
-	//	ideaPojo.reviewer = reviewerText.getText();
-	//	ideaPojo.relevance = invokedArtifactPojo.artifactKeyPojo.relevance;
-	//}
-	//
-	//public void setInitialItemPojoAddlFields(ItemPojo inItemPojo){
-	//	IdeaPojo ideaPojo = (IdeaPojo) inItemPojo;
-	//	ideaPojo.author = commonData.getCommons().userName;
-	//	ideaPojo.status = "Draft";
-	//}
 
 	public void getPrimerDocAddlFields() {
 		// from persistence to screen

@@ -8,10 +8,14 @@ import xtdCommonTechs.ExcelJavaObj;
 import xtdSrvrComp.ExtendedHandler;
 import xtdSrvrComp.XtdCommons;
 
+/**
+ * Handler for Allocated tasks grouper extended processing
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdAllocatedTasks extends AllocatedTasks implements ExtendedHandler {
-	/*
-	 * Handler for Allocated tasks grouper extended processing
-	 */
+
 	public static final String SHORTID_COLHDR = "ShortId";
 	public static final String TASKID_COLHDR = "TaskID";
 	public static final String TEAM_COLHDR = "Team";	// team can be the projectID or supportTeamID
@@ -63,8 +67,7 @@ public class XtdAllocatedTasks extends AllocatedTasks implements ExtendedHandler
 		return xtdProcStatus;
 	}
 	
-	public void absorbAllocatedTasksExcel(String inAllocatedTasksExcel){
-		
+	public void absorbAllocatedTasksExcel(String inAllocatedTasksExcel){		
 	}
 
 	public ExcelJavaObj getBaseXlJavaObjWithColTypes() {

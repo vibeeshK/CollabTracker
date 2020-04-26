@@ -1,8 +1,6 @@
 package commonTechs;
 
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.MouseEvent;
-import org.eclipse.swt.events.MouseListener;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Event;
@@ -13,10 +11,14 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Tray;
 import org.eclipse.swt.widgets.TrayItem;
 
+/**
+ * This class helps to manage the system tray item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class SysTrayHanlder {
-	/*
-	 * This class helps to manage the system tray item
-	 */
+
 	Display display;
 	Shell callerShell;
 	public Tray tray;
@@ -71,7 +73,7 @@ public class SysTrayHanlder {
 				// Creates a new menu item that terminates the program
 				// when selected
 				MenuItem exit = new MenuItem(m, SWT.NONE);
-				exit.setText("Goodbye!");
+				exit.setText("Goodbye");
 				exit.addListener(SWT.Selection, new Listener() {
 					public void handleEvent(Event event) {
 						System.exit(0);

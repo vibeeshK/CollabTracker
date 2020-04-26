@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
@@ -17,10 +16,13 @@ import espot.Commons;
 import espot.ErrorHandler;
 import espot.RootPojo;
 
+/**
+ * This class provides the means to access files on a Windows based Doc Centers
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class WindowsAccesser extends AbstractRemoteAccesser {
-	/*
-	 * This class provides the means to access files on a Windows based Doc Centers
-	 */
 
 	public WindowsAccesser (){
 	}
@@ -72,7 +74,6 @@ public class WindowsAccesser extends AbstractRemoteAccesser {
 		    commons.createFolderOfFileIfDontExist(destFile);
 			FileUtils.moveFile(sourceFile, destFile);
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in WindowsAccesser moveToRemoteLocation from "  + inSourceFileRemoteLocation + " into " + inDestinationFileRemoteLocation, e);
 		}
 	}
@@ -95,8 +96,6 @@ public class WindowsAccesser extends AbstractRemoteAccesser {
 		try {
 			FileUtils.copyFile(new File(inSourceFileAtLocal), new File(inDestinationFileAtRemote));
 		} catch (IOException e) {
-			//e.printStackTrace();
-			//commons.logger.error("Error in WindowsAccesser uploadToRemote into " + inDestinationFileAtRemote + " from " + inSourceFileAtLocal);
 			ErrorHandler.showErrorAndQuit(commons, "Error in WindowsAccesser uploadToRemote into " + inDestinationFileAtRemote + " from " + inSourceFileAtLocal, e);
 		}
 	}
@@ -108,9 +107,6 @@ public class WindowsAccesser extends AbstractRemoteAccesser {
 			System.out.println("At getRemoteFileStream a new remoteFileStream created with " + remoteFileStream);
 			System.out.println("At getRemoteFileStream a new remoteFileStream created for " + inRemoteFileName);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			//e.printStackTrace();
-			//commons.logger.error("Error in WindowsAccesser getRemoteFileStream of " + inRemoteFileName);
 			ErrorHandler.showErrorAndQuit(commons, "Error in WindowsAccesser getRemoteFileStream of " + inRemoteFileName, e);
 		}
 		return remoteFileStream;
@@ -127,23 +123,9 @@ public class WindowsAccesser extends AbstractRemoteAccesser {
 			outStream.write(inBytes);
 		    outStream.close();
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in WindowsAccesser put " + inRemoteURL, e);
 		}			
 	}
-
-	//@Override
-	//public List<String> getList(String inRemoteURL) {
-	//	List<String> resourcesStringList = null;
-	//	String[] resources = (new File(inRemoteURL)).list();
-	//	resourcesStringList = new ArrayList<String>();
-	//	for (int i = 0; i < resources.length; i++) {
-	//		System.out.println("resources received for i = " + i + " "
-	//				+ resources[i]);
-	//		resourcesStringList.add(resources[i]);
-	//	}
-	//	return resourcesStringList;
-	//}
 
 	@Override
 	public boolean exists(String inRemoteURL) {

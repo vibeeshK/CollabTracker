@@ -3,10 +3,14 @@ package contentHandlers;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for Defect item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class DefectItemDoc extends GenericItemDocPojo {
-	/*
-	 * json doc holder for Defect item
-	 */	
+
 	DefectItemPojo defectItemPojo;
 
 	public DefectItemDoc(ItemPojo inItemPojo) {

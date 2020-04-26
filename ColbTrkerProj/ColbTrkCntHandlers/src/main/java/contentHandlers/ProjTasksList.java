@@ -10,7 +10,6 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Table;
@@ -32,17 +31,17 @@ import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 import espot.SelfAuthoredArtifactpojo;
 
+/**
+ * This content handler helps to group proj tasks
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ProjTasksList extends GenericGrouper {
-	/*
-	 * This content handler helps to group proj tasks
-	 */
+
 	final static String EVENTDATA_ProjTaskItemPojo = "ProjTaskItemPojo";
 	final static String CONTENTTYPE1_AllocatdTask = "AllocatdTask";
 	final static String CONTENTTYPE2_AllocatedTasks = "AllocatedTasks";
-	
-	//Text descriptionText;
-	//Text authorText;
-	//Text statusText;
 
 	private HashMap<String,AllocatdTaskItemPojo> allocatdTasksFromProj;
 	private HashMap<String,AllocatdTaskItemPojo> allocatdTasksDrafts;
@@ -125,7 +124,6 @@ public class ProjTasksList extends GenericGrouper {
 			AllocatdTaskItemPojo allocatdTaskItem = (AllocatdTaskItemPojo) allocatdTaskInterface.getFocusedItemPojo();
 			System.out.println("Addl common init added allocation from allocatedTasksERL.artifactKeyPojo.artifactName " + allocatdTaskItem);
 
-			//allocatdTasksFromProj.put(allocatdTaskItem.taskID, allocatdTaskItem);
 			allocatdTasksDrafts.put(allocatdTaskItem.taskID, allocatdTaskItem);
 			System.out.println("Addl common init added allocation.taskID from draft " + allocatdTaskItem.taskID);
 		}
@@ -150,7 +148,6 @@ public class ProjTasksList extends GenericGrouper {
 		System.out.println("centerBaseColHeaders 0 " + centerBaseColHeaders[0]);
 		System.out.println("centerBaseColHeaders 1 " + centerBaseColHeaders[1]);
 		System.out.println("centerBaseColHeaders 2 " + centerBaseColHeaders[2]);
-		//System.out.println("centerBaseColHeaders 3 " + centerBaseColHeaders[3]);
 	}
 
 	public void setDisplayItemsCenterBaseFieldsInMultiDisplay(TableEditor inEditor, Table inTable, 
@@ -231,14 +228,7 @@ public class ProjTasksList extends GenericGrouper {
 
 		return inPrevGroup;
 	}
-	//public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
-	//	ProjTaskItemPojo projTaskPojo = (ProjTaskItemPojo) inItemPojo;
-	//}
-	//public void setInitialItemPojoAddlFields(ItemPojo inItemPojo){
-	//	ProjTaskItemPojo projTaskPojo = (ProjTaskItemPojo) inItemPojo;
-	//	projTaskPojo.author = commonData.getCommons().userName;
-	//	projTaskPojo.status = "Draft";
-	//}
+
 	public void getPrimerDocAddlFields() {
 		// from persistence to screen
 	}

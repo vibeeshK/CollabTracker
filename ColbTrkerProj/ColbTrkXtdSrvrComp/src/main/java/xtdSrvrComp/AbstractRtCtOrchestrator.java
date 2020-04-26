@@ -12,10 +12,14 @@ import espot.PublishedRootsHandler;
 import espot.RootPojo;
 import espot.SysCompRefresh;
 
+/**
+ * Abstract processor for the extended processing
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public abstract class AbstractRtCtOrchestrator {
-	/*
-	 * Abstract processor for the extended processing
-	 */
+
 	HashMap<String, RootPojo> rootPojosFromDBmap = null;
 	HashMap<String, XtdStdContentProcMaster> rtCtProcessThreads = null;
 
@@ -33,7 +37,7 @@ public abstract class AbstractRtCtOrchestrator {
 		SysCompRefresh.compRefresh(initialCommons);
 		System.out.println("2 Abstract Orchestrator AbstractRtCtOrchestrator commons extdSrvrContentTypes is " + initialCommons.xtdSrvrContentTypes );
 
-		Commons.logger.info(this.getClass().getSimpleName() + " starting up - logging set to info");
+		Commons.logger.info(this.getClass().getSimpleName() + " starting up - logging set to info at " + initialCommons.getCurrentTimeStamp());
 		System.out.println("Extended Orchestrator starting up; printing directly via sysout");
 
 		orchestrationData = new OrchestrationData(initialCommons.userName,this.getClass().getSimpleName(),initialCommons.applicationIcon);
@@ -70,8 +74,7 @@ public abstract class AbstractRtCtOrchestrator {
 		try {
 			System.out.println("Abstract Orchestrator begins at 1");
 			System.out.println("Abstract Orchestrator begins at 1 at commons is " + initialCommons);
-			//boolean nothingToProcess = false;
-			//while (!nothingToProcess) {
+
 			while (orchestrationData.getOkayToContinue()) {
 				rootPojosFromDBmap = PublishedRootsHandler.getPublishedRoots(initialCommons);
 				for (int rootCount = 0; rootCount < initialCommons.extendedSrvrRtNicks.length; rootCount++) {
@@ -131,7 +134,6 @@ public abstract class AbstractRtCtOrchestrator {
 				System.out.println("resuming ESPoTExtdCatlgSrvrOrchestrator");
 			}
 		} catch (InterruptedException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(initialCommons, "Error AbstractRtCtOrchestrator orchestration", e);
 		}
 		System.out.println("at 4");		

@@ -5,12 +5,17 @@ import java.text.ParseException;
 
 import espot.CommonUIData;
 import espot.Commons;
+import espot.ErrorHandler;
 import espot.RootPojo;
 
+/**
+ * CAUTION. EXECUTING THIS CLASS WILL CAUSE PERMANENT DATA LOSS IN EXTENDED DBs
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class NeverInvokeMe_DeleteAllXtdDbRecs {
-	/*
-	 * TO BE USED ONLY FOR DELETING EXTENDED DBs
-	 */
+
 	final static String ARG_XtdCtlgDeckerSrvrPropFileName = Commons.CONFIGFOLDERPREFIX + "extdCtlgSrvrForExtendedDecker.properties";
 	final static String ARG_XtdCtlgSrvrForDeckerLitePropFileName = Commons.CONFIGFOLDERPREFIX + "extdCtlgSrvrForDeckerLite.properties";
 	final static String ARG_XtdCtlgSrvrPropFileName = Commons.CONFIGFOLDERPREFIX + "extdCtlgSrvrForStdProcessor.properties";
@@ -18,8 +23,10 @@ public class NeverInvokeMe_DeleteAllXtdDbRecs {
 	public NeverInvokeMe_DeleteAllXtdDbRecs() {
 	}
 	public void clearXtdSrvrDbRecs() throws IOException, ParseException {
-		
+
 		Commons commons = Commons.getInstance(Commons.CLIENT_MACHINE); // bare minimal commons
+
+		Commons.logger.info("At NeverInvokeMe_DeleteAllXtdDbRecs clearXtdSrvrDbRecs start at " + commons.getCurrentTimeStamp()); 
 
 		CommonUIData commonUIData = CommonUIData.getUIInstance(commons);
 
@@ -30,7 +37,7 @@ public class NeverInvokeMe_DeleteAllXtdDbRecs {
 		try {
 			xtdCatalogPersistenceMgr = new XtdTmShCatlogPersistenceMgr(rootPojo,xtdCommons,Commons.EXTENDED_CATALOG_SERVER);
 		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+			ErrorHandler.showErrorAndQuit(xtdCommons, "Error NeverInvokeMe_DeleteAllXtdDbRecs clearXtdSrvrDbRecs while creating XtdTmShCatlogPersistenceMgr ", e);
 		}
 		xtdCatalogPersistenceMgr.neverCallMe_DeleteXtdStdProcessTbl();
 		xtdCatalogPersistenceMgr.neverCallMe_DeleteTimeDetail();
@@ -45,7 +52,7 @@ public class NeverInvokeMe_DeleteAllXtdDbRecs {
 			xtdDeckerCatalogPersistenceMgr = new XtdDeckerProcCatlogPersistenceManager(rootPojo, xtdCommons,
 												Commons.EXTENDED_CATALOG_SERVER);
 		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+			ErrorHandler.showErrorAndQuit(xtdCommons, "Error NeverInvokeMe_DeleteAllXtdDbRecs clearXtdSrvrDbRecs while creating XtdDeckerProcCatlogPersistenceManager ", e);
 		}
 		xtdDeckerCatalogPersistenceMgr.neverCallMe_DeleteXtdDeckerProcessParentTbl();
 		xtdDeckerCatalogPersistenceMgr.neverCallMe_DeleteXtdDeckerProcessChildTbl();
@@ -61,14 +68,12 @@ public class NeverInvokeMe_DeleteAllXtdDbRecs {
 			xtdDeckerLiteCatalogPersistenceMgr = new XtdDeckerProcCatlogPersistenceManager(rootPojo, xtdCommons,
 												Commons.EXTENDED_CATALOG_SERVER);
 		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+			ErrorHandler.showErrorAndQuit(xtdCommons, "Error NeverInvokeMe_DeleteAllXtdDbRecs clearXtdSrvrDbRecs while creating XtdDeckerProcCatlogPersistenceManager ", e);
 		}
 		xtdDeckerLiteCatalogPersistenceMgr.neverCallMe_DeleteXtdDeckerProcessParentTbl();
 		xtdDeckerLiteCatalogPersistenceMgr.neverCallMe_DeleteXtdDeckerProcessChildTbl();
 		xtdDeckerLiteCatalogPersistenceMgr.neverCallMe_DeleteAllSelfAuthoredArtifacts();
 		xtdDeckerLiteCatalogPersistenceMgr.neverCallMe_DeleteSubscriptions();		
-	
-	
 	}
 
 	public static void main(String[] args) throws IOException, ParseException {

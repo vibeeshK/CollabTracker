@@ -9,11 +9,16 @@ import java.util.Properties;
 
 import espot.Commons;
 
+/**
+ * This class consolidates the commonly used extended functions to avoid redundancy.
+ * This class is kept separate from Commons to cater with heavy weight components of 
+ * extended process such as POI Excel handling
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdCommons extends Commons {
-	/*
-	 * This class provides consolidates the commonly used extended functions to avoid redundancy.
-	 * This class is kept as separate from Commons to provide factory instances
-	 */	
+
 	public String alltimesheetfile;	// for timesheet trigger
 
 	public String[] xtdSrvrContentTypes;
@@ -23,10 +28,6 @@ public class XtdCommons extends Commons {
 	public String xtdHandlersFolder;
 	public String extdCtlgSrvrpropertiesFileName;
 	public String extdSrvrProcessFolder;
-	
-	//public String timeAllocSheetname;
-	//public int keyColumnNo;
-	//public String inputDataType;
 
 	public void readExtendedCatalogServerPrimaryProperties(String inExtdCtlgSrvrpropertiesFileName) throws IOException {
 		System.out.println("xxx XtdCommons readExtendedCatalogServerPrimaryProperties called inXtdArg is " + inExtdCtlgSrvrpropertiesFileName);
@@ -43,12 +44,6 @@ public class XtdCommons extends Commons {
 	
 	public void readExtendedCatalogServerSecondaryProperties(String inExtdCtlgSrvrpropertiesFileName) throws IOException {
 
-//		Properties extdCtlgSrvrPropObject = new Properties();
-//		extdCtlgSrvrpropertiesFileName = inExtdCtlgSrvrpropertiesFileName;
-//		InputStream propertiesStream = new FileInputStream(extdCtlgSrvrpropertiesFileName);
-//		extdCtlgSrvrPropObject.load(propertiesStream);
-//		propertiesStream.close();
-		
 		Properties extdCtlgSrvrPropObject = getPropertiesFromFile(extdCtlgSrvrpropertiesFileName);
 
 		System.out.println("xxx extdCtlgSrvrPropObject getProperty on EXTENDED_CATLOG_SERVER_FOLDER is " + xtdCatalogSrvrFolder);
@@ -69,12 +64,6 @@ public class XtdCommons extends Commons {
 		extdSrvrProcessFolder = installFileFolder + localFileSeparator + extdCtlgSrvrPropObject.getProperty("extdSrvrProcessFolder");
 		alltimesheetfile = extdSrvrProcessFolder + localFileSeparator + extdCtlgSrvrPropObject.getProperty("alltimesheetfile");
 
-		//timeAllocSheetname = extdCtlgSrvrPropObject.getProperty("timeallocsheetname");
-
-		//System.out.println("extdCtlgSrvrPropObject getProperty on keyColumnNo is " + extdCtlgSrvrPropObject.getProperty("keyColumnNo"));
-		
-		//keyColumnNo = Integer.parseInt(extdCtlgSrvrPropObject.getProperty("keyColumnNo"));
-		//inputDataType=extdCtlgSrvrPropObject.getProperty("inputdata");
 		System.out.println("xx2 extdCtlgSrvrPropObject getProperty on extdSrvrContentTypesText is " + extdSrvrContentTypesText);
 		System.out.println("xx2 extdCtlgSrvrPropObject getProperty on xtdSrvrContentTypes[0] is " + xtdSrvrContentTypes[0]);
 	}

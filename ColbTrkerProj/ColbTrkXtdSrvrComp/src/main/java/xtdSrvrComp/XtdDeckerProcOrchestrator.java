@@ -8,11 +8,15 @@ import espot.Commons;
 import espot.ErrorHandler;
 import espot.RootPojo;
 
+/**
+ * This processor invokes extended Decking sequence at defined intervals
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdDeckerProcOrchestrator extends AbstractRtCtOrchestrator {
-	/*
-	 * This processor invokes extended Decking sequence on defined intervals
-	 */
-	final static int ProcessInterval = 1 * 5 * 1000;
+
+	final static int ProcessInterval = 1 * 5 * 1000;	// default interval as 5 Sec
 	final static String ARG_XtdCtlgDeckerSrvrPropFileName = Commons.CONFIGFOLDERPREFIX + "extdCtlgSrvrForExtendedDecker.properties";
 
 	public XtdDeckerProcOrchestrator() throws IOException, ParseException {
@@ -41,7 +45,6 @@ public class XtdDeckerProcOrchestrator extends AbstractRtCtOrchestrator {
 			xtdCatalogPersistenceMgr = new XtdDeckerProcCatlogPersistenceManager(inRootPojo, xtdCommon,
 												Commons.EXTENDED_CATALOG_SERVER);
 		} catch (ClassNotFoundException | IOException | ParseException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(initialCommons, "Error ESPoTXtdSrvrDeckerProcOrchestrator getProcesor " + inRootPojo.rootNick + " " + inProcessingContentType, e);
 		}
 		System.out.println("ESPoTXtdSrvrDeckerProcOrchestrator before return getProcesor commons is " + xtdCommon);

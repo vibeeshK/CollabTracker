@@ -5,10 +5,14 @@ import java.util.ArrayList;
 import espot.GenericGrouperDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for GenlRequest grouper
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class GenlReqListDoc extends GenericGrouperDocPojo {
-	/*
-	 * json doc holder for GenlRequest grouper
-	 */	
+
 	ArrayList<GenlRequestPojo> genlRequestItemsList;
 
 	public ArrayList<GenlRequestPojo> getItemList() {

@@ -3,10 +3,13 @@ package contentHandlers;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for the Project Tracker
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ProjTrackerItemDoc extends GenericItemDocPojo {
-	/*
-	 * json doc holder for the Project Tracker
-	 */	
 
 	public ProjTrackerItemDoc(ItemPojo inItemPojo) {
 		super(inItemPojo);

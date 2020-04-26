@@ -1,9 +1,13 @@
 package commonTechs;
 
+/**
+ * This class used mainly for passing and holding state data of connected processes
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class OrchestrationData {
-	/* 
-	 * This class used mainly for passing and holding state data of connected processes
-	 */
+
 	private boolean okToContinue = true;
 	public String userName;
 	public String message;

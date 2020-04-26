@@ -3,10 +3,14 @@ package contentHandlers;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for the maintenance of contributing user detail item document
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class UserMaintReqDoc extends GenericItemDocPojo  {
-	/*
-	 * json doc holder for the User item
-	 */	
+
 	UserMaintReqPojo userMaintReqPojo;
 
 	public UserMaintReqDoc(ItemPojo inItemPojo){

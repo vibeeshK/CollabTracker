@@ -2,10 +2,13 @@ package contentHandlers;
 
 import espot.ItemPojo;
 
+/**
+ * Data holder for time sheet triggering item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class TimeShTriggerPojo extends ItemPojo{
-	/*
-	 * Data holder for time sheet triggering item
-	 */
 
 	public String description;
 	public String reviewer;

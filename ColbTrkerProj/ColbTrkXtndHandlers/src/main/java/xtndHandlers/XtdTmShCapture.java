@@ -9,10 +9,13 @@ import xtdSrvrComp.ExtendedHandler;
 import xtdSrvrComp.XtdCommons;
 import xtdSrvrComp.XtdStdProcessRecord;
 
+/**
+ * Handler for TmShCapture capturing extended processing
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdTmShCapture extends TimeShCapture implements ExtendedHandler {
-	/*
-	 * Handler for TmShCapture capturing extended processing
-	 */
 
 	public final static String ABSORB_TIMETRIGGER_INSTRUCTION = "ABSORB_TIMETRIGGER";
 

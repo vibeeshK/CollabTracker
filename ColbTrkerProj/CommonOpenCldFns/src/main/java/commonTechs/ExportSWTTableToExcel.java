@@ -10,6 +10,12 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
 
+/**
+ * Simplifier to export to excel from screen SWT table
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ExportSWTTableToExcel {
 
 	

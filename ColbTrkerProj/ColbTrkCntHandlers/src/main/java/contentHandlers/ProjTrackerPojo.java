@@ -2,10 +2,14 @@ package contentHandlers;
 
 import espot.ItemPojo;
 
+/**
+ * Data holder for a project tracker content
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ProjTrackerPojo extends ItemPojo{
-	/*
-	 * Data holder for a project tracker content
-	 */
+
 	public static final String INITIAL_TRACKER_FILE = "ProjPlannerTemplate.xlsx";
 	public static final String TRACKER_SUBFIX = ".xlsx";
 	public String projTrackerFile;

@@ -1,30 +1,25 @@
 package commonTechs;
 
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.MouseEvent;
-import org.eclipse.swt.events.MouseListener;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
-import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Listener;
-import org.eclipse.swt.widgets.Menu;
-import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Spinner;
-import org.eclipse.swt.widgets.Tray;
-import org.eclipse.swt.widgets.TrayItem;
 
+/**
+ * Provides a system tray to control Orchestrators that usually run in the background
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class OrchestrationUI implements Runnable {
-	/*
-	 * Provides a system tray to control Orchestrators that usually run in the background
-	 */
 
 	final int DEFAULTINTERVAL_MINIM_MINTS = 1;
 	final int DEFAULTINTERVAL_INCREMT_MINTS = 1;
@@ -43,8 +38,7 @@ public class OrchestrationUI implements Runnable {
 	}
 
 	void displayOrchUI() {
-		//display = Display.getDefault();
-		//display = new Display();
+
 		display = DisplayKeeper.getDisplay();
 
 		mainShell = new Shell(display, SWT.APPLICATION_MODAL | SWT.CLOSE
@@ -80,9 +74,9 @@ public class OrchestrationUI implements Runnable {
 		applyButton.setText ("Apply");
 		applyButton.addSelectionListener (new SelectionAdapter () {
 	        public void widgetSelected (SelectionEvent e) {
-				//orchestration.healthCheckIntervalMin = healthCheckIntervalDateTime.getSelection();
+
 	        	orchestration.setHealthCheckIntervalMin(healthCheckIntervalDateTime.getSelection());
-				//orchestration.repeatIntervalMin = repeatIntervalDateTime.getSelection();
+
 				orchestration.setRepeatIntervalMin(repeatIntervalDateTime.getSelection());
 
 				System.out.println("healthCheckIntervalMin is " + orchestration.getHealthCheckIntervalInSeconds());
@@ -119,7 +113,7 @@ public class OrchestrationUI implements Runnable {
 		    }
 		});
 
-		// Wait forever...
+		// Wait for events
 		while (orchestration.getOkayToContinue()) {
 			if (!display.readAndDispatch()) {
 				display.sleep();

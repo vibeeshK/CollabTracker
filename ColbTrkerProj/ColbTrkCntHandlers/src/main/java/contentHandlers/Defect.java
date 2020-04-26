@@ -14,10 +14,14 @@ import espot.ContentHandlerSpecs;
 import espot.GenericItemHandler;
 import espot.ItemPojo;
 
+/**
+ * This content handler helps to log a defect against a project task
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class Defect extends GenericItemHandler {
-	/*
-	 * This content handler helps to log a defect against a project task
-	 */
+
 	public final static String DEFECTPREFIX = "Dfct";
 	public final static String DEFECTTASKSEPARATOR = "_";
 	Text description_Tx;

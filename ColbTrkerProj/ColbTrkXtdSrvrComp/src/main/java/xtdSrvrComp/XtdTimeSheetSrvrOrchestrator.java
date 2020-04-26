@@ -8,12 +8,15 @@ import espot.Commons;
 import espot.ErrorHandler;
 import espot.RootPojo;
 
+/**
+ * NOT USED.
+ * 25june2019: this process has been merged with the projTrackerOrchestrator; hence we can discontinue this
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdTimeSheetSrvrOrchestrator extends AbstractRtCtOrchestrator {
-	/*
-	 * NOT USED.
-	 * 25june2019: this process has been merged with the projTrackerOrchestrator; hence we can discontinue this
-	 */
-	
+
 	final static String TimeShTrigerContTpConst = "TimeShTrigger";
 	final static int ProcessInterval = 1 * 5 * 1000;
 	final static String ARG_XtdCtlgSrvrPropFileName = Commons.CONFIGFOLDERPREFIX + "extdCtlgSrvrForTmShProcessor.properties";
@@ -50,7 +53,6 @@ public class XtdTimeSheetSrvrOrchestrator extends AbstractRtCtOrchestrator {
 			xtdCatalogPersistenceMgr = new XtdTmShCatlogPersistenceMgr(inRootPojo, initialCommons,
 												Commons.EXTENDED_CATALOG_SERVER);
 		} catch (ClassNotFoundException | IOException | ParseException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(initialCommons, "Error TimeSheetSrvrOrchestrator getProcesor " + inRootPojo.rootNick + " " + inProcessingContentType, e);
 		}
 		System.out.println("XtdStdContentProcMaster before return getProcesor commons is " + initialCommons);

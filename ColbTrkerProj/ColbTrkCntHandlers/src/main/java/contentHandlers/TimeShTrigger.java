@@ -11,16 +11,18 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Text;
 
-import commonTechs.SimpleDateObj;
 import espot.ArtifactKeyPojo;
 import espot.ErrorHandler;
 import espot.GenericItemHandler;
 import espot.ItemPojo;
 
+/**
+ * This content handler helps to initiate time sheet captures
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class TimeShTrigger extends GenericItemHandler {
-	/*
-	 * This content handler helps to initiate time sheet captures
-	 */
 
 	Text applicationText;
 	Text reviewerText;
@@ -102,7 +104,6 @@ public class TimeShTrigger extends GenericItemHandler {
 		captureStartDateInfo.setText("Capture Start Date");
 		captureStartDateInfo.setLayout(new FillLayout());
 		if (invokedForEdit) {
-			//DateTime datetm = new DateTime(inDateTime);
 
 			captureStartDateDisplay = new DateTime(captureStartDateInfo, SWT.DATE | SWT.CENTER);
 		} else {
@@ -110,33 +111,18 @@ public class TimeShTrigger extends GenericItemHandler {
 			captureStartDateDisplay.setEnabled(false);
 		}
 		if (invokedForEdit && (timeShTriggerPojo.captureStartDate == null || timeShTriggerPojo.captureStartDate.isEmpty())) {
-			//SimpleDateObj startDateSimpleObj = new SimpleDateObj(commons.getDateTS());
-			//captureStartDateDisplay.setDate(startDateSimpleObj.year,startDateSimpleObj.month-1,startDateSimpleObj.day);
-			
+
 			try {
 				commons.setCurrentDateOnDisplay(captureStartDateDisplay);
 			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(commons, "Error in TimeShCapture setAddlFieldsForItemDisplay CurrDate StartDate of " 
 															+ inItemPojo.artifactName, e);
 			}
 		} else if (timeShTriggerPojo.captureStartDate != null && !timeShTriggerPojo.captureStartDate.isEmpty()) {
-			//SimpleDateObj startDateSimpleObj = null;
-			//try {
-			//	startDateSimpleObj = new SimpleDateObj(commons.getDateFromDateOnlyString(timeShTriggerPojo.captureStartDate));
-			//} catch (ParseException e) {
-			//	// TODO Auto-generated catch block
-			//	e.printStackTrace();
-			//	ErrorHandler.showErrorAndQuit(commons, "Error in TimeShCapture setAddlFieldsForItemDisplay " + " " + inItemPojo.artifactName, e);				
-			//}
-			//captureStartDateDisplay.setDate(startDateSimpleObj.year,startDateSimpleObj.month-1,startDateSimpleObj.day);
 
 			try {
 				commons.setDateOnDisplay(captureStartDateDisplay, timeShTriggerPojo.captureStartDate);
 			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(commons, "Error in TimeShCapture setAddlFieldsForItemDisplay StartDate of " 
 															+ inItemPojo.artifactName, e);				
 			}
@@ -161,28 +147,16 @@ public class TimeShTrigger extends GenericItemHandler {
 		}
 
 		if (invokedForEdit && (timeShTriggerPojo.captureEndDate == null || timeShTriggerPojo.captureEndDate.isEmpty())) {
-			//SimpleDateObj endDateSimpleObj = new SimpleDateObj(commons.getDateTS());
-			//captureEndDateDisplay.setDate(endDateSimpleObj.year,endDateSimpleObj.month-1,endDateSimpleObj.day);			
 
 			try {
 				commons.setCurrentDateOnDisplay(captureEndDateDisplay);
 			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(commons, "Error in TimeShCapture setAddlFieldsForItemDisplay CurrDate EndDate of " 
 															+ inItemPojo.artifactName, e);
 			}		
 		}
 		
 		if (timeShTriggerPojo.captureEndDate!= null && !timeShTriggerPojo.captureEndDate.isEmpty()) {
-			//SimpleDateObj endDateSimpleObj = null;
-			//try {
-			//	endDateSimpleObj = new SimpleDateObj(commons.getDateFromDateOnlyString(timeShTriggerPojo.captureEndDate));
-			//} catch (ParseException e) {
-			//	e.printStackTrace();
-			//	ErrorHandler.showErrorAndQuit(commons, "Error in TimeShTrigger setAddlFieldsForItemDisplay " + " " + inItemPojo.artifactName, e);
-			//}
-			//captureEndDateDisplay.setDate(endDateSimpleObj.year,endDateSimpleObj.month-1,endDateSimpleObj.day);
 
 			try {
 				commons.setDateOnDisplay(captureEndDateDisplay, timeShTriggerPojo.captureEndDate);
@@ -205,35 +179,19 @@ public class TimeShTrigger extends GenericItemHandler {
 	public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
 		TimeShTriggerPojo timeShTriggerPojo = (TimeShTriggerPojo) primerDoc.getItem();
 		timeShTriggerPojo.reviewer = reviewerText.getText();
-		//timeShTriggerPojo.relevance = invokedArtifactPojo.artifactKeyPojo.relevance;
+
 		System.out.println("title value while saving is " + timeShTriggerPojo.title);
 		System.out.println("title value while saving is " + timeShTriggerPojo.title);
 
 		timeShTriggerPojo.captureInterval = commonData.getCommons().convertStringToInt(captureIntervalText.getText());
 		timeShTriggerPojo.allocationInterval = commonData.getCommons().convertStringToInt(allocationIntervalText.getText());
 
-		try {
-			//timeShTriggerPojo.captureStartDate = commons.getDateString(commons.getDate(
-			//												captureStartDateDisplay.getYear(),
-			//												captureStartDateDisplay.getMonth()+1,
-			//												captureStartDateDisplay.getDay(),			
-			//												captureStartDateDisplay.getHours(),
-			//												captureStartDateDisplay.getMinutes(),
-			//												captureStartDateDisplay.getSeconds()));
-			//timeShTriggerPojo.captureEndDate = commons.getDateString(commons.getDate(
-			//												captureEndDateDisplay.getYear(),
-			//												captureEndDateDisplay.getMonth()+1,
-			//												captureEndDateDisplay.getDay(),			
-			//												captureEndDateDisplay.getHours(),
-			//												captureEndDateDisplay.getMinutes(),
-			//												captureEndDateDisplay.getSeconds()));
-			
+		try {		
 			timeShTriggerPojo.captureStartDate = commons.getDateStringFromDisplayDate(captureStartDateDisplay);
 			timeShTriggerPojo.captureEndDate = commons.getDateStringFromDisplayDate(captureEndDateDisplay);
 			
 		} catch (ParseException e) {			
-			e.printStackTrace();
-			ErrorHandler.showErrorAndQuit(commons, "Error in TimeShTrigger getAddlFieldsOfItemPojo " + " " + inItemPojo.artifactName, e);			
+			ErrorHandler.showErrorAndQuit(commons, "Error in TimeShTrigger getAddlFieldsOfItemPojo " + " " + inItemPojo.artifactName, e);
 		}
 	}
 	

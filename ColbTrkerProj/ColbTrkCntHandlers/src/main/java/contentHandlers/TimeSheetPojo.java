@@ -2,10 +2,14 @@ package contentHandlers;
 
 import espot.ItemPojo;
 
+/**
+ * Data holder for a timesheet item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class TimeSheetPojo extends ItemPojo{
-	/*
-	 * Data holder for a timesheet item
-	 */
+
 	public static int ALLOCATION_TYPE_PREALLOCATED = 10;
 	public static int ALLOCATION_TYPE_PREVUSED = 20;
 	public static int ALLOCATION_TYPE_MANUALADD = 30;

@@ -10,16 +10,19 @@ import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.swt.widgets.Text;
 
 import espot.ErrorHandler;
 import espot.GenericItemHandler;
 import espot.ItemPojo;
 
+/**
+ * This content handler helps to track a simple dashboard workbook
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class SimpleTracker extends GenericItemHandler implements DeckerLiteContentTypeInterface {
-	/*
-	 * This content handler helps to track a simple dashboard workbook
-	 */
+
 	public String simpleTrackerPathFilename;
 
 	@Override
@@ -60,8 +63,6 @@ public class SimpleTracker extends GenericItemHandler implements DeckerLiteConte
 				try {
 					commons.openFileToView(simpleTrackerPathFilename);
 				} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
 					ErrorHandler.showErrorAndQuit(commons, "Error in SimpleTracker setAddlFieldsForItemDisplay " + " " + inItemPojo.artifactName, e1);
 				}
 			}
@@ -86,7 +87,6 @@ public class SimpleTracker extends GenericItemHandler implements DeckerLiteConte
 	
 	public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
 		SimpleTrackerPojo simpleTrackerPojo = (SimpleTrackerPojo) primerDoc.getItem();
-		//simpleTrackerPojo.relevance = invokedArtifactPojo.artifactKeyPojo.relevance;
 		simpleTrackerPojo.corePlanChanged = true;	// As this method is called only when save button is pressed in UI
 												// it would indicate that the core plan had changed.		
 	}

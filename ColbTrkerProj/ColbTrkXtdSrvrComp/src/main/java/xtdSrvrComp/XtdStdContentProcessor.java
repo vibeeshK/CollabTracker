@@ -8,30 +8,34 @@ import espot.Commons;
 import espot.ContentHandlerSpecs;
 import espot.ERLDownload;
 import espot.ErrorHandler;
-import espot.RemoteAccesser;
+
 import espot.RootPojo;
 import espot.SelfAuthoredArtifactpojo;
 
+/**
+ * This processor invokes extended standard sequence at defined intervals.
+ * Other more special processes extend this processor further for additional specs
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdStdContentProcessor {
-	/*
-	 * This processor invokes extended standard sequence on defined intervals
-	 * Other more special processes extend this processor further for their needs
-	 */	
+
 	private XtdStdRtCtCatlogPersistenceManager xtdCatlogPersistenceManager = null;
 	private Commons commons = null;
-	private RemoteAccesser remoteAccesser = null;	
 	private RootPojo rootPojo = null;
 	private String contentType = null;
 	private CommonData commonData = null;
 	private ContentHandlerSpecs ctHandlerSpecs = null;
 	private String[] dependentContentTypes = null;
 
-	public XtdStdContentProcessor(CommonData inCommonData, String inContentType,
-			RemoteAccesser inRemoteAccesser) {
+	public XtdStdContentProcessor(CommonData inCommonData, String inContentType) {
 		commonData = inCommonData;
 		xtdCatlogPersistenceManager = (XtdStdRtCtCatlogPersistenceManager) inCommonData.getCatelogPersistenceManager(); 
 		commons = commonData.getCommons();
-		remoteAccesser = inRemoteAccesser;
+		
+		Commons.logger.info(this.getClass().getSimpleName() + " starting up at " + commons.getCurrentTimeStamp());
+		
 		rootPojo  = commonData.getCurrentRootPojo();
 		contentType = inContentType;
 		ctHandlerSpecs = commonData.getContentHandlerSpecsMap().get(contentType);
@@ -155,18 +159,7 @@ public class XtdStdContentProcessor {
 	public SelfAuthoredArtifactpojo buildLocalArtifact(ERLDownload inERLDownload, boolean inArtifactToBeRefreshed) {
 		System.out.println("at 222221 buildLocalArtifact234324 inERLDownload.artifact : "  + inERLDownload.artifactKeyPojo.artifactName);
 		System.out.println("at 222221 buildLocalArtifact234324 inERLDownload.downLoadedFile : "  + inERLDownload.downLoadedFile);
-		
-		//SelfAuthoredArtifactpojo extdSelfAuthoredArtifactpojo = xtdCatlogPersistenceManager.readSelfAuthoredArtifact(
-		//		inERLDownload.artifactKeyPojo);
-		//System.out.println("at 222221 buildLocalArtifact3223234324" );
-		//
-		//if (extdSelfAuthoredArtifactpojo != null) {
-		//	// when a parent is changed and prior drafts exist, remove the old drafts
-		//	xtdCatlogPersistenceManager.deleteAllSelfAuthoredArtifacts(extdSelfAuthoredArtifactpojo.artifactKeyPojo);
-		//	ArtifactMover artifactMover = ArtifactMover.getInstance(commonData);
-		//	artifactMover.archiveDraft(extdSelfAuthoredArtifactpojo);
-		//}
-		
+
 		// clear old drafts starts
 		//read all versions of drafts from db
 		ArrayList<SelfAuthoredArtifactpojo> allVersionsSelfAuthoredArtifacts 
@@ -191,10 +184,7 @@ public class XtdStdContentProcessor {
 			);
 		}
 		// clear old drafts ends
-		
-		
-		
-		
+
 		// when a parent is new or prior drafts just got removed, insert a draft
 		System.out.println("at 222221 buildLocalArtifact extdSelfAuthoredArtifactpojo is null" );
 		int maxLocalVerionNumber = 0; // a single version enough at the extended server
@@ -216,30 +206,6 @@ public class XtdStdContentProcessor {
 			0,					// localVerionNumber
 			""					// delegatedTo
 			);
-		
-		//ATTENTION 
-		//this is INCORRECT Sequence. the db change shall be done only after the files are updated.
-		//else the db will point to ghost filenames!!!!!!!!!!!!!
-		//Hence changed the sequence and also removed reduntant delete.
-		//xtdCatlogPersistenceManager.insertArtifactUI(extdSelfAuthoredArtifactpojo);
-		//
-		//String targetCreateFileString = commons.getFullLocalPathFileNameOfNewArtifact(extdSelfAuthoredArtifactpojo.artifactKeyPojo.rootNick, extdSelfAuthoredArtifactpojo.artifactKeyPojo.relevance, extdSelfAuthoredArtifactpojo.LocalFileName);
-		//
-		//System.out.println("At buildLocalArtifact extdSelfAuthoredArtifactpojo.LocalFileName is " + extdSelfAuthoredArtifactpojo.LocalFileName);
-		//
-		//System.out.println("At buildLocalArtifact targetCreateFileString is " + targetCreateFileString);
-		//
-		//if (inArtifactToBeRefreshed){
-		//	System.out.println("At buildLocalArtifact inArtifactToBeRefreshed is " + inArtifactToBeRefreshed);
-		//	commons.deleteFile(targetCreateFileString);
-		//}
-		//System.out.println("At buildLocalArtifact post refresh check ");
-		//ArtifactMover artifactMover = ArtifactMover.getInstance(commons);
-		//artifactMover.moveArtifact(inERLDownload, extdSelfAuthoredArtifactpojo);
-		//if (artifactMover.lastProcessStatus != ArtifactMover.PROCESSED_OK) {
-		//	ErrorHandler.showErrorAndQuit(commons, "Error at ArtifactWrapper " + artifactMover.lastProcessStatus + " while dealing with : " + extdSelfAuthoredArtifactpojo.LocalFileName);
-		//	return null;
-		//}
 		String targetCreateFileString = commons.getFullLocalPathFileNameOfNewArtifact(
 										extdSelfAuthoredArtifactpojo.artifactKeyPojo.rootNick, 
 										extdSelfAuthoredArtifactpojo.artifactKeyPojo.relevance, 

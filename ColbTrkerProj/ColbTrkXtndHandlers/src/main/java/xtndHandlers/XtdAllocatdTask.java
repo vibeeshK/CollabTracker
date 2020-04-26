@@ -7,10 +7,13 @@ import xtdSrvrComp.ExtendedHandler;
 import xtdSrvrComp.XtdCommons;
 import xtdSrvrComp.XtdStdProcessRecord;
 
+/**
+ * Handler for allocated task item's extended processing
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdAllocatdTask extends AllocatdTask implements ExtendedHandler {
-	/*
-	 * Handler for allocated task item's extended processing
-	 */
 
 	XtdCommons xtdCommons = null;
 

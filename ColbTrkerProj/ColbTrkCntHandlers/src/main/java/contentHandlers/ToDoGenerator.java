@@ -11,19 +11,18 @@ import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
-import org.eclipse.swt.widgets.Text;
 
 import espot.GenericItemHandler;
 import espot.ItemPojo;
-import espot.UsersDisplay;
 
+/**
+ * This content handler helps the content requesters to set up a ToDo activity for another member
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ToDoGenerator extends GenericItemHandler {
-	/*
-	 * This content handler helps the content requesters to set up a ToDo activity for another member
-	 */
-	//Text reviewerText;
 
-	//Text statusText;
 	CCombo cloneFromArtifactNameList;
 	CCombo cloneFromRelevanceList;
 	CCombo cloneFromContentTypeList;

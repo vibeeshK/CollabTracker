@@ -3,7 +3,6 @@ package xtndHandlers;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
-import contentHandlers.DeckableContentTypeInterface;
 import contentHandlers.DeckerLite;
 import contentHandlers.DeckerLiteContentTypeInterface;
 import contentHandlers.DeckerLiteDocPojo;
@@ -20,16 +19,17 @@ import espot.SelfAuthoredArtifactpojo;
 import xtdCommonTechs.ExcelHandler;
 import xtdSrvrComp.ExtendedHandler;
 import xtdSrvrComp.XtdCommons;
-import xtdSrvrComp.XtdContntHandlerManager;
 import xtdSrvrComp.XtdStdProcessRecord;
 
+/**
+ * Handler for DeckrGroupr extended processing
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdDeckrLite extends DeckerLite implements ExtendedHandler {
-	/*
-	 * Handler for DeckrGroupr extended processing
-	 */
 
 	final static int DECKER_KEY_COLUMN = 0;
-	//final static String DETAILFILEPREFIX = "ItemDetl";
 	final static String COMBINED_FILE_SUBFIX = "_allCombined.xlsx";
 	XtdCommons xtdCommons = null;
 	public void initializeExtendedHandlerForExtdSrvrProcess(CommonData inCommonData, 
@@ -42,47 +42,7 @@ public class XtdDeckrLite extends DeckerLite implements ExtendedHandler {
 	@Override
 	public void processItemDetail(ArtifactPojo inChildArtifactPojo) {
 		System.out.println("at 2345432 processItemDetail = " + inChildArtifactPojo.artifactKeyPojo.artifactName);
-		// this method is not relevant for DeckerLite
-		
-//		DeckerLiteDocPojo deckerLiteDocPojo = (DeckerLiteDocPojo) primerDoc;
-//		DeckerLiteItemPojo deckerLiteItemPojo = (DeckerLiteItemPojo) deckerLiteDocPojo.getItemByChildArtifactName(inChildArtifactPojo.artifactKeyPojo.relevance, inChildArtifactPojo.artifactKeyPojo.artifactName);
-//
-//		SelfAuthoredArtifactpojo xtdChildDraft = setupDraftArtifact(inChildArtifactPojo.artifactKeyPojo);
-//
-//		ExtendedHandler childContentHandlerInterface = XtdContntHandlerManager.getInstance(xtdCommons,catelogPersistenceManager,xtdChildDraft.artifactKeyPojo.contentType);
-//		childContentHandlerInterface.initializeExtendedHandlerForExtdSrvrProcess(commonData, xtdChildDraft);
-//		DeckableContentTypeInterface deckableContentTypeInterface = (DeckableContentTypeInterface) childContentHandlerInterface;
-//
-//		if (deckerLiteDocPojo.summaryShKeyColSeqNum == -1) {
-//		// leveraging colSeq as an indicator to know if all base parameters are already set
-//
-//			deckerLiteDocPojo.summaryShKeyColSeqNum = deckableContentTypeInterface.getSummaryShKeyColSeqNum();
-//			deckerLiteDocPojo.summaryFilePage = deckableContentTypeInterface.getSummarySheetName();
-//			deckerLiteDocPojo.detailFilePage = deckableContentTypeInterface.getDetailSheetName();
-//		}
-//
-//		String srcChildFilePath = deckableContentTypeInterface.getDetailFilePath();
-//		System.out.println("at 2345432 processItemDetail srcChildFilePath = " + srcChildFilePath);
-//
-//		deckerLiteItemPojo.itemSummaryFile = DETAILFILEPREFIX + deckerLiteItemPojo.itemNumber + "_" + commons.getFileNameFromURL(srcChildFilePath,commons.localFileSeparator);
-//		System.out.println("at 2345432 processItemDetail deckerLiteItemPojo.itemSummaryFile = " + deckerLiteItemPojo.itemSummaryFile);
-//
-//		String targetItemDetailsPath = commonData.getCommons().getAbsolutePathFromDirAndFileNm(contentPathFolderName,deckerLiteItemPojo.itemSummaryFile);
-//		System.out.println("at 2345432 processItemDetail targetItemDetailsPath = " + targetItemDetailsPath);
-//
-//		deckerLiteItemPojo.summaryShKeyColVal = deckableContentTypeInterface.getSummaryShKeyColumnVal();
-//		System.out.println("at 2345432 processItemDetail deckerLiteItemPojo.summaryShKeyColVal = " + deckerLiteItemPojo.summaryShKeyColVal);
-//
-//		ExcelHandler excelHandler;
-//		try {
-//			excelHandler = new ExcelHandler(commons,srcChildFilePath,targetItemDetailsPath);
-//			excelHandler.cloneSheetsToNewWB(new String[]{deckerLiteDocPojo.summaryFilePage,deckerLiteDocPojo.detailFilePage});
-//		} catch (IOException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException e) {
-//			e.printStackTrace();
-//			ErrorHandler.showErrorAndQuit(commons, "Error in ExtdDeckrGroupr processItemDetail " + inChildArtifactPojo.artifactKeyPojo.artifactName, e);
-//		}
-//		deckerLiteItemPojo.deckingCompletedAt = commons.getDateTS();
-//		writePrimer();
+		// this method is not relevant for DeckerLite		
 		System.out.println("at 2345432 processItemDetail ended");
 	}
 
@@ -121,10 +81,6 @@ public class XtdDeckrLite extends DeckerLite implements ExtendedHandler {
 		ExcelHandler excelHandler;
 		try {
 			excelHandler = new ExcelHandler(commons,srcChildFilePath,targetOverallSummaryPath);
-			//String srcSheetName = excelHandler.getFirstSheetName();
-
-			//System.out
-			//.println("at 23454231 processItemSummary srcSheet is " + srcSheetName);
 
 			try {
 				if (deckerLiteDocPojo.keyBasedCombining) {
@@ -138,14 +94,12 @@ public class XtdDeckrLite extends DeckerLite implements ExtendedHandler {
 				}
 				
 				deckerLiteItemPojo.numberOfRecsCombined = excelHandler.recsBroughtInto;
-				//excelHandler.copyRows(srcSheetName,deckerLiteDocPojo.summaryShKeyColSeqNum,deckerLiteItemPojo.summaryShKeyColVal);
 			} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException
 					| NoSuchMethodException | SecurityException e) {
-				e.printStackTrace();
+				ErrorHandler.showErrorAndQuit(commons, "Error1 in ExtdDeckrGroupr processItemSummary " + inChildArtifactPojo.artifactKeyPojo.artifactName, e);
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
-			ErrorHandler.showErrorAndQuit(commons, "Error in ExtdDeckrGroupr processItemSummary " + inChildArtifactPojo.artifactKeyPojo.artifactName, e);
+			ErrorHandler.showErrorAndQuit(commons, "Error2 in ExtdDeckrGroupr processItemSummary " + inChildArtifactPojo.artifactKeyPojo.artifactName, e);
 		}
 		deckerLiteItemPojo.deckingCompletedAt = commons.getDateTS(); // as there is no separate pro
 		deckerLiteDocPojo.deckerEdited = false;

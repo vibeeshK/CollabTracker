@@ -5,10 +5,14 @@ import java.util.ArrayList;
 import espot.GenericGrouperDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for ToDo grouper
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ToDoGroupDoc extends GenericGrouperDocPojo {
-	/*
-	 * json doc holder for ToDo grouper
-	 */
+
 	ArrayList<ToDoPojo> toDoPojoList;
 
 	public ArrayList<ToDoPojo> getItemList() {

@@ -2,10 +2,14 @@ package contentHandlers;
 
 import espot.ItemPojo;
 
+/**
+ * Data holder for a simple tracker content
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class SimpleTrackerPojo extends ItemPojo{
-	/*
-	 * Data holder for a simple tracker content
-	 */
+
 	public static final String INITIAL_TRACKER_FILE = "SimpleTrackerTemplate.xlsx";
 	public static final String TRACKER_SUBFIX = ".xlsx";
 	public String simpleTrackerFile;

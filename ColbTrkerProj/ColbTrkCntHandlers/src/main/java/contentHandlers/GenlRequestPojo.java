@@ -2,12 +2,14 @@ package contentHandlers;
 
 import espot.ItemPojo;
 
+/**
+ * Data holder for an GenlRequestPojo item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class GenlRequestPojo extends ItemPojo{
-	/* 
-	 * Data holder for an GenlRequestPojo item
-	 */
 
-	//String requestorShortName;
 	String requestDesc;	
 	String requestCategory;	
 	String requestStartDate;
@@ -21,12 +23,9 @@ public class GenlRequestPojo extends ItemPojo{
 	void initializeAdditionalItemPojoFields(){
 		System.out.println("initializeAdditionalItemPojoFields at genlRequestPojoPojo class");
 
-		//requestorShortName = "";
 		requestDesc = "";
 		requestCategory = "";	
 		requestStartDate = "";
-		requestEndDate = "";
-		
+		requestEndDate = "";		
 	}
 }
-

@@ -35,10 +35,14 @@ import espot.GenericItemHandler;
 import espot.ItemPojo;
 import espot.SelfAuthoredArtifactpojo;
 
+/**
+ * This content handler helps to pop up the form to capture timesheets
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class TimeShCapture extends GenericItemHandler {
-	/*
-	 * This content handler helps to pop up the form to capture timesheets
-	 */
+
 	final static String TIMESHEET_CONTENTTYPE = "TimeSheet";
 	final static String TIMESHROLLUP_CONTENTTYPE = "TimeShRollup";
 	final static String ALLOCATEDTASKSLIST_CONTENTTYPE = "AllocatedTasks";
@@ -63,13 +67,11 @@ public class TimeShCapture extends GenericItemHandler {
 
 	String triggerAt;
 
-
 	public static String getTimeShCaptureArtifactName(ContentHandlerSpecs inContentHandlerSpecs, String inUserName) {
 		String artifactNameCoined = inContentHandlerSpecs.contentType + "_" + inUserName;
 		return artifactNameCoined;
 	}
 
-	
 	public void addlCommonInit () {
 		triggerAt = commonData.getCommons().getCurrentTimeStamp(); // setting if manually invoking screen
 
@@ -89,7 +91,6 @@ public class TimeShCapture extends GenericItemHandler {
 			timeShCapturePojo.itemID = timeShCapturePojo.author + commonData.getCommons().getCurrentTimeStamp();
 		}
 	}
-	
 
 	public Group setAddlFieldsForItemDisplay(Group itemContentGroup,Group inPrevGroup,FormData formData,ItemPojo inItemPojo){
 
@@ -478,7 +479,7 @@ public class TimeShCapture extends GenericItemHandler {
 
 	public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
 		TimeShCapturePojo timeShCapturePojo = (TimeShCapturePojo) primerDoc.getItem();
-		//timeShCapturePojo.relevance = invokedArtifactPojo.artifactKeyPojo.relevance;
+
 		System.out.println("title value while saving is " + timeShCapturePojo.title);
 
 		timeShCapturePojo.captureInterval = commonData.getCommons().convertStringToInt(captureIntervalText.getText());

@@ -33,20 +33,22 @@ import org.openxmlformats.schemas.spreadsheetml.x2006.main.STCellFormulaType;
 import commonTechs.CommonTechs;
 import commonTechs.StartAndSize;
 
-public class ExcelHandler {
-	/*
-	 * This class helps to read-and-write data between excel sheets and java objects
-	 * One can read specific columns by setting "interest" on the column header and conveying the col type
-	 * One can also refresh rows from one sheet to another based on key columns
-	 */
-	
-	// Thanks to
-	// http://www.dev2qa.com/copy-rows-between-excel-sheet-use-apache-poi
-	// https://stackoverflow.com/questions/10773961/apache-poi-apply-one-style-to-different-workbooks
+/**
+ * This class helps to read-and-write data between excel sheets and java objects
+ * One can read specific columns by setting "interest" on the column header and conveying the col type
+ * One can also refresh rows from one sheet to another based on key columns
 
-	
+ * Thanks to
+ * http://www.dev2qa.com/copy-rows-between-excel-sheet-use-apache-poi
+ * https://stackoverflow.com/questions/10773961/apache-poi-apply-one-style-to-different-workbooks
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
+public class ExcelHandler {
+
 	final static String DEFAULTDATEFORMAT = "dd-MMM-yy";
-	//int loopMax = 1000000;
+
 	final static int MAXROWS = 1000000;
 
 	String srcExcelFilePath = null;
@@ -326,9 +328,7 @@ public class ExcelHandler {
 													throws IllegalAccessException, IllegalArgumentException, 
 													InvocationTargetException, NoSuchMethodException, 
 													SecurityException, IOException {
-			//copyRows(String inExcelSheetName, int inKeyColumn,
-			//		String inKeyValue);
-			
+
 			String inExcelSheetName = getFirstSheetNameOfSourceWB();
 			Sheet sourceSheet = srcExcelWB.getSheet(inExcelSheetName);
 
@@ -449,10 +449,6 @@ public class ExcelHandler {
 
 			System.out.println("at before writing into = " + targetExcelFilePath);
 
-//			FileOutputStream fOut = new FileOutputStream(targetExcelFilePath);
-//			targetExcelWB.write(fOut);
-//			System.out.println("writing done for " + targetExcelFilePath);
-//			fOut.close();
 			writeTargetWB();
 	}
 	
@@ -638,10 +634,6 @@ public class ExcelHandler {
 
 		System.out.println("at before writing into = " + targetExcelFilePath);
 
-		//FileOutputStream fOut = new FileOutputStream(targetExcelFilePath);
-		//targetExcelWB.write(fOut);
-		//System.out.println("writing done for " + targetExcelFilePath);
-		//fOut.close();
 		writeTargetWB();
 	}
 
@@ -811,7 +803,7 @@ public class ExcelHandler {
 								System.out.println("excel at aax7");
 								if (HSSFDateUtil.isCellDateFormatted(srcCell1)) {
 								    Date date = HSSFDateUtil.getJavaDate(srcCell1.getNumericCellValue());
-									//rowJavaObj.set(javaObjColNum,date);
+
 									inXlJavaObj.setColValAtObjRowNumAndObjColNum(objRowNum, javaObjColNum, date);
 									
 							        System.out.println("srcCell.getNumericCellValue() = " + srcCell1.getNumericCellValue());
@@ -896,11 +888,6 @@ public class ExcelHandler {
 
 		// write to physical file
 		System.out.println("at before writing into = " + targetExcelFilePath);
-
-		//FileOutputStream fOut = new FileOutputStream(targetExcelFilePath);
-		//targetExcelWB.write(fOut);
-		//System.out.println("writing done for " + targetExcelFilePath);
-		//fOut.close();
 		writeTargetWB();
 	}
 	
@@ -937,7 +924,6 @@ public class ExcelHandler {
 				if (!isRowEmpty(row)) {
 					shLastRowNum++;	// keep incrementing this counter upon each new row
 					row = inTargetSheet.createRow(shLastRowNum);	// if row didn't exist before create a new xl row
-					//System.out.println("copyXlJavaObjRowsIntoSheet aa00 row is" + row);
 				}
 				inXlJavaObj.setDetailShRowNumForKey(rowIDKey, shLastRowNum);
 			} else {
@@ -1439,107 +1425,13 @@ public class ExcelHandler {
 					+ srcRow.getLastCellNum());
 			
 			commuteRowValues(srcRow, targetRow, columnStyles);
-
-//			for (int cellCount = srcRow.getFirstCellNum(); cellCount < srcRow
-//					.getLastCellNum(); cellCount++) {
-//
-//				System.out.println("cellCount = " + cellCount);
-//				Cell newCell = targetRow.createCell(cellCount);
-//				Cell srcCell = srcRow.getCell(cellCount);
-//
-//				if (columnStyles == null) {
-//					// set new cellStyles only once for the WB for second row
-//					// and reuse for later rows
-//					columnStyles = new CellStyle[srcRow.getLastCellNum()];
-//					for (int cloneCellCount = srcRow.getFirstCellNum(); cloneCellCount < srcRow
-//							.getLastCellNum(); cloneCellCount++) {
-//						System.out.println("cloneCellCount = " + cloneCellCount);
-//						columnStyles[cloneCellCount] = targetExcelWB
-//								.createCellStyle();
-//						if (srcRow.getCell(cloneCellCount) != null) {
-//							CellStyle origStyle = srcRow.getCell(cloneCellCount)
-//									.getCellStyle(); // Or from a cell
-//							columnStyles[cloneCellCount].cloneStyleFrom(origStyle);
-//							System.out.println("style has been set for cloneCellCount = " + cloneCellCount);
-//						} else {
-//							columnStyles[cloneCellCount] = targetExcelWB.getCellStyleAt(0);
-//						}
-//					}
-//				}
-//				newCell.setCellStyle(columnStyles[cellCount]);
-//
-//				newCell.setCellType(srcCell.getCellTypeEnum());
-//				System.out.println("srcCell.getCellTypeEnum() = "
-//						+ srcCell.getCellTypeEnum());
-//
-//				if (srcCell.getCellTypeEnum() == CellType.STRING) {
-//					newCell.setCellValue(srcCell.getStringCellValue());
-//					System.out.println("srcCell.getStringCellValue() = "
-//							+ srcCell.getStringCellValue());
-//				} else if (srcCell.getCellTypeEnum() == CellType.NUMERIC) {
-//					newCell.setCellValue(srcCell.getNumericCellValue());
-//					System.out.println("srcCell.getNumericCellValue() = "
-//							+ srcCell.getNumericCellValue());
-//				} else if (srcCell.getCellTypeEnum() == CellType.BOOLEAN) {
-//					newCell.setCellValue(srcCell.getBooleanCellValue());
-//					System.out.println("srcCell.getBooleanCellValue() = "
-//							+ srcCell.getBooleanCellValue());
-//				} else if (srcCell.getCellTypeEnum() == CellType.FORMULA) {
-//					
-//					CellValue newCellValue = srcWbFomulaEvaluator.evaluate(srcCell);
-//
-//					switch (newCellValue.getCellTypeEnum()) {
-//						case BOOLEAN:
-//					    	newCell.setCellValue(newCellValue.getBooleanValue());
-//					    	break;
-//						case NUMERIC:
-//					    	newCell.setCellValue(newCellValue.getNumberValue());
-//					    	break;
-//						case STRING:
-//							newCell.setCellValue(newCellValue.getStringValue());
-//					    	break;
-//					    case BLANK:
-//					    	break;
-//					    case ERROR:
-//					    	break;
-//					    // CELL_TYPE_FORMULA will never happen
-//					    case FORMULA: 
-//					    	break;
-//						case _NONE:
-//							break;
-//						default:
-//							break;
-//					}
-//					newCell.setCellFormula(null);	// reset the formula
-//				}
-//
-//				if (srcCell.getCellComment() != null) {
-//					if (drawingPatriarch == null) {
-//						drawingPatriarch = newCell.getSheet().createDrawingPatriarch();
-//						factoryXSSFCreationHelper = newCell.getSheet().getWorkbook()
-//								.getCreationHelper();
-//					}
-//					ClientAnchor anchor = factoryXSSFCreationHelper.createClientAnchor();
-//					anchor.setCol1(newCell.getColumnIndex());
-//					anchor.setCol2(newCell.getColumnIndex() + 1);
-//					anchor.setRow1(newCell.getRowIndex());
-//					anchor.setRow2(newCell.getRowIndex() + 3);
-//
-//					Comment comment = drawingPatriarch.createCellComment(anchor);
-//					comment.setVisible(Boolean.FALSE);
-//					comment.setString(srcCell.getCellComment().getString());
-//					newCell.setCellComment(srcCell.getCellComment());
-//				}
-//			}
 		}
 		System.out.println("insertRows done = ");
 		return;
 	}
 	
 	private void commuteRowValues(Row inSrcRow, Row inTargetRow, CellStyle[] columnStyles) {
-		//Row row = inTargetSheet.createRow(rowCount);
-		//Row srcRow = inSrcSheet.getRow(inSrcStartAndSize.start + rowCount
-		//		- inStartRowNum);
+
 		System.out.println("At ExcelHandler commuteRowValues");
 
 		for (int cellCount = inSrcRow.getFirstCellNum(); cellCount < inSrcRow
@@ -1570,7 +1462,6 @@ public class ExcelHandler {
 			}
 			newCell.setCellStyle(columnStyles[cellCount]);
 
-			//newCell.setCellType(srcCell.getCellTypeEnum());
 			System.out.println("srcCell.getCellTypeEnum() = "
 					+ srcCell.getCellTypeEnum());
 
@@ -1656,10 +1547,6 @@ public class ExcelHandler {
 	private void removeNonHeaders(String[] inCheckheetNames) throws IOException {
 		System.out.println("At removeNonHeaders for " + inCheckheetNames[0]
 				+ " through " + inCheckheetNames[inCheckheetNames.length - 1]);
-		
-		//FileOutputStream targetFileStream3 = new FileOutputStream(
-		//		targetExcelFilePath);
-		//targetExcelWB = new XSSFWorkbook(); // at this juncture we have already have content in targetExcelWB
 
 		for (int sheetCount = 0; sheetCount < inCheckheetNames.length; sheetCount++) {
 			
@@ -1680,11 +1567,7 @@ public class ExcelHandler {
 			removeRows(sheet, 1, sheet.getLastRowNum());
 		}
 
-		//FileOutputStream targetFileStream3 = new FileOutputStream(targetExcelFilePath);
-		//targetExcelWB.write(targetFileStream3);
-		//targetFileStream3.close();
 		writeTargetWB();
-
 	}
 
 	public void cloneSheetsToNewWB(String[] inCheckheetNames) throws IOException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
@@ -1738,10 +1621,7 @@ public class ExcelHandler {
 
 		// write the updated targetWB into target file
 		removeAllFormulas((XSSFWorkbook) targetExcelWB);
-		
-		//FileOutputStream targetFileStream3 = new FileOutputStream(targetExcelFilePath);
-		//targetExcelWB.write(targetFileStream3);
-		//targetFileStream3.close();
+
 		writeTargetWB();
 		
 		System.out.println("at cloneSheetsToNewWB A1.2 targetSheet is " + targetExcelWB.getSheet(inCheckheetNames[0]));
@@ -1751,11 +1631,7 @@ public class ExcelHandler {
 	
 	
 	private void removeCalcChain(XSSFWorkbook workbook) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
-		//CalculationChain calcchain = workbook.getCalculationChain();
-		//Method removeRelation = POIXMLDocumentPart.class.getDeclaredMethod("removeRelation", POIXMLDocumentPart.class); 
-		//removeRelation.setAccessible(true); 
-		//removeRelation.invoke(workbook, calcchain);
-		
+
 		CalculationChain calcchain = workbook.getCalculationChain();
 		Method removeRelation = POIXMLDocumentPart.class.getDeclaredMethod("removeRelation", POIXMLDocumentPart.class); 
 		removeRelation.setAccessible(false); 
@@ -1774,6 +1650,5 @@ public class ExcelHandler {
 				}
 			}
 		}
-		//removeCalcChain(workbook);
 	}	
 }

@@ -10,22 +10,24 @@ import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Text;
 
-import commonTechs.SimpleDateObj;
 import espot.ErrorHandler;
 import espot.GenericItemHandler;
 import espot.ItemPojo;
-import espot.UsersDisplay;
 
+/**
+ * This content handler helps to let team members to log general requests
+ * which will be collated into the grouping content type by the server.
+ * 
+ * The leaders can view the requests, categorize on status and process on rolled up view
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class GenlRequest extends GenericItemHandler {
-	/*
-	 * This content handler helps to let any team member to log the an genlRequest
-	 * which will be collated into the grouping content type by the server.
-	 */
+
 	public static final int PREFERED_DESC_WIDTH = 600;
 	public static final int PREFERED_DESC_HEIGHT = 100;
 
-	//Text statusText;
-	//Text reviewerText;
 	Text requestForText;
 	Text requestDescText;
 	Text requestorShortNameText;
@@ -41,7 +43,6 @@ public class GenlRequest extends GenericItemHandler {
 	@Override
 	public void setInitialItemPojoAddlFields() {
 		GenlRequestPojo genlRequestPojo = (GenlRequestPojo) primerDoc.getItem();
-		//genlRequestPojo.requestorShortName = commons.userName;				
 	}
 
 	public void checkSetNewItemID() {
@@ -52,32 +53,8 @@ public class GenlRequest extends GenericItemHandler {
 	}
 
 	public Group setAddlFieldsForItemDisplay(Group itemContentGroup, Group inPrevGroup,FormData formData, ItemPojo itemPojo){
-		//Text requestForText;
-		//Text requestDescText;
-		//Text requestorNameText;
-		//Text requestCategoryText;	
-		//DateTime requestStartDateDisplay;
-		//DateTime requestEndDateDisplay;
 
 		GenlRequestPojo genlRequestPojo = (GenlRequestPojo) itemPojo;
-
-		//{	
-		//	Group requestForInfo = new Group(itemContentGroup, SWT.LEFT);
-		//	requestForInfo.setText("RequestFor");
-		//	requestForInfo.setLayout(new FillLayout());
-		//	if (invokedForEdit) {
-		//		requestForText = new Text(requestForInfo, SWT.WRAP | SWT.CENTER);
-		//	} else {
-		//		requestForText = new Text(requestForInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);			
-		//	}
-		//	requestForText.setText(genlRequestPojo.requestFor);
-		//	
-		//	formData = new FormData();
-		//	formData.top = new FormAttachment(inPrevGroup);
-		//	formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		//	requestForInfo.setLayoutData(formData);
-		//	inPrevGroup = requestForInfo;
-		//}
 
 		{
 			Group requestDescInfo = new Group(itemContentGroup, SWT.LEFT);
@@ -102,20 +79,6 @@ public class GenlRequest extends GenericItemHandler {
 			requestDescInfo.setLayoutData(formData);
 			inPrevGroup = requestDescInfo;
 		}
-	
-		//{
-		//	Group requestorShortNameInfo = new Group(itemContentGroup, SWT.LEFT);
-		//	requestorShortNameInfo.setText("RequestorShortName");
-		//	requestorShortNameInfo.setLayout(new FillLayout());
-		//	requestorShortNameText = new Text(requestorShortNameInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-		//	requestorShortNameText.setText(genlRequestPojo.requestorShortName);
-		//
-		//	formData = new FormData();
-		//	formData.top = new FormAttachment(inPrevGroup);
-		//	formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		//	requestorShortNameInfo.setLayoutData(formData);
-		//	inPrevGroup = requestorShortNameInfo;
-		//}
 
 		{
 			Group requestCategoryInfo = new Group(itemContentGroup, SWT.LEFT);
@@ -149,8 +112,6 @@ public class GenlRequest extends GenericItemHandler {
 				try {
 					commons.setCurrentDateOnDisplay(requestStartDateDisplay);
 				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
 					ErrorHandler.showErrorAndQuit(commons, "Error in GenlRequest setAddlFieldsForItemDisplay CurrDate StartDate of " 
 																+ genlRequestPojo.artifactName, e);
 				}
@@ -162,8 +123,6 @@ public class GenlRequest extends GenericItemHandler {
 					System.out.println("requestStartDateDisplay is " + requestStartDateDisplay);
 					commons.setDateOnDisplay(requestStartDateDisplay, genlRequestPojo.requestStartDate);
 				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
 					ErrorHandler.showErrorAndQuit(commons, "Error in GenlRequest setAddlFieldsForItemDisplay StartDate of " 
 																+ genlRequestPojo.artifactName, e);
 				}
@@ -199,8 +158,6 @@ public class GenlRequest extends GenericItemHandler {
 				try {
 					commons.setDateOnDisplay(requestEndDateDisplay, genlRequestPojo.requestEndDate);
 				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
 					ErrorHandler.showErrorAndQuit(commons, "Error in GenlRequest setAddlFieldsForItemDisplay EndDate of "
 																+ genlRequestPojo.artifactName, e);
 				}
@@ -218,16 +175,13 @@ public class GenlRequest extends GenericItemHandler {
 	
 	public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
 		GenlRequestPojo genlRequestPojo = (GenlRequestPojo) inItemPojo;
-		//genlRequestPojo.requestFor = requestForText.getText();
 		genlRequestPojo.requestDesc = requestDescText.getText();
 		genlRequestPojo.requestCategory = requestCategoryText.getText();
-		//genlRequestPojo.requestorShortName = requestorShortNameText.getText();
 		try {
 			genlRequestPojo.requestStartDate = commons.getDateStringFromDisplayDate(requestStartDateDisplay);
 			genlRequestPojo.requestEndDate = commons.getDateStringFromDisplayDate(requestEndDateDisplay);
 			
 		} catch (ParseException e) {			
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in GenlRequest getAddlFieldsOfItemPojo "
 														+ inItemPojo.artifactName, e);
 		}

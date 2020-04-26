@@ -3,10 +3,14 @@ package contentHandlers;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for the Idea item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class IdeaItemDoc extends GenericItemDocPojo  {
-	/*
-	 * json doc holder for the Idea item
-	 */	
+
 	IdeaPojo ideaPojo;
 
 	public IdeaItemDoc(ItemPojo inItemPojo){

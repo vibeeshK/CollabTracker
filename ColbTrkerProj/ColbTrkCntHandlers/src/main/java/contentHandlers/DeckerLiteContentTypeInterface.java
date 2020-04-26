@@ -1,9 +1,13 @@
 package contentHandlers;
 
+/**
+ * Interface requirements which all Deckable content types shall adhere to
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public interface DeckerLiteContentTypeInterface {
-	/*
-	 * Interface requirements which all Deckable content types shall adhere to
-	 */
+
 	public String testOk(String inText);
 	public String getDetailFilePath();
 }

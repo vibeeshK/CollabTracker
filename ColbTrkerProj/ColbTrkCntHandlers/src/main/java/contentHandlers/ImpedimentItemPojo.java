@@ -5,10 +5,14 @@ import java.util.Date;
 
 import espot.ItemPojo;
 
+/**
+ * Data holder for impediment item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ImpedimentItemPojo extends ItemPojo{
-	/*
-	 * Data holder for impediment item
-	 */
+
 	final static String CONTENT_TYPE = "Impediment";
 
 	public final static String IMPEDIMENTSTATUSVALUES_YesToStart = "YesToStart";

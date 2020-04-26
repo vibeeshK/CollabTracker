@@ -13,12 +13,15 @@ import org.eclipse.swt.widgets.Text;
 import espot.GenericItemHandler;
 import espot.ItemPojo;
 
+/**
+ * This content handler helps to hold Timesheet entry made at one time
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class TimeSheet extends GenericItemHandler {
-	/*
-	 * This content handler helps to hold Timesheet entry made at one time
-	 */
+
 	Text applicationText;
-	//Text statusText;
 	Text reviewerText;
 	Text descriptionText;
 
@@ -69,28 +72,13 @@ public class TimeSheet extends GenericItemHandler {
 		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
 		reviewerInfo.setLayoutData(formData);
 		inPrevGroup = reviewerInfo;
-	
-//		Group statusInfo = new Group(itemContentGroup, SWT.LEFT
-//				| SWT.WRAP | SWT.READ_ONLY);
-//		statusInfo.setText("Status");
-//		statusInfo.setLayout(new FillLayout());
-//		statusText = new Text(statusInfo, SWT.WRAP | SWT.READ_ONLY | SWT.CENTER);
-//		statusText.setText(timeSheetPojo.status);
-//		
-//		formData = new FormData();
-//		formData.top = new FormAttachment(inPrevGroup);
-//		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-//		statusInfo.setLayoutData(formData);
-//		inPrevGroup = statusInfo;
 
 		return inPrevGroup;
 	}
 	
 	public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
 		TimeSheetPojo timeSheetPojo = (TimeSheetPojo) inItemPojo;
-		//timeSheetPojo.status = statusText.getText();
 		timeSheetPojo.reviewer = reviewerText.getText();
-		//timeSheetPojo.relevance = invokedArtifactPojo.artifactKeyPojo.relevance;
 		timeSheetPojo.description = descriptionText.getText();
 	}
 

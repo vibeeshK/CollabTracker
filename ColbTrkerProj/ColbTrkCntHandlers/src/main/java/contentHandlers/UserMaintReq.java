@@ -1,6 +1,5 @@
 package contentHandlers;
 
-import org.apache.commons.lang.StringUtils;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.CCombo;
 import org.eclipse.swt.layout.FillLayout;
@@ -18,17 +17,18 @@ import espot.ItemPojo;
 import espot.UserPojo;
 import espot.UsersDisplay;
 
+/**
+ * This content handler helps to maintain a contributing user's detail by admin level users
+ * which will be processed and collated into the grouping content type by the server.
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class UserMaintReq extends GenericItemHandler {
-	/*
-	 * This content handler helps to let any team member to log the an user
-	 * which will be collated into the grouping content type by the server.
-	 */
-//	public static final int PREFERED_DESC_WIDTH = 600;
-//	public static final int PREFERED_DESC_HEIGHT = 100;
 
 	Text rootSysLoginIDText;
 	Text userNameText;
-	//Text leadIDText;
+
 	UsersDisplay leadIDDisplay;
 	
 	CCombo activeStatesList;
@@ -110,14 +110,8 @@ public class UserMaintReq extends GenericItemHandler {
 		inPrevGroup = userNameInfo;
 
 		Group leadIDInfo = new Group(itemContentGroup, SWT.LEFT);
-		//leadIDInfo.setText("");
+
 		leadIDInfo.setLayout(new FillLayout());
-		//if (invokedForEdit) {
-		//	leadIDText = new Text(leadIDInfo, SWT.WRAP | SWT.CENTER);
-		//} else {
-		//	leadIDText = new Text(leadIDInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);		
-		//}
-		//leadIDText.setText(userMaintReqPojo.userPojo.leadID);
 
 		leadIDDisplay = new UsersDisplay(commonData.getUsersHandler(),leadIDInfo,userMaintReqPojo.userPojo.leadID,invokedForEdit,UsersDisplay.LEAD_LIT);
 
@@ -130,7 +124,7 @@ public class UserMaintReq extends GenericItemHandler {
 		Group activeStateIDInfo = new Group(itemContentGroup, SWT.LEFT);
 		activeStateIDInfo.setText("ActiveState");
 		activeStateIDInfo.setLayout(new FillLayout());
-		//if (commonData.getUsersHandler().getUserDetailsFromShortId(commons.userName).hasAdminPrivilege()){
+
 		if (invokedForEdit) {
 			activeStatesList = new CCombo(activeStateIDInfo, SWT.DROP_DOWN | SWT.CENTER);
 		} else {
@@ -150,7 +144,7 @@ public class UserMaintReq extends GenericItemHandler {
 		Group userPreveledgeInfo = new Group(itemContentGroup, SWT.LEFT);
 		userPreveledgeInfo.setText("UserPreveledge");
 		userPreveledgeInfo.setLayout(new FillLayout());	
-		//if (commonData.getUsersHandler().getUserDetailsFromShortId(commons.userName).hasAdminPrivilege()){
+
 		if (invokedForEdit) {
 			privilegeList = new CCombo(userPreveledgeInfo, SWT.DROP_DOWN | SWT.CENTER);
 		} else {
@@ -171,21 +165,18 @@ public class UserMaintReq extends GenericItemHandler {
 	
 	public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
 		UserMaintReqPojo userMaintReqPojo = (UserMaintReqPojo) inItemPojo;
-		//userMaintReqPojo.relevance = invokedArtifactPojo.artifactKeyPojo.relevance;
+
 		userMaintReqPojo.userPojo.rootSysLoginID = rootSysLoginIDText.getText();
 		userMaintReqPojo.userPojo.userName = userNameText.getText();
-		//userMaintReqPojo.userPojo.leadID = leadIDText.getText();
+
 		userMaintReqPojo.userPojo.leadID = leadIDDisplay.userText.getText();
 		
-		//if (commonData.getUsersHandler().getUserDetailsFromShortId(commons.userName).hasAdminPrivilege()) {
-			if (privilegeList.getSelectionIndex() > -1){
-				userMaintReqPojo.userPojo.privilegeLevel = UserPojo.getPrivilegeLevelOfLit(PRIVILEGE_LIST_LITs[privilegeList.getSelectionIndex()]);
-			}
-			if (activeStatesList.getSelectionIndex() > -1){
-				userMaintReqPojo.userPojo.activeStatus = ACTIVESTATE_LIST_LITs[activeStatesList.getSelectionIndex()];
-			}
-			
-		//}
+		if (privilegeList.getSelectionIndex() > -1){
+			userMaintReqPojo.userPojo.privilegeLevel = UserPojo.getPrivilegeLevelOfLit(PRIVILEGE_LIST_LITs[privilegeList.getSelectionIndex()]);
+		}
+		if (activeStatesList.getSelectionIndex() > -1){
+			userMaintReqPojo.userPojo.activeStatus = ACTIVESTATE_LIST_LITs[activeStatesList.getSelectionIndex()];
+		}
 	}
 	
 	public String validateBeforeUIEdit() {
@@ -225,18 +216,7 @@ public class UserMaintReq extends GenericItemHandler {
 				scrMsg = "LoginID " + enteredRootSysLoginID + " already exists in the root";				
 			}			
 		}
-		
-		//if (validationPassFlag && invokedForEdit) {
-		//	
-		//	String enteredLeadID = leadIDText.getText();
-		//
-		//	if (!enteredLeadID.isEmpty() && commonData.getUsersHandler().getUserDetailsFromRootSysLoginID(enteredLeadID) == null) {
-		//		//its ok not to have a lead
-		//		validationPassFlag = false;
-		//		scrMsg = "LeadID " + enteredLeadID + " doesn't exist";				
-		//	}			
-		//}
-		
+
 		if (!validationPassFlag) {
 			MessageBox editMessage2Box = new MessageBox(mainShell,
 					SWT.ICON_ERROR | SWT.OK);

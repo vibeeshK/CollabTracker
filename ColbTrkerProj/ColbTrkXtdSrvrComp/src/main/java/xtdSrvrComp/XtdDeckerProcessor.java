@@ -11,31 +11,32 @@ import espot.Commons;
 import espot.ERLDownload;
 import espot.ErrorHandler;
 import espot.GenericGrouper;
-import espot.RemoteAccesser;
 import espot.RootPojo;
 import espot.SelfAuthoredArtifactpojo;
 
+/**
+ * Extended core decking process that identifies, downloads related contents
+ * and invokes corresponding extended handlers
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdDeckerProcessor {
-	/*
-	 * Extended decking process core function that identifies, downloads related contents
-	 * and invokes corresponding extended handlers
-	 */
+
 	private XtdDeckerProcCatlogPersistenceManager xtdDeckerProcCatlogPersistenceMgr = null;
 	
 	private Commons commons;
-	private RemoteAccesser remoteAccesser;	
 	private RootPojo rootPojo;
 	private String contentType;
 	private CommonData commonData;
 
-	public XtdDeckerProcessor(CommonData inCommonData,String inContentType,
-			RemoteAccesser inRemoteAccesser) {
+	public XtdDeckerProcessor(CommonData inCommonData,String inContentType) {
 		commonData = inCommonData;
 		xtdDeckerProcCatlogPersistenceMgr = (XtdDeckerProcCatlogPersistenceManager) inCommonData.getCatelogPersistenceManager();
 		commons = inCommonData.getCommons();
-		remoteAccesser = inRemoteAccesser;
 		rootPojo = commonData.getCurrentRootPojo();
 		contentType = inContentType;
+		Commons.logger.info(this.getClass().getSimpleName() + " starting up at " + commons.getCurrentTimeStamp());
 	}
 
 	public void subscribeToDeckerParents(){
@@ -109,15 +110,7 @@ public class XtdDeckerProcessor {
 
 			System.out.println("at 222221 identifyGrouperChildrenOfUpdtdParents34534" );
 			ERLDownload parentERLDownload = xtdDeckerProcCatlogPersistenceMgr.readERLDownLoad(erlGrouperParent.artifactKeyPojo);
-//			boolean isParentRefreshed = (erlGrouperParent.parentStatus.equalsIgnoreCase(ERLGrouperParent.PARENT_NEW))?false:true;
-//			System.out.println("at 222221 identifyGrouperChildrenOfUpdtdParents45424356" );
-//			if (isParentRefreshed) {
-//				System.out.println("at 222221 identifyGrouperChildrenOfUpdtdParents4542434354316" );
-//				//Insert new child records; delete old child table records which are not connected anymore. 
-//				// Later remove those subscriptions of child records which are not connected to any parent.
-//				xtdDeckerProcCatlogPersistenceMgr.deleteGrouperChildren(parentERLDownload.artifactKeyPojo);
-//				System.out.println("at 222221 identifyGrouperChildrenOfUpdtdParents4542436575656" );
-//			}
+
 			System.out.println("at 222221 identifyGrouperChildrenOfUpdtdParents5436457" );
 			SelfAuthoredArtifactpojo extdParentSelfAuthoredArtifactpojo = setupDraftArtifact(parentERLDownload.artifactKeyPojo);
 

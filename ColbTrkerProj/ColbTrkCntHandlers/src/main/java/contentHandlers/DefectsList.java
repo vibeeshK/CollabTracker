@@ -1,4 +1,5 @@
 package contentHandlers;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -7,7 +8,6 @@ import org.eclipse.swt.custom.TableEditor;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
-import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
@@ -18,13 +18,13 @@ import espot.GenericGrouperDocPojo;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * This content handler helps to group defect decks against a project
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class DefectsList extends GenericGrouper {
-	/*
-	 * This content handler helps to group defect decks against a project
-	 */
-	//Text descriptionText;
-	//Text authorText;
-	//Text statusText;
 
 	public static HashMap<String,ArrayList<DefectItemPojo>> getTasksOpenDefects(ArrayList<DefectItemPojo> inDefectsList) {
 		HashMap<String,ArrayList<DefectItemPojo>> tasksOpenDefects = new HashMap<String,ArrayList<DefectItemPojo>>();
@@ -134,14 +134,7 @@ public class DefectsList extends GenericGrouper {
 
 		return inPrevGroup;
 	}
-	//public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
-	//	DefectItemPojo defectPojo = (DefectItemPojo) inItemPojo;
-	//}
-	//public void setInitialItemPojoAddlFields(ItemPojo inItemPojo){
-	//	DefectItemPojo defectPojo = (DefectItemPojo) inItemPojo;
-	//	defectPojo.author = commonData.getCommons().userName;
-	//	defectPojo.status = "Draft";
-	//}
+
 	public void getPrimerDocAddlFields() {
 		// from persistence to screen
 	}

@@ -43,10 +43,14 @@ import espot.CredentialsPojo;
 import espot.ErrorHandler;
 import espot.RootPojo;
 
+/**
+ * This class provides the means to access files on a WebDAV based Doc Centers
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class WebDAVAccesser extends AbstractRemoteAccesser {
-	/*
-	 * This class provides the means to access files on a WebDAV based Doc Centers
-	 */
+
 	private String hostName = null;
 	private Sardine sardine = null;
 	private String fileSeparator = null;
@@ -78,8 +82,6 @@ public class WebDAVAccesser extends AbstractRemoteAccesser {
 					credentialsPojo.password);
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in WebDAV intiateCommunications " + inRootString, e);
 		}
 
@@ -223,7 +225,6 @@ public class WebDAVAccesser extends AbstractRemoteAccesser {
 					.println("Added certificate to keystore 'jssecacerts' using alias '"
 							+ alias + "'");
 		} catch (IOException | KeyStoreException | NoSuchAlgorithmException | CertificateException | KeyManagementException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in WebDAV refreshTrustStore ", e);
 		}
 	}
@@ -248,7 +249,6 @@ public class WebDAVAccesser extends AbstractRemoteAccesser {
 				sardine.createDirectory(inFileName);
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in WebDAV createFolderOfFileIfDontExist " + inFileName, e);
 		}
 	}
@@ -259,7 +259,6 @@ public class WebDAVAccesser extends AbstractRemoteAccesser {
 			sardine.put(inNewContentRemoteLocation.replaceAll(" ", "%20"), inUpdatedContentByteArray);
 			System.out.println("end processContentAtWeb");
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in WebDAV putInStreamIntoRemoteLocation into " + inNewContentRemoteLocation + " from inUpdatedContentByteArray ", e);
 		}
 	}
@@ -271,7 +270,6 @@ public class WebDAVAccesser extends AbstractRemoteAccesser {
 			sardine.put(inNewContentRemoteLocation.replaceAll(" ", "%20"), inByteArrayData);
 			System.out.println("end processContentAtWeb");
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in WebDAV putByteArrayDataIntoRemoteLocation into " + inNewContentRemoteLocation + " from inByteArrayData ", e);
 		}
 	}
@@ -283,7 +281,6 @@ public class WebDAVAccesser extends AbstractRemoteAccesser {
 			System.out.println("moved file from " + inSourceFileRemoteLocation + " to " + inDestinationFileRemoteLocation);
 			System.out.println("end moveToRemoteLocation");
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in WebDAV moveToRemoteLocation from " + inSourceFileRemoteLocation + " to " + inDestinationFileRemoteLocation, e);
 		}
 	}
@@ -301,7 +298,6 @@ public class WebDAVAccesser extends AbstractRemoteAccesser {
 				resourcesStringList.add(resources.get(i).toString());
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in WebDAV getRemoteList " + inRemoteDropBox, e);
 		}
 		return resourcesStringList;
@@ -312,7 +308,6 @@ public class WebDAVAccesser extends AbstractRemoteAccesser {
 		try {
 			remoteFileStream = sardine.getInputStream(inRemoteFileName.replaceAll(" ", "%20"));			
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in WebDAV getRemoteFileStream " + inRemoteFileName, e);
 		}
 		System.out.println("@getRemoteFileStream remoteFileStream: " + remoteFileStream);
@@ -325,30 +320,9 @@ public class WebDAVAccesser extends AbstractRemoteAccesser {
 			createFolderOfFileIfDontExist(inRemoteURL);			
 			sardine.put(inRemoteURL.replaceAll(" ", "%20"),inBytes);
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in WebDAV put into " + inRemoteURL, e);
 		}
 	}
-
-	//@Override
-	//public List<String> getList(String inRemoteURL) {
-	//	List<DavResource> publishFileNameURLs = null;
-	//	List<String> publishFileNameURLList = null;
-	//
-	//	System.out.println("inRemoteURL= " + inRemoteURL);
-	//
-	//	try {
-	//		publishFileNameURLs = sardine.getResources(inRemoteURL.replaceAll(" ", "%20"));
-	//		
-	//	} catch (IOException e) {
-	//		e.printStackTrace();
-	//		ErrorHandler.showErrorAndQuit(commons, "error in WebDAV getLists for " + inRemoteURL, e);
-	//	}
-	//	System.out.println("publishFileNameURLs.size() = " + publishFileNameURLs.size());
-	//	publishFileNameURLList = commons.getStringListFromObjectList(publishFileNameURLs);
-	//	System.out.println("listing done");
-	//	return publishFileNameURLList;
-	//}
 
 	@Override
 	public boolean exists(String inRemoteURL) {
@@ -356,7 +330,6 @@ public class WebDAVAccesser extends AbstractRemoteAccesser {
 		try {
 			urlExists = sardine.exists(inRemoteURL.replaceAll(" ", "%20"));
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "error in WebDAV exists check for " + inRemoteURL, e);
 		}
 		return urlExists;
@@ -394,7 +367,6 @@ public class WebDAVAccesser extends AbstractRemoteAccesser {
 			localInputFileStream = new FileInputStream(new File(inSourceFileAtLocal));
 			putInStreamIntoRemoteLocation(inDestinationFileAtRemote, localInputFileStream);
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 			CommonTechs.logger.error("Error WebDAVAccessor uploadToRemote " + inDestinationFileAtRemote + " " + inSourceFileAtLocal, e);
 		}
 	}

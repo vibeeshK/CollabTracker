@@ -19,10 +19,13 @@ import xtdSrvrComp.XtdCommons;
 import xtdSrvrComp.XtdContntHandlerManager;
 import xtdSrvrComp.XtdStdProcessRecord;
 
+/**
+ * Handler for DeckrGroupr extended processing
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdDeckrGroupr extends DeckerGrouper implements ExtendedHandler {
-	/*
-	 * Handler for DeckrGroupr extended processing
-	 */
 
 	final static int DECKER_KEY_COLUMN = 0;
 	final static String DETAILFILEPREFIX = "ItemDetl";
@@ -76,7 +79,6 @@ public class XtdDeckrGroupr extends DeckerGrouper implements ExtendedHandler {
 			excelHandler = new ExcelHandler(commons,srcChildFilePath,targetItemDetailsPath);
 			excelHandler.cloneSheetsToNewWB(new String[]{deckerGrouperDocPojo.summaryFilePage,deckerGrouperDocPojo.detailFilePage});
 		} catch (IOException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in ExtdDeckrGroupr processItemDetail " + inChildArtifactPojo.artifactKeyPojo.artifactName, e);
 		}
 		deckerGrouperItemPojo.deckingCompletedAt = commons.getDateTS();
@@ -116,11 +118,10 @@ public class XtdDeckrGroupr extends DeckerGrouper implements ExtendedHandler {
 				excelHandler.copyRows(deckerGrouperDocPojo.summaryFilePage,deckerGrouperDocPojo.summaryShKeyColSeqNum,deckerGrouperItemPojo.summaryShKeyColVal);
 			} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException
 					| NoSuchMethodException | SecurityException e) {
-				e.printStackTrace();
+				ErrorHandler.showErrorAndQuit(commons, "Error1 in ExtdDeckrGroupr processItemSummary " + inChildArtifactPojo.artifactKeyPojo.artifactName, e);
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
-			ErrorHandler.showErrorAndQuit(commons, "Error in ExtdDeckrGroupr processItemSummary " + inChildArtifactPojo.artifactKeyPojo.artifactName, e);
+			ErrorHandler.showErrorAndQuit(commons, "Error2 in ExtdDeckrGroupr processItemSummary " + inChildArtifactPojo.artifactKeyPojo.artifactName, e);
 		}
 		deckerGrouperDocPojo.deckerEdited = false;
 		writePrimer();		

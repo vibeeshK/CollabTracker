@@ -10,19 +10,24 @@ import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.swt.widgets.Text;
 
 import espot.ErrorHandler;
 import espot.GenericItemHandler;
 import espot.ItemPojo;
 
+/**
+ * This content handler helps to track a project by letting user set up an 
+ * activities-workbook which will pull all key events centrally and provide 
+ * a dashboard view of the project.
+ * 
+ * The extended content handler facilitates collation of real time data into the dashboard
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ProjTracker extends GenericItemHandler implements DeckableContentTypeInterface {
-	/*
-	 * This content handler helps to track a project dashboard workbook
-	 */
-	public String projTrackerPathFilename;
 
-	//Text projectIDText;
+	public String projTrackerPathFilename;
 
 	@Override
 	public String testOk(String inText) {
@@ -32,9 +37,6 @@ public class ProjTracker extends GenericItemHandler implements DeckableContentTy
 	
 	public void setInitialItemPojoAddlFields(){
 		ProjTrackerPojo projTrackerPojo = (ProjTrackerPojo) primerDoc.getItem();
-		
-		//22Mar2020 SetNewItemID is invoked in the calling method itself
-		//checkSetNewItemID();
 	}
 
 	public void checkSetNewItemID() {
@@ -64,9 +66,7 @@ public class ProjTracker extends GenericItemHandler implements DeckableContentTy
 				try {
 					commons.openFileToView(projTrackerPathFilename);
 				} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-					ErrorHandler.showErrorAndQuit(commons, "Error in ProjTracker setAddlFieldsForItemDisplay " + " " + inItemPojo.artifactName, e1);
+					ErrorHandler.showErrorAndQuit(commons, "Error in ProjTracker setAddlFieldsForItemDisplay " + inItemPojo.artifactName, e1);
 				}
 			}
 		});
@@ -90,7 +90,6 @@ public class ProjTracker extends GenericItemHandler implements DeckableContentTy
 	
 	public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
 		ProjTrackerPojo projTrackerPojo = (ProjTrackerPojo) primerDoc.getItem();
-		//projTrackerPojo.relevance = invokedArtifactPojo.artifactKeyPojo.relevance;
 		projTrackerPojo.corePlanChanged = true;	// As this method is called only when save button is pressed in UI
 												// it would indicate that the core plan had changed.		
 	}

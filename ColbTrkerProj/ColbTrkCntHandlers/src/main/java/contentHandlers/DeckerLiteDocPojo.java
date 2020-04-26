@@ -7,10 +7,14 @@ import espot.GenericGrouperDocPojo;
 import espot.ItemPojo;
 import espot.ScreenPatternFieldPojo;
 
+/**
+ * json doc holder for DeckerLite
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class DeckerLiteDocPojo extends GenericGrouperDocPojo {
-	/*
-	 * json doc holder for DeckerLite
-	 */
+
 	public static String AUTHORCOLHDRNAME = "OwnerID";
 	public static String KEYCOLHDRNAME = "TaskID";
 	public String combinedFileName;
@@ -41,12 +45,7 @@ public class DeckerLiteDocPojo extends GenericGrouperDocPojo {
 	public ArrayList<?> getItemList() {
 		return deckerLiteItemPojoList;
 	}
-	
-//	public ArrayList<DeckerLiteItemPojo> createItemList() {
-//		deckerLiteItemPojoList = new ArrayList<DeckerLiteItemPojo>();
-//		return deckerLiteItemPojoList;
-//	}
-//
+
 	public ArrayList<?> createItemList() {
 		deckerLiteItemPojoList = new ArrayList<DeckerLiteItemPojo>();
 

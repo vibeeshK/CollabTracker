@@ -5,10 +5,14 @@ import java.util.ArrayList;
 import espot.GenericGrouperDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for Time sheet grouper
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class TimeShRollupDoc extends GenericGrouperDocPojo {
-	/*
-	 * json doc holder for Time sheet grouper
-	 */
+
 	ArrayList<TimeSheetPojo> timeShItemsList;
 
 	public ArrayList<TimeSheetPojo> getItemList() {

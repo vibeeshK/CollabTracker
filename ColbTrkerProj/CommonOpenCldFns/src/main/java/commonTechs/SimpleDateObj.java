@@ -5,10 +5,14 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * Helps to create and manage a date field in SimpleDateFormat type
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class SimpleDateObj {
-	/*
-	 * Helps to create and manage a date field in SimpleDateFormat type
-	 */
+
 	public int year;
 	public int month;
 	public int day;

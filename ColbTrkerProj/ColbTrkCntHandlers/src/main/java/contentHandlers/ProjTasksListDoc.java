@@ -4,10 +4,14 @@ import java.util.ArrayList;
 import espot.GenericGrouperDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for Project Tasks Grouping content
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ProjTasksListDoc extends GenericGrouperDocPojo {
-	/*
-	 * json doc holder for Project Tasks Grouping content
-	 */
+
 	ArrayList<ProjTaskItemPojo> projTasksList;
 
 	public ArrayList<ProjTaskItemPojo> getItemList() {

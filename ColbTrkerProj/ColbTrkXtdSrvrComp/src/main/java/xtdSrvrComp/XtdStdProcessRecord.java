@@ -2,10 +2,14 @@ package xtdSrvrComp;
 
 import espot.ArtifactKeyPojo;
 
+/**
+ * Db record holder for standard processing to track status
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdStdProcessRecord {
-	/*
-	 * Db record holder for standard processing to track status
-	 */			
+
 	public static final String ERLRecord_NEW = "NEW";
 	public static final String ERLRecord_UPDATED = "RENEWED";
 	public static final String ERLRecord_PROCESSED = "PROCESSED";

@@ -2,13 +2,15 @@ package xtdCommonTechs;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 
+/**
+ * This class acts as java replica of an excel sheet and provides means to seamlessly
+ * refer specific cell data with an indexing function
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ExcelJavaObj {
-	/*
-	 * This class acts as java replica of an excel sheet and provides means to seamlessly
-	 * refer specific cell data with an indexing function
-	 */
 
 	public final static int PROCSTAT_GOOD = 0;
 	public final static int PROCSTAT_WARNING = 4;
@@ -19,10 +21,7 @@ public class ExcelJavaObj {
 	private  ArrayList<ExcelColJavaObj> colObjsOfInterest;
 	private ExcelColJavaObj keyColObj;
 	private ArrayList<String> colHdrsOfInterest;
-	//removed the hashmap as its redundant. The same info can be retrieved by combining rowObjKeyPointers and rowObjObjShIndexes
-	//which are stored in the same sequence.
-	
-	//private HashMap<String,Integer> shRowKeyPointers; //the excel row number stored agaist the key
+
 	private ArrayList<String> rowObjKeyPointers;	//the keys are stored here in the same sequence as the rowObj's
 	private ArrayList<Integer> rowObjShIndexes;	// physical row number of the object
 	
@@ -42,7 +41,6 @@ public class ExcelJavaObj {
 		colObjsOfInterest = null;
 		colHdrsOfInterest = null;
 		keyColObj = null;
-		//shRowKeyPointers = null;
 		rowObjKeyPointers = null;
 
 	}
@@ -70,7 +68,6 @@ public class ExcelJavaObj {
 			rowObjKeyPointers.add(inRowKey);
 			rowObjShIndexes.add(shRowNum);
 			keyRowObjLocation = rowObjKeyPointers.size()-1; // new key's location which is 0 based.
-			//shRowKeyPointers.put(inRowKey,shRowNum);	// as this row doesn't exist in excel, mark it as -1 so it will be added as a new row
 		}
 		System.out.println("At getCreateXlObjRow new keyRowObjLocation is " + keyRowObjLocation);
 		System.out.println("At getCreateXlObjRow rowObjKeyPointers is " + rowObjKeyPointers);

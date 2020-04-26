@@ -6,10 +6,13 @@ import java.util.Date;
 
 import commonTechs.CommonTechs;
 
+/**
+ * This class holds the details of an excel column's characteristics
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ExcelColJavaObj {
-	/*
-	 * This class holds the details of an excel column's characteristics
-	 */
 
 	public final static int COLTYPE_NUMERIC = 5;
 	public final static int COLTYPE_STRING = 10;

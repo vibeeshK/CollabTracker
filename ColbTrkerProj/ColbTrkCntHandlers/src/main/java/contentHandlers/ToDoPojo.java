@@ -2,10 +2,14 @@ package contentHandlers;
 
 import espot.ItemPojo;
 
+/**
+ * Data holder for a toDo item content
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ToDoPojo extends ItemPojo{
-	/*
-	 * Data holder for a toDo item content
-	 */
+
 	String cloneFromArtifactName;
 	String cloneFromRelevance;
 	String cloneFromContentType;
@@ -22,14 +26,6 @@ public class ToDoPojo extends ItemPojo{
 		cloneFromContentType="";
 		attachment="";
 	}
-
-	//public String getStatus() {
-	//	return status;
-	//}
-	//
-	//public void setStatus(String status) {
-	//	this.status = status;
-	//}
 
 	public String getCloneFromArtifactName() {
 		return cloneFromArtifactName;
@@ -55,4 +51,3 @@ public class ToDoPojo extends ItemPojo{
 		this.cloneFromContentType = cloneFromContentType;
 	}
 }
-

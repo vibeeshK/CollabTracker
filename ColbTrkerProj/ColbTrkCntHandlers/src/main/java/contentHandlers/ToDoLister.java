@@ -3,7 +3,6 @@ package contentHandlers;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.TableEditor;
 import org.eclipse.swt.layout.FormData;
-import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
@@ -17,16 +16,13 @@ import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 import espot.RelevancePojo;
 
+/**
+ * This content handler helps to group the ToDo activities
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ToDoLister extends GenericGrouper {
-	/*
-	 * This content handler helps to group the ToDo activities
-	 */
-	//Text authorText;
-	//Text reviewerText;
-	//Text statusText;
-	//Text cloneFromArtifactNameText;
-	//Text cloneFromRelevanceText;
-	//Text cloneFromContentTypeText;
 
 	protected void setScreenTitle() {
 		mainShell.setText("ToDoLister: <viewContentsAtDesk>");
@@ -106,14 +102,6 @@ public class ToDoLister extends GenericGrouper {
 		System.out.println("ERROR ERROR. individual display shall not be invoked on multiDisplay");
 		return inPrevGroup;
 	}
-	
-	//public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
-	//	ToDoPojo toDoPojo = (ToDoPojo) inItemPojo;
-	//}
-	//
-	//public void setInitialItemPojoAddlFields(ItemPojo inItemPojo){
-	//	IdeaPojo ideaPojo = (IdeaPojo) inItemPojo;
-	//}
 
 	public void getPrimerDocAddlFields() {
 		// from persistence to screen

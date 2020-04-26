@@ -21,10 +21,13 @@ import xtdSrvrComp.XtdContntHandlerManager;
 import xtdSrvrComp.XtdStdProcessRecord;
 import xtdSrvrComp.XtdStdRtCtCatlogPersistenceManager;
 
+/**
+ * Handler for TmShTrigger capturing extended processing
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdTmShTrigger extends TimeShTrigger implements ExtendedHandler {
-	/*
-	 * Handler for TmShTrigger capturing extended processing
-	 */
 
 	final static String INITIATED_TYPE1CONTENT_TIMESHCAPTURE = "TimeShCapture";
 
@@ -132,7 +135,6 @@ public class XtdTmShTrigger extends TimeShTrigger implements ExtendedHandler {
 
 		} catch (IOException | ParseException e) {
 			
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in XtdTimeShRollup processXtdStdProcessRec " + inXtdProcStatus, e);
 		}
 		

@@ -4,15 +4,15 @@ import java.util.Date;
 import java.util.HashMap;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for a deckerLite item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class DeckerLiteItemPojo extends ItemPojo {
-	/*
-	 * json doc holder for a decker item
-	 */
 
-	//defining this class here as there is no corresponding
 	public Date deckingCompletedAt;
-//	public String itemSummaryFile;
-//	public String summaryShKeyColVal;
 	public HashMap<String,String> addlFieldValues;
 	public String itemDetailFileInRelevancePath;
 	public int numberOfRecsCombined;
@@ -27,8 +27,6 @@ public class DeckerLiteItemPojo extends ItemPojo {
 		artifactName = inArtifactName;
 		deckingCompletedAt = null;
 		numberOfRecsCombined = 0;
-//		itemSummaryFile = "";
-//		summaryShKeyColVal = "";
 	}
 	void absorbScreenFieldValues(HashMap<String,String> inScreenFieldValues){
 		addlFieldValues = new HashMap<String,String>();

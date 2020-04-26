@@ -13,10 +13,13 @@ import xtdSrvrComp.XtdCommons;
 import xtdSrvrComp.XtdStdProcessRecord;
 import xtdSrvrComp.XtdTmShCatlogPersistenceMgr;
 
+/**
+ * Handler for ProjTask extended processing
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdProjTask extends ProjTask implements ExtendedHandler {
-	/*
-	 * Handler for ProjTask extended processing
-	 */
 
 	public final static String INSTRUCTION_ABSORB_XLJAVAOBJ = "ABSORB_XLJAVAOBJ";
 
@@ -90,7 +93,6 @@ public class XtdProjTask extends ProjTask implements ExtendedHandler {
 		try {
 			commonData.getCommons().putJsonDocToFile(contentPathFileName,getPrimerDoc());
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in XtdProjTask processXtdStdProcessRec " + inXtdProcStatus, e);
 		}
 		System.out.println("at processxtdStdProcessRec inArtifactKeyPojo = " + invokedArtifactPojo.artifactKeyPojo.artifactName);

@@ -3,10 +3,14 @@ package contentHandlers;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for Impediment item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ImpedimentItemDoc extends GenericItemDocPojo {
-	/*
-	 * json doc holder for Impediment item
-	 */
+
 	ImpedimentItemPojo impedimentItemPojo;
 
 	public ImpedimentItemDoc(ItemPojo inItemPojo) {

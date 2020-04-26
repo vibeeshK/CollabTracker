@@ -3,10 +3,14 @@ package contentHandlers;
 import espot.ItemPojo;
 import espot.UserPojo;
 
+/**
+ * Data holder for a contributing user detail item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class UserMaintReqPojo extends ItemPojo{
-	/* 
-	 * Data holder for an user item
-	 */
+
 	UserPojo userPojo;
 	
 	UserMaintReqPojo(int inItemNumber){

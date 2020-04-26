@@ -7,11 +7,14 @@ import java.util.HashMap;
 import espot.ErrorHandler;
 import espot.RootPojo;
 
+/**
+ * This class maintains the sqls for extended time tracking process
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdTmShCatlogPersistenceMgr extends XtdStdRtCtCatlogPersistenceManager {
-	/*
-	 * This class maintains the sqls for extended time tracking process
-	 */
-	
+
 	public XtdTmShCatlogPersistenceMgr(RootPojo inRootPojo, XtdCommons inCommons, int inProcessMode)
 			throws ClassNotFoundException {
 		super(inRootPojo, inCommons, inProcessMode);
@@ -48,7 +51,6 @@ public class XtdTmShCatlogPersistenceMgr extends XtdStdRtCtCatlogPersistenceMana
 		} catch (SQLException e) {
 			// if the error message is "out of memory",
 			// it probably means no database file is found
-			//System.err.println(e.getMessage());
 			ErrorHandler.showErrorAndQuit(commons, "Error XtdTmShCatlogPersistenceMgr replaceTimeDetail "
 			+ inTaskID
 			+ " " + inRelevance
@@ -92,7 +94,6 @@ public class XtdTmShCatlogPersistenceMgr extends XtdStdRtCtCatlogPersistenceMana
 		} catch (SQLException e) {
 			// if the error message is "out of memory",
 			// it probably means no database file is found
-			//System.err.println(e.getMessage());
 			ErrorHandler.showErrorAndQuit(commons, "Error XtdTmShCatlogPersistenceMgr getFirstHrsEntryTimingOfTask "
 			+ inTaskID
 			+ " " + inRelevance
@@ -199,7 +200,6 @@ public class XtdTmShCatlogPersistenceMgr extends XtdStdRtCtCatlogPersistenceMana
 		} catch (SQLException e) {
 			// if the error message is "out of memory",
 			// it probably means no database file is found
-			//System.err.println(e.getMessage());
 			ErrorHandler.showErrorAndQuit(commons, "Error XtdTmShCatlogPersistenceMgr neverCallMe_DeleteTimeDetail ", e);
 		}
 	}

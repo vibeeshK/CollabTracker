@@ -36,10 +36,14 @@ import espot.GenericItemHandler;
 import espot.ItemPojo;
 import espot.SelfAuthoredArtifactpojo;
 
+/**
+ * This content handler helps to maintain a project task
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class ProjTask extends GenericItemHandler {
-	/*
-	 * This content handler helps to maintain a project task
-	 */
+
 	Text projectID_Tx;
 	Text taskID_Tx;
 	Text description_Tx;
@@ -48,7 +52,6 @@ public class ProjTask extends GenericItemHandler {
 	Text plannedHours_Tx;
 	Text plannedStart_Tx;
 	Text plannedEnd_Tx;
-	//Text status_Tx;
 	Text actualStart_Tx;
 	Text actualEnd_Tx;
 	Text burntHours_Tx;

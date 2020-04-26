@@ -6,10 +6,14 @@ import espot.CatelogPersistenceManager;
 import espot.ErrorHandler;
 import espot.RootPojo;
 
+/**
+ * Maintains connections and SQLs to the specified db files for extended processes
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public abstract class XtdCatalogPersistenceManager extends CatelogPersistenceManager {
-	/*
-	 * Maintains connections to the specified db files for extended processes
-	 */
+
 	String extdSrvrDBAlias;
 	String extdSrvrDBAliasPrefix;
 
@@ -45,7 +49,6 @@ public abstract class XtdCatalogPersistenceManager extends CatelogPersistenceMan
 		} catch (SQLException e) {
 			// if the error message is "out of memory",
 			// it probably means no database file is found
-			//System.err.println(e.getMessage());
 			ErrorHandler.showErrorAndQuit(commons, "Error XtdCatalogPersistenceManager connectToExtdSrvrDb", e);
 		}
 		return;

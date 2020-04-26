@@ -36,10 +36,14 @@ import xtdSrvrComp.XtdStdProcessRecord;
 import xtdSrvrComp.XtdStdRtCtCatlogPersistenceManager;
 import xtdSrvrComp.XtdTmShCatlogPersistenceMgr;
 
+/**
+ * Handler for ProjTracker extended processing
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
-	/*
-	 * Handler for ProjTracker extended processing
-	 */
+
 	final static String CONTENTTYPE1_ProjTask = "ProjTask";
 	final static String CONTENTTYPE2_AllocatdTask = "AllocatdTask";
 	final static String CONTENTTYPE3_ProjTasksList = "ProjTasksList";
@@ -139,7 +143,6 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 			System.out.println("At 5 initializeExtendedHandlerForExtdSrvrProcess of XtdProjTracker excelHandler " + excelHandler);
 			
 		} catch (IOException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(xtdCommons, "Error in XtdProjTracker initializeExtendedHandlerForExtdSrvrProcess " + inArtifactPojo.artifactKeyPojo.artifactName, e);
 		}
 	}
@@ -517,7 +520,6 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 			System.out.println("at end of 23454233 absorbInput inArtifactKeyPojo = " + invokedArtifactPojo.artifactKeyPojo.artifactName);
 
 		} catch (IOException | ParseException e) {
-			e.printStackTrace();
 			ErrorHandler.showErrorAndQuit(commons, "Error in XtdProjTracker absorbInput" + inInput + " " + inInstruction, e);
 		}
 		
@@ -911,7 +913,6 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 				}
 				excelHandler.replaceFromXlJavaObj(projSummaryUpdateXlJavaObj, ProjSummary_SHEETNAME);
 			} catch (IOException e) {
-				e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(xtdCommons, "Error in XtdProjTracker setSummaryShKeyColumnVal " + invokedArtifactPojo.artifactKeyPojo.artifactName, e);
 			}
 		}
@@ -936,7 +937,6 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 				projSummaryUpdateXlJavaObj = getProjSummaryXlJavaObjForProjNameUpdateIntoSh();
 				summaryShKeyColSeqNum = projSummaryUpdateXlJavaObj.getShColSeqNumOfHdr(PROJSUMSH_EngagementID_COLHDR);
 			} catch (IOException e) {
-				e.printStackTrace();
 				ErrorHandler.showErrorAndQuit(xtdCommons, "Error in XtdProjTracker getSummaryShKeyColSeqNum " + invokedArtifactPojo.artifactKeyPojo.artifactName, e);
 			}
 		}

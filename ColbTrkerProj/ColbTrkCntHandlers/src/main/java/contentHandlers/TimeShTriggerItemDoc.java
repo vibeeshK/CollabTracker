@@ -3,10 +3,14 @@ package contentHandlers;
 import espot.GenericItemDocPojo;
 import espot.ItemPojo;
 
+/**
+ * json doc holder for Time sheet trigger item
+ * 
+ * @author Vibeesh Kamalakannan
+ *
+ */
 public class TimeShTriggerItemDoc extends GenericItemDocPojo {
-	/*
-	 * json doc holder for Time sheet trigger item
-	 */
+
 	TimeShTriggerPojo timeShTriggerPojo;
 
 	public TimeShTriggerItemDoc(ItemPojo inItemPojo) {
