@@ -436,28 +436,47 @@ public class ReviewHandler {
 				public void widgetSelected(SelectionEvent event) {
 	
 					try {
+						if (newCommentText.getText() == null ||
+								newCommentText.getText().isEmpty()){
+							MessageBox emptyCommentErrorBox = new MessageBox(outerMainShell,
+									SWT.ICON_WARNING | SWT.OK);
+							emptyCommentErrorBox.setMessage("Please enter your comment");
+							emptyCommentErrorBox.open();
+							return;							
+						}
 						((Button) event.getSource()).setEnabled(false);
 						System.out.println("Saving Remarks");
-
+						
 						ClientSideNew_ReviewPojo clientSideNew_ReviewPojo = new ClientSideNew_ReviewPojo(
 								commonUIData.getCommons(), reviewArtifactKeyPojo,reviewOf,commonUIData.getCommons().userName,commonUIData.getCommons().getCurrentTimeStamp());
-						if (authorsDisplay!=null) {
+						if (authorsDisplay!=null && authorsDisplay.userText != null
+							&& !authorsDisplay.userText.getText().equalsIgnoreCase(reviewERLAuthor)) {
 							System.out.println("Inside Author display reassign sel Auth is " + authorsDisplay.userText.getText());
 							clientSideNew_ReviewPojo.reassignedAuthor = authorsDisplay.userText.getText();
+						} else {
+							clientSideNew_ReviewPojo.reassignedAuthor = "";
 						}
-						if (requestorDisplay!=null) {
+						if (requestorDisplay!=null && requestorDisplay.userText!=null
+							&& !requestorDisplay.userText.getText().equalsIgnoreCase(reviewERLRequestor)){
 							System.out.println("Inside requestor display reassign sel requestor is " + requestorDisplay.userText.getText());
 							clientSideNew_ReviewPojo.reassignedRequestor = requestorDisplay.userText.getText();
+						} else {
+							clientSideNew_ReviewPojo.reassignedRequestor = "";
 						}
-						if (erlStatusDisplay!=null) {
+						if (erlStatusDisplay!=null && erlStatusDisplay.newERLStatusCaptured != null
+							&& !erlStatusDisplay.newERLStatusCaptured.equalsIgnoreCase(reviewERLStatus)) {
 							System.out.println("Inside newERLStatusStaging3 is " + erlStatusDisplay.newERLStatusCaptured);
 							clientSideNew_ReviewPojo.newERLStatus = erlStatusDisplay.newERLStatusCaptured;
 							System.out.println("new value of newERLStatusStaging is " + clientSideNew_ReviewPojo.newERLStatus);
+						} else {
+							clientSideNew_ReviewPojo.newERLStatus = "";
 						}
 						
 						System.out.println("new value of sel Auth is " + clientSideNew_ReviewPojo.reassignedAuthor);
 						System.out.println("new value of sel Req is " + clientSideNew_ReviewPojo.reassignedRequestor);
+
 						clientSideNew_ReviewPojo.captureNewComment(newCommentText.getText());
+						
 						String localReviewPathFileName = commonUIData.getCommons().getFullLocalPathFileNameOfNewReview(commonUIData.getCommons().getCurrentRootNick(), reviewArtifactKeyPojo.relevance, clientSideNew_ReviewPojo.reviewFileName);
 	
 						System.out.println("clientSideNew_ReviewPojo.newReviewDocument:" + clientSideNew_ReviewPojo.newReviewDocument);

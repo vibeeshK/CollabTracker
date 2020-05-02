@@ -39,31 +39,50 @@ public abstract class GenericGrouperDocPojo implements PrimerDocInterface{
 	public abstract ArrayList<?> createItemList();
 	public int getItemsCurrentLocation(ItemPojo inItemPojo) {
 		int location = -1;
- 		ArrayList<?> items = getItemList();
-		for (int itemlocn=0; itemlocn<items.size();itemlocn++) {
-			ItemPojo itemPojo = (ItemPojo) items.get(itemlocn);
-			if (itemPojo.equals(inItemPojo)) {
-				location = itemlocn;
-				break;
-			}			
-		}		
+		if (inItemPojo != null) {
+	 		ArrayList<?> items = getItemList();
+			for (int itemlocn=0; itemlocn<items.size();itemlocn++) {
+				ItemPojo itemPojo = (ItemPojo) items.get(itemlocn);
+				if (itemPojo.equals(inItemPojo)) {
+					location = itemlocn;
+					break;
+				}			
+			}
+		}
 		return location;
 	}
 	
 	public ItemPojo getItemByChildArtifactName(String inChildRelevance, String inChildArtifactName, String inChildContentType) {
 		ItemPojo childItemPojo = null;
- 		ArrayList<?> items = getItemList();
-		for (int itemLocation=0; itemLocation<items.size();itemLocation++) {
-			ItemPojo itemPojo = (ItemPojo) items.get(itemLocation);
-			if (itemPojo.artifactName.equals(inChildArtifactName) 
-					&& itemPojo.relevance.equals(inChildRelevance)
-					&& itemPojo.contentType.equals(inChildContentType)) {
-				childItemPojo = itemPojo;
-				break;
+		if (inChildRelevance!=null && inChildArtifactName!=null && inChildContentType!=null) {
+	 		ArrayList<?> items = getItemList();
+			for (int itemLocation=0; itemLocation<items.size();itemLocation++) {
+				ItemPojo itemPojo = (ItemPojo) items.get(itemLocation);
+				if (itemPojo.artifactName.equals(inChildArtifactName) 
+						&& itemPojo.relevance.equals(inChildRelevance)
+						&& itemPojo.contentType.equals(inChildContentType)) {
+					childItemPojo = itemPojo;
+					break;
+				}
 			}
 		}
 		return childItemPojo;
 	}
+
+	public ItemPojo getChildItemByItemID(String inChildItemID) {
+		ItemPojo childItemPojo = null;
+ 		if (inChildItemID != null) {
+ 	 		ArrayList<?> items = getItemList();
+			for (int itemLocation=0; itemLocation<items.size();itemLocation++) {
+				ItemPojo itemPojo = (ItemPojo) items.get(itemLocation);			
+				if (itemPojo.itemID.equals(inChildItemID)) {
+					childItemPojo = itemPojo;
+					break;
+				}
+			}
+ 		}
+		return childItemPojo;
+	}	
 	
 	public void clearList() {
 		maxItemNumber = -1;

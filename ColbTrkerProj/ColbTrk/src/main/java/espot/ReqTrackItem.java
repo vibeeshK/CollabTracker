@@ -15,7 +15,7 @@ public class ReqTrackItem {
 	public boolean erlMasterDBUpdated;
 	public boolean reqRespFileUpdated;
 	public boolean reqArchived;
-	public boolean errored;
+	public boolean reqProcessOKSoFar = true;
 	public String errorMessage;
 	
 	public ERLVersioningDocItem erlVersioningDocItem;
@@ -29,7 +29,7 @@ public class ReqTrackItem {
 		reqRespFileUpdated = false;
 		reqArchived = false;
 		erlVersioningDocItem = null;
-		errored = false;
+		reqProcessOKSoFar = true;
 		errorMessage = "";
 	}
 }

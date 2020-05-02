@@ -165,21 +165,21 @@ public class RequestProcessor {
 					commonData.getUsersHandler().getUserDetailsFromRootSysLoginID(requestPojo.requestor.toUpperCase()) == null ||
 					!commonData.getUsersHandler().getUserDetailsFromRootSysLoginID(requestPojo.requestor.toUpperCase()).isActive()) {
 					
-					reqTrackItem.errored = true;
+					reqTrackItem.reqProcessOKSoFar = false;
 					reqTrackItem.errorMessage = "Request coming from inactive user " + requestPojo.requestor;
 
 					commons.putJsonDocToFile(reqProcTrackingPathFileName,reqProcTracking);
 					System.out.println("2.01 At processRequestsOfOneRoot req tracker written");
 					
 				} else if (!remoteAccesser.exists(requestProcesserPojo.incomingContentFullPath)) {
-					reqTrackItem.errored = true;
+					reqTrackItem.reqProcessOKSoFar = false;
 					reqTrackItem.errorMessage = "Content not found " + requestProcesserPojo.incomingContentFullPath;
 
 					commons.putJsonDocToFile(reqProcTrackingPathFileName,reqProcTracking);
 					System.out.println("2.02 At processRequestsOfOneRoot req tracker written");
 				}
 				
-				if (!reqTrackItem.errored) {
+				if (reqTrackItem.reqProcessOKSoFar) {
 					System.out.println("requestProcesserPojo.incomingContentFullPath is " + requestProcesserPojo.incomingContentFullPath);
 	
 					requestProcesserPojo.contentHandlerSpecs = contentHandlerSpecsMap.get(requestPojo.contentType);				
@@ -233,10 +233,13 @@ public class RequestProcessor {
 	
 					if (requestPojo.artifactOrReview.equalsIgnoreCase(RequestPojo.ARTIFACT)) {
 
-						updateTargetContent(requestProcesserPojo,finalArtifactKeyPojo);
-	
-						erlVersioningDocItem.stackUp(requestProcesserPojo.newERLPojo.contentFileName);
+						reqTrackItem.reqProcessOKSoFar = updateTargetContent(requestProcesserPojo,finalArtifactKeyPojo);
 						
+						if (reqTrackItem.reqProcessOKSoFar) {
+							erlVersioningDocItem.stackUp(requestProcesserPojo.newERLPojo.contentFileName);
+						} else {
+							reqTrackItem.errorMessage = "Errored while updating Target Content File";
+						}
 					} else {
 						// processing the remarks files.
 						// a) mark current reviews file for archival
@@ -274,8 +277,14 @@ public class RequestProcessor {
 						erlVersioningDocItem.stackUp(requestProcesserPojo.newERLPojo.reviewFileName);
 						
 						if (requestProcesserPojo.artifactToBeUpdatedForRemarkFields){
-							updateTargetContent(requestProcesserPojo,finalArtifactKeyPojo);
-							erlVersioningDocItem.stackUp(requestProcesserPojo.newERLPojo.contentFileName);
+							
+							reqTrackItem.reqProcessOKSoFar = updateTargetContent(requestProcesserPojo,finalArtifactKeyPojo);
+							
+							if (reqTrackItem.reqProcessOKSoFar) {
+								erlVersioningDocItem.stackUp(requestProcesserPojo.newERLPojo.contentFileName);
+							} else {
+								reqTrackItem.errorMessage = "Errored while updating Target Content File";								
+							}
 						}
 					}
 					System.out.println("4.01 At processRequestsOfOneRoot reqTrackItem.artifactMoveComplete is " + reqTrackItem.artifactMoveComplete);
@@ -307,7 +316,7 @@ public class RequestProcessor {
 					erlVersionDocPathFileName,
 					erlVersionDetail);
 
-			if (!reqTrackItem.errored && !reqTrackItem.oldestContentVersionArchived) {
+			if (reqTrackItem.reqProcessOKSoFar && !reqTrackItem.oldestContentVersionArchived) {
 				String oldestFileToBeRemoved = erlVersioningDocItem.getOldestVerFileDetail(commons.erlMaxVersions);
 	
 				if (oldestFileToBeRemoved!= null) {
@@ -342,7 +351,7 @@ public class RequestProcessor {
 			
 			// update ERL database
 			
-			if (!reqTrackItem.errored && !reqTrackItem.erlMasterDBUpdated) {
+			if (reqTrackItem.reqProcessOKSoFar && !reqTrackItem.erlMasterDBUpdated) {
 				if (requestProcesserPojo.doesERLAlreadyExist()) {
 					System.out.println("doesERLAlreadyExist is true and requestProcesserPojo.newERLPojo contentType" + requestProcesserPojo.newERLPojo.artifactKeyPojo.contentType);
 	
@@ -364,7 +373,7 @@ public class RequestProcessor {
 
 			if (!reqTrackItem.reqRespFileUpdated) {
 				String responseMessage = "";
-				if (reqTrackItem.errored) {
+				if (!reqTrackItem.reqProcessOKSoFar) {
 					responseMessage = reqTrackItem.errorMessage;
 				} else {
 					responseMessage = "Your artifact \"" + requestPojo.artifactName + "\" of \"" 
@@ -381,7 +390,7 @@ public class RequestProcessor {
 			}
 			
 			if (!reqTrackItem.reqArchived) {
-				if (!reqTrackItem.errored) {
+				if (reqTrackItem.reqProcessOKSoFar) {
 				// archive request files
 					String remoteReqArchiveFile = rootPojo.rootString
 							+ rootPojo.fileSeparator + commons.remoteArchive
@@ -470,7 +479,10 @@ public class RequestProcessor {
 		}
 	}
 
-	public void updateTargetContent(RequestProcesserPojo requestProcesserPojo,ArtifactKeyPojo finalArtifactKeyPojo) throws IOException{
+	public boolean updateTargetContent(RequestProcesserPojo requestProcesserPojo,ArtifactKeyPojo finalArtifactKeyPojo) throws IOException{
+		
+		boolean process_OK = true;
+		
 		String newContentFileName = 
 				finalArtifactKeyPojo.artifactName
 				+ "_"
@@ -545,32 +557,39 @@ public class RequestProcessor {
 			System.out.println("at 2143c requestProcesserPojo newERLPojo contentType is " + requestProcesserPojo.newERLPojo.artifactKeyPojo.contentType);
 
 			contentHandlerObjectInterface.processContentAtWeb(rootPojo, remoteAccesser, requestProcesserPojo);
-
-			System.out.println("at 2143d requestProcesserPojo newERLPojo contentType is " + requestProcesserPojo.newERLPojo.artifactKeyPojo.contentType);
-
-			System.out.println("newContentRemoteLocation is " + newContentRemoteLocation);
-
-			remoteAccesser.putInStreamIntoRemoteLocation(newContentRemoteLocation, requestProcesserPojo.updatedContentInputStream);
-			requestProcesserPojo.updatedContentInputStream.close();
-			System.out.println("At request processer requestProcesserPojo.updatedContentInputStream is closed for " + requestProcesserPojo.updatedContentInputStream);
 			
-			String remoteContentArchiveFile = rootPojo.rootString
-					+ rootPojo.fileSeparator + commons.remoteArchive
-					+ rootPojo.fileSeparator
-					+ commons.getFileNameFromURL(requestProcesserPojo.incomingContentFullPath,rootPojo.fileSeparator);
-
-			System.out.println("remoteContentArchiveFile...=" + remoteContentArchiveFile);
-			remoteAccesser.moveToRemoteLocation(requestProcesserPojo.incomingContentFullPath, remoteContentArchiveFile);			
+			if (requestProcesserPojo.updatedContentInputStream == null){
+				process_OK = false;
+				Commons.logger.error("At RequestProcessor updateTargetContent requestProcesserPojo itemname " + requestProcesserPojo.requestPojo.itemName + " and finalArtifactKeyPojo " + finalArtifactKeyPojo.artifactName);
+				System.out.println("At RequestProcessor updateTargetContent requestProcesserPojo itemname " + requestProcesserPojo.requestPojo.itemName + " and finalArtifactKeyPojo " + finalArtifactKeyPojo.artifactName);
+			}
+			
+			if (process_OK) {
+				System.out.println("at 2143d requestProcesserPojo newERLPojo contentType is " + requestProcesserPojo.newERLPojo.artifactKeyPojo.contentType);
+	
+				System.out.println("newContentRemoteLocation is " + newContentRemoteLocation);
+	
+				remoteAccesser.putInStreamIntoRemoteLocation(newContentRemoteLocation, requestProcesserPojo.updatedContentInputStream);
+				requestProcesserPojo.updatedContentInputStream.close();
+				System.out.println("At request processer requestProcesserPojo.updatedContentInputStream is closed for " + requestProcesserPojo.updatedContentInputStream);
+				
+				String remoteContentArchiveFile = rootPojo.rootString
+						+ rootPojo.fileSeparator + commons.remoteArchive
+						+ rootPojo.fileSeparator
+						+ commons.getFileNameFromURL(requestProcesserPojo.incomingContentFullPath,rootPojo.fileSeparator);
+	
+				System.out.println("remoteContentArchiveFile...=" + remoteContentArchiveFile);
+				remoteAccesser.moveToRemoteLocation(requestProcesserPojo.incomingContentFullPath, remoteContentArchiveFile);
+			}
 		}		
+		return process_OK;
 	}
 
-	
-	
 	public void processRemarksAtWeb(RequestProcesserPojo inRequestProcesserPojo) throws IOException {
 		System.out.println("begin processRemarksAtWeb");
 
 		InputStream prevFileStream;
-		InputStream incomingReviewFileStream;
+		//InputStream incomingReviewFileStream;
 
 		Document documentToUpdate = null;
 		Document incomingReviewDoc = null;
@@ -578,13 +597,14 @@ public class RequestProcessor {
 
 		System.out.println("inRequestProcesserPojo.incomingContentFullPath=" + inRequestProcesserPojo.incomingContentFullPath);
 
-		incomingReviewFileStream = remoteAccesser.getRemoteFileStream(inRequestProcesserPojo.incomingContentFullPath);
+		InputStream incomingReviewFileStream = remoteAccesser.getRemoteFileStream(inRequestProcesserPojo.incomingContentFullPath);
 		try {
 			incomingReviewDoc = commons.getDocumentFromXMLFileStream(incomingReviewFileStream);
+			incomingReviewFileStream.close();
 		} catch (SAXException | ParserConfigurationException e) {
 			ErrorHandler.showErrorAndQuit(commons, "Error in RequestProcessor processRemarksAtWeb inRequestProcesserPojo", e);
 		}
-			
+
 		System.out.println("incomingDoc=" + incomingReviewDoc);
 		NewReviewPojo incomingItemNewReviewPojo = new NewReviewPojo(commons, inRequestProcesserPojo.newERLPojo.artifactKeyPojo,incomingReviewDoc);
 
@@ -613,14 +633,15 @@ public class RequestProcessor {
 		} else {
 			//append incoming xml reviews	
 			System.out.println("prevReviewsRemoteLocation = " + prevReviewsRemoteLocation);
-			InputStream artifactAllReviewsXMLInputStream = remoteAccesser.getRemoteFileStream(prevReviewsRemoteLocation);
 			Document artifactAllReviewsXMLDocument = null;
+			InputStream artifactAllReviewsXMLInputStream = remoteAccesser.getRemoteFileStream(prevReviewsRemoteLocation);
 			try {
 				artifactAllReviewsXMLDocument = commons.getDocumentFromXMLFileStream(artifactAllReviewsXMLInputStream);
+				artifactAllReviewsXMLInputStream.close();
 			} catch (SAXException | ParserConfigurationException e) {
 				ErrorHandler.showErrorAndQuit(commons, "Error in RequestProcessor 3 processRemarksAtWeb inRequestProcesserPojo", e);
 			}
-			
+
 			System.out.println("artifactAllReviewsXMLDocument = " + artifactAllReviewsXMLDocument.getTextContent());
 			artifactAllReviewsPojo.buildArtifactAllReviewsPojoFromFromDoc(artifactAllReviewsXMLDocument);
 		}
@@ -629,6 +650,32 @@ public class RequestProcessor {
 		System.out.println("incomingItemNewReviewPojo.getCondensedReviewString() = " + incomingItemNewReviewPojo.getCondensedReviewString());
 		
 		artifactAllReviewsPojo.appendItemReviewsDoc(inRequestProcesserPojo.requestPojo.itemName, incomingItemNewReviewPojo.getCondensedReviewString());
+
+		String commentPrefix =  "***SubmittedBy_" 
+								+ inRequestProcesserPojo.requestPojo.requestor
+								+"_At_" + inRequestProcesserPojo.requestPojo.uploadedTimeStamp + ":\n";
+
+		if (incomingItemNewReviewPojo.reassignedRequestor != null && !incomingItemNewReviewPojo.reassignedRequestor.isEmpty()) {
+			System.out.println("reassignment processing for requestor change");
+			artifactAllReviewsPojo.appendItemReviewsDoc(inRequestProcesserPojo.requestPojo.itemName,
+														commentPrefix
+														+ " reassignedRequestor " + incomingItemNewReviewPojo.reassignedRequestor
+														);
+		}
+		if (incomingItemNewReviewPojo.reassignedAuthor != null && !incomingItemNewReviewPojo.reassignedAuthor.isEmpty()) {
+			System.out.println("reassignment processing for Author change");						
+			artifactAllReviewsPojo.appendItemReviewsDoc(inRequestProcesserPojo.requestPojo.itemName,
+														commentPrefix
+														+ " reassignedAuthor " + incomingItemNewReviewPojo.reassignedAuthor
+														);
+		}
+		if (incomingItemNewReviewPojo.newERLStatus != null && !incomingItemNewReviewPojo.newERLStatus.isEmpty()) {
+			System.out.println("erl status upgrades processing");
+			artifactAllReviewsPojo.appendItemReviewsDoc(inRequestProcesserPojo.requestPojo.itemName,
+														commentPrefix
+														+ " newERLStatus " + incomingItemNewReviewPojo.newERLStatus
+														);
+		}
 
 		try {
 			inRequestProcesserPojo.updatedContentInputStream = commons.getInputStreamOfXMLDoc(artifactAllReviewsPojo.artifactAllReviewsDocument);
@@ -666,16 +713,20 @@ public class RequestProcessor {
 			|| (incomingItemNewReviewPojo.reassignedAuthor != null && !incomingItemNewReviewPojo.reassignedAuthor.isEmpty())
 			|| (incomingItemNewReviewPojo.newERLStatus != null && !incomingItemNewReviewPojo.newERLStatus.isEmpty())) {
 
-			if (inRequestProcesserPojo.contentHandlerSpecs.rollupAddupType) {
-			// for rollAddTypes, this info is at item level
+			
+			// You cannot use rollAdd type for this check since incoming review would be already pointing to rolled up artifact
+			//if (inRequestProcesserPojo.contentHandlerSpecs.rollupAddupType) { <-- you cannot use this flag as 
+			if (!inRequestProcesserPojo.requestPojo.itemName.equalsIgnoreCase(inRequestProcesserPojo.requestPojo.artifactName)) {
+
+				// For rollAddTypes the item level info are stored in the grouped artifact.
 				inRequestProcesserPojo.artifactToBeUpdatedForRemarkFields = true;
 				
 				inRequestProcesserPojo.itemReassignedRequestor = incomingItemNewReviewPojo.reassignedRequestor;
 				inRequestProcesserPojo.itemReassignedAuthor = incomingItemNewReviewPojo.reassignedAuthor;	
-				inRequestProcesserPojo.itemNewERLStatus = incomingItemNewReviewPojo.newERLStatus;
-				
-			}
-			else {
+				inRequestProcesserPojo.itemNewERLStatus = incomingItemNewReviewPojo.newERLStatus;				
+			} else {
+
+				// For non-rollAddTypes the item level info are stored in catalog db itself.
 				
 				if (requestAuthorsDetail.hasAdminPrivilege() 
 						|| requestAuthorsDetail.hasTeamLeaderPrivilege() 
@@ -683,24 +734,25 @@ public class RequestProcessor {
 							&& (requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(inRequestProcesserPojo.prevERLPojo.author)
 								|| requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(inRequestProcesserPojo.prevERLPojo.requestor)
 								|| commonData.getUsersHandler().doesUserHaveUpdateRightsOverMember(requestAuthorsDetail.rootSysLoginID, inRequestProcesserPojo.prevERLPojo.author)
-						))) {
-						
-						if (incomingItemNewReviewPojo.reassignedRequestor != null && !incomingItemNewReviewPojo.reassignedRequestor.isEmpty()) {
-							System.out.println("reassignment processing for requestor change");
-							inRequestProcesserPojo.newERLPojo.requestor = incomingItemNewReviewPojo.reassignedRequestor;
-						}
-						if (incomingItemNewReviewPojo.reassignedAuthor != null && !incomingItemNewReviewPojo.reassignedAuthor.isEmpty()) {
-							System.out.println("reassignment processing for Author change");						
-							inRequestProcesserPojo.newERLPojo.author = incomingItemNewReviewPojo.reassignedAuthor;
-						}
-						if (incomingItemNewReviewPojo.newERLStatus != null && !incomingItemNewReviewPojo.newERLStatus.isEmpty()) {
-							System.out.println("erl status upgrades processing");
-							inRequestProcesserPojo.newERLPojo.erlStatus = incomingItemNewReviewPojo.newERLStatus;
-						}
-					}				
+					))) {
+					
+					if (incomingItemNewReviewPojo.reassignedRequestor != null && !incomingItemNewReviewPojo.reassignedRequestor.isEmpty()) {
+						System.out.println("reassignment processing for requestor change");
+						inRequestProcesserPojo.newERLPojo.requestor = incomingItemNewReviewPojo.reassignedRequestor;
+					}
+					if (incomingItemNewReviewPojo.reassignedAuthor != null && !incomingItemNewReviewPojo.reassignedAuthor.isEmpty()) {
+						System.out.println("reassignment processing for Author change");						
+						inRequestProcesserPojo.newERLPojo.author = incomingItemNewReviewPojo.reassignedAuthor;
+					}
+					if (incomingItemNewReviewPojo.newERLStatus != null && !incomingItemNewReviewPojo.newERLStatus.isEmpty()) {
+						System.out.println("erl status upgrades processing");
+						inRequestProcesserPojo.newERLPojo.erlStatus = incomingItemNewReviewPojo.newERLStatus;
+					}
+				}				
 			
-			// Archival of incoming remark content. Note: when item fields are to be updated, this archival is deferred and
-			// taken care in the next step
+			// Archival of incoming remark content.
+			// Note: when item fields are to be updated for rolledup artifacts, this archival is
+			// 		 taken care in the next step
 				String remoteRemarkArchiveFile = rootPojo.rootString
 						+ rootPojo.fileSeparator + commons.remoteArchive
 						+ rootPojo.fileSeparator

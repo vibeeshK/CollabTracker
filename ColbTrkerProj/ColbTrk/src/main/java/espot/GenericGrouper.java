@@ -278,6 +278,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 
 		System.out.println("GenericGrouper initiated for initializeContentHandlerWithMinimumSetup");
 		commonData = inCommonData;
+		commons = commonData.getCommons();
 		catelogPersistenceManager = commonData.getCatelogPersistenceManager();
 	}
 
@@ -887,9 +888,159 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		return artifactKeyPojoList;
 	}
 	
+//	public void processContentAtWeb(RootPojo inRootPojo, RemoteAccesser inRemoteAccesser, RequestProcesserPojo inRequestProcesserPojo) {
+//		//This method invoked on the serverside processes the uploaded document
+//		
+//		System.out.println("begin processContentAtWeb GenericGrouper");
+//
+//		System.out.println("commonData is " + commonData);
+//		System.out.println("commonData.getCommons() is " + commonData.getCommons());
+//		System.out.println("inRootPojo is " + inRootPojo);
+//		System.out.println("inRootPojo.rootString is " + inRootPojo.rootString);
+//		System.out.println("inRequestProcesserPojo is " + inRequestProcesserPojo);
+//
+//		GenericGrouperDocPojo documentToUpdate = null;
+//		
+//		try {
+//	
+//			System.out.println("At processContentAtWeb inRequestProcesserPojo.prevERLPojo.contentFileName is " + inRequestProcesserPojo.incomingContentFullPath);
+//
+//			InputStream incomingFileStream = null;
+//			InputStream prevFileStream = null;
+//
+//			System.out.println("At processContentAtWeb incomingFileStream is " + incomingFileStream);
+//			System.out.println("At processContentAtWeb ContentHandlerSpecs.ROLLUP_ADDUP_TYPE_ROLLUP is " + inRequestProcesserPojo.contentHandlerSpecs.rollupOrAddup);
+//			System.out.println("At processContentAtWeb contenttype is " + inRequestProcesserPojo.contentHandlerSpecs.contentType);
+//			
+//			if (inRequestProcesserPojo.contentHandlerSpecs.rollupAddupType) {
+//				//For rollup contents such as innovations we need to absorb 'single item' from base content type
+//				//For other types just need to refresh whole list as both incoming and prev will be both 'group items'
+//				//documentToUpdate.absorbIncomingItemPojo(incomingDoc.getBaseItemDoc());
+//	
+//				System.out.println("At processContentAtWeb ContentHandlerSpecs.ROLLUP_ADDUP_TYPE_ROLLUP or addup side process ");
+//				
+//				if (inRequestProcesserPojo.prevERLPojo == null) {
+//					documentToUpdate = getNewPrimerDoc();
+//
+//					// set up any initial content
+//					setInitialContent(inRequestProcesserPojo.requestPojo.relevance, inRequestProcesserPojo.requestPojo.contentType, documentToUpdate);
+//					
+//				} else {
+//					System.out.println("inRequestProcesserPojo.prevERLPojo is " + inRequestProcesserPojo.prevERLPojo);
+//					System.out.println("inRequestProcesserPojo.prevERLPojo.artifactKeyPojo is " + inRequestProcesserPojo.prevERLPojo.artifactKeyPojo);
+//					System.out.println("inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance is " + inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance);
+//					System.out.println("inRequestProcesserPojo.prevERLPojo.contentFileName is " + inRequestProcesserPojo.prevERLPojo.contentFileName);
+//		
+//					prevFileStream = inRemoteAccesser.getRemoteFileStream(commonData.getCommons().getRemotePathFileName(inRootPojo.rootString, 
+//							inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance, inRequestProcesserPojo.prevERLPojo.contentFileName,inRootPojo.fileSeparator));
+//					documentToUpdate = (GenericGrouperDocPojo) commonData.getCommons().getJsonDocFromInputStream(prevFileStream,getPrimerDocClass());
+//					prevFileStream.close();
+//					System.out.println("At processContentAtWeb closing the instream prevFileStream " + prevFileStream);
+//				}
+//
+//				GenericItemDocPojo incomingDoc = null;
+//
+//				if (inRequestProcesserPojo.requestPojo.artifactOrReview.equalsIgnoreCase(RequestPojo.ARTIFACT)) {
+//					
+//					incomingFileStream = inRemoteAccesser.getRemoteFileStream(inRequestProcesserPojo.incomingContentFullPath);
+//					incomingDoc = (GenericItemDocPojo) commonData.getCommons().getJsonDocFromInputStream(incomingFileStream,getBasePrimerDocClass());
+//					incomingFileStream.close();
+//
+//					documentToUpdate.absorbIncomingItemPojo(incomingDoc.getItem());
+//					additionalRollAddWebProcess(incomingDoc.getItem());
+//
+//				} else {
+/////////////////////
+/////////////////////
+//					// As remarks dont bring item content from user, existing item needs to be read
+//
+//					ItemPojo itemPojoToUpdate = documentToUpdate.getItemByChildArtifactName(
+//							inRequestProcesserPojo.requestPojo.relevance, 
+//							inRequestProcesserPojo.requestPojo.artifactName,
+//							inRequestProcesserPojo.requestPojo.contentType);
+//
+//					UserPojo requestAuthorsDetail = commonData.getUsersHandler().getUserDetailsFromRootSysLoginID(inRequestProcesserPojo.requestPojo.requestor);
+//
+//					if ((inRequestProcesserPojo.itemReassignedRequestor!= null && !inRequestProcesserPojo.itemReassignedRequestor.isEmpty()) 
+//						|| (inRequestProcesserPojo.itemReassignedAuthor != null && !inRequestProcesserPojo.itemReassignedAuthor.isEmpty())
+//						|| (inRequestProcesserPojo.itemNewERLStatus != null && !inRequestProcesserPojo.itemNewERLStatus.isEmpty())) {
+//
+//						if (requestAuthorsDetail.hasAdminPrivilege() 
+//							|| requestAuthorsDetail.hasTeamLeaderPrivilege() 
+//							|| ((requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(itemPojoToUpdate.author)
+//								|| requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(itemPojoToUpdate.requestor)
+//								|| commonData.getUsersHandler().doesUserHaveUpdateRightsOverMember(requestAuthorsDetail.rootSysLoginID, itemPojoToUpdate.author)
+//							))) {
+//							if (inRequestProcesserPojo.itemReassignedRequestor != null && !inRequestProcesserPojo.itemReassignedRequestor.isEmpty()){
+//								itemPojoToUpdate.requestor = inRequestProcesserPojo.itemReassignedRequestor;
+//							}
+//							if (inRequestProcesserPojo.itemReassignedAuthor != null && !inRequestProcesserPojo.itemReassignedAuthor.isEmpty()){
+//								itemPojoToUpdate.author = inRequestProcesserPojo.itemReassignedAuthor;
+//							}
+//							if (inRequestProcesserPojo.itemNewERLStatus != null && !inRequestProcesserPojo.itemNewERLStatus.isEmpty()){
+//								itemPojoToUpdate.status = inRequestProcesserPojo.itemNewERLStatus;
+//							}
+//						}
+//					}
+/////////////////////					
+/////////////////////					
+//					
+//					if (inRequestProcesserPojo.contentHandlerSpecs.rollupType
+//						&& itemPojoToUpdate.status!= null 
+//						&& itemPojoToUpdate.status.equalsIgnoreCase(
+//									ArtifactPojo.ERLSTAT_DELETE_ROLLUPITEM)) {
+//					// Providing a clean up process for rollup artifacts that may clutter in a long period.
+//					// The autoarchival process only look at Artifact level status for archiving
+//						documentToUpdate.removeItemByItemNumber(itemPojoToUpdate.itemNumber);
+//					} else {
+//						documentToUpdate.absorbIncomingItemPojo(itemPojoToUpdate);						
+//					}
+//				}
+//			} else {
+//				System.out.println("At processContentAtWeb not a ContentHandlerSpecs.ROLLUP_ADDUP_TYPE_ROLLUP or addup" );
+//
+//				if (inRequestProcesserPojo.requestPojo.artifactOrReview.equalsIgnoreCase(RequestPojo.ARTIFACT)) {				
+//					incomingFileStream = inRemoteAccesser.getRemoteFileStream(inRequestProcesserPojo.incomingContentFullPath);
+//					GenericGrouperDocPojo incomingDoc = (GenericGrouperDocPojo) commonData.getCommons().getJsonDocFromInputStream(incomingFileStream,getPrimerDocClass());
+//					documentToUpdate = incomingDoc;								// hence replacing the whole doc with new.
+//					incomingFileStream.close();
+//				} else {
+//					// Will land here for any remark update for reassignments and status change
+//					// As remarks dont bring artifact content from user, existing artifact needs to be read
+//					if (inRequestProcesserPojo.prevERLPojo != null) {
+//						prevFileStream = inRemoteAccesser.getRemoteFileStream(commonData.getCommons().getRemotePathFileName(inRootPojo.rootString, 
+//								inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance, inRequestProcesserPojo.prevERLPojo.contentFileName,inRootPojo.fileSeparator));
+//						documentToUpdate = (GenericGrouperDocPojo) commonData.getCommons().getJsonDocFromInputStream(prevFileStream,getPrimerDocClass());
+//						prevFileStream.close();
+//					} else {
+//						Commons.logger.error("Conflict at GenericGrouper processContentAtWeb. Remark requested on a nonExistent ERL"
+//								+ " artifact name " + inRequestProcesserPojo.newERLPojo.artifactKeyPojo.artifactName
+//									+ " relevance " + inRequestProcesserPojo.newERLPojo.artifactKeyPojo.relevance
+//									+ " contentType " + inRequestProcesserPojo.newERLPojo.artifactKeyPojo.contentType);
+//					}
+//				}
+//			}
+//	
+//			if (documentToUpdate != null) {
+//				inRequestProcesserPojo.updatedContentInputStream = commonData.getCommons().getJsonDocInStream(documentToUpdate);
+//				System.out.println("At processContentAtWeb inRequestProcesserPojo.updatedContentInputStream is " + inRequestProcesserPojo.updatedContentInputStream);
+//			}
+//	
+//			//System.out.println("At processContentAtWeb closing the instream incomingFileStream " + incomingFileStream);
+//			
+//		} catch (IOException e) {
+//			ErrorHandler.showErrorAndQuit(mainShell, commonData.getCommons(), "Error2 at GenericGrouper processContentAtWeb " + inRequestProcesserPojo.newERLPojo.artifactKeyPojo.artifactName, e);
+//		}
+//		
+//
+//		System.out.println("end processContentAtWeb");
+//	}
+	
 	public void processContentAtWeb(RootPojo inRootPojo, RemoteAccesser inRemoteAccesser, RequestProcesserPojo inRequestProcesserPojo) {
 		//This method invoked on the serverside processes the uploaded document
 		
+		Commons.logger.info("At GenericGrouper processContentAtWeb start for " + inRequestProcesserPojo.requestPojo.artifactName);
+
 		System.out.println("begin processContentAtWeb GenericGrouper");
 
 		System.out.println("commonData is " + commonData);
@@ -903,125 +1054,128 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		try {
 	
 			System.out.println("At processContentAtWeb inRequestProcesserPojo.prevERLPojo.contentFileName is " + inRequestProcesserPojo.incomingContentFullPath);
-
-			InputStream incomingFileStream = null;
-			InputStream prevFileStream = null;
-
-			System.out.println("At processContentAtWeb incomingFileStream is " + incomingFileStream);
 			System.out.println("At processContentAtWeb ContentHandlerSpecs.ROLLUP_ADDUP_TYPE_ROLLUP is " + inRequestProcesserPojo.contentHandlerSpecs.rollupOrAddup);
 			System.out.println("At processContentAtWeb contenttype is " + inRequestProcesserPojo.contentHandlerSpecs.contentType);
-			
-			if (inRequestProcesserPojo.contentHandlerSpecs.rollupAddupType) {
+
+			if (inRequestProcesserPojo.prevERLPojo == null) {
+
+				documentToUpdate = getNewPrimerDoc();
+				// set up any initial content
+				setInitialContent(inRequestProcesserPojo.requestPojo.relevance, inRequestProcesserPojo.newERLPojo.artifactKeyPojo.contentType, documentToUpdate);
+				
+			} else {
+				System.out.println("inRequestProcesserPojo.prevERLPojo is " + inRequestProcesserPojo.prevERLPojo);
+				System.out.println("inRequestProcesserPojo.prevERLPojo.artifactKeyPojo is " + inRequestProcesserPojo.prevERLPojo.artifactKeyPojo);
+				System.out.println("inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance is " + inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance);
+				System.out.println("inRequestProcesserPojo.prevERLPojo.contentFileName is " + inRequestProcesserPojo.prevERLPojo.contentFileName);
+	
+				InputStream prevFileStream = inRemoteAccesser.getRemoteFileStream(commonData.getCommons().getRemotePathFileName(inRootPojo.rootString, 
+						inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance, inRequestProcesserPojo.prevERLPojo.contentFileName,inRootPojo.fileSeparator));
+				documentToUpdate = (GenericGrouperDocPojo) commonData.getCommons().getJsonDocFromInputStream(prevFileStream,getPrimerDocClass());
+				prevFileStream.close();
+				System.out.println("At processContentAtWeb closing the instream prevFileStream " + prevFileStream);
+			}
+
+			if (inRequestProcesserPojo.requestPojo.artifactOrReview.equalsIgnoreCase(RequestPojo.ARTIFACT)) {
+				
 				//For rollup contents such as innovations we need to absorb 'single item' from base content type
 				//For other types just need to refresh whole list as both incoming and prev will be both 'group items'
-				//documentToUpdate.absorbIncomingItemPojo(incomingDoc.getBaseItemDoc());
-	
+
 				System.out.println("At processContentAtWeb ContentHandlerSpecs.ROLLUP_ADDUP_TYPE_ROLLUP or addup side process ");
-				
-				if (inRequestProcesserPojo.prevERLPojo == null) {
-					documentToUpdate = getNewPrimerDoc();
 
-					// set up any initial content
-					setInitialContent(inRequestProcesserPojo.requestPojo.relevance, inRequestProcesserPojo.requestPojo.contentType, documentToUpdate);
+				if (inRequestProcesserPojo.contentHandlerSpecs.rollupAddupType) {
 					
-				} else {
-					System.out.println("inRequestProcesserPojo.prevERLPojo is " + inRequestProcesserPojo.prevERLPojo);
-					System.out.println("inRequestProcesserPojo.prevERLPojo.artifactKeyPojo is " + inRequestProcesserPojo.prevERLPojo.artifactKeyPojo);
-					System.out.println("inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance is " + inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance);
-					System.out.println("inRequestProcesserPojo.prevERLPojo.contentFileName is " + inRequestProcesserPojo.prevERLPojo.contentFileName);
-		
-					prevFileStream = inRemoteAccesser.getRemoteFileStream(commonData.getCommons().getRemotePathFileName(inRootPojo.rootString, 
-							inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance, inRequestProcesserPojo.prevERLPojo.contentFileName,inRootPojo.fileSeparator));
-					documentToUpdate = (GenericGrouperDocPojo) commonData.getCommons().getJsonDocFromInputStream(prevFileStream,getPrimerDocClass());
-					prevFileStream.close();
-					System.out.println("At processContentAtWeb closing the instream prevFileStream " + prevFileStream);
-				}
-
-				GenericItemDocPojo incomingDoc = null;
-
-				if (inRequestProcesserPojo.requestPojo.artifactOrReview.equalsIgnoreCase(RequestPojo.ARTIFACT)) {
-					
-					incomingFileStream = inRemoteAccesser.getRemoteFileStream(inRequestProcesserPojo.incomingContentFullPath);
-					incomingDoc = (GenericItemDocPojo) commonData.getCommons().getJsonDocFromInputStream(incomingFileStream,getBasePrimerDocClass());
+					InputStream incomingFileStream = inRemoteAccesser.getRemoteFileStream(inRequestProcesserPojo.incomingContentFullPath);
+					GenericItemDocPojo incomingDoc = (GenericItemDocPojo) commonData.getCommons().getJsonDocFromInputStream(incomingFileStream,getBasePrimerDocClass());
 					incomingFileStream.close();
 
 					documentToUpdate.absorbIncomingItemPojo(incomingDoc.getItem());
 					additionalRollAddWebProcess(incomingDoc.getItem());
 
 				} else {
-///////////////////
-///////////////////
-					ItemPojo itemPojoToUpdate = documentToUpdate.getItemByChildArtifactName(
-							inRequestProcesserPojo.requestPojo.relevance, 
-							inRequestProcesserPojo.requestPojo.artifactName,
-							inRequestProcesserPojo.requestPojo.contentType);
-
-					UserPojo requestAuthorsDetail = commonData.getUsersHandler().getUserDetailsFromRootSysLoginID(inRequestProcesserPojo.requestPojo.requestor);
-
-					if ((inRequestProcesserPojo.itemReassignedRequestor!= null && !inRequestProcesserPojo.itemReassignedRequestor.isEmpty()) 
-						|| (inRequestProcesserPojo.itemReassignedAuthor != null && !inRequestProcesserPojo.itemReassignedAuthor.isEmpty())
-						|| (inRequestProcesserPojo.itemNewERLStatus != null && !inRequestProcesserPojo.itemNewERLStatus.isEmpty())) {
-
-						if (requestAuthorsDetail.hasAdminPrivilege() 
-							|| requestAuthorsDetail.hasTeamLeaderPrivilege() 
-							|| ((requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(itemPojoToUpdate.author)
-								|| requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(itemPojoToUpdate.requestor)
-								|| commonData.getUsersHandler().doesUserHaveUpdateRightsOverMember(requestAuthorsDetail.rootSysLoginID, itemPojoToUpdate.author)
-							))) {
-							if (inRequestProcesserPojo.itemReassignedRequestor != null && !inRequestProcesserPojo.itemReassignedRequestor.isEmpty()){
-								itemPojoToUpdate.requestor = inRequestProcesserPojo.itemReassignedRequestor;
-							}
-							if (inRequestProcesserPojo.itemReassignedAuthor != null && !inRequestProcesserPojo.itemReassignedAuthor.isEmpty()){
-								itemPojoToUpdate.author = inRequestProcesserPojo.itemReassignedAuthor;
-							}
-							if (inRequestProcesserPojo.itemNewERLStatus != null && !inRequestProcesserPojo.itemNewERLStatus.isEmpty()){
-								itemPojoToUpdate.status = inRequestProcesserPojo.itemNewERLStatus;
-							}
-						}
-					}
-///////////////////					
-///////////////////					
-					
-					if (inRequestProcesserPojo.contentHandlerSpecs.rollupType
-						&& itemPojoToUpdate.status!= null 
-						&& itemPojoToUpdate.status.equalsIgnoreCase(
-									ArtifactPojo.ERLSTAT_DELETE_ROLLUPITEM)) {
-					// Providing a clean up process for rollup artifacts that may clutter in a long period.
-					// The autoarchival process only look at Artifact level status for archiving
-						documentToUpdate.removeItemByItemNumber(itemPojoToUpdate.itemNumber);
-					} else {
-						documentToUpdate.absorbIncomingItemPojo(itemPojoToUpdate);						
-					}
-				}
-			} else {
-				System.out.println("At processContentAtWeb not a ContentHandlerSpecs.ROLLUP_ADDUP_TYPE_ROLLUP or addup" );
-
-				if (inRequestProcesserPojo.requestPojo.artifactOrReview.equalsIgnoreCase(RequestPojo.ARTIFACT)) {				
-					incomingFileStream = inRemoteAccesser.getRemoteFileStream(inRequestProcesserPojo.incomingContentFullPath);
+					InputStream incomingFileStream = inRemoteAccesser.getRemoteFileStream(inRequestProcesserPojo.incomingContentFullPath);
 					GenericGrouperDocPojo incomingDoc = (GenericGrouperDocPojo) commonData.getCommons().getJsonDocFromInputStream(incomingFileStream,getPrimerDocClass());
-					documentToUpdate = incomingDoc;								// hence replacing the whole doc with new.
 					incomingFileStream.close();
-				} else {
-					prevFileStream = inRemoteAccesser.getRemoteFileStream(commonData.getCommons().getRemotePathFileName(inRootPojo.rootString, 
+
+					documentToUpdate = incomingDoc;		// Replacing the whole doc with new.
+				}
+			} else {					
+				// Will land here for any remark update for reassignments and status change of child items only.
+				// The equivalent fields at artifact level are stored in catalog DB itself.
+				
+				// As remarks dont bring item content from user, existing item needs to be read to begin with
+				if (inRequestProcesserPojo.prevERLPojo != null) {
+					InputStream prevFileStream = inRemoteAccesser.getRemoteFileStream(commonData.getCommons().getRemotePathFileName(inRootPojo.rootString, 
 							inRequestProcesserPojo.prevERLPojo.artifactKeyPojo.relevance, inRequestProcesserPojo.prevERLPojo.contentFileName,inRootPojo.fileSeparator));
 					documentToUpdate = (GenericGrouperDocPojo) commonData.getCommons().getJsonDocFromInputStream(prevFileStream,getPrimerDocClass());
 					prevFileStream.close();
+				} else {
+					Commons.logger.error("Conflict at GenericGrouper processContentAtWeb. Remark requested on a nonExistent ERL"
+							+ " artifact name " + inRequestProcesserPojo.newERLPojo.artifactKeyPojo.artifactName
+								+ " relevance " + inRequestProcesserPojo.newERLPojo.artifactKeyPojo.relevance
+								+ " contentType " + inRequestProcesserPojo.newERLPojo.artifactKeyPojo.contentType);
+				}
+				//ItemPojo itemPojoToUpdate = documentToUpdate.getItemByChildArtifactName(
+				//		inRequestProcesserPojo.requestPojo.relevance, 
+				//		inRequestProcesserPojo.requestPojo.artifactName,
+				//		inRequestProcesserPojo.requestPojo.contentType);
+
+				ItemPojo itemPojoToUpdate = documentToUpdate.getChildItemByItemID(inRequestProcesserPojo.requestPojo.itemName);
+
+				System.out.println("At xyz1 processContentAtWeb inRequestProcesserPojo.requestPojo.contentType " + inRequestProcesserPojo.requestPojo.contentType);
+				System.out.println("At xyz1 processContentAtWeb inRequestProcesserPojo.requestPojo.artifactName " + inRequestProcesserPojo.requestPojo.artifactName);
+				System.out.println("At xyz1 processContentAtWeb inRequestProcesserPojo.requestPojo.itemName " + inRequestProcesserPojo.requestPojo.itemName);	
+				System.out.println("At xyz1 processContentAtWeb inRequestProcesserPojo.requestPojo.relevance " + inRequestProcesserPojo.requestPojo.relevance);				
+				System.out.println("At xyz1 processContentAtWeb itemPojoToUpdate " + itemPojoToUpdate);				
+
+				UserPojo requestAuthorsDetail = commonData.getUsersHandler().getUserDetailsFromRootSysLoginID(inRequestProcesserPojo.requestPojo.requestor);
+
+				if ((inRequestProcesserPojo.itemReassignedRequestor!= null && !inRequestProcesserPojo.itemReassignedRequestor.isEmpty()) 
+					|| (inRequestProcesserPojo.itemReassignedAuthor != null && !inRequestProcesserPojo.itemReassignedAuthor.isEmpty())
+					|| (inRequestProcesserPojo.itemNewERLStatus != null && !inRequestProcesserPojo.itemNewERLStatus.isEmpty())) {
+
+					if (requestAuthorsDetail.hasAdminPrivilege() 
+						|| requestAuthorsDetail.hasTeamLeaderPrivilege() 
+						|| ((requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(itemPojoToUpdate.author)
+							|| requestAuthorsDetail.rootSysLoginID.equalsIgnoreCase(itemPojoToUpdate.requestor)
+							|| commonData.getUsersHandler().doesUserHaveUpdateRightsOverMember(requestAuthorsDetail.rootSysLoginID, itemPojoToUpdate.author)
+						))) {
+						if (inRequestProcesserPojo.itemReassignedRequestor != null && !inRequestProcesserPojo.itemReassignedRequestor.isEmpty()){
+							itemPojoToUpdate.requestor = inRequestProcesserPojo.itemReassignedRequestor;
+						}
+						if (inRequestProcesserPojo.itemReassignedAuthor != null && !inRequestProcesserPojo.itemReassignedAuthor.isEmpty()){
+							itemPojoToUpdate.author = inRequestProcesserPojo.itemReassignedAuthor;
+						}
+						if (inRequestProcesserPojo.itemNewERLStatus != null && !inRequestProcesserPojo.itemNewERLStatus.isEmpty()){
+							itemPojoToUpdate.status = inRequestProcesserPojo.itemNewERLStatus;
+						}
+						itemPojoToUpdate.updatedAt = commons.getDateTS();
+					}
+				}
+
+				if (inRequestProcesserPojo.contentHandlerSpecs.rollupType
+					&& itemPojoToUpdate.status!= null 
+					&& itemPojoToUpdate.status.equalsIgnoreCase(ArtifactPojo.ERLSTAT_DELETE_ROLLUPITEM)) {
+				// Providing a clean up process for rollup artifacts that may clutter in a long period.
+				// The autoarchival process only look at Artifact level status for archiving
+					documentToUpdate.removeItemByItemNumber(itemPojoToUpdate.itemNumber);
+				} else {
+					documentToUpdate.absorbIncomingItemPojo(itemPojoToUpdate);
 				}
 			}
 	
-			inRequestProcesserPojo.updatedContentInputStream = commonData.getCommons().getJsonDocInStream(documentToUpdate);
-	
-			System.out.println("At processContentAtWeb closing the instream incomingFileStream " + incomingFileStream);
-			
+			if (documentToUpdate != null) {
+				inRequestProcesserPojo.updatedContentInputStream = commonData.getCommons().getJsonDocInStream(documentToUpdate);
+				System.out.println("At processContentAtWeb inRequestProcesserPojo.updatedContentInputStream is " + inRequestProcesserPojo.updatedContentInputStream);
+			}
+
 		} catch (IOException e) {
 			ErrorHandler.showErrorAndQuit(mainShell, commonData.getCommons(), "Error2 at GenericGrouper processContentAtWeb " + inRequestProcesserPojo.newERLPojo.artifactKeyPojo.artifactName, e);
 		}
 		
-		System.out.println("At processContentAtWeb inRequestProcesserPojo.updatedContentInputStream is " + inRequestProcesserPojo.updatedContentInputStream);
-
 		System.out.println("end processContentAtWeb");
 	}
-	
+
 	public void setInitialContent(String inRelevance, String inContentType, GenericGrouperDocPojo inDocumentToUpdate) {
 		// dummy method to be overridden when required
 	}
