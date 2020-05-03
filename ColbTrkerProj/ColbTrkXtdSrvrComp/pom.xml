@@ -8,17 +8,6 @@
   <artifactId>ColbTrkXtdSrvrComp</artifactId>
   
   <dependencies>
-	<!-- https://mvnrepository.com/artifact/org.junit/org.junit -->
-
-	<!--   
-    <dependency>
-	  <groupId>ESPoT</groupId>
-	  <artifactId>ESPoT</artifactId>
-	  <version>0.0.1-SNAPSHOT</version>
-	  <scope>system</scope>	  
-	  <systemPath>C:/Kannan/Java/ESPoT/mainJar64Bit/ESPoT_CatalogDisplay.jar</systemPath>
-    </dependency>
-	-->
 	<dependency>
 		<groupId>ColbTrkerProj</groupId>
 		<artifactId>ColbTrk</artifactId>

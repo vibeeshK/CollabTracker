@@ -9,13 +9,13 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Text;
 
-import espot.ArtifactKeyPojo;
-import espot.CommonData;
-import espot.Commons;
-import espot.GenericItemHandler;
-import espot.ItemPojo;
-import espot.UserPojo;
-import espot.UsersDisplay;
+import clobTrk.ArtifactKeyPojo;
+import clobTrk.CommonData;
+import clobTrk.Commons;
+import clobTrk.GenericItemHandler;
+import clobTrk.ItemPojo;
+import clobTrk.UserPojo;
+import clobTrk.UsersDisplay;
 
 /**
  * This content handler helps to maintain a contributing user's detail by admin level users

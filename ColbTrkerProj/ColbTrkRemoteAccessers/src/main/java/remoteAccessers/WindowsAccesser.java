@@ -11,10 +11,10 @@ import java.util.ArrayList;
 
 import org.apache.commons.io.FileUtils;
 
-import espot.AbstractRemoteAccesser;
-import espot.Commons;
-import espot.ErrorHandler;
-import espot.RootPojo;
+import clobTrk.AbstractRemoteAccesser;
+import clobTrk.Commons;
+import clobTrk.ErrorHandler;
+import clobTrk.RootPojo;
 
 /**
  * This class provides the means to access files on a Windows based Doc Centers

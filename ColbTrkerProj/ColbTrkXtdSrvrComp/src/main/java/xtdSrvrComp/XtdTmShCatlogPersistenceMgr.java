@@ -4,8 +4,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 
-import espot.ErrorHandler;
-import espot.RootPojo;
+import clobTrk.ErrorHandler;
+import clobTrk.RootPojo;
 
 /**
  * This class maintains the sqls for extended time tracking process

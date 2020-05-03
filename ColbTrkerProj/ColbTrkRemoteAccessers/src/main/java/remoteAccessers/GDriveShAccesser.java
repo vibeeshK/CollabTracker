@@ -28,11 +28,11 @@ import com.google.api.services.drive.DriveScopes;
 import com.google.api.services.drive.model.File;
 import com.google.api.services.drive.model.FileList;
 
+import clobTrk.AbstractRemoteAccesser;
+import clobTrk.Commons;
+import clobTrk.ErrorHandler;
+import clobTrk.RootPojo;
 import commonTechs.ParentChildObject;
-import espot.AbstractRemoteAccesser;
-import espot.Commons;
-import espot.ErrorHandler;
-import espot.RootPojo;
 
 /**
  * This class provides the means to access files on a Google Drive
@@ -142,7 +142,7 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 
 		//https://drive.google.com/open?id=1DnfPrmgScI2AggSRRhGDhJod4Us8KBYC
 
-    	String outfile = "C:\\Kannan\\Java\\ESPoT\\testOutput\\GDriveTest\\testDoc.txt";
+    	String outfile = "C:\\Kannan\\Java\\ColbTrk\\testOutput\\GDriveTest\\testDoc.txt";
 		System.out.println(" inputstream received is " + ins);
 		System.out.println(" outfile name is " + outfile);
     	

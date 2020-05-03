@@ -19,20 +19,20 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
-import espot.ArtifactKeyPojo;
-import espot.ArtifactPrepper;
-import espot.ContentHandlerInterface;
-import espot.ContentHandlerManager;
-import espot.ERLDownload;
-import espot.ErrorHandler;
-import espot.GenericGrouper;
-import espot.GenericGrouperDocPojo;
-import espot.GenericItemDocPojo;
-import espot.ItemPojo;
-import espot.RemoteAccesser;
-import espot.RequestProcesserPojo;
-import espot.RootPojo;
-import espot.ScreenPatternFieldPojo;
+import clobTrk.ArtifactKeyPojo;
+import clobTrk.ArtifactPrepper;
+import clobTrk.ContentHandlerInterface;
+import clobTrk.ContentHandlerManager;
+import clobTrk.ERLDownload;
+import clobTrk.ErrorHandler;
+import clobTrk.GenericGrouper;
+import clobTrk.GenericGrouperDocPojo;
+import clobTrk.GenericItemDocPojo;
+import clobTrk.ItemPojo;
+import clobTrk.RemoteAccesser;
+import clobTrk.RequestProcesserPojo;
+import clobTrk.RootPojo;
+import clobTrk.ScreenPatternFieldPojo;
 
 /**
  * This content handler helps to deck up contents that implements decklite interface

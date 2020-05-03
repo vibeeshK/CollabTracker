@@ -2,7 +2,7 @@ package contentHandlers;
 
 import java.util.ArrayList;
 
-import espot.ItemPojo;
+import clobTrk.ItemPojo;
 
 /**
  * Grouping Doc data holder for allocated tasks on a project for a team member

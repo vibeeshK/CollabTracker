@@ -1,6 +1,6 @@
 package xtdSrvrComp;
 
-import espot.ArtifactKeyPojo;
+import clobTrk.ArtifactKeyPojo;
 
 /**
  * db record holder for Decking grouper Child to track status

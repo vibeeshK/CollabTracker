@@ -8,13 +8,13 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
-import espot.ArtifactKeyPojo;
-import espot.ERLDownload;
-import espot.GenericGrouper;
-import espot.GenericGrouperDocPojo;
-import espot.GenericItemDocPojo;
-import espot.ItemPojo;
-import espot.RelevancePojo;
+import clobTrk.ArtifactKeyPojo;
+import clobTrk.ERLDownload;
+import clobTrk.GenericGrouper;
+import clobTrk.GenericGrouperDocPojo;
+import clobTrk.GenericItemDocPojo;
+import clobTrk.ItemPojo;
+import clobTrk.RelevancePojo;
 
 /**
  * This content handler helps to group the ToDo activities

@@ -2,9 +2,9 @@ package xtdSrvrComp;
 
 import java.sql.SQLException;
 
-import espot.CatelogPersistenceManager;
-import espot.ErrorHandler;
-import espot.RootPojo;
+import clobTrk.CatelogPersistenceManager;
+import clobTrk.ErrorHandler;
+import clobTrk.RootPojo;
 
 /**
  * Maintains connections and SQLs to the specified db files for extended processes

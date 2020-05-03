@@ -1,6 +1,6 @@
 package xtdSrvrComp;
 
-import espot.ArtifactKeyPojo;
+import clobTrk.ArtifactKeyPojo;
 
 /**
  * Db record holder for standard processing to track status

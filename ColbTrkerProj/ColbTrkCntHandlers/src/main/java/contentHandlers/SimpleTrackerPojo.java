@@ -1,6 +1,6 @@
 package contentHandlers;
 
-import espot.ItemPojo;
+import clobTrk.ItemPojo;
 
 /**
  * Data holder for a simple tracker content

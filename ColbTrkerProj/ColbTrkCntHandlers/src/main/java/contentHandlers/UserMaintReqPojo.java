@@ -1,7 +1,7 @@
 package contentHandlers;
 
-import espot.ItemPojo;
-import espot.UserPojo;
+import clobTrk.ItemPojo;
+import clobTrk.UserPojo;
 
 /**
  * Data holder for a contributing user detail item

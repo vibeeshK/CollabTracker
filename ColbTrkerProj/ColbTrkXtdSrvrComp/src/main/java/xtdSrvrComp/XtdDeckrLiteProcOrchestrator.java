@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.HashMap;
 
-import espot.Commons;
-import espot.ErrorHandler;
-import espot.RootPojo;
+import clobTrk.Commons;
+import clobTrk.ErrorHandler;
+import clobTrk.RootPojo;
 
 /**
  * This processor invokes extended Decking sequence at defined intervals
@@ -37,7 +37,7 @@ public class XtdDeckrLiteProcOrchestrator extends AbstractRtCtOrchestrator {
 	
 	public XtdStdContentProcMaster getProcesor(RootPojo inRootPojo, String inProcessingContentType) {
 		XtdCatalogPersistenceManager xtdCatalogPersistenceMgr = null;
-		System.out.println("ESPoTXtdSrvrDeckerProcOrchestrator getProcesor commons is " + initialCommons);
+		System.out.println("XtdDeckerProcOrchestrator getProcesor commons is " + initialCommons);
 
 		XtdCommons xtdCommon = null;
 		try {
@@ -47,9 +47,9 @@ public class XtdDeckrLiteProcOrchestrator extends AbstractRtCtOrchestrator {
 		} catch (ClassNotFoundException | IOException | ParseException e) {
 			ErrorHandler.showErrorAndQuit(initialCommons, "Error extdCtlgSrvrForDeckerLite getProcesor " + inRootPojo.rootNick + " " + inProcessingContentType, e);
 		}
-		System.out.println("extdCtlgSrvrForDeckerLite before return getProcesor commons is " + xtdCommon);
-		System.out.println("extdCtlgSrvrForDeckerLite before return getProcesor inRootPojo.rootNick " + inRootPojo.rootNick);
-		System.out.println("extdCtlgSrvrForDeckerLite before return getProcesor inProcessingContentType " + inProcessingContentType);		
+		System.out.println("xtdCtlgSrvrForDeckerLite before return getProcesor commons is " + xtdCommon);
+		System.out.println("xtdCtlgSrvrForDeckerLite before return getProcesor inRootPojo.rootNick " + inRootPojo.rootNick);
+		System.out.println("xtdCtlgSrvrForDeckerLite before return getProcesor inProcessingContentType " + inProcessingContentType);		
 		return new XtdDeckerProcMaster(xtdCommon, inRootPojo,inProcessingContentType, xtdCatalogPersistenceMgr);
 	}
 	
@@ -58,7 +58,7 @@ public class XtdDeckrLiteProcOrchestrator extends AbstractRtCtOrchestrator {
 	}
 	
 	public static void main(String[] args) throws IOException, ParseException {
-		XtdDeckrLiteProcOrchestrator eSPoTExtdCatlgSrvrOrchestrator = new XtdDeckrLiteProcOrchestrator();
-		eSPoTExtdCatlgSrvrOrchestrator.orchestration();		
+		XtdDeckrLiteProcOrchestrator colbTrkExtdCatlgSrvrOrchestrator = new XtdDeckrLiteProcOrchestrator();
+		colbTrkExtdCatlgSrvrOrchestrator.orchestration();		
 	}
 }

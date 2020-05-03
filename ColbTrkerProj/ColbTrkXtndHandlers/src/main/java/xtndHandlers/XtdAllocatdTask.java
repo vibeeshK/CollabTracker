@@ -1,8 +1,8 @@
 package xtndHandlers;
 
+import clobTrk.ArtifactPojo;
+import clobTrk.CommonData;
 import contentHandlers.AllocatdTask;
-import espot.ArtifactPojo;
-import espot.CommonData;
 import xtdSrvrComp.ExtendedHandler;
 import xtdSrvrComp.XtdCommons;
 import xtdSrvrComp.XtdStdProcessRecord;

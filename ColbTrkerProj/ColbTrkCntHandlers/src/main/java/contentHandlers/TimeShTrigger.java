@@ -11,10 +11,10 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Text;
 
-import espot.ArtifactKeyPojo;
-import espot.ErrorHandler;
-import espot.GenericItemHandler;
-import espot.ItemPojo;
+import clobTrk.ArtifactKeyPojo;
+import clobTrk.ErrorHandler;
+import clobTrk.GenericItemHandler;
+import clobTrk.ItemPojo;
 
 /**
  * This content handler helps to initiate time sheet captures

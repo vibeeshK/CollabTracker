@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.HashMap;
 
-import espot.Commons;
-import espot.ErrorHandler;
-import espot.RootPojo;
+import clobTrk.Commons;
+import clobTrk.ErrorHandler;
+import clobTrk.RootPojo;
 
 /**
  * This processor invokes extended Decking sequence at defined intervals
@@ -37,7 +37,7 @@ public class XtdDeckerProcOrchestrator extends AbstractRtCtOrchestrator {
 	
 	public XtdStdContentProcMaster getProcesor(RootPojo inRootPojo, String inProcessingContentType) {
 		XtdCatalogPersistenceManager xtdCatalogPersistenceMgr = null;
-		System.out.println("ESPoTXtdSrvrDeckerProcOrchestrator getProcesor commons is " + initialCommons);
+		System.out.println("AbstractRtCtOrchestrator getProcesor commons is " + initialCommons);
 
 		XtdCommons xtdCommon = null;
 		try {
@@ -45,11 +45,11 @@ public class XtdDeckerProcOrchestrator extends AbstractRtCtOrchestrator {
 			xtdCatalogPersistenceMgr = new XtdDeckerProcCatlogPersistenceManager(inRootPojo, xtdCommon,
 												Commons.EXTENDED_CATALOG_SERVER);
 		} catch (ClassNotFoundException | IOException | ParseException e) {
-			ErrorHandler.showErrorAndQuit(initialCommons, "Error ESPoTXtdSrvrDeckerProcOrchestrator getProcesor " + inRootPojo.rootNick + " " + inProcessingContentType, e);
+			ErrorHandler.showErrorAndQuit(initialCommons, "Error XtdDeckerProcOrchestrator getProcesor " + inRootPojo.rootNick + " " + inProcessingContentType, e);
 		}
-		System.out.println("ESPoTXtdSrvrDeckerProcOrchestrator before return getProcesor commons is " + xtdCommon);
-		System.out.println("ESPoTXtdSrvrDeckerProcOrchestrator before return getProcesor inRootPojo.rootNick " + inRootPojo.rootNick);
-		System.out.println("ESPoTXtdSrvrDeckerProcOrchestrator before return getProcesor inProcessingContentType " + inProcessingContentType);		
+		System.out.println("XtdDeckerProcOrchestrator before return getProcesor commons is " + xtdCommon);
+		System.out.println("XtdDeckerProcOrchestrator before return getProcesor inRootPojo.rootNick " + inRootPojo.rootNick);
+		System.out.println("XtdDeckerProcOrchestrator before return getProcesor inProcessingContentType " + inProcessingContentType);		
 		return new XtdDeckerProcMaster(xtdCommon, inRootPojo,inProcessingContentType, xtdCatalogPersistenceMgr);
 	}
 	
@@ -58,7 +58,7 @@ public class XtdDeckerProcOrchestrator extends AbstractRtCtOrchestrator {
 	}
 	
 	public static void main(String[] args) throws IOException, ParseException {
-		XtdDeckerProcOrchestrator eSPoTExtdCatlgSrvrOrchestrator = new XtdDeckerProcOrchestrator();
-		eSPoTExtdCatlgSrvrOrchestrator.orchestration();		
+		XtdDeckerProcOrchestrator colbTrkExtdCatlgSrvrOrchestrator = new XtdDeckerProcOrchestrator();
+		colbTrkExtdCatlgSrvrOrchestrator.orchestration();		
 	}
 }

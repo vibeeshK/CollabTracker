@@ -11,9 +11,9 @@ import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Group;
 
-import espot.ErrorHandler;
-import espot.GenericItemHandler;
-import espot.ItemPojo;
+import clobTrk.ErrorHandler;
+import clobTrk.GenericItemHandler;
+import clobTrk.ItemPojo;
 
 /**
  * This content handler helps to track a project by letting user set up an 

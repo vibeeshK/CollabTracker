@@ -67,8 +67,8 @@ public class ExcelHandler {
 	public int recsBroughtInto = 0;
 
 	public static void main(String[] args) throws IOException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
-		String sourceExcelFilePath = "D:\\Kannan\\Java\\ESPoT\\testOutput\\deckerID2_20180226225351.xlsx";
-		String targetExcelFilePath = "D:\\Kannan\\Java\\ESPoT\\testOutput\\ArtifactSummary.xlsx";
+		String sourceExcelFilePath = "D:\\Kannan\\Java\\ColbTrk\\testOutput\\deckerID2_20180226225351.xlsx";
+		String targetExcelFilePath = "D:\\Kannan\\Java\\ColbTrk\\testOutput\\ArtifactSummary.xlsx";
 		String copySheetName = "ItemDetails";
 		int keyColumn = 0;
 		String keyValue = "deckerID2";

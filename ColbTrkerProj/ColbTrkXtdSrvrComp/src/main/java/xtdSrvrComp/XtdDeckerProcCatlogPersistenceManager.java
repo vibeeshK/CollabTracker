@@ -4,10 +4,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import espot.ArtifactKeyPojo;
-import espot.ERLDownload;
-import espot.ErrorHandler;
-import espot.RootPojo;
+import clobTrk.ArtifactKeyPojo;
+import clobTrk.ERLDownload;
+import clobTrk.ErrorHandler;
+import clobTrk.RootPojo;
 
 /**
  * Extended catalog processes for extended decking handler

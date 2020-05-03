@@ -35,13 +35,13 @@ import com.googlecode.sardine.DavResource;
 import com.googlecode.sardine.Sardine;
 import com.googlecode.sardine.SardineFactory;
 
+import clobTrk.AbstractRemoteAccesser;
+import clobTrk.Commons;
+import clobTrk.CredentialHandler;
+import clobTrk.CredentialsPojo;
+import clobTrk.ErrorHandler;
+import clobTrk.RootPojo;
 import commonTechs.CommonTechs;
-import espot.AbstractRemoteAccesser;
-import espot.Commons;
-import espot.CredentialHandler;
-import espot.CredentialsPojo;
-import espot.ErrorHandler;
-import espot.RootPojo;
 
 /**
  * This class provides the means to access files on a WebDAV based Doc Centers

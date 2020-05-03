@@ -1,8 +1,8 @@
 package osHandlers;
 import java.io.IOException;
 
+import clobTrk.OSHandler;
 import commonTechs.CommonTechs;
-import espot.OSHandler;
 
 /**
  * File opener on a windows machine

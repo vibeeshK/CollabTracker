@@ -2,8 +2,8 @@ package contentHandlers;
 
 import java.util.ArrayList;
 
-import espot.GenericGrouperDocPojo;
-import espot.ItemPojo;
+import clobTrk.GenericGrouperDocPojo;
+import clobTrk.ItemPojo;
 
 /**
  * json doc holder for Idea grouper

@@ -3,7 +3,7 @@ package contentHandlers;
 import java.util.ArrayList;
 import java.util.Date;
 
-import espot.ItemPojo;
+import clobTrk.ItemPojo;
 
 /**
  * Data holder for a defect item

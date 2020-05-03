@@ -2,7 +2,8 @@ package contentHandlers;
 
 import java.util.Date;
 import java.util.HashMap;
-import espot.ItemPojo;
+
+import clobTrk.ItemPojo;
 
 /**
  * json doc holder for a deckerLite item

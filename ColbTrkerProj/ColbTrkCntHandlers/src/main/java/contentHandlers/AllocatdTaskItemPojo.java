@@ -2,7 +2,7 @@ package contentHandlers;
 
 import java.util.Date;
 
-import espot.ItemPojo;
+import clobTrk.ItemPojo;
 
 /**
  * Data holder for the allocated task item

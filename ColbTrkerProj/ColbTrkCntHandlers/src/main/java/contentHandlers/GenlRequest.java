@@ -10,9 +10,9 @@ import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Text;
 
-import espot.ErrorHandler;
-import espot.GenericItemHandler;
-import espot.ItemPojo;
+import clobTrk.ErrorHandler;
+import clobTrk.GenericItemHandler;
+import clobTrk.ItemPojo;
 
 /**
  * This content handler helps to let team members to log general requests

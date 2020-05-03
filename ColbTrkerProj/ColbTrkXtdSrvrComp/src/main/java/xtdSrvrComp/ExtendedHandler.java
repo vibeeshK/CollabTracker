@@ -1,8 +1,8 @@
 package xtdSrvrComp;
 
-import espot.ArtifactPojo;
-import espot.CommonData;
-import espot.ContentHandlerInterface;
+import clobTrk.ArtifactPojo;
+import clobTrk.CommonData;
+import clobTrk.ContentHandlerInterface;
 
 /**
  * Interface mandate for extended processes

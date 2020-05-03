@@ -10,8 +10,8 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
-import espot.GenericItemHandler;
-import espot.ItemPojo;
+import clobTrk.GenericItemHandler;
+import clobTrk.ItemPojo;
 
 /**
  * This content handler helps to hold Timesheet entry made at one time

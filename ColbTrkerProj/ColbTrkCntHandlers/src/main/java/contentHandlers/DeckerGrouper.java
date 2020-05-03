@@ -1,7 +1,7 @@
 package contentHandlers;
 
-import espot.GenericGrouperDocPojo;
-import espot.ItemPojo;
+import clobTrk.GenericGrouperDocPojo;
+import clobTrk.ItemPojo;
 
 /**
  * This content handler helps to deck up contents that implements decking interface

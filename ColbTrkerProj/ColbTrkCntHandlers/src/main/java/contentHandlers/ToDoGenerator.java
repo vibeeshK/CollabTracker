@@ -12,8 +12,8 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 
-import espot.GenericItemHandler;
-import espot.ItemPojo;
+import clobTrk.GenericItemHandler;
+import clobTrk.ItemPojo;
 
 /**
  * This content handler helps the content requesters to set up a ToDo activity for another member

@@ -10,10 +10,10 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
-import espot.GenericGrouper;
-import espot.GenericGrouperDocPojo;
-import espot.GenericItemDocPojo;
-import espot.ItemPojo;
+import clobTrk.GenericGrouper;
+import clobTrk.GenericGrouperDocPojo;
+import clobTrk.GenericItemDocPojo;
+import clobTrk.ItemPojo;
 
 /**
  * This content handler helps to group the timesheets of a user

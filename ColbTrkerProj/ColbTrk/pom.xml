@@ -83,7 +83,7 @@
 	        <configuration>
 	          <archive>
 	            <manifest>
-              		<mainClass>espot.ColbTrkClientUI</mainClass>
+              		<mainClass>colbTrk.ColbTrkClientUI</mainClass>
 	            </manifest>
 	          </archive>
 	          <descriptorRefs>

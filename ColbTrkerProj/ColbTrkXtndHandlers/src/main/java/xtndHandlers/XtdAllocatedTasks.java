@@ -1,8 +1,8 @@
 package xtndHandlers;
 
+import clobTrk.ArtifactPojo;
+import clobTrk.CommonData;
 import contentHandlers.AllocatedTasks;
-import espot.ArtifactPojo;
-import espot.CommonData;
 import xtdCommonTechs.ExcelColJavaObj;
 import xtdCommonTechs.ExcelJavaObj;
 import xtdSrvrComp.ExtendedHandler;

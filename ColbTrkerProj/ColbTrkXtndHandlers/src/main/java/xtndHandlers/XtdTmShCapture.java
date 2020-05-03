@@ -1,10 +1,10 @@
 package xtndHandlers;
 
+import clobTrk.ArtifactPojo;
+import clobTrk.CommonData;
 import contentHandlers.TimeShCapture;
 import contentHandlers.TimeShCapturePojo;
 import contentHandlers.TimeShTriggerPojo;
-import espot.ArtifactPojo;
-import espot.CommonData;
 import xtdSrvrComp.ExtendedHandler;
 import xtdSrvrComp.XtdCommons;
 import xtdSrvrComp.XtdStdProcessRecord;

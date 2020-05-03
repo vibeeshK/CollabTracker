@@ -10,13 +10,13 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
-import espot.ArtifactKeyPojo;
-import espot.CommonData;
-import espot.GenericGrouper;
-import espot.GenericGrouperDocPojo;
-import espot.GenericItemDocPojo;
-import espot.ItemPojo;
-import espot.UserPojo;
+import clobTrk.ArtifactKeyPojo;
+import clobTrk.CommonData;
+import clobTrk.GenericGrouper;
+import clobTrk.GenericGrouperDocPojo;
+import clobTrk.GenericItemDocPojo;
+import clobTrk.ItemPojo;
+import clobTrk.UserPojo;
 
 /**
  * This content handler helps to view contributing users of the root repository

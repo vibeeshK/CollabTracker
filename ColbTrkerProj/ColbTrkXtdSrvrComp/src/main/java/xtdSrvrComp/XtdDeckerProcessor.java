@@ -3,16 +3,16 @@ package xtdSrvrComp;
 import java.util.ArrayList;
 import java.util.Date;
 
-import espot.ArtifactKeyPojo;
-import espot.ArtifactMover;
-import espot.ArtifactPrepper;
-import espot.CommonData;
-import espot.Commons;
-import espot.ERLDownload;
-import espot.ErrorHandler;
-import espot.GenericGrouper;
-import espot.RootPojo;
-import espot.SelfAuthoredArtifactpojo;
+import clobTrk.ArtifactKeyPojo;
+import clobTrk.ArtifactMover;
+import clobTrk.ArtifactPrepper;
+import clobTrk.CommonData;
+import clobTrk.Commons;
+import clobTrk.ERLDownload;
+import clobTrk.ErrorHandler;
+import clobTrk.GenericGrouper;
+import clobTrk.RootPojo;
+import clobTrk.SelfAuthoredArtifactpojo;
 
 /**
  * Extended core decking process that identifies, downloads related contents

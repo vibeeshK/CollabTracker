@@ -11,10 +11,10 @@ import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Text;
 
-import espot.ArtifactKeyPojo;
-import espot.ContentHandlerSpecs;
-import espot.GenericItemHandler;
-import espot.ItemPojo;
+import clobTrk.ArtifactKeyPojo;
+import clobTrk.ContentHandlerSpecs;
+import clobTrk.GenericItemHandler;
+import clobTrk.ItemPojo;
 
 /**
  * This content handler helps to log an impediment

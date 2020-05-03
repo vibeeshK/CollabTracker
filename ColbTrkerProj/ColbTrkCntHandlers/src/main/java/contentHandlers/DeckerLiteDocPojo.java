@@ -3,9 +3,9 @@ package contentHandlers;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import espot.GenericGrouperDocPojo;
-import espot.ItemPojo;
-import espot.ScreenPatternFieldPojo;
+import clobTrk.GenericGrouperDocPojo;
+import clobTrk.ItemPojo;
+import clobTrk.ScreenPatternFieldPojo;
 
 /**
  * json doc holder for DeckerLite

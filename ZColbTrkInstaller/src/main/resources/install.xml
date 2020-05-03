@@ -50,9 +50,9 @@
       </description>
 	  <file src="Readme.txt" targetdir="$INSTALL_PATH"/>
 	  <file src="Licence.txt" targetdir="$INSTALL_PATH"/>
-  	  <fileset dir="C:\Kannan\Java\ESPoT\InstallationPackaging\BaseContentsFromFolder" targetdir="${INSTALL_PATH}\${DesktopUserName}" override="true"/>
-      <fileset dir="C:\Kannan\Java\ESPoT\InstallationPackaging\ExcecuteModulesFromFolder" targetdir="${INSTALL_PATH}" override="true"/>
-      <fileset dir="C:\Kannan\Java\ESPoT\InstallationPackaging\WindowsRoots" targetdir="${INSTALL_PATH}\WindowsRoots" override="true"/>
+  	  <fileset dir="C:\Kannan\Java\ColbTrk\InstallationPackaging\BaseContentsFromFolder" targetdir="${INSTALL_PATH}\${DesktopUserName}" override="true"/>
+      <fileset dir="C:\Kannan\Java\ColbTrk\InstallationPackaging\ExcecuteModulesFromFolder" targetdir="${INSTALL_PATH}" override="true"/>
+      <fileset dir="C:\Kannan\Java\ColbTrk\InstallationPackaging\WindowsRoots" targetdir="${INSTALL_PATH}\WindowsRoots" override="true"/>
       <parsable targetfile="${INSTALL_PATH}\${DesktopUserName}\ConfigData\PulishedRoots.xml"/>
       <parsable targetfile="${INSTALL_PATH}\mainJar64Bit\config\commons.properties" type="javaprop"/>
       <parsable targetfile="${INSTALL_PATH}\mainJar64Bit\config\client.properties" type="javaprop"/>

@@ -1,7 +1,7 @@
 package contentHandlers;
 
-import espot.GenericItemDocPojo;
-import espot.ItemPojo;
+import clobTrk.GenericItemDocPojo;
+import clobTrk.ItemPojo;
 
 /**
  * json doc holder for ToDo item

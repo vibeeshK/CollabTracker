@@ -2,7 +2,7 @@ package contentHandlers;
 
 import java.util.ArrayList;
 
-import espot.ItemPojo;
+import clobTrk.ItemPojo;
 
 /**
  * json doc holder for DeckerGrouper

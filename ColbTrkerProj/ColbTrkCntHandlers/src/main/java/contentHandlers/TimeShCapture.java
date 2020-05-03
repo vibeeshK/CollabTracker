@@ -21,19 +21,19 @@ import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
-import espot.ArtifactKeyPojo;
-import espot.ArtifactMover;
-import espot.ArtifactPojo;
-import espot.CommonData;
-import espot.CommonUIData;
-import espot.ContentHandlerInterface;
-import espot.ContentHandlerManager;
-import espot.ContentHandlerSpecs;
-import espot.ERLDownload;
-import espot.ErrorHandler;
-import espot.GenericItemHandler;
-import espot.ItemPojo;
-import espot.SelfAuthoredArtifactpojo;
+import clobTrk.ArtifactKeyPojo;
+import clobTrk.ArtifactMover;
+import clobTrk.ArtifactPojo;
+import clobTrk.CommonData;
+import clobTrk.CommonUIData;
+import clobTrk.ContentHandlerInterface;
+import clobTrk.ContentHandlerManager;
+import clobTrk.ContentHandlerSpecs;
+import clobTrk.ERLDownload;
+import clobTrk.ErrorHandler;
+import clobTrk.GenericItemHandler;
+import clobTrk.ItemPojo;
+import clobTrk.SelfAuthoredArtifactpojo;
 
 /**
  * This content handler helps to pop up the form to capture timesheets

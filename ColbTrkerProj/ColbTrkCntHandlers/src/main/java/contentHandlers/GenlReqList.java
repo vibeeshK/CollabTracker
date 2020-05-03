@@ -14,12 +14,12 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
-import espot.ErrorHandler;
-import espot.GenericGrouper;
-import espot.GenericGrouperDocPojo;
-import espot.GenericItemDocPojo;
-import espot.ItemPojo;
-import espot.UsersDisplay;
+import clobTrk.ErrorHandler;
+import clobTrk.GenericGrouper;
+import clobTrk.GenericGrouperDocPojo;
+import clobTrk.GenericItemDocPojo;
+import clobTrk.ItemPojo;
+import clobTrk.UsersDisplay;
 
 /**
  * This content handler helps to group genlRequests within a relevance

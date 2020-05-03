@@ -2,15 +2,14 @@ package xtdSrvrComp;
 
 import java.util.ArrayList;
 
-import espot.ArtifactMover;
-import espot.CommonData;
-import espot.Commons;
-import espot.ContentHandlerSpecs;
-import espot.ERLDownload;
-import espot.ErrorHandler;
-
-import espot.RootPojo;
-import espot.SelfAuthoredArtifactpojo;
+import clobTrk.ArtifactMover;
+import clobTrk.CommonData;
+import clobTrk.Commons;
+import clobTrk.ContentHandlerSpecs;
+import clobTrk.ERLDownload;
+import clobTrk.ErrorHandler;
+import clobTrk.RootPojo;
+import clobTrk.SelfAuthoredArtifactpojo;
 
 /**
  * This processor invokes extended standard sequence at defined intervals.

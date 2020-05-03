@@ -4,13 +4,13 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.HashMap;
 
+import clobTrk.Commons;
+import clobTrk.ErrorHandler;
+import clobTrk.PublishedRootsHandler;
+import clobTrk.RootPojo;
+import clobTrk.SysCompRefresh;
 import commonTechs.OrchestrationData;
 import commonTechs.OrchestrationUI;
-import espot.Commons;
-import espot.ErrorHandler;
-import espot.PublishedRootsHandler;
-import espot.RootPojo;
-import espot.SysCompRefresh;
 
 /**
  * Abstract processor for the extended processing
@@ -129,9 +129,9 @@ public abstract class AbstractRtCtOrchestrator {
 					System.out.println("***********Orchestrator endProcessOfRec completed as well ");
 				}
 
-				System.out.println("Sleeping ESPoTExtdCatlgSrvrOrchestrator");
+				System.out.println("Sleeping AbstractRtCtOrchestrator");
 				Thread.sleep(getSleepInterval());
-				System.out.println("resuming ESPoTExtdCatlgSrvrOrchestrator");
+				System.out.println("resuming AbstractRtCtOrchestrator");
 			}
 		} catch (InterruptedException e) {
 			ErrorHandler.showErrorAndQuit(initialCommons, "Error AbstractRtCtOrchestrator orchestration", e);

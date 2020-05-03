@@ -2,9 +2,10 @@ package contentHandlers;
 
 import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.widgets.Group;
-import espot.ContentHandlerSpecs;
-import espot.GenericItemHandler;
-import espot.ItemPojo;
+
+import clobTrk.ContentHandlerSpecs;
+import clobTrk.GenericItemHandler;
+import clobTrk.ItemPojo;
 
 /**
  * This content handler helps to allocate a new task item to a content creator 

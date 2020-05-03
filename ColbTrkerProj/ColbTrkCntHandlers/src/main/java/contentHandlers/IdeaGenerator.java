@@ -6,9 +6,10 @@ import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Text;
-import espot.GenericItemHandler;
-import espot.ItemPojo;
-import espot.UsersDisplay;
+
+import clobTrk.GenericItemHandler;
+import clobTrk.ItemPojo;
+import clobTrk.UsersDisplay;
 
 /**
  * This content handler helps to let any team member to log the an idea

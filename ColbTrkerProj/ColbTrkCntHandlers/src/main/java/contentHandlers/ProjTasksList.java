@@ -16,20 +16,20 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
-import espot.ArtifactKeyPojo;
-import espot.ArtifactPrepper;
-import espot.CommonUIData;
-import espot.Commons;
-import espot.ContentHandlerInterface;
-import espot.ContentHandlerManager;
-import espot.ContentHandlerSpecs;
-import espot.ERLDownload;
-import espot.ErrorHandler;
-import espot.GenericGrouper;
-import espot.GenericGrouperDocPojo;
-import espot.GenericItemDocPojo;
-import espot.ItemPojo;
-import espot.SelfAuthoredArtifactpojo;
+import clobTrk.ArtifactKeyPojo;
+import clobTrk.ArtifactPrepper;
+import clobTrk.CommonUIData;
+import clobTrk.Commons;
+import clobTrk.ContentHandlerInterface;
+import clobTrk.ContentHandlerManager;
+import clobTrk.ContentHandlerSpecs;
+import clobTrk.ERLDownload;
+import clobTrk.ErrorHandler;
+import clobTrk.GenericGrouper;
+import clobTrk.GenericGrouperDocPojo;
+import clobTrk.GenericItemDocPojo;
+import clobTrk.ItemPojo;
+import clobTrk.SelfAuthoredArtifactpojo;
 
 /**
  * This content handler helps to group proj tasks
@@ -70,12 +70,12 @@ public class ProjTasksList extends GenericGrouper {
 					if (allocatedTasksERL.subscriptionStatus.equalsIgnoreCase(ERLDownload.NEVER_SUBSCRIBED) 
 						|| allocatedTasksERL.localCopyStatus.equalsIgnoreCase(ERLDownload.LOCAL_COPY_TOBERENEWED)) {
 						String popUpMsg = allocatedTasksERL.artifactKeyPojo.artifactName + " is not available. Do you want to subscribe?";
-						if (ErrorHandler.confirmationPopup(((CommonUIData) commonData).getESPoTDisplay(), popUpMsg)) {
+						if (ErrorHandler.confirmationPopup(((CommonUIData) commonData).getColbTrkDisplay(), popUpMsg)) {
 							commonData.getCatelogPersistenceManager().replaceSubscription(allocatedTasksERL,ERLDownload.CURRENTLY_SUBSCRIBED);
 						}
 					} else {
 						String popUpMsg = allocatedTasksERL.artifactKeyPojo.artifactName + " is not available. Pl. wait until its downloaded";
-						ErrorHandler.infoPopup(((CommonUIData) commonData).getESPoTDisplay(), popUpMsg);
+						ErrorHandler.infoPopup(((CommonUIData) commonData).getColbTrkDisplay(), popUpMsg);
 					}
 				} else {
 					ErrorHandler.showErrorAndQuit(commons, "expected erl not yet downloaded " + allocatedTasksERL.artifactKeyPojo.artifactName);
