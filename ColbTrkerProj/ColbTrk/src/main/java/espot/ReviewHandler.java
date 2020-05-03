@@ -26,7 +26,8 @@ import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 /**
- * Review handling UI for an artifact or an item within
+ * Review handling UI for an artifact or an item within.
+ * Provides a plug in convenience across UI screens.
  * 
  * @author Vibeesh Kamalakannan
  *
@@ -54,7 +55,8 @@ public class ReviewHandler {
 	private boolean reviewVisible = true;
 	private Group hideReviewGrp = null;	
 	private Text newCommentText = null;
-	private ContentHandlerSpecs reviewERLContentHandlerSpecs = null;
+	//private ContentHandlerSpecs reviewERLContentHandlerSpecs = null;
+	private boolean baseItemIsRollupType = false;
 
 	private ArtifactKeyPojo reviewArtifactKeyPojo = null;
 
@@ -102,6 +104,8 @@ public class ReviewHandler {
 
 		Commons.logger.info("ReviewHandler initReviewHandler starting for "
 								+ inArtifactPojo.artifactKeyPojo.artifactName);
+
+		baseItemIsRollupType = false;
 		
 		if (inItemPojo!= null) {
 			if (commonUIData.getContentHandlerSpecs(inItemPojo.contentType).rollupAddupType) {
@@ -111,7 +115,10 @@ public class ReviewHandler {
 				reviewERLContentType = inItemPojo.contentType;
 				reviewERLStatus = inItemPojo.status;
 				reviewERLRequestor = inItemPojo.requestor;
-				reviewERLAuthor = inItemPojo.author;			
+				reviewERLAuthor = inItemPojo.author;
+				if (commonUIData.getContentHandlerSpecs(inItemPojo.contentType).rollupType){
+					baseItemIsRollupType = true;
+				}
 			} else {
 			// for non rollup types use the item pojo's referred ERL for details
 				reviewArtifactKeyPojo = new ArtifactKeyPojo(inArtifactPojo.artifactKeyPojo.rootNick, 
@@ -145,8 +152,7 @@ public class ReviewHandler {
 		}
 		
 		downloadedReviewsHandler = new DownloadedReviewsHandler(inCommonUIData, reviewArtifactKeyPojo);
-		reviewERLContentHandlerSpecs = commonUIData.getContentHandlerSpecs(reviewERLContentType);
-
+		//reviewERLContentHandlerSpecs = commonUIData.getContentHandlerSpecs(reviewERLContentType);
 
 		outerMainShell = inMainShell;
 		System.out.println("@ReviewHandler reviewArtifactKeyPojo = " + reviewArtifactKeyPojo);
@@ -364,7 +370,7 @@ public class ReviewHandler {
 		
 		String[] validActions = null;
 		
-		boolean rollupItemInDeleteAllowedState = false;
+		boolean itemInDeleteAllowedState = false;
 		
 		System.out.println("About to check the delete allowed status for rollup child. Curr state " + reviewERLStatus);
 
@@ -372,10 +378,10 @@ public class ReviewHandler {
 		if (reviewERLStatus!= null && reviewERLStatus.equalsIgnoreCase(ArtifactPojo.ERLSTAT_INACTIVE)) {
 		// Providing a clean up process for rollup artifacts that may clutter in a long period.
 		// The autoarchival process only look at Artifact level status for archiving
-			rollupItemInDeleteAllowedState = true;
+			itemInDeleteAllowedState = true;
 		}
 
-		System.out.println("After check of delete allowed status for rollup child. rollupItemInDeleteAllowedState " + rollupItemInDeleteAllowedState);
+		System.out.println("After check of delete allowed status for rollup child. rollupItemInDeleteAllowedState " + itemInDeleteAllowedState);
 		System.out.println("Requestor check true for user " + commonUIData.getCommons().userName);
 		System.out.println("Requestor check true for requestor " + reviewERLRequestor);
 		
@@ -383,7 +389,7 @@ public class ReviewHandler {
 													commonUIData.getCommons().userName,
 													reviewERLAuthor)) {
 			System.out.println("taking path 1 ");
-			if (reviewERLContentHandlerSpecs.rollupType && rollupItemInDeleteAllowedState) {
+			if (baseItemIsRollupType && itemInDeleteAllowedState) {
 				System.out.println("taking path 2 ");
 				validActions = ArtifactPojo.ADMIN_VALID_ROLLUPITEM_ACTIONS;
 			} else {				
@@ -392,7 +398,7 @@ public class ReviewHandler {
 			}
 		} else if (commonUIData.getCommons().userName.equalsIgnoreCase(reviewERLRequestor)){
 			System.out.println("taking path 4 ");
-			if (reviewERLContentHandlerSpecs.rollupType && rollupItemInDeleteAllowedState) {
+			if (baseItemIsRollupType && itemInDeleteAllowedState) {
 				System.out.println("taking path 5 ");
 				validActions = ArtifactPojo.REQUESTOR_VALID_ROLLUPITEM_ACTIONS;
 			} else {				
@@ -401,7 +407,7 @@ public class ReviewHandler {
 			}
 		} else if (commonUIData.getCommons().userName.equalsIgnoreCase(reviewERLAuthor)){
 			System.out.println("taking path 7 ");
-			if (reviewERLContentHandlerSpecs.rollupType && rollupItemInDeleteAllowedState) {
+			if (baseItemIsRollupType && itemInDeleteAllowedState) {
 				System.out.println("taking path 8 ");
 				validActions = ArtifactPojo.AUTHOR_VALID_ROLLUPITEM_ACTIONS;
 			} else {
@@ -442,7 +448,8 @@ public class ReviewHandler {
 									SWT.ICON_WARNING | SWT.OK);
 							emptyCommentErrorBox.setMessage("Please enter your comment");
 							emptyCommentErrorBox.open();
-							return;							
+							newCommentText.setFocus();
+							return;
 						}
 						((Button) event.getSource()).setEnabled(false);
 						System.out.println("Saving Remarks");

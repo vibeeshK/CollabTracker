@@ -417,11 +417,11 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		if (itemOnRowHasALocalDraft){
 			inMaintenanceButton
 			.setText("*" + inItemPojoScrolled.artifactName);
-			inMaintenanceButton.setToolTipText("click for maintenance of: " + inItemPojoScrolled.title + ". A draft is already available");
+			inMaintenanceButton.setToolTipText("click for maintenance of: " + inItemPojoScrolled.itemID + ". A draft is already available");
 		} else {
 			inMaintenanceButton
 			.setText(inItemPojoScrolled.artifactName);			
-			inMaintenanceButton.setToolTipText("click for maintenance of: " + inItemPojoScrolled.title);
+			inMaintenanceButton.setToolTipText("click for maintenance of: " + inItemPojoScrolled.itemID);
 		}		
 		inMaintenanceButton.setData(ItemOnRowHasALocalDraftLIT, itemOnRowHasALocalDraft);
 	}
@@ -465,7 +465,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		reviewButton
 				.setText("Review");
 		System.out.println("@2 reviewButton.getSize().x = " + reviewButton.getSize().x);
-		reviewButton.setToolTipText("click to review " + itemPojoScrolled.title);
+		reviewButton.setToolTipText("click to review " + itemPojoScrolled.itemID);
 		System.out.println("@3 reviewButton.getSize().x = " + reviewButton.getSize().x);
 		reviewButton.setData(SCREENROWNUMLIT, screenRowNum);
 		System.out.println("@4 reviewButton.getSize().x = " + reviewButton.getSize().x);
@@ -491,7 +491,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 				
 				ItemPojo selectedItemPojo  = (ItemPojo) filteredItems.get(selectedItemRow);
 				
-				System.out.println("This item is being viewed = " + selectedItemPojo.title);
+				System.out.println("This item is being viewed = " + selectedItemPojo.itemID);
 				primerDoc.setItem(selectedItemRow, selectedItemPojo);
 				System.out.println("itemPojo :2: " + selectedItemPojo);
 
@@ -1115,10 +1115,6 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 								+ " relevance " + inRequestProcesserPojo.newERLPojo.artifactKeyPojo.relevance
 								+ " contentType " + inRequestProcesserPojo.newERLPojo.artifactKeyPojo.contentType);
 				}
-				//ItemPojo itemPojoToUpdate = documentToUpdate.getItemByChildArtifactName(
-				//		inRequestProcesserPojo.requestPojo.relevance, 
-				//		inRequestProcesserPojo.requestPojo.artifactName,
-				//		inRequestProcesserPojo.requestPojo.contentType);
 
 				ItemPojo itemPojoToUpdate = documentToUpdate.getChildItemByItemID(inRequestProcesserPojo.requestPojo.itemName);
 
@@ -1153,8 +1149,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 					}
 				}
 
-				if (inRequestProcesserPojo.contentHandlerSpecs.rollupType
-					&& itemPojoToUpdate.status!= null 
+				if (itemPojoToUpdate.status!= null 
 					&& itemPojoToUpdate.status.equalsIgnoreCase(ArtifactPojo.ERLSTAT_DELETE_ROLLUPITEM)) {
 				// Providing a clean up process for rollup artifacts that may clutter in a long period.
 				// The autoarchival process only look at Artifact level status for archiving

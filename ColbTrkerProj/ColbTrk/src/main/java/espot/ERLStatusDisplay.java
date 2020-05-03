@@ -10,6 +10,7 @@ import org.eclipse.swt.widgets.Text;
 
 /**
  * Convenience class that derives the ERL Status text to be displayed
+ * Provides a plug in convenience across UI screens
  * 
  * @author Vibeesh Kamalakannan
  *

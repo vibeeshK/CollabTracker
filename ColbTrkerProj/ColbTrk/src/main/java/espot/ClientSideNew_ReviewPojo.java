@@ -1,7 +1,7 @@
 package espot;
 
 /**
- * Helper class
+ * Helps to capture the New Review from user machine and tracks until its shipped out to server
  *  
  * @author Vibeesh Kamalakannan
  *

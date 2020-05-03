@@ -6,7 +6,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 /**
- * Holds New Review created by the user
+ * Holds New Review created by the user. Simplifies to carry the new review data from user machine side to server
  * 
  * @author Vibeesh Kamalakannan
  *

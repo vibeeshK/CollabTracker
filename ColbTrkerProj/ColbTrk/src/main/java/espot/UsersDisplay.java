@@ -10,6 +10,7 @@ import org.eclipse.swt.widgets.Text;
 
 /**
  * Simplifier class for UsersDisplay with short name and full name listing with option for update
+ * Provides a plug in convenience across UI screens
  * 
  * @author Vibeesh Kamalakannan
  *

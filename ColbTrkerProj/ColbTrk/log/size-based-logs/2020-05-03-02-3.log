@@ -1,0 +1,799 @@
+2020-May-03 14:09:26 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-03 14:09:27 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-03 14:09:27 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-03 14:09:27 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-03 14:09:27 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-03 14:09:27 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503140927
+2020-May-03 14:09:27 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:09:27 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:09:27 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503140927
+2020-May-03 14:09:28 PM [Thread-1] INFO  CommonLogger - At ArtifactsDisplay displayArtifact start 
+2020-May-03 14:09:29 PM [Thread-1] INFO  CommonLogger - CatelogPersistenceManager in setData start
+2020-May-03 14:09:29 PM [Thread-1] INFO  CommonLogger - inArtifactPojos at setArtifactValues is [espot.ERLDownload@449bc91b, espot.ERLDownload@63f904d6, espot.ERLDownload@3621e0ba, espot.ERLDownload@7fb1b89a, espot.ERLDownload@65f86566, espot.ERLDownload@4e8c02bb, espot.ERLDownload@77110fe0, espot.ERLDownload@5161cf0]
+2020-May-03 14:09:29 PM [Thread-1] INFO  CommonLogger - At ArtifactsDisplay DisplayContent Start
+2020-May-03 14:09:33 PM [Thread-1] INFO  CommonLogger - At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload
+2020-May-03 14:09:33 PM [Thread-1] INFO  CommonLogger - At start of startupWithERLpojo GenlReqList_HR
+2020-May-03 14:09:33 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:09:33 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:09:33 PM [Thread-1] INFO  CommonLogger - At xxa displayContent
+2020-May-03 14:09:34 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:09:34 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:09:34 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:09:34 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:09:34 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:09:35 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:09:35 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:09:35 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503025423.json inStandAloneFlag false
+2020-May-03 14:09:35 PM [Thread-1] INFO  CommonLogger - ContentHandlerManager singleton class built at 20200503140935
+2020-May-03 14:09:35 PM [Thread-1] INFO  CommonLogger - GenericGrouper doCommonInit starting up at 20200503140935
+2020-May-03 14:09:35 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:09:35 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:09:35 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503025423.json inStandAloneFlag false
+2020-May-03 14:09:36 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:09:36 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:09:36 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200404015117
+2020-May-03 14:09:36 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:09:36 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200412161120
+2020-May-03 14:09:36 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:09:36 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:09:36 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:09:36 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:09:36 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At ArtifactPrepper initProcess start targetArtifactKeyPojo GenlReg8 inItemID DEMOUSER20200405224038 inNewAuthor null
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReg8
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReg8
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\newartifacts\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReg8_2.json inStandAloneFlag false
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - GenericGrouper doCommonInit starting up at 20200503140941
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503025423.json inStandAloneFlag false
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At ArtifactPrepper initProcess end  useErlDownloadRolledupChild true useActiveDraft false useErlDownloadStandalone false useTemplate false
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At ArtifactPrepper createDraft start 
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At ArtifactMover createDraftFromBaseContent start inDestArtifactPojo is GenlReg8
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReg8
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At start of startupWithERLpojo GenlReg8
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:09:41 PM [Thread-1] INFO  CommonLogger - At xxa displayContent
+2020-May-03 14:09:45 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:09:45 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:09:45 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:09:45 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:09:45 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141318
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141318
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger -  Catalog Display Started at 20200503141318
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141318
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:13:18 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141318
+2020-May-03 14:13:20 PM [Thread-1] INFO  CommonLogger - At ArtifactsDisplay displayArtifact start 
+2020-May-03 14:13:20 PM [Thread-1] INFO  CommonLogger - CatelogPersistenceManager in setData start
+2020-May-03 14:13:20 PM [Thread-1] INFO  CommonLogger - inArtifactPojos at setArtifactValues is [espot.ERLDownload@761aba06, espot.ERLDownload@393f48ab, espot.ERLDownload@6fe5e8c8, espot.ERLDownload@bf94f01, espot.ERLDownload@28101ef2, espot.ERLDownload@6b29614b, espot.ERLDownload@2bca774e, espot.ERLDownload@6a0aa471]
+2020-May-03 14:13:20 PM [Thread-1] INFO  CommonLogger - At ArtifactsDisplay DisplayContent Start
+2020-May-03 14:13:27 PM [Thread-1] INFO  CommonLogger - At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload
+2020-May-03 14:13:27 PM [Thread-1] INFO  CommonLogger - At start of startupWithERLpojo GenlReqList_HR
+2020-May-03 14:13:27 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:13:27 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:13:28 PM [Thread-1] INFO  CommonLogger - At xxa displayContent
+2020-May-03 14:13:28 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:13:28 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:13:28 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:13:28 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:13:28 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:13:30 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:13:30 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:13:30 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503025423.json inStandAloneFlag false
+2020-May-03 14:13:30 PM [Thread-1] INFO  CommonLogger - ContentHandlerManager singleton class built at 20200503141330
+2020-May-03 14:13:30 PM [Thread-1] INFO  CommonLogger - GenericGrouper doCommonInit starting up at 20200503141330
+2020-May-03 14:13:30 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:13:30 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:13:30 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503025423.json inStandAloneFlag false
+2020-May-03 14:13:30 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:13:30 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:13:30 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200404015117
+2020-May-03 14:13:31 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:13:31 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200412161120
+2020-May-03 14:13:31 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:13:31 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:13:31 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:13:31 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:13:31 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:13:43 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:13:43 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:13:43 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:13:43 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:13:43 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:14:16 PM [Thread-1] INFO  CommonLogger - NewReviewPojo createNewReviewDocument newReviewElement text: inactivating item
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger -  ClientOrchestrator Started at 20200503141427
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinPlatformRoot
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-03 14:14:27 PM [main] INFO  CommonLogger - ColbTrkClientOrchestrator being set up - logging set to info at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - ColbTrkClientOrchestrator started0.2 - logging set to info
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - ColbTrkClientOrchestrator started2 - logging set to info at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - DesktopRootProcessor contructed at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinContentRoot
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - ContentDownloader Started at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - ContntHandlrTriggr constructed at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:14:27 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200503141427
+2020-May-03 14:14:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:14:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:14:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:27 PM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-03 14:14:27 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200503141427
+2020-May-03 14:14:27 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200503141427
+2020-May-03 14:14:27 PM [Thread-5] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:27 PM [Thread-5] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:14:27 PM [Thread-5] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:14:27 PM [Thread-5] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141427
+2020-May-03 14:14:28 PM [Thread-4] INFO  CommonLogger - Uploader uploadContenAndRequestFiles complete for C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\newreviews\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_DEMOUSER20200405224038_ReviewBy_DEMOUSER_at_20200503141416
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200503141518
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinPlatformRoot
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-03 14:15:18 PM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200503141518
+2020-May-03 14:15:20 PM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinContentRoot
+2020-May-03 14:15:20 PM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoWinContentRoot_RequestsTracker.json at 20200503141520
+2020-May-03 14:15:20 PM [Thread-2] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:15:20 PM [Thread-2] INFO  CommonLogger - At appendItemReviewsDoc start Appending:::: DEMOUSER20200405224038 new review:::: ***ReviewBy_DEMOUSER_at_20200503141416 : 
+inactivating item
+2020-May-03 14:15:20 PM [Thread-2] INFO  CommonLogger - At appendItemReviewsPojo start for inItemID: DEMOUSER20200405224038 inCondensedNewItemReview: ***ReviewBy_DEMOUSER_at_20200503141416 : 
+inactivating item
+2020-May-03 14:15:20 PM [Thread-2] INFO  CommonLogger - At appendItemReviewsDoc start Appending:::: DEMOUSER20200405224038 new review:::: ***SubmittedBy_DEMOUSER_At_20200503141427:
+ newERLStatus INACTIVE
+2020-May-03 14:15:20 PM [Thread-2] INFO  CommonLogger - At appendItemReviewsPojo start for inItemID: DEMOUSER20200405224038 inCondensedNewItemReview: ***SubmittedBy_DEMOUSER_At_20200503141427:
+ newERLStatus INACTIVE
+2020-May-03 14:15:20 PM [Thread-2] INFO  CommonLogger - ContentHandlerManager singleton class built at 20200503141520
+2020-May-03 14:15:20 PM [Thread-2] INFO  CommonLogger - At GenericGrouper processContentAtWeb start for GenlReqList_HR
+2020-May-03 14:15:20 PM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. New catalogpublishFile C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot\catalogpublishfolder\catalogDbPublishedCopyOfDemoWinContentRoot20200503141520
+2020-May-03 14:15:20 PM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. espot.ReqTrackItem@64983dc5
+2020-May-03 14:15:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200503141527
+2020-May-03 14:15:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141527
+2020-May-03 14:15:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141527
+2020-May-03 14:15:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141527
+2020-May-03 14:15:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:15:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141527
+2020-May-03 14:15:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141527
+2020-May-03 14:15:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200503141527
+2020-May-03 14:15:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141527
+2020-May-03 14:15:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:15:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:15:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141527
+2020-May-03 14:15:27 PM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-03 14:15:28 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200503141528
+2020-May-03 14:15:28 PM [Thread-4] INFO  CommonLogger - At ArtifactMover downloadTo start inSourceFilePath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503141520.json inDestERLDownload is GenlReqList_HR
+2020-May-03 14:15:28 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200503141528
+2020-May-03 14:15:28 PM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141528
+2020-May-03 14:15:28 PM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:15:28 PM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:15:28 PM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141528
+2020-May-03 14:15:28 PM [Thread-4] INFO  CommonLogger - ResponseChecker checkResponsesOfReviewsOfOneRoot complete for DEMOUSER20200405224038 of GenlReqList_HR
+2020-May-03 14:15:37 PM [Thread-1] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141537
+2020-May-03 14:15:37 PM [Thread-1] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:15:37 PM [Thread-1] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:15:37 PM [Thread-1] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141537
+2020-May-03 14:15:37 PM [Thread-1] INFO  CommonLogger - CatelogPersistenceManager in setData start
+2020-May-03 14:15:37 PM [Thread-1] INFO  CommonLogger - inArtifactPojos at setArtifactValues is [espot.ERLDownload@18cc56ea, espot.ERLDownload@34ce90eb, espot.ERLDownload@5e654df0, espot.ERLDownload@49de5f5, espot.ERLDownload@7e1c988a, espot.ERLDownload@3e15066a, espot.ERLDownload@4aebd695, espot.ERLDownload@21b22070]
+2020-May-03 14:15:37 PM [Thread-1] INFO  CommonLogger - At ArtifactsDisplay DisplayContent Start
+2020-May-03 14:15:39 PM [Thread-1] INFO  CommonLogger - At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload
+2020-May-03 14:15:39 PM [Thread-1] INFO  CommonLogger - At start of startupWithERLpojo GenlReqList_HR
+2020-May-03 14:15:39 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:15:39 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:15:39 PM [Thread-1] INFO  CommonLogger - At xxa displayContent
+2020-May-03 14:15:40 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:15:40 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:15:40 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:15:40 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:15:40 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503141520.json inStandAloneFlag false
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - GenericGrouper doCommonInit starting up at 20200503141543
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503141520.json inStandAloneFlag false
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200404015117
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200412161120
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:15:43 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:15:50 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:15:50 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:15:50 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:15:50 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:15:50 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:16:20 PM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. Nothing new to publish 
+2020-May-03 14:16:20 PM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. espot.ReqTrackItem@64983dc5
+2020-May-03 14:16:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200503141627
+2020-May-03 14:16:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141627
+2020-May-03 14:16:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141627
+2020-May-03 14:16:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141627
+2020-May-03 14:16:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:16:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141627
+2020-May-03 14:16:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141627
+2020-May-03 14:16:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200503141627
+2020-May-03 14:16:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141627
+2020-May-03 14:16:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:16:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:16:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141627
+2020-May-03 14:16:27 PM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-03 14:16:28 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200503141628
+2020-May-03 14:16:28 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200503141628
+2020-May-03 14:16:28 PM [Thread-7] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141628
+2020-May-03 14:16:28 PM [Thread-7] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:16:28 PM [Thread-7] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:16:28 PM [Thread-7] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141628
+2020-May-03 14:17:20 PM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. Nothing new to publish 
+2020-May-03 14:17:20 PM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. espot.ReqTrackItem@64983dc5
+2020-May-03 14:17:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200503141727
+2020-May-03 14:17:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141727
+2020-May-03 14:17:27 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141727
+2020-May-03 14:17:28 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141727
+2020-May-03 14:17:28 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:17:28 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141728
+2020-May-03 14:17:28 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141728
+2020-May-03 14:17:28 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200503141728
+2020-May-03 14:17:28 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141728
+2020-May-03 14:17:28 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:17:28 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:17:28 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141728
+2020-May-03 14:17:28 PM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-03 14:17:28 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200503141728
+2020-May-03 14:17:28 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200503141728
+2020-May-03 14:17:28 PM [Thread-8] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141728
+2020-May-03 14:17:28 PM [Thread-8] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:17:28 PM [Thread-8] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:17:28 PM [Thread-8] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503141728
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142634
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142634
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger -  Catalog Display Started at 20200503142634
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142634
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:26:34 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142634
+2020-May-03 14:26:36 PM [Thread-1] INFO  CommonLogger - At ArtifactsDisplay displayArtifact start 
+2020-May-03 14:26:36 PM [Thread-1] INFO  CommonLogger - CatelogPersistenceManager in setData start
+2020-May-03 14:26:36 PM [Thread-1] INFO  CommonLogger - inArtifactPojos at setArtifactValues is [espot.ERLDownload@3b09e096, espot.ERLDownload@5df53845, espot.ERLDownload@4e65b784, espot.ERLDownload@3fc9c2dd, espot.ERLDownload@4b3098e2, espot.ERLDownload@3f73a6d1, espot.ERLDownload@5cc9ff2c, espot.ERLDownload@2d671142]
+2020-May-03 14:26:36 PM [Thread-1] INFO  CommonLogger - At ArtifactsDisplay DisplayContent Start
+2020-May-03 14:26:47 PM [Thread-1] INFO  CommonLogger - At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload
+2020-May-03 14:26:47 PM [Thread-1] INFO  CommonLogger - At start of startupWithERLpojo GenlReqList_HR
+2020-May-03 14:26:47 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:26:47 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:26:47 PM [Thread-1] INFO  CommonLogger - At xxa displayContent
+2020-May-03 14:26:47 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:26:47 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:26:47 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:26:47 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:26:47 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:26:49 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:26:49 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:26:49 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503141520.json inStandAloneFlag false
+2020-May-03 14:26:49 PM [Thread-1] INFO  CommonLogger - ContentHandlerManager singleton class built at 20200503142649
+2020-May-03 14:26:49 PM [Thread-1] INFO  CommonLogger - GenericGrouper doCommonInit starting up at 20200503142649
+2020-May-03 14:26:49 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:26:49 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:26:49 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503141520.json inStandAloneFlag false
+2020-May-03 14:26:49 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:26:49 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:26:49 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200404015117
+2020-May-03 14:26:50 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:26:50 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200412161120
+2020-May-03 14:26:50 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:26:50 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:26:50 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:26:50 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:26:50 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:27:31 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:27:31 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:27:31 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:27:31 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:27:31 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:28:24 PM [Thread-1] INFO  CommonLogger - NewReviewPojo createNewReviewDocument newReviewElement text: delting item DEMOUSER20200405224038
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger -  ClientOrchestrator Started at 20200503142901
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinPlatformRoot
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-03 14:29:01 PM [main] INFO  CommonLogger - ColbTrkClientOrchestrator being set up - logging set to info at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - ColbTrkClientOrchestrator started0.2 - logging set to info
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - ColbTrkClientOrchestrator started2 - logging set to info at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - DesktopRootProcessor contructed at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinContentRoot
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - ContentDownloader Started at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - ContntHandlrTriggr constructed at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142901
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:29:01 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142901
+2020-May-03 14:29:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200503142901
+2020-May-03 14:29:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142901
+2020-May-03 14:29:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142901
+2020-May-03 14:29:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142901
+2020-May-03 14:29:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:29:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:29:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142901
+2020-May-03 14:29:01 PM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-03 14:29:02 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200503142902
+2020-May-03 14:29:02 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200503142902
+2020-May-03 14:29:02 PM [Thread-5] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142902
+2020-May-03 14:29:02 PM [Thread-5] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:29:02 PM [Thread-5] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:29:02 PM [Thread-5] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503142902
+2020-May-03 14:29:02 PM [Thread-4] INFO  CommonLogger - Uploader uploadContenAndRequestFiles complete for C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\newreviews\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_DEMOUSER20200405224038_ReviewBy_DEMOUSER_at_20200503142824
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200503142925
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinPlatformRoot
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-03 14:29:25 PM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200503142925
+2020-May-03 14:29:27 PM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinContentRoot
+2020-May-03 14:29:27 PM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoWinContentRoot_RequestsTracker.json at 20200503142927
+2020-May-03 14:29:27 PM [Thread-2] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:29:27 PM [Thread-2] INFO  CommonLogger - At appendItemReviewsDoc start Appending:::: DEMOUSER20200405224038 new review:::: ***ReviewBy_DEMOUSER_at_20200503142824 : 
+delting item DEMOUSER20200405224038
+2020-May-03 14:29:27 PM [Thread-2] INFO  CommonLogger - At appendItemReviewsPojo start for inItemID: DEMOUSER20200405224038 inCondensedNewItemReview: ***ReviewBy_DEMOUSER_at_20200503142824 : 
+delting item DEMOUSER20200405224038
+2020-May-03 14:29:27 PM [Thread-2] INFO  CommonLogger - At appendItemReviewsDoc start Appending:::: DEMOUSER20200405224038 new review:::: ***SubmittedBy_DEMOUSER_at_20200503142902:
+ newERLStatus DELETE_ROLLUPITEM
+2020-May-03 14:29:27 PM [Thread-2] INFO  CommonLogger - At appendItemReviewsPojo start for inItemID: DEMOUSER20200405224038 inCondensedNewItemReview: ***SubmittedBy_DEMOUSER_at_20200503142902:
+ newERLStatus DELETE_ROLLUPITEM
+2020-May-03 14:29:28 PM [Thread-2] INFO  CommonLogger - ContentHandlerManager singleton class built at 20200503142928
+2020-May-03 14:29:28 PM [Thread-2] INFO  CommonLogger - At GenericGrouper processContentAtWeb start for GenlReqList_HR
+2020-May-03 14:29:28 PM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. New catalogpublishFile C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot\catalogpublishfolder\catalogDbPublishedCopyOfDemoWinContentRoot20200503142928
+2020-May-03 14:29:28 PM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. espot.ReqTrackItem@42e8042a
+2020-May-03 14:30:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200503143001
+2020-May-03 14:30:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143001
+2020-May-03 14:30:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143001
+2020-May-03 14:30:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143001
+2020-May-03 14:30:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:30:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143002
+2020-May-03 14:30:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143002
+2020-May-03 14:30:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200503143002
+2020-May-03 14:30:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143002
+2020-May-03 14:30:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:30:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:30:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143002
+2020-May-03 14:30:02 PM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-03 14:30:02 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200503143002
+2020-May-03 14:30:02 PM [Thread-4] INFO  CommonLogger - At ArtifactMover downloadTo start inSourceFilePath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503142928.json inDestERLDownload is GenlReqList_HR
+2020-May-03 14:30:02 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200503143002
+2020-May-03 14:30:02 PM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143002
+2020-May-03 14:30:02 PM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:30:02 PM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:30:02 PM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143002
+2020-May-03 14:30:02 PM [Thread-4] INFO  CommonLogger - ResponseChecker checkResponsesOfReviewsOfOneRoot complete for DEMOUSER20200405224038 of GenlReqList_HR
+2020-May-03 14:30:18 PM [Thread-1] INFO  CommonLogger - At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload
+2020-May-03 14:30:18 PM [Thread-1] INFO  CommonLogger - At start of startupWithERLpojo GenlReqList_HR
+2020-May-03 14:30:18 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:30:18 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:30:18 PM [Thread-1] INFO  CommonLogger - At xxa displayContent
+2020-May-03 14:30:18 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:30:18 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:30:18 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:30:18 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:30:18 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503142928.json inStandAloneFlag false
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - GenericGrouper doCommonInit starting up at 20200503143021
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503142928.json inStandAloneFlag false
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200404015117
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200412161120
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:30:21 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:30:27 PM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. Nothing new to publish 
+2020-May-03 14:30:27 PM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. espot.ReqTrackItem@42e8042a
+2020-May-03 14:30:53 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:30:53 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:30:53 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:30:53 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:30:53 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:31:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200503143101
+2020-May-03 14:31:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143101
+2020-May-03 14:31:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143101
+2020-May-03 14:31:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143102
+2020-May-03 14:31:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:31:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143102
+2020-May-03 14:31:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143102
+2020-May-03 14:31:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200503143102
+2020-May-03 14:31:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143102
+2020-May-03 14:31:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:31:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:31:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143102
+2020-May-03 14:31:02 PM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-03 14:31:02 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200503143102
+2020-May-03 14:31:02 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200503143102
+2020-May-03 14:31:02 PM [Thread-7] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143102
+2020-May-03 14:31:02 PM [Thread-7] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:31:02 PM [Thread-7] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:31:02 PM [Thread-7] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143102
+2020-May-03 14:31:27 PM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. Nothing new to publish 
+2020-May-03 14:31:27 PM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. espot.ReqTrackItem@42e8042a
+2020-May-03 14:32:01 PM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200503143201
+2020-May-03 14:32:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143202
+2020-May-03 14:32:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143202
+2020-May-03 14:32:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143202
+2020-May-03 14:32:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:32:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143202
+2020-May-03 14:32:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143202
+2020-May-03 14:32:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200503143202
+2020-May-03 14:32:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143202
+2020-May-03 14:32:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:32:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:32:02 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143202
+2020-May-03 14:32:02 PM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-03 14:32:02 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200503143202
+2020-May-03 14:32:02 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200503143202
+2020-May-03 14:32:02 PM [Thread-8] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143202
+2020-May-03 14:32:02 PM [Thread-8] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:32:02 PM [Thread-8] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:32:02 PM [Thread-8] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143202
+2020-May-03 14:32:27 PM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. Nothing new to publish 
+2020-May-03 14:32:27 PM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. espot.ReqTrackItem@42e8042a
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143709
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143709
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger -  Catalog Display Started at 20200503143709
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143709
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:37:09 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143709
+2020-May-03 14:37:11 PM [Thread-1] INFO  CommonLogger - At ArtifactsDisplay displayArtifact start 
+2020-May-03 14:37:11 PM [Thread-1] INFO  CommonLogger - CatelogPersistenceManager in setData start
+2020-May-03 14:37:11 PM [Thread-1] INFO  CommonLogger - inArtifactPojos at setArtifactValues is [espot.ERLDownload@61257d65, espot.ERLDownload@9ae8197, espot.ERLDownload@781a530, espot.ERLDownload@7735233f, espot.ERLDownload@3db1a6e9, espot.ERLDownload@40ee2af1, espot.ERLDownload@4accaff9, espot.ERLDownload@14be4144]
+2020-May-03 14:37:11 PM [Thread-1] INFO  CommonLogger - At ArtifactsDisplay DisplayContent Start
+2020-May-03 14:37:15 PM [Thread-1] INFO  CommonLogger - At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload
+2020-May-03 14:37:15 PM [Thread-1] INFO  CommonLogger - At start of startupWithERLpojo GenlReqList_HR
+2020-May-03 14:37:15 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:37:15 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:37:15 PM [Thread-1] INFO  CommonLogger - At xxa displayContent
+2020-May-03 14:37:15 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:37:16 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:37:16 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:37:16 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:37:16 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:37:19 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:37:19 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:37:19 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503142928.json inStandAloneFlag false
+2020-May-03 14:37:19 PM [Thread-1] INFO  CommonLogger - ContentHandlerManager singleton class built at 20200503143719
+2020-May-03 14:37:19 PM [Thread-1] INFO  CommonLogger - GenericGrouper doCommonInit starting up at 20200503143719
+2020-May-03 14:37:19 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:37:19 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:37:19 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503142928.json inStandAloneFlag false
+2020-May-03 14:37:19 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:37:19 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:37:19 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200404015117
+2020-May-03 14:37:19 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:37:20 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200412161120
+2020-May-03 14:37:20 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:37:20 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:37:20 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:37:20 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:37:20 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:37:28 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:37:28 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:37:28 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:37:28 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:37:28 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200405224038
+2020-May-03 14:39:00 PM [Thread-1] INFO  CommonLogger - NewReviewPojo createNewReviewDocument newReviewElement text: dummy update for triggering delete
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger -  ClientOrchestrator Started at 20200503143913
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinPlatformRoot
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-03 14:39:13 PM [main] INFO  CommonLogger - ColbTrkClientOrchestrator being set up - logging set to info at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - ColbTrkClientOrchestrator started0.2 - logging set to info
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - ColbTrkClientOrchestrator started2 - logging set to info at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - DesktopRootProcessor contructed at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinContentRoot
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - ContentDownloader Started at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - ContntHandlrTriggr constructed at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:39:13 PM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200503143913
+2020-May-03 14:39:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:39:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:39:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-03 14:39:13 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200503143913
+2020-May-03 14:39:13 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200503143913
+2020-May-03 14:39:13 PM [Thread-5] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-5] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:39:13 PM [Thread-5] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:39:13 PM [Thread-5] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503143913
+2020-May-03 14:39:13 PM [Thread-4] INFO  CommonLogger - Uploader uploadContenAndRequestFiles complete for C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\newreviews\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_DEMOUSER20200405224038_ReviewBy_DEMOUSER_at_20200503143900
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200503143922
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinPlatformRoot
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-03 14:39:22 PM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200503143922
+2020-May-03 14:39:24 PM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinContentRoot
+2020-May-03 14:39:24 PM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoWinContentRoot_RequestsTracker.json at 20200503143924
+2020-May-03 14:39:24 PM [Thread-2] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:39:24 PM [Thread-2] INFO  CommonLogger - At appendItemReviewsDoc start Appending:::: DEMOUSER20200405224038 new review:::: ***ReviewBy_DEMOUSER_at_20200503143900 : 
+dummy update for triggering delete
+2020-May-03 14:39:24 PM [Thread-2] INFO  CommonLogger - At appendItemReviewsPojo start for inItemID: DEMOUSER20200405224038 inCondensedNewItemReview: ***ReviewBy_DEMOUSER_at_20200503143900 : 
+dummy update for triggering delete
+2020-May-03 14:39:24 PM [Thread-2] INFO  CommonLogger - At appendItemReviewsDoc start Appending:::: DEMOUSER20200405224038 new review:::: ***SubmittedBy_DEMOUSER_at_20200503143913:
+ reassignedRequestor ADMIN
+2020-May-03 14:39:24 PM [Thread-2] INFO  CommonLogger - At appendItemReviewsPojo start for inItemID: DEMOUSER20200405224038 inCondensedNewItemReview: ***SubmittedBy_DEMOUSER_at_20200503143913:
+ reassignedRequestor ADMIN
+2020-May-03 14:39:24 PM [Thread-2] INFO  CommonLogger - ContentHandlerManager singleton class built at 20200503143924
+2020-May-03 14:39:24 PM [Thread-2] INFO  CommonLogger - At GenericGrouper processContentAtWeb start for GenlReqList_HR
+2020-May-03 14:39:25 PM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. New catalogpublishFile C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot\catalogpublishfolder\catalogDbPublishedCopyOfDemoWinContentRoot20200503143925
+2020-May-03 14:39:25 PM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. espot.ReqTrackItem@64983dc5
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200503144013
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144013
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144013
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144013
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144013
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144013
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200503144013
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144013
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144013
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200503144013
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - At ArtifactMover downloadTo start inSourceFilePath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503143924.json inDestERLDownload is GenlReqList_HR
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200503144013
+2020-May-03 14:40:13 PM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144013
+2020-May-03 14:40:13 PM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:40:13 PM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:40:13 PM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144013
+2020-May-03 14:40:13 PM [Thread-4] INFO  CommonLogger - ResponseChecker checkResponsesOfReviewsOfOneRoot complete for DEMOUSER20200405224038 of GenlReqList_HR
+2020-May-03 14:40:24 PM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. Nothing new to publish 
+2020-May-03 14:40:24 PM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. espot.ReqTrackItem@64983dc5
+2020-May-03 14:40:30 PM [Thread-1] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144030
+2020-May-03 14:40:30 PM [Thread-1] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:40:30 PM [Thread-1] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:40:30 PM [Thread-1] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144030
+2020-May-03 14:40:30 PM [Thread-1] INFO  CommonLogger - CatelogPersistenceManager in setData start
+2020-May-03 14:40:30 PM [Thread-1] INFO  CommonLogger - inArtifactPojos at setArtifactValues is [espot.ERLDownload@101b7ede, espot.ERLDownload@4d1931b7, espot.ERLDownload@7d1853cc, espot.ERLDownload@6b86b825, espot.ERLDownload@20a0c605, espot.ERLDownload@24b0df2f, espot.ERLDownload@1b097e46, espot.ERLDownload@4590ba92]
+2020-May-03 14:40:30 PM [Thread-1] INFO  CommonLogger - At ArtifactsDisplay DisplayContent Start
+2020-May-03 14:40:33 PM [Thread-1] INFO  CommonLogger - At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload
+2020-May-03 14:40:33 PM [Thread-1] INFO  CommonLogger - At start of startupWithERLpojo GenlReqList_HR
+2020-May-03 14:40:33 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:40:33 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:40:33 PM [Thread-1] INFO  CommonLogger - At xxa displayContent
+2020-May-03 14:40:33 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:40:33 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:40:33 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:40:33 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:40:33 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503143924.json inStandAloneFlag false
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - GenericGrouper doCommonInit starting up at 20200503144035
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is GenlReqList_HR
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo GenlReqList_HR
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\OpenDeClouderUserArtifacts\clientMc\downloadedcontent\DemoWinContentRoot\MyOrg\Divisions\HR\GenlReqList_HR_20200503143924.json inStandAloneFlag false
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200404015117
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200412161120
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:40:35 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReqList_HR
+2020-May-03 14:40:44 PM [Thread-1] INFO  CommonLogger - ReviewHandler initReviewHandler starting for GenlReqList_HR
+2020-May-03 14:40:44 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:40:44 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:40:44 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200412161120
+2020-May-03 14:40:44 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: DEMOUSER20200412161120
+2020-May-03 14:41:05 PM [Thread-1] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200503144105
+2020-May-03 14:41:08 PM [Thread-1] INFO  CommonLogger - At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload
+2020-May-03 14:41:08 PM [Thread-1] INFO  CommonLogger - At start of startupWithERLpojo GenlReg8
+2020-May-03 14:41:08 PM [Thread-1] INFO  CommonLogger - At buildArtifactAllReviewsPojoFromFromDoc start [#document: null]
+2020-May-03 14:41:08 PM [Thread-1] INFO  CommonLogger - At getItemAllReviews start for inItemID: GenlReq5
+2020-May-03 14:41:08 PM [Thread-1] INFO  CommonLogger - At xxa displayContent
+2020-May-03 14:41:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200503144113
+2020-May-03 14:41:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144113
+2020-May-03 14:41:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144113
+2020-May-03 14:41:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144113
+2020-May-03 14:41:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-03 14:41:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144113
+2020-May-03 14:41:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144113
+2020-May-03 14:41:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200503144113
+2020-May-03 14:41:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200503144113
+2020-May-03 14:41:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-03 14:41:13 PM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot

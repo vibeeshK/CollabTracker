@@ -653,7 +653,7 @@ public class RequestProcessor {
 
 		String commentPrefix =  "***SubmittedBy_" 
 								+ inRequestProcesserPojo.requestPojo.requestor
-								+"_At_" + inRequestProcesserPojo.requestPojo.uploadedTimeStamp + ":\n";
+								+"_at_" + inRequestProcesserPojo.requestPojo.uploadedTimeStamp + ":\n";
 
 		if (incomingItemNewReviewPojo.reassignedRequestor != null && !incomingItemNewReviewPojo.reassignedRequestor.isEmpty()) {
 			System.out.println("reassignment processing for requestor change");
