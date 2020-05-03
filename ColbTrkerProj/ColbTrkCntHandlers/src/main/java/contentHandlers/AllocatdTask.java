@@ -3,9 +3,9 @@ package contentHandlers;
 import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.widgets.Group;
 
-import clobTrk.ContentHandlerSpecs;
-import clobTrk.GenericItemHandler;
-import clobTrk.ItemPojo;
+import colbTrk.ContentHandlerSpecs;
+import colbTrk.GenericItemHandler;
+import colbTrk.ItemPojo;
 
 /**
  * This content handler helps to allocate a new task item to a content creator 

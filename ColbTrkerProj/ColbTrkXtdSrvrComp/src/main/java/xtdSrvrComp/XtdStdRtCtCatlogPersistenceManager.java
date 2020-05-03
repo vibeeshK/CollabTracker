@@ -4,9 +4,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import clobTrk.ArtifactKeyPojo;
-import clobTrk.ErrorHandler;
-import clobTrk.RootPojo;
+import colbTrk.ArtifactKeyPojo;
+import colbTrk.ErrorHandler;
+import colbTrk.RootPojo;
 
 /**
  * This class maintains the sql queries for the standard extended processes

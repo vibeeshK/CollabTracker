@@ -1,6 +1,6 @@
 package contentHandlers;
 
-import clobTrk.ItemPojo;
+import colbTrk.ItemPojo;
 
 /**
  * Data holder for an idea item

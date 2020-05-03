@@ -1,7 +1,7 @@
 package contentHandlers;
 
-import clobTrk.GenericGrouperDocPojo;
-import clobTrk.ItemPojo;
+import colbTrk.GenericGrouperDocPojo;
+import colbTrk.ItemPojo;
 
 /**
  * This content handler helps to deck up contents that implements decking interface

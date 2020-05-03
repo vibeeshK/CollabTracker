@@ -1,7 +1,7 @@
 package contentHandlers;
 
-import clobTrk.GenericItemDocPojo;
-import clobTrk.ItemPojo;
+import colbTrk.GenericItemDocPojo;
+import colbTrk.ItemPojo;
 
 /**
  * json doc holder for the maintenance of contributing user detail item document

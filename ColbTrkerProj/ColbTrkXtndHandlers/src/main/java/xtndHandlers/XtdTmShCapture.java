@@ -1,7 +1,7 @@
 package xtndHandlers;
 
-import clobTrk.ArtifactPojo;
-import clobTrk.CommonData;
+import colbTrk.ArtifactPojo;
+import colbTrk.CommonData;
 import contentHandlers.TimeShCapture;
 import contentHandlers.TimeShCapturePojo;
 import contentHandlers.TimeShTriggerPojo;

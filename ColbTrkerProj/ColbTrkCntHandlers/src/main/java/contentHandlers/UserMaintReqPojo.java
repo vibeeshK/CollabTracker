@@ -1,7 +1,7 @@
 package contentHandlers;
 
-import clobTrk.ItemPojo;
-import clobTrk.UserPojo;
+import colbTrk.ItemPojo;
+import colbTrk.UserPojo;
 
 /**
  * Data holder for a contributing user detail item

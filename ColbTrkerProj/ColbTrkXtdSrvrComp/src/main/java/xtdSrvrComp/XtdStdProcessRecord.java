@@ -1,6 +1,6 @@
 package xtdSrvrComp;
 
-import clobTrk.ArtifactKeyPojo;
+import colbTrk.ArtifactKeyPojo;
 
 /**
  * Db record holder for standard processing to track status

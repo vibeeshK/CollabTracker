@@ -2,7 +2,7 @@ package xtdSrvrComp;
 
 import java.util.ArrayList;
 
-import clobTrk.ArtifactKeyPojo;
+import colbTrk.ArtifactKeyPojo;
 
 /**
  * Db record holder for Decking grouper Parent to track status

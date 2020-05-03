@@ -1,8 +1,8 @@
 package xtdSrvrComp;
 
-import clobTrk.ArtifactPojo;
-import clobTrk.CommonData;
-import clobTrk.ContentHandlerInterface;
+import colbTrk.ArtifactPojo;
+import colbTrk.CommonData;
+import colbTrk.ContentHandlerInterface;
 
 /**
  * Interface mandate for extended processes

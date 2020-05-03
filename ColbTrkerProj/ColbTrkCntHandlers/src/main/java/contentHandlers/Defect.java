@@ -10,10 +10,10 @@ import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Text;
 
-import clobTrk.ArtifactKeyPojo;
-import clobTrk.ContentHandlerSpecs;
-import clobTrk.GenericItemHandler;
-import clobTrk.ItemPojo;
+import colbTrk.ArtifactKeyPojo;
+import colbTrk.ContentHandlerSpecs;
+import colbTrk.GenericItemHandler;
+import colbTrk.ItemPojo;
 
 /**
  * This content handler helps to log a defect against a project task

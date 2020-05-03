@@ -2,8 +2,8 @@ package contentHandlers;
 
 import java.util.ArrayList;
 
-import clobTrk.GenericGrouperDocPojo;
-import clobTrk.ItemPojo;
+import colbTrk.GenericGrouperDocPojo;
+import colbTrk.ItemPojo;
 
 /**
  * json doc holder for Idea grouper

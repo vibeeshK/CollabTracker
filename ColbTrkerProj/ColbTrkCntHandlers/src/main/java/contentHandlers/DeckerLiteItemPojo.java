@@ -3,7 +3,7 @@ package contentHandlers;
 import java.util.Date;
 import java.util.HashMap;
 
-import clobTrk.ItemPojo;
+import colbTrk.ItemPojo;
 
 /**
  * json doc holder for a deckerLite item
