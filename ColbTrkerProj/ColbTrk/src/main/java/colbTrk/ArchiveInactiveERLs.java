@@ -94,7 +94,7 @@ public class ArchiveInactiveERLs {
 		if (inactiveERLArchivalCount > 0) {
 			String catalogpublishFolder = rootPojo.rootString
 					+ rootPojo.fileSeparator
-					+ commons.getServerSideSideCatalogDbPublishFolderOfRoot();
+					+ commons.getServerSideSideCatalogDbPublishFolderOfRoot(rootPojo.fileSeparator);
 			
 			String catalogpublishFile = catalogpublishFolder
 					+ rootPojo.fileSeparator

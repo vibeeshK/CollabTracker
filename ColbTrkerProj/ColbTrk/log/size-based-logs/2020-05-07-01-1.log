@@ -1,0 +1,1032 @@
+2020-May-04 00:34:12 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-04 00:34:12 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 00:34:12 AM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-04 00:34:12 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-04 00:34:12 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 00:34:12 AM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-04 00:34:12 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-04 00:34:12 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 00:34:12 AM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-04 00:34:12 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-04 00:34:12 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 00:34:12 AM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-04 00:34:12 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-04 00:34:12 AM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200504003412
+2020-May-04 00:34:14 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShContentRoot
+2020-May-04 00:34:14 AM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoGShContentRoot_RequestsTracker.json at 20200504003414
+2020-May-04 00:34:14 AM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-04 00:34:14 AM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-04 00:34:17 AM [Thread-2] INFO  CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+}
+2020-May-04 00:34:17 AM [Thread-2] ERROR CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+} at 20200504003417
+2020-May-04 00:34:17 AM [Thread-2] ERROR CommonLogger - java.lang.Exception: error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+} at 20200504003417
+2020-May-04 00:34:20 AM [Thread-2] ERROR CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder
+com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+}
+	at com.google.api.client.googleapis.json.GoogleJsonResponseException.from(GoogleJsonResponseException.java:150) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:113) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:40) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest$1.interceptResponse(AbstractGoogleClientRequest.java:417) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1132) ~[google-http-client-1.28.0.jar:?]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:515) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:448) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.execute(AbstractGoogleClientRequest.java:565) ~[google-api-client-1.28.0.jar:1.28.0]
+	at remoteAccessers.GDriveShAccesser.createFolderPathFromCanoniPostString(GDriveShAccesser.java:305) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.createFolderpath(GDriveShAccesser.java:268) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.createFolderOfFileIfDontExist(GDriveShAccesser.java:225) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.uploadToRemote(GDriveShAccesser.java:499) [ColbTrkRemoteAccessers.jar!/:?]
+	at colbTrk.RequestProcessor.processRequestsOfOneRoot(RequestProcessor.java:458) [classes/:?]
+	at colbTrk.MasterRootProcessor.run(MasterRootProcessor.java:71) [classes/:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_171]
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200504003709
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-04 00:37:09 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-04 00:37:10 AM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-04 00:37:10 AM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-04 00:37:10 AM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-04 00:37:12 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShPlatformRoot
+2020-May-04 00:37:15 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-04 00:37:15 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 00:37:15 AM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-04 00:37:15 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-04 00:37:15 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 00:37:15 AM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-04 00:37:15 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-04 00:37:15 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 00:37:15 AM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-04 00:37:15 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-04 00:37:15 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 00:37:15 AM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-04 00:37:15 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-04 00:37:15 AM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200504003715
+2020-May-04 00:37:17 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShContentRoot
+2020-May-04 00:37:17 AM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoGShContentRoot_RequestsTracker.json at 20200504003717
+2020-May-04 00:37:17 AM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-04 00:37:17 AM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-04 00:37:19 AM [Thread-2] INFO  CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+}
+2020-May-04 00:37:19 AM [Thread-2] ERROR CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+} at 20200504003719
+2020-May-04 00:37:19 AM [Thread-2] ERROR CommonLogger - java.lang.Exception: error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+} at 20200504003719
+2020-May-04 00:37:21 AM [Thread-2] ERROR CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder
+com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+}
+	at com.google.api.client.googleapis.json.GoogleJsonResponseException.from(GoogleJsonResponseException.java:150) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:113) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:40) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest$1.interceptResponse(AbstractGoogleClientRequest.java:417) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1132) ~[google-http-client-1.28.0.jar:?]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:515) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:448) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.execute(AbstractGoogleClientRequest.java:565) ~[google-api-client-1.28.0.jar:1.28.0]
+	at remoteAccessers.GDriveShAccesser.createFolderPathFromCanoniPostString(GDriveShAccesser.java:305) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.createFolderpath(GDriveShAccesser.java:268) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.createFolderOfFileIfDontExist(GDriveShAccesser.java:225) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.uploadToRemote(GDriveShAccesser.java:499) [ColbTrkRemoteAccessers.jar!/:?]
+	at colbTrk.RequestProcessor.processRequestsOfOneRoot(RequestProcessor.java:458) [classes/:?]
+	at colbTrk.MasterRootProcessor.run(MasterRootProcessor.java:71) [classes/:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_171]
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200504004321
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-04 00:43:21 AM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-04 00:43:23 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShPlatformRoot
+2020-May-04 00:43:25 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-04 00:43:25 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 00:43:25 AM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-04 00:43:25 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-04 00:43:25 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 00:43:25 AM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-04 00:43:25 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-04 00:43:25 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 00:43:25 AM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-04 00:43:25 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-04 00:43:25 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 00:43:25 AM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-04 00:43:25 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-04 00:43:25 AM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200504004325
+2020-May-04 00:43:27 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShContentRoot
+2020-May-04 00:43:27 AM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoGShContentRoot_RequestsTracker.json at 20200504004327
+2020-May-04 00:43:27 AM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-04 00:43:27 AM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-04 00:43:29 AM [Thread-2] INFO  CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+}
+2020-May-04 00:43:29 AM [Thread-2] ERROR CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+} at 20200504004329
+2020-May-04 00:43:29 AM [Thread-2] ERROR CommonLogger - java.lang.Exception: error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+} at 20200504004329
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200504010128
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-04 01:01:28 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-04 01:01:29 AM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-04 01:01:29 AM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-04 01:01:29 AM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-04 01:02:17 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShPlatformRoot
+2020-May-04 01:02:19 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-04 01:02:19 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 01:02:19 AM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-04 01:02:19 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-04 01:02:19 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 01:02:19 AM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-04 01:02:19 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-04 01:02:19 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 01:02:19 AM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-04 01:02:19 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-04 01:02:19 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 01:02:19 AM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-04 01:02:20 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-04 01:02:20 AM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200504010220
+2020-May-04 01:02:56 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShContentRoot
+2020-May-04 01:02:56 AM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoGShContentRoot_RequestsTracker.json at 20200504010256
+2020-May-04 01:02:56 AM [Thread-12] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-04 01:02:56 AM [Thread-12] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-04 01:02:59 AM [Thread-12] INFO  CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+}
+2020-May-04 01:02:59 AM [Thread-12] ERROR CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+} at 20200504010259
+2020-May-04 01:02:59 AM [Thread-12] ERROR CommonLogger - java.lang.Exception: error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+} at 20200504010259
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200504011116
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-04 01:11:16 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-04 01:11:17 AM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-04 01:11:17 AM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-04 01:11:17 AM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-04 01:11:20 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShPlatformRoot
+2020-May-04 01:11:22 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-04 01:11:22 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 01:11:22 AM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-04 01:11:22 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-04 01:11:22 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 01:11:22 AM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-04 01:11:22 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-04 01:11:22 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 01:11:22 AM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-04 01:11:22 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-04 01:11:22 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 01:11:22 AM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-04 01:11:22 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-04 01:11:22 AM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200504011122
+2020-May-04 01:11:25 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShContentRoot
+2020-May-04 01:11:25 AM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoGShContentRoot_RequestsTracker.json at 20200504011125
+2020-May-04 01:11:25 AM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-04 01:11:25 AM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-04 01:11:28 AM [Thread-2] INFO  CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+}
+2020-May-04 01:11:28 AM [Thread-2] ERROR CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+} at 20200504011128
+2020-May-04 01:11:28 AM [Thread-2] ERROR CommonLogger - java.lang.Exception: error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+} at 20200504011128
+2020-May-04 01:11:33 AM [Thread-2] ERROR CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder
+com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+}
+	at com.google.api.client.googleapis.json.GoogleJsonResponseException.from(GoogleJsonResponseException.java:150) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:113) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:40) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest$1.interceptResponse(AbstractGoogleClientRequest.java:417) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1132) ~[google-http-client-1.28.0.jar:?]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:515) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:448) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.execute(AbstractGoogleClientRequest.java:565) ~[google-api-client-1.28.0.jar:1.28.0]
+	at remoteAccessers.GDriveShAccesser.createFolderPathFromCanoniPostString(GDriveShAccesser.java:305) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.createFolderpath(GDriveShAccesser.java:268) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.createFolderOfFileIfDontExist(GDriveShAccesser.java:225) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.uploadToRemote(GDriveShAccesser.java:504) [ColbTrkRemoteAccessers.jar!/:?]
+	at colbTrk.RequestProcessor.processRequestsOfOneRoot(RequestProcessor.java:458) [classes/:?]
+	at colbTrk.MasterRootProcessor.run(MasterRootProcessor.java:71) [classes/:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_171]
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200504011732
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-04 01:17:32 AM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-04 01:17:33 AM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-04 01:18:22 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShPlatformRoot
+2020-May-04 01:18:23 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-04 01:18:23 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 01:18:23 AM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-04 01:18:23 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-04 01:18:23 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 01:18:23 AM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-04 01:18:23 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-04 01:18:23 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 01:18:23 AM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-04 01:18:23 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-04 01:18:23 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 01:18:23 AM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-04 01:18:23 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-04 01:18:23 AM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200504011823
+2020-May-04 01:19:04 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShContentRoot
+2020-May-04 01:19:04 AM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoGShContentRoot_RequestsTracker.json at 20200504011904
+2020-May-04 01:19:04 AM [Thread-12] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-04 01:19:04 AM [Thread-12] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-04 01:19:08 AM [Thread-12] INFO  CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+}
+2020-May-04 01:19:08 AM [Thread-12] ERROR CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+} at 20200504011908
+2020-May-04 01:19:08 AM [Thread-12] ERROR CommonLogger - java.lang.Exception: error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+} at 20200504011908
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200504233832
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-04 23:38:32 PM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-04 23:38:34 PM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShPlatformRoot
+2020-May-04 23:38:37 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-04 23:38:37 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 23:38:37 PM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-04 23:38:37 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-04 23:38:37 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 23:38:37 PM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-04 23:38:37 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-04 23:38:37 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 23:38:37 PM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-04 23:38:37 PM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-04 23:38:37 PM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-04 23:38:37 PM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-04 23:38:37 PM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-04 23:38:37 PM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200504233837
+2020-May-04 23:38:39 PM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShContentRoot
+2020-May-04 23:38:39 PM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoGShContentRoot_RequestsTracker.json at 20200504233839
+2020-May-04 23:38:39 PM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-04 23:38:40 PM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-04 23:38:43 PM [Thread-2] INFO  CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+}
+2020-May-04 23:38:43 PM [Thread-2] ERROR CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+} at 20200504233843
+2020-May-04 23:38:43 PM [Thread-2] ERROR CommonLogger - java.lang.Exception: error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+} at 20200504233843
+2020-May-04 23:40:30 PM [Thread-2] ERROR CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /catalogpublishfolder
+com.google.api.client.googleapis.json.GoogleJsonResponseException: 404 Not Found
+{
+  "code" : 404,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "fileId",
+    "locationType" : "parameter",
+    "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO.",
+    "reason" : "notFound"
+  } ],
+  "message" : "File not found: 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO."
+}
+	at com.google.api.client.googleapis.json.GoogleJsonResponseException.from(GoogleJsonResponseException.java:150) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:113) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:40) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest$1.interceptResponse(AbstractGoogleClientRequest.java:417) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1132) ~[google-http-client-1.28.0.jar:?]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:515) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:448) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.execute(AbstractGoogleClientRequest.java:565) ~[google-api-client-1.28.0.jar:1.28.0]
+	at remoteAccessers.GDriveShAccesser.createFolderPathFromCanoniPostString(GDriveShAccesser.java:305) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.createFolderpath(GDriveShAccesser.java:268) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.createFolderOfFileIfDontExist(GDriveShAccesser.java:225) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.uploadToRemote(GDriveShAccesser.java:504) [ColbTrkRemoteAccessers.jar!/:?]
+	at colbTrk.RequestProcessor.processRequestsOfOneRoot(RequestProcessor.java:458) [classes/:?]
+	at colbTrk.MasterRootProcessor.run(MasterRootProcessor.java:71) [classes/:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_171]
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - TesterContentRootAccessCheck starting up at 20200505003425
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-05 00:34:25 AM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-05 00:34:26 AM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-05 00:34:28 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShContentRoot
+2020-May-05 00:34:29 AM [main] INFO  CommonLogger - TesterContentRootAccessCheck completed access result : false
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - TesterContentRootAccessCheck starting up at 20200505004725
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-05 00:47:25 AM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-05 00:47:26 AM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-05 00:47:27 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShContentRoot
+2020-May-05 00:47:30 AM [main] INFO  CommonLogger - TesterContentRootAccessCheck completed access result : true
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200505004941
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-05 00:49:41 AM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-05 00:49:43 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShPlatformRoot
+2020-May-05 00:49:46 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-05 00:49:46 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-05 00:49:46 AM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-05 00:49:46 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-05 00:49:46 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-05 00:49:46 AM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-05 00:49:46 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-05 00:49:46 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-05 00:49:46 AM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-05 00:49:46 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-05 00:49:46 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-05 00:49:46 AM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-05 00:49:46 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-05 00:49:46 AM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200505004946
+2020-May-05 00:49:48 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShContentRoot
+2020-May-05 00:49:48 AM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoGShContentRoot_RequestsTracker.json at 20200505004948
+2020-May-05 00:49:48 AM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-05 00:49:48 AM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-05 00:50:01 AM [Thread-2] INFO  CommonLogger - error in GDriveAccess moveToRemoteLocation from 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO/requestdropbox/DEMOUSER20200503155217.json to 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO/erroredrequests/DEMOUSER20200503155217.json from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 403 Forbidden
+{
+  "code" : 403,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "Authorization",
+    "locationType" : "header",
+    "message" : "The user has not granted the app 893734934 write access to the file 1jFdppYbI2-goE8p2GmavSEcLZbv7Ofb5.",
+    "reason" : "appNotAuthorizedToFile"
+  } ],
+  "message" : "The user has not granted the app 893734934 write access to the file 1jFdppYbI2-goE8p2GmavSEcLZbv7Ofb5."
+}
+2020-May-05 00:50:01 AM [Thread-2] ERROR CommonLogger - error in GDriveAccess moveToRemoteLocation from 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO/requestdropbox/DEMOUSER20200503155217.json to 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO/erroredrequests/DEMOUSER20200503155217.json from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 403 Forbidden
+{
+  "code" : 403,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "Authorization",
+    "locationType" : "header",
+    "message" : "The user has not granted the app 893734934 write access to the file 1jFdppYbI2-goE8p2GmavSEcLZbv7Ofb5.",
+    "reason" : "appNotAuthorizedToFile"
+  } ],
+  "message" : "The user has not granted the app 893734934 write access to the file 1jFdppYbI2-goE8p2GmavSEcLZbv7Ofb5."
+} at 20200505005001
+2020-May-05 00:50:01 AM [Thread-2] ERROR CommonLogger - java.lang.Exception: error in GDriveAccess moveToRemoteLocation from 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO/requestdropbox/DEMOUSER20200503155217.json to 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO/erroredrequests/DEMOUSER20200503155217.json from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 403 Forbidden
+{
+  "code" : 403,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "Authorization",
+    "locationType" : "header",
+    "message" : "The user has not granted the app 893734934 write access to the file 1jFdppYbI2-goE8p2GmavSEcLZbv7Ofb5.",
+    "reason" : "appNotAuthorizedToFile"
+  } ],
+  "message" : "The user has not granted the app 893734934 write access to the file 1jFdppYbI2-goE8p2GmavSEcLZbv7Ofb5."
+} at 20200505005001
+2020-May-05 00:51:17 AM [Thread-2] ERROR CommonLogger - error in GDriveAccess moveToRemoteLocation from 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO/requestdropbox/DEMOUSER20200503155217.json to 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO/erroredrequests/DEMOUSER20200503155217.json
+com.google.api.client.googleapis.json.GoogleJsonResponseException: 403 Forbidden
+{
+  "code" : 403,
+  "errors" : [ {
+    "domain" : "global",
+    "location" : "Authorization",
+    "locationType" : "header",
+    "message" : "The user has not granted the app 893734934 write access to the file 1jFdppYbI2-goE8p2GmavSEcLZbv7Ofb5.",
+    "reason" : "appNotAuthorizedToFile"
+  } ],
+  "message" : "The user has not granted the app 893734934 write access to the file 1jFdppYbI2-goE8p2GmavSEcLZbv7Ofb5."
+}
+	at com.google.api.client.googleapis.json.GoogleJsonResponseException.from(GoogleJsonResponseException.java:150) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:113) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:40) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest$1.interceptResponse(AbstractGoogleClientRequest.java:417) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1132) ~[google-http-client-1.28.0.jar:?]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:515) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:448) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.execute(AbstractGoogleClientRequest.java:565) ~[google-api-client-1.28.0.jar:1.28.0]
+	at remoteAccessers.GDriveShAccesser.moveToRemoteLocation(GDriveShAccesser.java:587) [ColbTrkRemoteAccessers.jar!/:?]
+	at colbTrk.RequestProcessor.processRequestsOfOneRoot(RequestProcessor.java:409) [classes/:?]
+	at colbTrk.MasterRootProcessor.run(MasterRootProcessor.java:71) [classes/:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_171]
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200506135039
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200506135039
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger -  Catalog Display Started at 20200506135039
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200506135039
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-06 13:50:39 PM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200506135039
+2020-May-06 13:50:43 PM [Thread-1] INFO  CommonLogger - At ArtifactsDisplay displayArtifact start 
+2020-May-06 13:50:43 PM [Thread-1] INFO  CommonLogger - CatelogPersistenceManager in setData start
+2020-May-06 13:50:43 PM [Thread-1] INFO  CommonLogger - inArtifactPojos at setArtifactValues is [colbTrk.ERLDownload@48b4aaaa, colbTrk.ERLDownload@7fe9f19a, colbTrk.ERLDownload@903466f, colbTrk.ERLDownload@31e17ad1, colbTrk.ERLDownload@5ced67bd, colbTrk.ERLDownload@6c38389b, colbTrk.ERLDownload@7f1b3b4d, colbTrk.ERLDownload@4516f18d]
+2020-May-06 13:50:43 PM [Thread-1] INFO  CommonLogger - At ArtifactsDisplay DisplayContent Start
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200507004853
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-07 00:48:53 AM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-07 00:48:54 AM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-07 00:48:56 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShPlatformRoot
+2020-May-07 00:48:58 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-07 00:48:58 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:48:58 AM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-07 00:48:58 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-07 00:48:58 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:48:58 AM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-07 00:48:58 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-07 00:48:58 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:48:58 AM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-07 00:48:58 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-07 00:48:58 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:48:58 AM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-07 00:48:59 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-07 00:48:59 AM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200507004859
+2020-May-07 00:49:03 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShContentRoot
+2020-May-07 00:49:03 AM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoGShContentRoot_RequestsTracker.json at 20200507004903
+2020-May-07 00:49:03 AM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-07 00:49:03 AM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-07 00:49:06 AM [Thread-2] INFO  CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /1_allmembersreadable/catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 403 Forbidden
+{
+  "code" : 403,
+  "errors" : [ {
+    "domain" : "global",
+    "message" : "Forbidden",
+    "reason" : "forbidden"
+  } ],
+  "message" : "Forbidden"
+}
+2020-May-07 00:49:06 AM [Thread-2] ERROR CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /1_allmembersreadable/catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 403 Forbidden
+{
+  "code" : 403,
+  "errors" : [ {
+    "domain" : "global",
+    "message" : "Forbidden",
+    "reason" : "forbidden"
+  } ],
+  "message" : "Forbidden"
+} at 20200507004906
+2020-May-07 00:49:06 AM [Thread-2] ERROR CommonLogger - java.lang.Exception: error in GDriveAccess createFolderPathFromCanoniPostString /1_allmembersreadable/catalogpublishfolder from method run --- com.google.api.client.googleapis.json.GoogleJsonResponseException: 403 Forbidden
+{
+  "code" : 403,
+  "errors" : [ {
+    "domain" : "global",
+    "message" : "Forbidden",
+    "reason" : "forbidden"
+  } ],
+  "message" : "Forbidden"
+} at 20200507004906
+2020-May-07 00:49:27 AM [Thread-2] ERROR CommonLogger - error in GDriveAccess createFolderPathFromCanoniPostString /1_allmembersreadable/catalogpublishfolder
+com.google.api.client.googleapis.json.GoogleJsonResponseException: 403 Forbidden
+{
+  "code" : 403,
+  "errors" : [ {
+    "domain" : "global",
+    "message" : "Forbidden",
+    "reason" : "forbidden"
+  } ],
+  "message" : "Forbidden"
+}
+	at com.google.api.client.googleapis.json.GoogleJsonResponseException.from(GoogleJsonResponseException.java:150) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:113) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:40) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest$1.interceptResponse(AbstractGoogleClientRequest.java:417) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1132) ~[google-http-client-1.28.0.jar:?]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:515) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:448) ~[google-api-client-1.28.0.jar:1.28.0]
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.execute(AbstractGoogleClientRequest.java:565) ~[google-api-client-1.28.0.jar:1.28.0]
+	at remoteAccessers.GDriveShAccesser.createFolderPathFromCanoniPostString(GDriveShAccesser.java:305) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.createFolderpath(GDriveShAccesser.java:268) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.createFolderOfFileIfDontExist(GDriveShAccesser.java:225) [ColbTrkRemoteAccessers.jar!/:?]
+	at remoteAccessers.GDriveShAccesser.uploadToRemote(GDriveShAccesser.java:504) [ColbTrkRemoteAccessers.jar!/:?]
+	at colbTrk.RequestProcessor.processRequestsOfOneRoot(RequestProcessor.java:458) [classes/:?]
+	at colbTrk.MasterRootProcessor.run(MasterRootProcessor.java:71) [classes/:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_171]
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200507004947
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-07 00:49:47 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-07 00:49:48 AM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-07 00:49:48 AM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-07 00:49:48 AM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-07 00:49:49 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShPlatformRoot
+2020-May-07 00:49:52 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-07 00:49:52 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:49:52 AM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-07 00:49:52 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-07 00:49:52 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:49:52 AM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-07 00:49:52 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-07 00:49:52 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:49:52 AM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-07 00:49:52 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-07 00:49:52 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:49:52 AM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-07 00:49:52 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-07 00:49:52 AM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200507004952
+2020-May-07 00:49:54 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinContentRoot
+2020-May-07 00:49:54 AM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoWinContentRoot_RequestsTracker.json at 20200507004954
+2020-May-07 00:49:54 AM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. Nothing new to publish 
+2020-May-07 00:49:54 AM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. colbTrk.ReqTrackItem@5b5d8013
+2020-May-07 00:50:54 AM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. Nothing new to publish 
+2020-May-07 00:50:54 AM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. colbTrk.ReqTrackItem@5b5d8013
+2020-May-07 00:51:54 AM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. Nothing new to publish 
+2020-May-07 00:51:54 AM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. colbTrk.ReqTrackItem@5b5d8013
+2020-May-07 00:52:54 AM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. Nothing new to publish 
+2020-May-07 00:52:54 AM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. colbTrk.ReqTrackItem@5b5d8013
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200507005604
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-07 00:56:04 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-07 00:56:05 AM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-07 00:56:05 AM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-07 00:56:05 AM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-07 00:56:07 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShPlatformRoot
+2020-May-07 00:56:09 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-07 00:56:09 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:56:09 AM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-07 00:56:09 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-07 00:56:09 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:56:09 AM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-07 00:56:09 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-07 00:56:09 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:56:09 AM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-07 00:56:09 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-07 00:56:09 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:56:09 AM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-07 00:56:09 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-07 00:56:09 AM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200507005609
+2020-May-07 00:56:11 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinContentRoot
+2020-May-07 00:56:11 AM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoWinContentRoot_RequestsTracker.json at 20200507005611
+2020-May-07 00:56:42 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200507005642
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-07 00:56:43 AM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-07 00:56:45 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShPlatformRoot
+2020-May-07 00:56:47 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-07 00:56:47 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:56:47 AM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-07 00:56:47 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-07 00:56:47 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:56:47 AM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-07 00:56:47 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-07 00:56:47 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:56:47 AM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-07 00:56:47 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-07 00:56:47 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 00:56:47 AM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-07 00:56:47 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator started2 - logging set to info
+2020-May-07 00:56:47 AM [main] INFO  CommonLogger - MasterRootProcessor constructor starting up at 20200507005647
+2020-May-07 00:56:49 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoWinContentRoot
+2020-May-07 00:56:49 AM [main] INFO  CommonLogger - RequestProcessor constructure with reqProcTrackingPathFileName C:\Kannan\Java\ColbTrk\kvasavaiah\reqtrackersfolderlocal\DemoWinContentRoot_RequestsTracker.json at 20200507005649
+2020-May-07 00:56:49 AM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. Nothing new to publish 
+2020-May-07 00:56:49 AM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. colbTrk.ReqTrackItem@49a12e54
+2020-May-07 00:57:49 AM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoWinContentRoot completed. Nothing new to publish 
+2020-May-07 00:57:49 AM [Thread-2] WARN  CommonLogger -  rootNick DemoWinContentRoot has 1 unfinished requests. e.g. colbTrk.ReqTrackItem@49a12e54
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - ColbTrkServerOrchestrator starting up at 20200507010325
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-07 01:03:25 AM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-07 01:03:27 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShPlatformRoot
+2020-May-07 01:03:29 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-07 01:03:29 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-07 01:03:29 AM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-07 01:03:29 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-07 01:03:29 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019

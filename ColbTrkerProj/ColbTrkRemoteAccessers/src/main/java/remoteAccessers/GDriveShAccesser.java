@@ -218,7 +218,10 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 
 	public void createFolderOfFileIfDontExist(String inFileName) {
 		String parentFolder = commons.getFolderNameFromURL(inFileName, fileSeparator);
+		System.out.println("At createFolderOfFileIfDontExist inFileName " + inFileName);
+		System.out.println("At createFolderOfFileIfDontExist parentFolder " + parentFolder);
 		if (!exists(parentFolder)){
+			System.out.println("At createFolderOfFileIfDontExist parentFolder " + parentFolder + " doesn't exist hence creating");
 			createFolderpath(parentFolder);
 		}
 	}
@@ -328,6 +331,8 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 	}
 
 	ParentChildObject getFileResourceIDFromCanoniPostString(String inCanonicPostBaseString) {
+        System.out.println("at start of getFileResourceIDFromCanoniPostString(String  inCanonicPostBaseString " + inCanonicPostBaseString);
+        
 		String[] splitFolderNodes = StringUtils.split(inCanonicPostBaseString,rootPojo.fileSeparator);
 
 		String prevNodeResourceID = rootPojo.rootString;
@@ -335,6 +340,7 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
         System.out.println("\n at 00 inCanonicPostBaseString is " + inCanonicPostBaseString);
         System.out.println("\n at 00 rootPojo.fileSeparator is " + rootPojo.fileSeparator);
         System.out.println("\n at 00 splitFolderNodes length is " + splitFolderNodes.length);
+        System.out.println("\n at 00 splitFolderNode 0 is " + splitFolderNodes[0]);
 
 		ParentChildObject currentNodeParentChildObject = new ParentChildObject(prevNodeResourceID,null);;
 
@@ -393,6 +399,7 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 	}
 		
 	void findChildNSiblingForNode(ParentChildObject inPrevNodeParentChildObject, String inNode) {
+    	System.out.printf("GSh findChildNSiblingForNode " + inNode);
 		
         String pageToken = null;
 		String query =  " '" + inPrevNodeParentChildObject.parentObj + "' in parents and trashed = false ";
@@ -416,6 +423,7 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		}
 
 		System.out.printf("result 22 size" + resultFileList.size());
+		System.out.printf("result 22b size" + resultFileList.getFiles().size());
         
         for (File file : resultFileList.getFiles()) {
         	System.out.printf("\n 22 found folder " + file.toString());

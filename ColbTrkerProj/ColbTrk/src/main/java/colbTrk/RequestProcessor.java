@@ -99,7 +99,7 @@ public class RequestProcessor {
 		ArrayList<String> resourcesStringList = remoteAccesser.getRemoteList(remoteDropBox);
 
 		reqProcTracking.dbTobeRenewed = false;
-		for (int resourceCount = 0; resourceCount < resourcesStringList.size(); resourceCount++) {
+		for (int resourceCount = 0; resourcesStringList!=null && resourceCount < resourcesStringList.size(); resourceCount++) {
 			String requestFile;
 			String requestFileExtension;
 
@@ -393,7 +393,7 @@ public class RequestProcessor {
 				if (reqTrackItem.reqProcessOKSoFar) {
 				// archive request files
 					String remoteReqArchiveFile = rootPojo.rootString
-							+ rootPojo.fileSeparator + commons.remoteArchive
+							+ rootPojo.fileSeparator + commons.getRemoteArchivePath(rootPojo.fileSeparator)
 							+ rootPojo.fileSeparator
 							+ commons.getFileNameFromURL(requestFile,rootPojo.fileSeparator);
 		
@@ -402,7 +402,7 @@ public class RequestProcessor {
 				} else {
 				// move errored request files to errorReq folder
 					String remoteErroredReqFile = rootPojo.rootString
-							+ rootPojo.fileSeparator + commons.remoteErroredRequests
+							+ rootPojo.fileSeparator + commons.getRemoteErroredRequestsPath(rootPojo.fileSeparator)
 							+ rootPojo.fileSeparator
 							+ commons.getFileNameFromURL(requestFile,rootPojo.fileSeparator);		
 					System.out.println("remoteErroredRequest...=" + remoteErroredReqFile);
@@ -423,7 +423,7 @@ public class RequestProcessor {
 
 		String catalogpublishFolder = rootPojo.rootString
 				+ rootPojo.fileSeparator
-				+ commons.getServerSideSideCatalogDbPublishFolderOfRoot();
+				+ commons.getServerSideSideCatalogDbPublishFolderOfRoot(rootPojo.fileSeparator);
 
 		System.out.println("AA At RequestProcessor Check first time run for forceSetting reqProcTracking.dbTobeRenewed = " + reqProcTracking.dbTobeRenewed);
 
@@ -574,7 +574,7 @@ public class RequestProcessor {
 				System.out.println("At request processer requestProcesserPojo.updatedContentInputStream is closed for " + requestProcesserPojo.updatedContentInputStream);
 				
 				String remoteContentArchiveFile = rootPojo.rootString
-						+ rootPojo.fileSeparator + commons.remoteArchive
+						+ rootPojo.fileSeparator + commons.getRemoteArchivePath(rootPojo.fileSeparator)
 						+ rootPojo.fileSeparator
 						+ commons.getFileNameFromURL(requestProcesserPojo.incomingContentFullPath,rootPojo.fileSeparator);
 	
@@ -754,7 +754,7 @@ public class RequestProcessor {
 			// Note: when item fields are to be updated for rolledup artifacts, this archival is
 			// 		 taken care in the next step
 				String remoteRemarkArchiveFile = rootPojo.rootString
-						+ rootPojo.fileSeparator + commons.remoteArchive
+						+ rootPojo.fileSeparator + commons.getRemoteArchivePath(rootPojo.fileSeparator)
 						+ rootPojo.fileSeparator
 						+ commons.getFileNameFromURL(inRequestProcesserPojo.incomingContentFullPath,rootPojo.fileSeparator);
 				System.out.println("remoteRemarkArchiveFile...=" + remoteRemarkArchiveFile);

@@ -45,7 +45,7 @@ public class ClearDBsAtDecktopSide {
 		
 		String catalogpublishFile = rootPojo.rootString
 				+ rootPojo.fileSeparator
-				+ commons.getServerSideSideCatalogDbPublishFolderOfRoot()
+				+ commons.getServerSideSideCatalogDbPublishFolderOfRoot(rootPojo.fileSeparator)
 				+ rootPojo.fileSeparator
 				+ commons.getNewCatalogDbPublishFileName(rootPojo.rootNick);
 		System.out.println("catalogpublishFile = " + catalogpublishFile);		

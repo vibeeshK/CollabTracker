@@ -43,7 +43,7 @@ public class CatalogDownloader {
 		ArrayList<String> publishFileNameURLs = new ArrayList<String>();
 		String catalogPublishURL = rootPojo.rootString
 		+ rootPojo.fileSeparator
-		+ commons.getServerSideSideCatalogDbPublishFolderOfRoot();
+		+ commons.getServerSideSideCatalogDbPublishFolderOfRoot(rootPojo.fileSeparator);
 		
 		System.out.println("at 222 already set remoteAccesser= " + remoteAccesser);
 
@@ -139,7 +139,7 @@ public class CatalogDownloader {
 
 		ArrayList<String> publishFileNameURLs = new ArrayList<String>();
 		String catalogPublishURL = rootPojo.rootString
-				+ rootPojo.fileSeparator + commons.getServerSideSideCatalogDbPublishFolderOfRoot();
+				+ rootPojo.fileSeparator + commons.getServerSideSideCatalogDbPublishFolderOfRoot(rootPojo.fileSeparator);
 
 		System.out.println("catalogPublishURL= " + catalogPublishURL);
 		System.out.println("at 2221 remoteAccesser already set = " + remoteAccesser );

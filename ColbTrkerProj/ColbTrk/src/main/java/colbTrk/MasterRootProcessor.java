@@ -27,7 +27,8 @@ public class MasterRootProcessor implements Runnable {
 
 	public MasterRootProcessor(RootPojo inRootPojo, OrchestrationData inOrchestrationData) throws IOException, ParseException {
 		rootPojo = inRootPojo;
-		Commons commons = Commons.getInstance(Commons.BASE_CATALOG_SERVER,rootPojo.rootNick);
+		commons = Commons.getInstance(Commons.BASE_CATALOG_SERVER,rootPojo.rootNick);
+		System.out.println(" At vsc1 MasterRootProcessor commons is " + commons);
 		
 		Commons.logger.info("MasterRootProcessor constructor starting up at " + commons.getCurrentTimeStamp());
 		
@@ -36,17 +37,26 @@ public class MasterRootProcessor implements Runnable {
 		System.out.println("going to create the Sardine object1 for MasterRootProcessor");
 		commonData = CommonData.getInstance(commons);			
 
+		System.out.println(" At vsc2 MasterRootProcessor commons is " + commons);
+		System.out.println(" At vsc2 MasterRootProcessor commons is " + commonData);
+		
 		remoteAccesser = RemoteAccessManager.getInstance(commons, rootPojo.rootNick);
 
-		System.out.println("created sardine");
+		System.out.println("created remoteAccesser");
+		System.out.println(" At vsc3 MasterRootProcessor commons is " + commons);
 
 		requestProcessor = new RequestProcessor(commonData, remoteAccesser);
 			
 		System.out.println("at 4");
+		System.out.println(" At vsc4 MasterRootProcessor commons is " + commons);
 	}
 
 	public void run() {
 
+		System.out.println(" At vsc51 MasterRootProcessor rootPojo is " + rootPojo);
+		System.out.println(" At vsc51 MasterRootProcessor commonData is " + commonData);
+		System.out.println(" At vsc51 MasterRootProcessor commons is " + commons);
+		
 		while (orchestrationData.getOkayToContinue()) {
 			if (rootPojo.requiresInternet && !commons.isInternetAvailable()){
 				Commons.logger.warn(" Internet umavailable, hence skipping MasterRootProcess for " + rootPojo.rootNick);	
