@@ -11,8 +11,11 @@ This installer will install the Opensource software CollabTracker which is built
 
 It comes pre-configured with below functions which are useful for the scenarios mentioned.
 
+General Requests Capture:
+Acts as a general purpose requests collation tool. Helps to categorize and take actions.
+
 Idea Generator:
-Team members can submit ideas and it gets rolled into the ideas repository. Others can review and provide feedback.
+Captures ideas from team members and rolls them the group buckets. Captures feedback from others and helps to collaborate.
 
 Timesheet Capture:
 Captures timecards in real time. Allows one to create a new time-capture function to track the time spent at specific interval and start tracking the time expended in real time. This module will further evolve to interact with mobile users to capture the time card content.
@@ -28,11 +31,11 @@ Decks up individual contents into summary view. E.g. one can setup a summarizer 
 
 Software stack - With many thanks to the providers
 	jdk 1.8
-	SWT – Standard windows toolkit, a lightweight framework for desktop UI
+	SWT Standard windows toolkit, a lightweight framework for desktop UI
 	SQLITE - A serverless self-contained database engine used to track the drafts one creates, to publish the available catalog of artifacts to all participants, to track the subscriptions at subscriber’s desktop and  to hold the content type configurations
 	Google APIs - For accessing a Google Drive based doc central
 	Sardine - For accessing WebDAV enabled doc central
-	Apache POI - For rolling up excel artifacts
+	Apache POI - For exporting displayed data to excels, spawning project tasks from plans in excel, and also to deck up excel artifacts
 	Log4J - Logging function
 	Maven - For version control of external repositories.
 	izpack - For packaging and installation

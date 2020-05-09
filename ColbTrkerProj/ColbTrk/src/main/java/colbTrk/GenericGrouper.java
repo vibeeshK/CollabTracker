@@ -49,7 +49,7 @@ import commonTechs.ExportSWTTableToExcel;
 public abstract class GenericGrouper extends SelectionAdapter implements
 		ContentHandlerInterface {
 
-	public final static String SCREENROWNUMLIT = "screenRowNum";
+	//public final static String SCREENROWNUMLIT = "screenRowNum";
 	public final static String ItemOnRowHasALocalDraftLIT = "ItemOnRowHasALocalDraftFlag";
 	
 	public final static String ITEMNUMLIT = "ItemNumber";
@@ -429,10 +429,10 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 	public void setDisplayCoreLeftFieldsInMultiDisplay(TableEditor inEditor, Table inTable, TableItem inTableItem, int inLastColLocation, ItemPojo inItemPojoScrolled, Button inMaintenanceButton, int inScreenRowNum) {
 		// the reason the maintenanceButton is kept as argument is it would be referred for setting focus on specific record.
 		System.out.println("setDisplayCoreLeftFieldsInMultiDisplay");
-		inMaintenanceButton.setData(SCREENROWNUMLIT, inScreenRowNum);
+		inMaintenanceButton.setData(Commons.SCREENROWNUMLIT, inScreenRowNum);
 
 		System.out.println("itemPojo.itemID:"+inItemPojoScrolled.itemID);
-		System.out.println("set data = " + inMaintenanceButton.getData("screenRowNum"));
+		System.out.println("set data = " + inMaintenanceButton.getData(Commons.SCREENROWNUMLIT));
 
 		if (!standaloneReadingMode) {	
 			checkIfItemOnRowHasALocalDraft(inItemPojoScrolled,inMaintenanceButton);
@@ -467,11 +467,11 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		System.out.println("@2 reviewButton.getSize().x = " + reviewButton.getSize().x);
 		reviewButton.setToolTipText("click to review " + itemPojoScrolled.itemID);
 		System.out.println("@3 reviewButton.getSize().x = " + reviewButton.getSize().x);
-		reviewButton.setData(SCREENROWNUMLIT, screenRowNum);
+		reviewButton.setData(Commons.SCREENROWNUMLIT, screenRowNum);
 		System.out.println("@4 reviewButton.getSize().x = " + reviewButton.getSize().x);
 
 		System.out.println("set data = "
-				+ reviewButton.getData("screenRowNum"));
+				+ reviewButton.getData(Commons.SCREENROWNUMLIT));
 		
 		reviewButton.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -479,7 +479,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 				Button eventButton = (Button) e.getSource();
 				System.out.println("eventButton = " + eventButton);
 				int selectedItemRow = (Integer) eventButton
-						.getData("screenRowNum");
+						.getData(Commons.SCREENROWNUMLIT);
 				System.out.println("selected screenRowNum = "
 						+ selectedItemRow);
 				if (displayedItemMap.containsKey(selectedItemRow)) {
@@ -655,7 +655,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 				Button eventButton = (Button) e.getSource();
 				System.out.println("eventButton = " + eventButton);
 				int selectedItemRow = (Integer) eventButton
-						.getData("screenRowNum");
+						.getData(Commons.SCREENROWNUMLIT);
 				System.out.println("selected screenRowNum = "
 						+ selectedItemRow);
 
@@ -742,7 +742,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		scrolledComposite_1 = new ScrolledComposite(itemsMainCompositeInMultiConentView, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
 		System.out.println("mutiview here");
 
-		closeItemButton1.setData(SCREENROWNUMLIT, reviewItemRow);
+		closeItemButton1.setData(Commons.SCREENROWNUMLIT, reviewItemRow);
 
 		closeItemButton1.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -750,7 +750,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 				
 				Button eventButton = (Button) e.getSource();
 				System.out.println("eventButton = " + eventButton);
-				Integer itemRwWithinEvent = (Integer) eventButton.getData("screenRowNum");
+				Integer itemRwWithinEvent = (Integer) eventButton.getData(Commons.SCREENROWNUMLIT);
 
 				System.out.println("itemRwWithinEvent = " + itemRwWithinEvent);
 				

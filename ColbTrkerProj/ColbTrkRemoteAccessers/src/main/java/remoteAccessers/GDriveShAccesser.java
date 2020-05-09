@@ -101,7 +101,7 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
         System.out.println("query is " + query);
 
         FileList result = service.files().list().setQ(query).setSpaces("drive") //
-                // Fields will be assigned values: id, name, createdTime, mimeType
+                // Fields will be assigned values: id, name, mimeType
                 .setFields("nextPageToken, files(id, name, mimeType)")//
                 .setPageToken(pageToken).execute();
 
@@ -265,12 +265,12 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		if (preCheckURL(inFolderPath)) {
 			String canonicPostBaseString = getCanonicPostBaseString(inFolderPath);
 			System.out.println(" canonicPostBaseString is " + canonicPostBaseString);
-			createFolderPathFromCanoniPostString(canonicPostBaseString);
+			createFolderPathFromCanonicPostString(canonicPostBaseString);
 		}
 		return;		
 	}
 
-	void createFolderPathFromCanoniPostString(String inCanonicPostBaseString) {
+	void createFolderPathFromCanonicPostString(String inCanonicPostBaseString) {
 		String[] splitFolderNodes = StringUtils.split(inCanonicPostBaseString,rootPojo.fileSeparator);
 
 		String prevNodeResourceID = rootPojo.rootString;
@@ -286,7 +286,7 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 	        System.out.println("\n at 0a node to find is " + node);
 	        currentNodeParentChildObject = 
 					new ParentChildObject(prevNodeResourceID,null); // at this time we know parent id
-	        findChildNSiblingForNode(currentNodeParentChildObject, node);
+	        findChildNodeID(currentNodeParentChildObject, node);
 
 	        System.out.println("\n at 0a currentNodeParentChildObject.childObj is " + currentNodeParentChildObject.childObj);
 	        System.out.println("\n at 0a inside node " + node);
@@ -356,7 +356,7 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 
 	        currentNodeParentChildObject = 
 					new ParentChildObject(prevNodeResourceID,null); // at this time we know parent id
-	        findChildNSiblingForNode(currentNodeParentChildObject, node);
+	        findChildNodeID(currentNodeParentChildObject, node);
 
 	        if (currentNodeParentChildObject.childObj != null) {
 	        	prevNodeResourceID = (String) currentNodeParentChildObject.childObj;
@@ -398,8 +398,10 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		return resultFileList.getFiles();
 	}
 		
-	void findChildNSiblingForNode(ParentChildObject inPrevNodeParentChildObject, String inNode) {
-    	System.out.printf("GSh findChildNSiblingForNode " + inNode);
+	void findChildNodeID(ParentChildObject inPrevNodeParentChildObject, String inNode) {
+	// finds the given child node's ID based on its name within the parent ID passed
+	
+    	System.out.printf("GSh findChildNodeID " + inNode);
 		
         String pageToken = null;
 		String query =  " '" + inPrevNodeParentChildObject.parentObj + "' in parents and trashed = false ";
@@ -434,6 +436,7 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
         	if (file.getName().equals(inNode)) {
             	System.out.printf("\n 22 adding inNode name is " + file.getName());
             	inPrevNodeParentChildObject.childObj = file.getId();
+            	break;
         	}
         }
 		return;

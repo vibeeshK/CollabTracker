@@ -22,7 +22,8 @@
 					<source>1.8</source>
 					<target>1.8</target>
 					<fork>true</fork>
-					<executable>C:\Program Files\Java\jdk1.8.0_162\bin\javac</executable>
+					<!--keep this for reference <executable>C:\Program Files\Java\jdk1.8.0_162\bin\javac</executable>  -->
+					<executable>${JAVA_1_8_HOME}/bin/javac</executable>
 				</configuration>
 			</plugin>
 		    <plugin>

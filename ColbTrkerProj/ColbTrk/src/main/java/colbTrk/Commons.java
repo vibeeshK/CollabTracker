@@ -63,7 +63,6 @@ public class Commons extends CommonTechs {
 	public String platformRoot = null;
 	public final static String platformRootLIT = "platformRoot";
 
-
 	public final static String ARTIFACT_PRIME_FILE = "primeFile.json";
 
 	public final static String REQUEST_TRACKING_FILE_SUBFIX = "_RequestsTracker.json";
@@ -83,12 +82,13 @@ public class Commons extends CommonTechs {
 	public static String CLIENT_MACHNE_FOLDER = "clientMc";
 	public String xtdCatalogSrvrFolder = "extdSrvr";
 
-	public int erlMaxVersions;
-	public int inactiveAgingDaysLimit; //initiated with default
-
+	private String localArchive = null;
+	private int archiveDupeMax;			// for archivals in within same txn, subfix added to prevent duplicates
 	private String remoteArchive = null;
-	private String remoteInactiveERLsArchive = null;
 	private String remoteErroredRequests = null;
+	private String remoteInactiveERLsArchive = null;
+	public int erlMaxVersions;			// max versions before archivals
+	public int inactiveAgingDaysLimit;	// days to keep before archiving inactive erls
 
 	public static Commons baseCatalogServerCommonsInstance = null;
 	public static Commons clientMachineCommonsInstance = null;
@@ -97,17 +97,14 @@ public class Commons extends CommonTechs {
 	private static boolean proxy_checked_already = false;
 
 	public Date sysCompCurrLocalLogUpdateTm = null;
-	public int catalogDownloadTimeGapSec = 0;
+	public String sysUpdateLogDoc = null;		// doc with details of whats new in platform publications
+	public String sysDbFileLocation = null;
 
 	public String localFileSeparator = null;
 	public String installFileFolder = null;
 	public String configDataFolder = null;
-	//private String certificatFile = null;
 	public String certificatesFolder = null;
 
-	private String localArchive = null;
-	private int archiveDupeMax; // this gets overridden from the property file
-	
 	private String newArtifactsFolder = null;
 	private String newReviewsFolder = null;	
 	private String responsesfolderlocal = null;
@@ -127,18 +124,10 @@ public class Commons extends CommonTechs {
 	public String rootConfigFolder = null;
 	public String artifactsFolder = null;
 	private String tempFolder = null;
-	
-	//private String backupRootNick = null;
-	//private String remoteBackupFolder = null;
-	
 
-
-	public String sysUpdateLogDoc = null;
-	
 	public String[] serverRootNicks;
 
 	private String catalogDbPublishFilePrefix = null;	
-
 	private String allMembersReadableFolder = null;	// at Doc Central, the folder branch accessible by all members
 	private String serverSideSideCatalogDbPublishFolder=null;
 	private String remoteArtifacts = null;			//both artifacts and remarks are maintained in the same branch
@@ -149,15 +138,15 @@ public class Commons extends CommonTechs {
 	private String requestdropbox = null;
 	
 	private String behindSceneFolder = null;		// at Doc Central, the folder branch accessible by server processes
-	
+	public String adminBranchRelevance;
 
 	private String serversMasterCopyofCatalogDbLocalFolder=null;	// folder name at server processor
 	private String serversMasterCopyofCatalogDbPrefix=null;			// file prefix at server processor
 
 	private String clientSideCatalogDbReceiveFolder=null;
 	public String downloadedCatalogDetailsFile=null;
+	public int catalogDownloadTimeGapSec = 0;		// time to wait before next download
 
-	public String sysDbFileLocation = null;
 	private String reqTrackersFolderLocal = null;
 	private String versioningFilesFolderLocal = null;
 
@@ -167,9 +156,7 @@ public class Commons extends CommonTechs {
 	private String osHandlerName = null;
 	private String defaultUIRootNick = null;
 	private String processingRootNick = null;
-	boolean remoteCommunicationInitiated = false;
 
-	public String adminBranchRelevance;
 	private String siteToCheckInternet;
 	public String httpProxyHost;
 	public String httpProxyPort;
