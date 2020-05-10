@@ -1687,6 +1687,26 @@ public class CatelogPersistenceManager {
 		}
 	}
 
+	public void pickAllRelevances(String inRootNick) {
+
+		synchronized (syncLock) {
+
+			try {
+				if (connection == null || statement == null) {
+					createConnectionAndStatment();
+				}
+				String queryString = "INSERT INTO PickedRelevance (RootNick, Relevance) "
+									+ " select '" + inRootNick + "', Relevance from "
+									+ catalogDBAliasPrefix
+									+ "Relevance RL";
+				System.out.println(queryString);
+				statement.executeUpdate(queryString);
+			} catch (SQLException e) {
+				ErrorHandler.showErrorAndQuit(commons, "Error in CatelogPersistenceManager pickAllRelevance ", e);
+			}
+		}
+	}
+
 	public void unPickRelevance(RelevancePojo inRelevancePojo) {
 
 		synchronized (syncLock) {
@@ -1707,6 +1727,24 @@ public class CatelogPersistenceManager {
 		}
 	}
 
+	public void unPickAllRelevance(String inRootNick) {
+
+		synchronized (syncLock) {
+
+			try {
+				if (connection == null || statement == null) {
+					createConnectionAndStatment();
+				}
+				String queryString = "Delete from "
+						+ " PickedRelevance where RootNick = '" + inRootNick + "'";
+				System.out.println(queryString);
+				statement.executeUpdate(queryString);
+			} catch (SQLException e) {
+				ErrorHandler.showErrorAndQuit(commons, "Error in CatelogPersistenceManager unPickAllRelevances", e);
+			}
+		}
+	}
+	
 	public String[] readContentTypes() {
 
 		synchronized (syncLock) {

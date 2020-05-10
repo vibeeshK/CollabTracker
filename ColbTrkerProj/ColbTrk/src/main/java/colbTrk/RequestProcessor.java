@@ -433,7 +433,9 @@ public class RequestProcessor {
 
 			System.out.println("AB At RequestProcessor Check first time run for forceSetting reqProcTracking.dbTobeRenewed = " + reqProcTracking.dbTobeRenewed);
 
-			if (remoteAccesser.getRemoteList(catalogpublishFolder) == null) {
+			ArrayList<String> remoteList = remoteAccesser.getRemoteList(catalogpublishFolder);
+			
+			if (remoteList == null || remoteList.size() == 0) {
 				reqProcTracking.dbTobeRenewed = true;
 				// Force setting the renewal for initial run post installation
 				System.out.println("AC At RequestProcessor Check first time run for forceSetting reqProcTracking.dbTobeRenewed = " + reqProcTracking.dbTobeRenewed);

@@ -352,7 +352,7 @@ public class RootsSubsciptionsUI {
 											.get(screenRowNum))) {
 										MessageBox messageBox2 = new MessageBox(mainShell, SWT.ICON_WARNING | SWT.OK);
 										messageBox2.setMessage("You need to first subscribe to this root before making it default");
-										int rc2 = messageBox2.open();
+										messageBox2.open();
 										return;										
 									}
 									
@@ -364,6 +364,11 @@ public class RootsSubsciptionsUI {
 									}
 
 									commonUIData.refresh();
+									
+									MessageBox alertMessageBox = new MessageBox(mainShell, SWT.ICON_WARNING | SWT.OK);
+									alertMessageBox.setMessage("Please Choose Relevances now for the artifacts to be shown in Catalogue Display screen");
+									alertMessageBox.open();
+									
 									refreshRootsSubsriptionsUI();
 								}
 							});
@@ -396,6 +401,9 @@ public class RootsSubsciptionsUI {
 					Button relevancebutton = new Button(table, SWT.PUSH);
 					relevancebutton.setText("Choose");
 					relevancebutton.pack();
+					relevancebutton.setToolTipText(
+							"To choose Relevances of the artifacts to be shown in Catalogue Display screen");
+					
 					editor.minimumWidth = relevancebutton.getSize().x;
 					editor.horizontalAlignment = SWT.LEFT;
 					editor.setEditor(relevancebutton,

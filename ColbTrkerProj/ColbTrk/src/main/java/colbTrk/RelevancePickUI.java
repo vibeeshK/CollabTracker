@@ -2,8 +2,16 @@ package colbTrk;
 
 import java.util.ArrayList;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.layout.RowLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Shell;
@@ -18,31 +26,118 @@ import org.eclipse.swt.widgets.TreeItem;
  */
 public class RelevancePickUI {
 
+	private static String RelevancePojoLIT = "RelevancePojo";
 	private Shell mainShell = null;
 	ArrayList<RelevancePojo> relevancePojoList = null;
 	CommonUIData commonUIData = null;
+
+	private Composite buttonRibbon = null;
+	private Composite bodyPane = null;
+	
 	public RelevancePickUI(CommonUIData inCommonUIData) {
 		commonUIData = inCommonUIData;
+
+		//mainShell = new Shell(commonUIData.getColbTrkDisplay(), SWT.APPLICATION_MODAL|SWT.CLOSE|SWT.TITLE|SWT.BORDER|SWT.RESIZE);
+		//mainShell.setImage(new Image(commonUIData.getColbTrkDisplay(), commonUIData.getCommons().applicationIcon));		
+		//mainShell.setText("Relevance Pick");
+		//mainShell.setLayout(new RowLayout());
+
+
+		mainShell = new Shell(commonUIData.getColbTrkDisplay(),SWT.APPLICATION_MODAL
+								|SWT.CLOSE|SWT.TITLE|SWT.BORDER|SWT.RESIZE|SWT.MAX|SWT.MIN);
+		mainShell.setLayout(new GridLayout(1, false));
+		mainShell.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+		mainShell.setImage(new Image(commonUIData.getColbTrkDisplay(), commonUIData.getCommons().applicationIcon));
+		mainShell.setText("Relevance Pick");
+
+		setButtonRibbon();
+
+		bodyPane = new Composite(mainShell, SWT.NONE);		
+		bodyPane.setLayout(new FillLayout());
+		bodyPane.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 	}
 
+	private void setButtonRibbon(){
+		buttonRibbon = new Composite (mainShell, SWT.NONE);
+		buttonRibbon.setLayout(new FillLayout(SWT.HORIZONTAL));
+		buttonRibbon.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
+
+		{
+			Button btnRefresh = new Button(buttonRibbon, SWT.NONE);
+			btnRefresh.addSelectionListener(new SelectionAdapter() {
+				@Override
+				public void widgetSelected(SelectionEvent e) {
+					System.out.println("Refreshing");
+					refreshCreateArtifactUI();
+				}
+			});
+			btnRefresh.setBounds(10, 10, 120, 25);
+			btnRefresh.setText("Refresh");
+			btnRefresh.setToolTipText("Refresh screen");
+			btnRefresh.pack();
+		}
+
+		{
+			Button btnSelectAll = new Button(buttonRibbon, SWT.NONE);
+			btnSelectAll.addSelectionListener(new SelectionAdapter() {
+				@Override
+				public void widgetSelected(SelectionEvent e) {
+
+					System.out.println("Selecting all");
+
+					// before adding all revelance, delete current relevances any to avoid duplicates
+					commonUIData.getCatelogPersistenceManager()
+					.unPickAllRelevance(commonUIData.getCommons().getCurrentRootNick());
+
+					commonUIData.getCatelogPersistenceManager()
+					.pickAllRelevances(commonUIData.getCommons().getCurrentRootNick());
+					
+					refreshCreateArtifactUI();
+				}
+			});
+			btnSelectAll.setBounds(10, 10, 120, 25);
+			btnSelectAll.setText("Select All");
+			btnSelectAll.setToolTipText("Select All Relevances");
+			btnSelectAll.pack();
+		}
+		
+		{
+			Button btnSelectNone = new Button(buttonRibbon, SWT.NONE);
+			btnSelectNone.addSelectionListener(new SelectionAdapter() {
+				@Override
+				public void widgetSelected(SelectionEvent e) {
+					System.out.println("Select None");
+
+					commonUIData.getCatelogPersistenceManager()
+					.unPickAllRelevance(commonUIData.getCommons().getCurrentRootNick());
+					
+					refreshCreateArtifactUI();
+				}
+			});
+			btnSelectNone.setBounds(10, 10, 120, 25);
+			btnSelectNone.setText("Select None");
+			btnSelectNone.setToolTipText("Deselect all relevances");
+			btnSelectNone.pack();
+		}
+		
+	}
 	public void refreshCreateArtifactUI() {
-		mainShell.close();
+		Control[] oldControls = bodyPane.getChildren();
+		for (Control oldControl : oldControls) {
+		    oldControl.dispose();
+		}
 		displayRelevancePickUI();
 	}
 
 	public void displayRelevancePickUI() {
 
-		mainShell = new Shell(commonUIData.getColbTrkDisplay(), SWT.APPLICATION_MODAL|SWT.CLOSE|SWT.TITLE|SWT.BORDER|SWT.RESIZE);
-		mainShell.setImage(new Image(commonUIData.getColbTrkDisplay(), commonUIData.getCommons().applicationIcon));		
-		mainShell.setText("Relevance Pick");
-		mainShell.setLayout(new FillLayout());
 		relevancePojoList = commonUIData.getCatelogPersistenceManager()
 				.readRelevances(commonUIData.getCommons().getCurrentRootNick());
 
-		final Tree tree = new Tree(mainShell, SWT.CHECK);
+		final Tree tree = new Tree(bodyPane, SWT.CHECK);
 
 		TreeItem item = null;
-		TreeItem[] parentTreeItems = new TreeItem[20];
+		TreeItem[] parentTreeItems = new TreeItem[relevancePojoList.size()];
 		String[] prevRelevanceNodes = new String[] { "" };
 		String[] relevanceNodes;
 		boolean pathChanged = false;
@@ -90,7 +185,7 @@ public class RelevancePickUI {
 						item
 								.setChecked(relevancePojoList
 										.get(relevanceCount).RelevancePicked);
-						item.setData("RelevancePojo", relevancePojoList
+						item.setData(RelevancePojoLIT, relevancePojoList
 								.get(relevanceCount));
 					}
 					parentTreeItems[nodeCount] = item;
@@ -115,7 +210,7 @@ public class RelevancePickUI {
 											.get(relevanceCount).relevance);
 							item.setChecked(relevancePojoList
 									.get(relevanceCount).RelevancePicked);
-							item.setData("RelevancePojo", relevancePojoList
+							item.setData(RelevancePojoLIT, relevancePojoList
 									.get(relevanceCount));
 
 						}
@@ -145,7 +240,7 @@ public class RelevancePickUI {
 										.get(relevanceCount).relevance);
 								item.setChecked(relevancePojoList
 										.get(relevanceCount).RelevancePicked);
-								item.setData("RelevancePojo", relevancePojoList
+								item.setData(RelevancePojoLIT, relevancePojoList
 										.get(relevanceCount));
 								System.out.println("node added9999 at "
 										+ nodeCount);
@@ -171,20 +266,20 @@ public class RelevancePickUI {
 				if (event.detail == SWT.CHECK) {
 					TreeItem item = (TreeItem) event.item;
 					//boolean checked = item.getChecked();
-					//if (item.getData("RelevancePojo") != null) {
+					//if (item.getData(RelevancePojoLIT) != null) {
 					//	if (checked) {
 					//		commonUIData.getCatelogPersistenceManager()
 					//				.pickRelevance((RelevancePojo) item
-					//						.getData("RelevancePojo"));
+					//						.getData(RelevancePojoLIT));
 					//	} else {
 					//		commonUIData.getCatelogPersistenceManager()
 					//				.unPickRelevance((RelevancePojo) item
-					//						.getData("RelevancePojo"));
+					//						.getData(RelevancePojoLIT));
 					//	}
 					//	Commons.logger.info("RelevancePickUI checked " + checked);						
 					//}
-					if (item.getData("RelevancePojo") != null) {
-						RelevancePojo relevancePojo = (RelevancePojo) item.getData("RelevancePojo");
+					if (item.getData(RelevancePojoLIT) != null) {
+						RelevancePojo relevancePojo = (RelevancePojo) item.getData(RelevancePojoLIT);
 						boolean checked = item.getChecked();
 						if (checked) {
 							commonUIData.getCatelogPersistenceManager()
@@ -200,9 +295,24 @@ public class RelevancePickUI {
 		});
 
 		mainShell.setData(tree);
+		tree.pack();
+		bodyPane.pack();
 		mainShell.pack();
-		mainShell.open();
+		mainShell.open();		
+		shellDisposeHolder();
 
+		//while (!mainShell.isDisposed()) {
+		//	if (!commonUIData.getColbTrkDisplay().readAndDispatch()) {
+		//		if (commonUIData.getArtifactDisplayOkayToContinue()) {
+		//			commonUIData.getColbTrkDisplay().sleep();
+		//		} else {
+		//			break;
+		//		}
+		//	}			
+		//}
+	}
+	
+	private void shellDisposeHolder() {
 		while (!mainShell.isDisposed()) {
 			if (!commonUIData.getColbTrkDisplay().readAndDispatch()) {
 				if (commonUIData.getArtifactDisplayOkayToContinue()) {
@@ -210,7 +320,9 @@ public class RelevancePickUI {
 				} else {
 					break;
 				}
-			}			
+			}
 		}
-	}
+		System.out.println("here disposing....");
+		mainShell.dispose();
+	}	
 }

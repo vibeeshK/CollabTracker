@@ -20,7 +20,9 @@ public class UsersHandler {
 
 	private UsersHandler(CatelogPersistenceManager inCatelogPersistenceManager,
 			Commons inCommons) {
-		catelogPersistenceManager  = inCatelogPersistenceManager;
+		System.out.println("UsersHandler inCommons passed " + inCommons);
+		
+		catelogPersistenceManager = inCatelogPersistenceManager;
 
 		commons = inCommons;
 		usersList = catelogPersistenceManager.readUsersList();

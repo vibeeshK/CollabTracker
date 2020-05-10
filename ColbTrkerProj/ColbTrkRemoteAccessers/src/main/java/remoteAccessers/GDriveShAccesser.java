@@ -393,7 +393,13 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAccess getChildListForNode while finding inFileID " + inFileID, e);
 		}
 
-    	System.out.printf("result getChildListForNode 22 resultFileList size" + resultFileList.size());
+    	System.out.printf("result getChildListForNode 22 resultFileList size " + resultFileList.getFiles().size() + "\n");
+    	System.out.printf("result getChildListForNode 22 for inFileID is " + inFileID + " \n");
+    	
+    	
+    	if (resultFileList.getFiles().size() == 1) {
+        	System.out.printf("result getChildListForNode 22 resultFileList first child is " + resultFileList.getFiles().get(0) + "\n");
+    	}
 
 		return resultFileList.getFiles();
 	}

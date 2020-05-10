@@ -35,13 +35,13 @@ public class ClearDBsAtDecktopSide {
 
 	public void clearServerDBs() throws IOException, ParseException{
 		Commons commons = Commons.getInstance(Commons.BASE_CATALOG_SERVER);
-		CommonUIData commonUIData = CommonUIData.getUIInstance(commons);
+		CommonData commonData = CommonData.getInstance(commons);
 
 		Commons.logger.info("ClearDBsAtDecktopSide clearServerDBs start " + commons.getCurrentTimeStamp());
 
-		catelogPersistenceManager = commonUIData.getCatelogPersistenceManager();
+		catelogPersistenceManager = commonData.getCatelogPersistenceManager();
 		catelogPersistenceManager.neverCallMe_DeleteERLs();		
-		RootPojo rootPojo = commonUIData.getCurrentRootPojo();
+		RootPojo rootPojo = commonData.getCurrentRootPojo();
 		
 		String catalogpublishFile = rootPojo.rootString
 				+ rootPojo.fileSeparator
