@@ -29,6 +29,12 @@ Enables project managers with a All-in-One Dashboard that tracks effort, defects
 Decker Grouper:
 Decks up individual contents into summary view. E.g. one can setup a summarizer of all project trackers to provide a high-level view to the leadership.
 
+Simple Tracker:
+Enables members of a team to maintain consistent data sheets which can be merged onto a DeckerLite rollup sheet.
+
+Decker Lite:
+A simple decking process that combines all users' individual contents into a group level view. 
+
 Software stack - With many thanks to the providers
 	jdk 1.8
 	SWT Standard windows toolkit, a lightweight framework for desktop UI
