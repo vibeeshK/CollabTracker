@@ -235,6 +235,10 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		ribbonScrollPane.setContent(buttonRibbon);
 		ribbonScrollPane.setLayout(new GridLayout());
 
+		GridData buttonGridData = new GridData(SWT.FILL, SWT.FILL, true, true);
+		buttonRibbon.setLayoutData(buttonGridData);
+		
+		
 		buttonRibbon.setLayout(new GridLayout(10,false));
 
 		Image bg = new Image(((CommonUIData) commonData).getColbTrkDisplay(), commonData.getCommons().backgroundImagePathFileName);
@@ -735,12 +739,18 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 
 		Group actionButtonGrp1 = new Group(itemsMainCompositeInMultiConentView, SWT.RIGHT | SWT.WRAP | SWT.READ_ONLY);
 		actionButtonGrp1.setLayout(new FillLayout());
-		
+
+		GridData actionButtonGrp1GridData = new GridData(SWT.FILL, SWT.FILL, true, true);
+		actionButtonGrp1.setLayoutData(actionButtonGrp1GridData);
+
 		Button closeItemButton1 = new Button(actionButtonGrp1, SWT.PUSH);
 		closeItemButton1.setText("Hide Below Item " + reviewItemPojo.itemID);
 
 		scrolledComposite_1 = new ScrolledComposite(itemsMainCompositeInMultiConentView, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
 		System.out.println("mutiview here");
+
+		GridData scrolledComposite_1GridData = new GridData(SWT.FILL, SWT.FILL, true, true);
+		scrolledComposite_1.setLayoutData(scrolledComposite_1GridData);
 
 		closeItemButton1.setData(Commons.SCREENROWNUMLIT, reviewItemRow);
 
@@ -847,6 +857,10 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		reviewHander.displayContent();
 		reviewGrp.pack();
 		childCompositeOfSingleView.pack();
+
+		actionButtonGrp1.pack();
+		scrolledComposite_1.pack();
+		
 		itemsMainCompositeInMultiConentView.pack();
 
 		mainShell.layout(true);

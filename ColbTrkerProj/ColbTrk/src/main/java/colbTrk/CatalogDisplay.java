@@ -33,7 +33,7 @@ public class CatalogDisplay extends ArtifactsDisplay implements Runnable {
 		Commons.logger.info("CatelogPersistenceManager in setData start");
 		System.out.println("catelogPersistenceManager in setData is " + commonUIData.getCatelogPersistenceManager());
 
-		ArrayList<ERLDownload> allERLDownLoads = catelogPersistenceManager.readActiveERLDownLoadsOfRoot();
+		ArrayList<ERLDownload> allERLDownLoads = commonUIData.getCatelogPersistenceManager().readActiveERLDownLoadsOfRoot();
 		
 		ArrayList<ERLDownload> dbDisplayERLs = new ArrayList<ERLDownload>();
 		for (ERLDownload erlDownload : allERLDownLoads){
@@ -45,7 +45,7 @@ public class CatalogDisplay extends ArtifactsDisplay implements Runnable {
 			System.out.println("CatalogDisplay SetData erlDownload personified " + erlDownload.personified);
 			
 			if (erlDownload.relevancePicked 
-				&& (erlDownload.author.equalsIgnoreCase(commons.userName)
+				&& (erlDownload.author.equalsIgnoreCase(commonUIData.getCommons().userName)
 				|| !commonUIData.getContentHandlerSpecsMap().get(erlDownload.artifactKeyPojo.contentType).personified)) {
 
 				System.out.println("CatalogDisplay SetData Added erlDownload " + erlDownload.artifactKeyPojo.artifactName);
@@ -297,7 +297,7 @@ public class CatalogDisplay extends ArtifactsDisplay implements Runnable {
 					//} else {
 					//	commonUIData.getCatelogPersistenceManager().insertSubscription(selectedERLpojo,ERLDownload.CURRENTLY_SUBSCRIBED);
 					//}
-					catelogPersistenceManager.replaceSubscription(selectedERLpojo,ERLDownload.CURRENTLY_SUBSCRIBED);
+					commonUIData.getCatelogPersistenceManager().replaceSubscription(selectedERLpojo,ERLDownload.CURRENTLY_SUBSCRIBED);
 					refreshScreen();
 				}
 			});

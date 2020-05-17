@@ -475,13 +475,18 @@ public class Commons extends CommonTechs {
 		//userName = clientPropObject.getProperty("userName");
 		System.out.println("At readClienSideProperties defaultUIRootNick is " + defaultUIRootNick);
 
-		userName = readRootSysLoginIDFromClienSideProperties(defaultUIRootNick);
+		//userName = readRootSysLoginIDFromClienSideProperties(defaultUIRootNick);
+		refreshDefaultRootSysUserName();
 
 		System.out.println("At readClienSideProperties userName is " + userName);
 
 		osHandlerName = clientPropObject.getProperty("OSHandler");
 		//backupRootNick = clientPropObject.getProperty("backupRootNick");
 		//remoteBackupFolder = clientPropObject.getProperty("remoteBackupFolder");
+	}
+	
+	public void refreshDefaultRootSysUserName() throws IOException {
+		userName = readRootSysLoginIDFromClienSideProperties(defaultUIRootNick);
 	}
 
 	public String readRootSysLoginIDFromClienSideProperties(String inRootNick) throws IOException {

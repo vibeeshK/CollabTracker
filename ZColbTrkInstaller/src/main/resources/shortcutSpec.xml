@@ -32,7 +32,7 @@ Systems that are not shortcut compatible the information is taken from here.
     desktop="yes"
     applications="yes"
     startMenu="yes"
-    startup="yes"/>
+    startup="no"/>
  <shortcut
     name = "XtdDeckerLiteProcOrchestrator"
     target = "${INSTALL_PATH}\mainJar64Bit\ColbTrk_XtdDeckerLiteProcOrchestrator.bat"
@@ -46,7 +46,7 @@ Systems that are not shortcut compatible the information is taken from here.
     desktop="yes"
     applications="yes"
     startMenu="yes"
-    startup="yes"/>
+    startup="no"/>
  <shortcut
     name = "XtdDeckerProcOrchestrator"
     target = "${INSTALL_PATH}\mainJar64Bit\ColbTrk_XtdDeckerProcOrchestrator.bat"
@@ -60,7 +60,7 @@ Systems that are not shortcut compatible the information is taken from here.
     desktop="yes"
     applications="yes"
     startMenu="yes"
-    startup="yes"/>
+    startup="no"/>
  <shortcut
     name = "XtdProjTrackingSrvrOrchestrator"
     target = "${INSTALL_PATH}\mainJar64Bit\ColbTrk_XtdProjTrackingSrvrOrchestrator.bat"
@@ -74,5 +74,5 @@ Systems that are not shortcut compatible the information is taken from here.
     desktop="yes"
     applications="yes"
     startMenu="yes"
-    startup="yes"/>    
+    startup="no"/>    
 </shortcuts>

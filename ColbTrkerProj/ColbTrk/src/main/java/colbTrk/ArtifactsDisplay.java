@@ -35,8 +35,10 @@ public abstract class ArtifactsDisplay {
 	
 	ArrayList<ArtifactPojo> artifactPojos = null;
 	public CommonUIData commonUIData = null;
-	Commons commons = null;
-	CatelogPersistenceManager catelogPersistenceManager = null;
+	//Commons commons = null;
+	//CatelogPersistenceManager catelogPersistenceManager = null;	// keeping a local reference proved to be error prone
+																	// if you dont sync up at each place after swiching root defaults
+																	// it would result in pointing to old instance at some part
 	
 	String displayTitle = null;
 	Composite buttonRibbon = null;
@@ -51,8 +53,8 @@ public abstract class ArtifactsDisplay {
 
 	public ArtifactsDisplay(CommonUIData inCommonUIData) {
 		commonUIData = inCommonUIData ;
-		commons = commonUIData.getCommons();
-		catelogPersistenceManager = commonUIData.getCatelogPersistenceManager();
+		//commons = commonUIData.getCommons();
+		//catelogPersistenceManager = commonUIData.getCatelogPersistenceManager();
 	}
 	abstract public void setData();
 	
@@ -251,12 +253,27 @@ public abstract class ArtifactsDisplay {
 	abstract public void setDisplayItemsThirdAddlColFieldsOfRow(TableEditor editor,Table table, TableItem tableItem,ArtifactPojo displayArtifact, int inRowNumber);
 
 	public void refreshScreen() {
-		catelogPersistenceManager.tobeConnectedCatalogDbFile = 
-			CatalogDownloadDtlsHandler.getInstance(commonUIData.getCommons()).getCatalogDownLoadedFileName(commonUIData.getCurrentRootNick());
-		catelogPersistenceManager.connectToToBECataloged();
 
-		System.out.println("refreshed catelogPersistenceManager is " + catelogPersistenceManager);
+		//System.out.println("uniqk prior to refresh catelogPersistenceManager of artifactDisplay is " + catelogPersistenceManager);
+		//System.out.println("uniqk prior to refresh catelogPersistenceManager catelogPersistenceManager.tobeConnectedCatalogDbFile is " + catelogPersistenceManager.tobeConnectedCatalogDbFile);
+
+		System.out.println("uniqk refreshed catelogPersistenceManager of commonUIData is " + commonUIData.getCatelogPersistenceManager());
+		System.out.println("uniqk refreshed catelogPersistenceManager.tobeConnectedCatalogDbFile of commonUIData is " + commonUIData.getCatelogPersistenceManager().tobeConnectedCatalogDbFile);
 		
+		//catelogPersistenceManager.tobeConnectedCatalogDbFile = 
+		//	CatalogDownloadDtlsHandler.getInstance(commonUIData.getCommons()).getCatalogDownLoadedFileName(commonUIData.getCurrentRootNick());
+		//catelogPersistenceManager.connectToToBECataloged();
+		commonUIData.getCatelogPersistenceManager().tobeConnectedCatalogDbFile = 
+				CatalogDownloadDtlsHandler.getInstance(commonUIData.getCommons()).getCatalogDownLoadedFileName(commonUIData.getCurrentRootNick());
+		commonUIData.getCatelogPersistenceManager().connectToToBECataloged();
+
+		
+		//System.out.println("uniqk after refresh catelogPersistenceManager of artifactDisplay is " + catelogPersistenceManager);
+		//System.out.println("uniqk after refresh of its catelogPersistenceManager.tobeConnectedCatalogDbFile is " + catelogPersistenceManager.tobeConnectedCatalogDbFile);
+
+		System.out.println("uniqk catelogPersistenceManager of commonUIData is " + commonUIData.getCatelogPersistenceManager());
+		System.out.println("uniqk commonUIData's catelogPersistenceManager.tobeConnectedCatalogDbFile is " + commonUIData.getCatelogPersistenceManager().tobeConnectedCatalogDbFile);
+				
 		Control[] oldControls = mainShell.getChildren();
 		for (Control oldControl : oldControls) {
 		    oldControl.dispose();

@@ -472,6 +472,7 @@ public class RootsSubsciptionsUI {
 			commonUIData.getCommons().setRootSysLoginIDInClienSideProperties(
 					selectedRootNick,
 					selectedRootSysLoginID);
+			commonUIData.getCommons().refreshDefaultRootSysUserName();
 		} catch (IOException e1) {
 
 			ErrorHandler.showErrorAndQuit(commonUIData.getCommons(), 
