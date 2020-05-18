@@ -30,8 +30,8 @@ public class ProjTaskItemPojo extends ItemPojo{
 	public String actualStart;
 	public String actualEnd;
 	public double burntHours;
-	public double estimatedOverrunEffortToComplete;
-	public double estimatedEffortToComplete;
+	public double forecastOverrunHoursAtCompletion;
+	public double forecastTotalHoursAtCompletion;
 	public Date expectedEnd;
 	public String remark;
 
@@ -54,8 +54,8 @@ public class ProjTaskItemPojo extends ItemPojo{
 		actualStart=null;
 		actualEnd=null;
 		burntHours=0.0;
-		estimatedOverrunEffortToComplete=0.0;
-		estimatedEffortToComplete=0.0;
+		forecastOverrunHoursAtCompletion=0.0;
+		forecastTotalHoursAtCompletion=0.0;
 		expectedEnd=null;
 		remark="";
 	}

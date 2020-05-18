@@ -82,7 +82,7 @@ public class XtdProjTask extends ProjTask implements ExtendedHandler {
 		projTaskItem.burntHours = xtdTmShCatlogPersistenceMgr.readTimeDetailOfTask(projTaskItem.taskID, 
 														projTaskItem.relevance, 
 														projTaskItem.projectName);
-		projTaskItem.estimatedEffortToComplete = getEstimatedEffortToComplete();
+		projTaskItem.forecastTotalHoursAtCompletion = getForecastTotalHoursAtCompletion();
 
 		System.out.println("at processxtdStdProcessRec XtdProjTask 222");
 

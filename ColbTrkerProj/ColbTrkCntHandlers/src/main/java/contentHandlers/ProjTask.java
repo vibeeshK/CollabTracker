@@ -55,8 +55,8 @@ public class ProjTask extends GenericItemHandler {
 	Text actualStart_Tx;
 	Text actualEnd_Tx;
 	Text burntHours_Tx;
-	Text estimatedOverrunEffortToComplete_Tx;
-	Text estimatedEffortToComplete_Tx;
+	Text forecastOverrunHoursAtCompletion_Tx;
+	Text forecastTotalHoursAtCompletion_Tx;
 	Text earnedValueSoFar_Tx;
 	DateTime expectedEnd_DateDisplay;	
 
@@ -334,45 +334,45 @@ public class ProjTask extends GenericItemHandler {
 		burntHoursInfo.setLayoutData(formData);
 		lastGroup = burntHoursInfo;
 
-		Group estimatedOverrunEffortToCompleteInfo = new Group(itemContentGroup, SWT.LEFT);
-		estimatedOverrunEffortToCompleteInfo.setText("EstimatedOverrunEffortToComplete");
-		estimatedOverrunEffortToCompleteInfo.setLayout(new FillLayout());
+		Group forcastOverrunHoursAtCompletionInfo = new Group(itemContentGroup, SWT.LEFT);
+		forcastOverrunHoursAtCompletionInfo.setText("ForecastOverrunHoursAtCompletion");
+		forcastOverrunHoursAtCompletionInfo.setLayout(new FillLayout());
 		if (invokedForEdit) {
-			estimatedOverrunEffortToComplete_Tx = new Text(estimatedOverrunEffortToCompleteInfo, SWT.WRAP | SWT.CENTER);
+			forecastOverrunHoursAtCompletion_Tx = new Text(forcastOverrunHoursAtCompletionInfo, SWT.WRAP | SWT.CENTER);
 		} else {
-			estimatedOverrunEffortToComplete_Tx = new Text(estimatedOverrunEffortToCompleteInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);			
+			forecastOverrunHoursAtCompletion_Tx = new Text(forcastOverrunHoursAtCompletionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);			
 		}
-		estimatedOverrunEffortToComplete_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.estimatedOverrunEffortToComplete));
-		estimatedOverrunEffortToComplete_Tx.addModifyListener(new ModifyListener() {
+		forecastOverrunHoursAtCompletion_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.forecastOverrunHoursAtCompletion));
+		forecastOverrunHoursAtCompletion_Tx.addModifyListener(new ModifyListener() {
 			@Override
 			public void modifyText(ModifyEvent e) {
 
-				System.out.println(" estimatedOverrunEffortToComplete_Tx.getText() is " + estimatedOverrunEffortToComplete_Tx.getText());
-				if (estimatedOverrunEffortToComplete_Tx.getText().equals("")) return;
+				System.out.println("forcastOverrunHoursAtCompletion_Tx.getText() is " + forecastOverrunHoursAtCompletion_Tx.getText());
+				if (forecastOverrunHoursAtCompletion_Tx.getText().equals("")) return;
 
-				if (!StringUtils.isNumeric(estimatedOverrunEffortToComplete_Tx.getText())) {
+				if (!StringUtils.isNumeric(forecastOverrunHoursAtCompletion_Tx.getText())) {
 					ErrorHandler.messageBoxNumericOnly(mainShell, commons);
 					return;
 				}
-				System.out.println(" numeric check passed for " + estimatedOverrunEffortToComplete_Tx.getText());
-				projTaskItemPojo.estimatedOverrunEffortToComplete = 
-						commons.convertStringToDouble(estimatedOverrunEffortToComplete_Tx.getText());
-				projTaskItemPojo.estimatedEffortToComplete = getEstimatedEffortToComplete();
-				estimatedEffortToComplete_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.estimatedEffortToComplete));
+				System.out.println(" numeric check passed for " + forecastOverrunHoursAtCompletion_Tx.getText());
+				projTaskItemPojo.forecastOverrunHoursAtCompletion = 
+						commons.convertStringToDouble(forecastOverrunHoursAtCompletion_Tx.getText());
+				projTaskItemPojo.forecastTotalHoursAtCompletion = getForecastTotalHoursAtCompletion();
+				forecastTotalHoursAtCompletion_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.forecastTotalHoursAtCompletion));
 			}
 		});
 
 		formData = new FormData();
 		formData.top = new FormAttachment(lastGroup);
 		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		estimatedOverrunEffortToCompleteInfo.setLayoutData(formData);
-		lastGroup = estimatedOverrunEffortToCompleteInfo;
+		forcastOverrunHoursAtCompletionInfo.setLayoutData(formData);
+		lastGroup = forcastOverrunHoursAtCompletionInfo;
 
 		Group estimatedEffortToCompleteInfo = new Group(itemContentGroup, SWT.LEFT);
-		estimatedEffortToCompleteInfo.setText("EstimatedOverrunEffortToComplete");
+		estimatedEffortToCompleteInfo.setText("ForecastTotalHoursAtCompletion");
 		estimatedEffortToCompleteInfo.setLayout(new FillLayout());
-		estimatedEffortToComplete_Tx = new Text(estimatedEffortToCompleteInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-		estimatedEffortToComplete_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.estimatedEffortToComplete));
+		forecastTotalHoursAtCompletion_Tx = new Text(estimatedEffortToCompleteInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+		forecastTotalHoursAtCompletion_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.forecastTotalHoursAtCompletion));
 		
 		formData = new FormData();
 		formData.top = new FormAttachment(lastGroup);
@@ -792,8 +792,9 @@ public class ProjTask extends GenericItemHandler {
 		return new ProjTaskItemDoc(new ProjTaskItemPojo(-1));
 	}
 	
-	public double getEstimatedEffortToComplete() {
+	public double getForecastTotalHoursAtCompletion() {
 		ProjTaskItemPojo projTaskItem = (ProjTaskItemPojo) primerDoc.getItem();
-		return projTaskItem.plannedHours - projTaskItem.burntHours + projTaskItem.estimatedOverrunEffortToComplete;
+		//return projTaskItem.plannedHours - projTaskItem.burntHours + projTaskItem.forcastOverrunHoursAtCompletion;
+		return projTaskItem.plannedHours + projTaskItem.forecastOverrunHoursAtCompletion;
 	}	
 }

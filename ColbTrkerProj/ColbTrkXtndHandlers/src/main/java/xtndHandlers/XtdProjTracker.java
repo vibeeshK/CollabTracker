@@ -77,8 +77,11 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 	public static final String PROJPLANSH_ActualStart_COLHDR = "ActualStart";
 	public static final String PROJPLANSH_ActualEnd_COLHDR = "ActualEnd";
 	public static final String PROJPLANSH_BurntHours_COLHDR = "BurntHours";
-	public static final String PROJPLANSH_EstimatedOverrunEffortToComplete_COLHDR = "Estimated Overrun Effort required to complete";
-	public static final String PROJPLANSH_EstimatedEffortToComplete_COLHDR = "Estimated Effort required to complete";
+	//public static final String PROJPLANSH_EstimatedOverrunEffortToComplete_COLHDR = "Estimated Overrun Effort required to complete";
+	public static final String PROJPLANSH_ForecastOverrunHoursAtCompletion_COLHDR = "Forecast Overrun Hours At Completion";
+	//public static final String PROJPLANSH_EstimatedEffortToComplete_COLHDR = "Estimated Effort required to complete";
+	//forecast total hours in excel would be arrive with same inline formula in spreadsheet
+	//public static final String PROJPLANSH_ForcastTotalHoursAtCompletion_COLHDR = "Forecast Total Hours At Completion";
 	public static final String PROJPLANSH_EarnedValueSoFar_COLHDR = "Earned Value so far";
 	public static final String PROJPLANSH_ExpectedEnd_COLHDR = "ExpectedEnd";
 	public static final String PROJPLANSH_CPI_COLHDR = "CPI =  Earned / Actual";
@@ -660,8 +663,9 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 		projTasksXlObj.addColOfInterest(PROJPLANSH_ActualStart_COLHDR, ExcelColJavaObj.COLTYPE_DATE);
 		projTasksXlObj.addColOfInterest(PROJPLANSH_ActualEnd_COLHDR, ExcelColJavaObj.COLTYPE_DATE);
 		projTasksXlObj.addColOfInterest(PROJPLANSH_BurntHours_COLHDR, ExcelColJavaObj.COLTYPE_NUMERIC);
-		projTasksXlObj.addColOfInterest(PROJPLANSH_EstimatedOverrunEffortToComplete_COLHDR, ExcelColJavaObj.COLTYPE_NUMERIC);
-		projTasksXlObj.addColOfInterest(PROJPLANSH_EstimatedEffortToComplete_COLHDR, ExcelColJavaObj.COLTYPE_NUMERIC);
+		projTasksXlObj.addColOfInterest(PROJPLANSH_ForecastOverrunHoursAtCompletion_COLHDR, ExcelColJavaObj.COLTYPE_NUMERIC);
+		//forecast total hours in excel would be arrive with same inline formula in spreadsheet
+		//projTasksXlObj.addColOfInterest(PROJPLANSH_ForcastTotalHoursAtCompletion_COLHDR, ExcelColJavaObj.COLTYPE_NUMERIC);
 		projTasksXlObj.addColOfInterest(PROJPLANSH_ExpectedEnd_COLHDR, ExcelColJavaObj.COLTYPE_DATE);
 		projTasksXlObj.addColOfInterest(PROJPLANSH_Remark_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		
@@ -768,8 +772,9 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 		projTasksXlObj.addColOfInterest(PROJPLANSH_ActualStart_COLHDR, ExcelColJavaObj.COLTYPE_DATE);
 		projTasksXlObj.addColOfInterest(PROJPLANSH_ActualEnd_COLHDR, ExcelColJavaObj.COLTYPE_DATE);
 		projTasksXlObj.addColOfInterest(PROJPLANSH_BurntHours_COLHDR, ExcelColJavaObj.COLTYPE_NUMERIC);
-		projTasksXlObj.addColOfInterest(PROJPLANSH_EstimatedOverrunEffortToComplete_COLHDR, ExcelColJavaObj.COLTYPE_NUMERIC);
-		projTasksXlObj.addColOfInterest(PROJPLANSH_EstimatedEffortToComplete_COLHDR, ExcelColJavaObj.COLTYPE_FORMULA);
+		projTasksXlObj.addColOfInterest(PROJPLANSH_ForecastOverrunHoursAtCompletion_COLHDR, ExcelColJavaObj.COLTYPE_NUMERIC);
+		//forecast total hours in excel would be arrive with same inline formula in spreadsheet		
+		//projTasksXlObj.addColOfInterest(PROJPLANSH_ForcastTotalHoursAtCompletion_COLHDR, ExcelColJavaObj.COLTYPE_FORMULA);
 		projTasksXlObj.addColOfInterest(PROJPLANSH_ExpectedEnd_COLHDR, ExcelColJavaObj.COLTYPE_DATE);
 		projTasksXlObj.addColOfInterest(PROJPLANSH_Remark_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		projTasksXlObj.initKeyColumn(PROJPLANSH_TaskID_COLHDR);
@@ -825,8 +830,10 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 			ErrorHandler.showErrorAndQuit(commons, "Error XtdProjTracker moveTaskItemDataIntoPlanShRowObj " + inProjTaskItem.artifactName, e);
 		}
 		inProjTasksXlJavaObj.setColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_BurntHours_COLHDR, inProjTaskItem.burntHours);
-		inProjTasksXlJavaObj.setColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_EstimatedOverrunEffortToComplete_COLHDR, inProjTaskItem.estimatedOverrunEffortToComplete);
-		inProjTasksXlJavaObj.setColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_EstimatedEffortToComplete_COLHDR, inProjTaskItem.estimatedEffortToComplete);
+		inProjTasksXlJavaObj.setColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_ForecastOverrunHoursAtCompletion_COLHDR, inProjTaskItem.forecastOverrunHoursAtCompletion);
+		//forecast total hours in excel would be arrive with same inline formula in spreadsheet
+		//inProjTasksXlJavaObj.setColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_ForcastTotalHoursAtCompletion_COLHDR, inProjTaskItem.forecastTotalHoursAtCompletion);
+		
 		inProjTasksXlJavaObj.setColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_ExpectedEnd_COLHDR, inProjTaskItem.expectedEnd);
 		inProjTasksXlJavaObj.setColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_Remark_COLHDR, inProjTaskItem.remark);
 	}
