@@ -212,7 +212,8 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 	                .setApplicationName(APPLICATION_NAME)
 	                .build();
 		} catch (GeneralSecurityException | IOException e) {
-			ErrorHandler.showErrorAndQuit(commons, "error in GDriveShAccesser intiateCommunications " + inRootPojo.rootNick, e);
+			ErrorHandler.showErrorAndQuit(commons, "Error in GDriveShAccesser intiateCommunications."
+					+ " Check connection issues and port lockups. Root: " + inRootPojo.rootNick, e);
 		}
 	}
 

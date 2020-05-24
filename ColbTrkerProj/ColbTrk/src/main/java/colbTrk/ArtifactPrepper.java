@@ -266,7 +266,12 @@ public class ArtifactPrepper {
 		int maxLocalVerionNumber;
 		maxLocalVerionNumber = catelogPersistenceManager.getMaxDBVersionNumberOfSelfAuthoredArtifact(
 				targetArtifactKeyPojo);
-		if (commons.processMode == Commons.EXTENDED_CATALOG_SERVER && maxLocalVerionNumber >  -1) {
+
+		//23May2020: excluded situation when prev draft had to be used as few important fields such as 
+		//projTrackerPojo2.corePlanChanged set in the same transaction got lost
+		//if (commons.processMode == Commons.EXTENDED_CATALOG_SERVER && maxLocalVerionNumber >  -1) {
+		if (!useActiveDraft && commons.processMode == Commons.EXTENDED_CATALOG_SERVER && maxLocalVerionNumber >  -1) {
+		
 			// for extended servers, no need to maintain multiple versions
 			//catelogPersistenceManager.deleteAllSelfAuthoredArtifacts(targetArtifactKeyPojo);
 			// clear old drafts starts

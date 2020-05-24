@@ -101,6 +101,7 @@ public class ProjTracker extends GenericItemHandler implements DeckableContentTy
 		ProjTrackerPojo projTrackerPojo2 = (ProjTrackerPojo) primerDoc.getItem();
 
 		System.out.println("In testPrinter Pojo title from primeDoc is " + projTrackerPojo2.title);
+		System.out.println("In testPrinter projTrackerPojo2.corePlanChanged : " + projTrackerPojo2.corePlanChanged);
 	}
 
 	public String validateBeforeUIEdit() {

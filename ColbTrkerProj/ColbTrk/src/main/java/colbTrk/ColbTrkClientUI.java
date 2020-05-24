@@ -5,7 +5,6 @@ import java.text.ParseException;
 import java.util.ArrayList;
 
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.custom.TableEditor;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Image;
@@ -17,12 +16,8 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.Table;
-import org.eclipse.swt.widgets.TableItem;
-import org.eclipse.swt.widgets.Text;
 
 import commonTechs.DisplayKeeper;
-import commonTechs.SysTrayHanlder;
 
 /**
  * User's desktop side UI. Provides option for 
@@ -66,6 +61,7 @@ public class ColbTrkClientUI {
 				
 		mainShell = new Shell(mainDisplay,SWT.APPLICATION_MODAL
 				|SWT.CLOSE|SWT.TITLE|SWT.BORDER|SWT.RESIZE|SWT.MAX|SWT.MIN);
+		mainShell.setImage(new Image(mainDisplay, commons.applicationIcon));
 		
 		mainShell.setLayout(new GridLayout(1, false));
 		mainShell.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
@@ -119,6 +115,7 @@ public class ColbTrkClientUI {
 		mainShell.pack();
 		mainShell.open();
 
+		
 		mainShell.addListener(SWT.Close, new Listener() {
 		      public void handleEvent(Event event) {
 		    	  
@@ -132,8 +129,8 @@ public class ColbTrkClientUI {
 		      }
 		    });
 
+		btnClientOrchestratorProcess();	// auto triggering client orchestrator to ensure content sync up
 		//comments this auto opens and leaving upto user to choose
-		//btnClientOrchestratorProcess();
 		//btnCatalogUI();
 
 		shellDisposeHolder();
@@ -166,15 +163,17 @@ public class ColbTrkClientUI {
 	}
 	
 	public void btnCatalogUI() {
-		if (catalogDisplayThread != null && catalogDisplayThread.isAlive()){
+		//if (catalogDisplayThread != null && catalogDisplayThread.isAlive()){
+		if (catalogDisplayThread != null && catalogDisplayThread.getState() != Thread.State.TERMINATED){
 			MessageBox messageBox1 = new MessageBox(mainShell, SWT.ICON_WARNING | SWT.OK);
 			messageBox1.setMessage("CatalogDisplay already open");
 			messageBox1.open();
 			return;
-		} else if (espotClientOrchestratorThread == null || !espotClientOrchestratorThread.isAlive()) {			
+		//} else if (espotClientOrchestratorThread == null || !espotClientOrchestratorThread.isAlive()) {
+		} else if (espotClientOrchestratorThread == null || espotClientOrchestratorThread.getState() == Thread.State.TERMINATED) {
 			MessageBox messageBox2 = new MessageBox(mainShell, SWT.ICON_WARNING | SWT.OK);
 			messageBox2.setMessage("Ensure ClientOrchestrator is started to sync up with Doc Center");
-			messageBox2.open();	
+			messageBox2.open();
 		}
 
 		CatalogDownloadDtlsHandler catalogDownloadDtlsHandler = CatalogDownloadDtlsHandler.getInstance(commons);
@@ -182,7 +181,7 @@ public class ColbTrkClientUI {
 		
 		if (catalogDownLoadedFileName == null) {
 			MessageBox messageBox1 = new MessageBox(mainShell, SWT.ICON_WARNING | SWT.OK);
-			messageBox1.setMessage("Catalogs not downLoaded yet. You can invoke CatalogUI after download completes in a few min.");
+			messageBox1.setMessage("Catalogs not downLoaded yet. Please try few min after initiating Client Orchestrator.");
 			messageBox1.open();
 			return;			
 		}		
@@ -193,7 +192,6 @@ public class ColbTrkClientUI {
 		catalogDisplay = new CatalogDisplay(commonUIData);
 		catalogDisplayThread = new Thread(catalogDisplay);
 		catalogDisplayThread.start();
-
 	}
 
 	public void btnStandaloneReaderUI(){
@@ -213,7 +211,8 @@ public class ColbTrkClientUI {
 	}
 	
 	public void btnClientOrchestratorProcess() {
-		if (espotClientOrchestratorThread != null && espotClientOrchestratorThread.isAlive()){		
+		//if (espotClientOrchestratorThread != null && espotClientOrchestratorThread.isAlive()){		
+		if (espotClientOrchestratorThread != null && espotClientOrchestratorThread.getState() != Thread.State.TERMINATED) {
 			MessageBox messageBox1 = new MessageBox(mainShell, SWT.ICON_WARNING | SWT.OK);
 			messageBox1.setMessage("ClientOrchestrator already active");
 			messageBox1.open();

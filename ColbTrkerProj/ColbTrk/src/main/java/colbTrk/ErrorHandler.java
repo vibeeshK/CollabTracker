@@ -1,6 +1,7 @@
 package colbTrk;
 
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.MessageBox;
@@ -41,6 +42,7 @@ public class ErrorHandler {
 			Display display = DisplayKeeper.getDisplay();
 			mainShell = new Shell(display, SWT.APPLICATION_MODAL | SWT.CLOSE
 					| SWT.TITLE | SWT.BORDER | SWT.RESIZE | SWT.MIN | SWT.MAX);
+			mainShell.setImage(new Image(display,inCommons.applicationIcon));			
 			mainShell.setLayout(new FillLayout());
 		} else {
 			mainShell = inMainShell;
@@ -113,6 +115,7 @@ public class ErrorHandler {
 
 			mainShell = new Shell(display, SWT.APPLICATION_MODAL | SWT.CLOSE
 					| SWT.TITLE | SWT.BORDER | SWT.RESIZE | SWT.MIN | SWT.MAX);
+			mainShell.setImage(new Image(display,inCommons.applicationIcon));			
 			mainShell.setLayout(new FillLayout());
 		} else {
 			mainShell = inMainShell;

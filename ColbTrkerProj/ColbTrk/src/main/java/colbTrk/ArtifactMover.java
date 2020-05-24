@@ -122,7 +122,11 @@ public class ArtifactMover {
 					System.out.println("At moveArtifact Is a Zip file");
 					System.out.println("check unzip");
 					System.out.println("source : " + sourcePath);
-					String targetCreateDirName = commons.getDirectoryOfZipFile(destPath);
+
+					//23May2020: destpath wont have zip extensions at this point
+					//String targetCreateDirName = commons.getDirectoryOfZipFile(destPath);					
+					String targetCreateDirName = commons.getParentFolderName(destPath);
+					
 					System.out.println("target : " + targetCreateDirName);
 					if (!commons.createFolder(targetCreateDirName)) {
 						System.out.println("ERROR4 Issue with directory creation : " + targetCreateDirName);

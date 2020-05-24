@@ -14,7 +14,9 @@ public class SelfAuthoredArtifactpojo extends ArtifactPojo {
 	final public static String ArtifactStatusProcessed = "Processed";
 	final public static String ArtifactStatusNoAction = "NoAction";
 	final public static String ArtifactStatusOutdated = "Outdated";
-	final public static String ArtifactStatusToBeBatchUploaded = "ToBeBatchUploaded";
+	final public static String ArtifactStatusToBeBatchUploaded = "ToBeBatchUploaded"; // used in extended processors
+																						// to upload all together
+																						// at end of each cycle
 	
 	final public static String ArtifactStatusScreenTextCreateArtifact = "CreateArtifact";
 	final public static String ArtifactStatusScreenTextUpload = "Upload";

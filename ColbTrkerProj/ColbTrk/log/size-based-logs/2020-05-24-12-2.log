@@ -1,0 +1,749 @@
+2020-May-24 00:39:05 AM [Thread-6] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:39:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:39:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:39:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524003905
+2020-May-24 00:39:05 AM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:39:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524003905
+2020-May-24 00:39:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524003905
+2020-May-24 00:39:05 AM [Thread-113] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524003905
+2020-May-24 00:39:05 AM [Thread-113] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:39:05 AM [Thread-113] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:39:05 AM [Thread-113] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524003905
+2020-May-24 00:39:05 AM [Thread-6] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:39:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200524003905
+2020-May-24 00:39:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524003905
+2020-May-24 00:39:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524003905
+2020-May-24 00:39:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524003907
+2020-May-24 00:39:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:39:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524003907
+2020-May-24 00:39:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524003907
+2020-May-24 00:39:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200524003907
+2020-May-24 00:39:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524003907
+2020-May-24 00:39:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:39:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:39:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524003907
+2020-May-24 00:39:07 AM [Thread-6] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:39:07 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524003907
+2020-May-24 00:39:07 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524003907
+2020-May-24 00:39:07 AM [Thread-114] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524003907
+2020-May-24 00:39:07 AM [Thread-114] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:39:07 AM [Thread-114] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:39:07 AM [Thread-114] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524003907
+2020-May-24 00:39:11 AM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:39:11 AM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:39:14 AM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoGShContentRoot completed. Nothing new to publish 
+2020-May-24 00:39:14 AM [Thread-2] WARN  CommonLogger -  rootNick DemoGShContentRoot has 1 unfinished requests. e.g. colbTrk.ReqTrackItem@244a1a31
+2020-May-24 00:40:05 AM [Thread-6] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200524004005
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004005
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004005
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004005
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004005
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004005
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200524004005
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004005
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004005
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004005
+2020-May-24 00:40:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004005
+2020-May-24 00:40:05 AM [Thread-115] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004005
+2020-May-24 00:40:05 AM [Thread-115] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:40:05 AM [Thread-115] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:40:05 AM [Thread-115] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004005
+2020-May-24 00:40:05 AM [Thread-6] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:40:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200524004005
+2020-May-24 00:40:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004005
+2020-May-24 00:40:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004005
+2020-May-24 00:40:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004006
+2020-May-24 00:40:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:40:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004006
+2020-May-24 00:40:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004006
+2020-May-24 00:40:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200524004006
+2020-May-24 00:40:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004006
+2020-May-24 00:40:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:40:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:40:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004006
+2020-May-24 00:40:06 AM [Thread-6] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:40:06 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004006
+2020-May-24 00:40:07 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004007
+2020-May-24 00:40:07 AM [Thread-116] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004007
+2020-May-24 00:40:07 AM [Thread-116] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:40:07 AM [Thread-116] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:40:07 AM [Thread-116] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004007
+2020-May-24 00:40:11 AM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:40:11 AM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:40:14 AM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoGShContentRoot completed. Nothing new to publish 
+2020-May-24 00:40:14 AM [Thread-2] WARN  CommonLogger -  rootNick DemoGShContentRoot has 1 unfinished requests. e.g. colbTrk.ReqTrackItem@244a1a31
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200524004105
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004105
+2020-May-24 00:41:05 AM [Thread-6] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004105
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004105
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004105
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004105
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200524004105
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004105
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004105
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004105
+2020-May-24 00:41:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004105
+2020-May-24 00:41:05 AM [Thread-117] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004105
+2020-May-24 00:41:05 AM [Thread-117] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:41:05 AM [Thread-117] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:41:05 AM [Thread-117] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004105
+2020-May-24 00:41:05 AM [Thread-6] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:41:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200524004105
+2020-May-24 00:41:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004105
+2020-May-24 00:41:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004105
+2020-May-24 00:41:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004106
+2020-May-24 00:41:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:41:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004106
+2020-May-24 00:41:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004106
+2020-May-24 00:41:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200524004106
+2020-May-24 00:41:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004106
+2020-May-24 00:41:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:41:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:41:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004106
+2020-May-24 00:41:06 AM [Thread-6] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:41:06 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004106
+2020-May-24 00:41:06 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004106
+2020-May-24 00:41:06 AM [Thread-118] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004106
+2020-May-24 00:41:06 AM [Thread-118] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:41:06 AM [Thread-118] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:41:06 AM [Thread-118] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004106
+2020-May-24 00:41:10 AM [Thread-3] INFO  CommonLogger - At start of startupWithERLpojo ProjDestiny
+2020-May-24 00:41:10 AM [Thread-3] INFO  CommonLogger - At xxa displayContent
+2020-May-24 00:41:10 AM [Thread-3] INFO  CommonLogger - ReviewHandler initReviewHandler starting for ProjDestiny
+2020-May-24 00:41:11 AM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:41:11 AM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:41:13 AM [Thread-3] INFO  CommonLogger - At ArtifactMover prepForUpload start inDestSelfAuthoredArtifactpojo is ProjDestiny inFileExtn is .zip
+2020-May-24 00:41:13 AM [Thread-3] INFO  CommonLogger - At start of startupWithERLpojo ProjDestiny
+2020-May-24 00:41:13 AM [Thread-3] INFO  CommonLogger - At xxa displayContent
+2020-May-24 00:41:13 AM [Thread-3] INFO  CommonLogger - ReviewHandler initReviewHandler starting for ProjDestiny
+2020-May-24 00:41:14 AM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoGShContentRoot completed. Nothing new to publish 
+2020-May-24 00:41:14 AM [Thread-2] WARN  CommonLogger -  rootNick DemoGShContentRoot has 1 unfinished requests. e.g. colbTrk.ReqTrackItem@244a1a31
+2020-May-24 00:41:52 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004152
+2020-May-24 00:41:53 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004153
+2020-May-24 00:41:53 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:41:53 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:41:53 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004153
+2020-May-24 00:41:53 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004153
+2020-May-24 00:41:55 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004155
+2020-May-24 00:41:55 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:41:55 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:41:55 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004155
+2020-May-24 00:41:55 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004155
+2020-May-24 00:41:58 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004158
+2020-May-24 00:41:58 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:41:58 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:41:58 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004158
+2020-May-24 00:41:58 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004158
+2020-May-24 00:42:00 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004200
+2020-May-24 00:42:00 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:00 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:00 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004200
+2020-May-24 00:42:00 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004200
+2020-May-24 00:42:03 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004203
+2020-May-24 00:42:03 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:03 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:03 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004203
+2020-May-24 00:42:03 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004203
+2020-May-24 00:42:04 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004204
+2020-May-24 00:42:04 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:04 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:04 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004204
+2020-May-24 00:42:04 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004204
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200524004205
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004205
+2020-May-24 00:42:05 AM [Thread-6] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004205
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004205
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004205
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004205
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200524004205
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004205
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004205
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004205
+2020-May-24 00:42:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004205
+2020-May-24 00:42:05 AM [Thread-119] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004205
+2020-May-24 00:42:05 AM [Thread-119] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:42:05 AM [Thread-119] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:42:05 AM [Thread-119] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004205
+2020-May-24 00:42:05 AM [Thread-6] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:42:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200524004205
+2020-May-24 00:42:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004205
+2020-May-24 00:42:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004205
+2020-May-24 00:42:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004206
+2020-May-24 00:42:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004206
+2020-May-24 00:42:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004206
+2020-May-24 00:42:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200524004206
+2020-May-24 00:42:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004206
+2020-May-24 00:42:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004206
+2020-May-24 00:42:06 AM [Thread-6] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:42:06 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004206
+2020-May-24 00:42:06 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004206
+2020-May-24 00:42:06 AM [Thread-120] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004206
+2020-May-24 00:42:06 AM [Thread-120] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:06 AM [Thread-120] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:06 AM [Thread-120] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004206
+2020-May-24 00:42:07 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004207
+2020-May-24 00:42:07 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:07 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:07 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004207
+2020-May-24 00:42:07 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004207
+2020-May-24 00:42:10 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004210
+2020-May-24 00:42:10 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:10 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:10 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004210
+2020-May-24 00:42:10 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004210
+2020-May-24 00:42:11 AM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:42:11 AM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:42:14 AM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoGShContentRoot completed. Nothing new to publish 
+2020-May-24 00:42:14 AM [Thread-2] WARN  CommonLogger -  rootNick DemoGShContentRoot has 1 unfinished requests. e.g. colbTrk.ReqTrackItem@244a1a31
+2020-May-24 00:42:15 AM [Thread-6] INFO  CommonLogger - Uploader uploadContenAndRequestFiles complete for C:\Users\kvasavaiah\ColbTrkUserArtifacts\clientMc\newartifacts\DemoGShContentRoot\MyOrg\Divisions\HR\ProjDestiny_1.zip
+2020-May-24 00:42:16 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004216
+2020-May-24 00:42:16 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:16 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:16 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004216
+2020-May-24 00:42:16 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004216
+2020-May-24 00:42:17 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004217
+2020-May-24 00:42:17 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:17 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:17 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004217
+2020-May-24 00:42:17 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004217
+2020-May-24 00:42:21 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004221
+2020-May-24 00:42:21 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:21 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:21 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004221
+2020-May-24 00:42:21 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004221
+2020-May-24 00:42:25 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004225
+2020-May-24 00:42:25 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:25 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:25 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004225
+2020-May-24 00:42:25 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004225
+2020-May-24 00:42:27 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004227
+2020-May-24 00:42:27 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:27 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:27 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004227
+2020-May-24 00:42:27 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004227
+2020-May-24 00:42:33 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004233
+2020-May-24 00:42:33 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:33 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:33 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004233
+2020-May-24 00:42:33 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004233
+2020-May-24 00:42:44 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004244
+2020-May-24 00:42:44 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:44 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:44 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004244
+2020-May-24 00:42:44 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004244
+2020-May-24 00:42:46 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004246
+2020-May-24 00:42:46 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:46 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:46 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004246
+2020-May-24 00:42:46 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004246
+2020-May-24 00:42:49 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004249
+2020-May-24 00:42:49 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:42:49 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:42:49 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004249
+2020-May-24 00:42:49 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004249
+2020-May-24 00:43:01 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004301
+2020-May-24 00:43:01 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:43:01 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:43:01 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004301
+2020-May-24 00:43:01 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004301
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200524004305
+2020-May-24 00:43:05 AM [Thread-6] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004305
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004305
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004305
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004305
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004305
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200524004305
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004305
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004305
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004305
+2020-May-24 00:43:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004305
+2020-May-24 00:43:05 AM [Thread-121] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004305
+2020-May-24 00:43:05 AM [Thread-121] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:43:05 AM [Thread-121] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:43:05 AM [Thread-121] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004305
+2020-May-24 00:43:05 AM [Thread-6] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:43:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200524004305
+2020-May-24 00:43:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004305
+2020-May-24 00:43:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004305
+2020-May-24 00:43:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004306
+2020-May-24 00:43:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:43:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004306
+2020-May-24 00:43:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004306
+2020-May-24 00:43:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200524004306
+2020-May-24 00:43:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004306
+2020-May-24 00:43:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:43:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:43:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004306
+2020-May-24 00:43:06 AM [Thread-6] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:43:06 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004306
+2020-May-24 00:43:06 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004306
+2020-May-24 00:43:06 AM [Thread-122] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004306
+2020-May-24 00:43:06 AM [Thread-122] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:43:06 AM [Thread-122] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:43:06 AM [Thread-122] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004306
+2020-May-24 00:43:11 AM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:43:11 AM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:43:12 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004312
+2020-May-24 00:43:12 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:43:12 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:43:12 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004312
+2020-May-24 00:43:12 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004312
+2020-May-24 00:43:35 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004335
+2020-May-24 00:43:35 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:43:35 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:43:35 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004335
+2020-May-24 00:43:35 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004335
+2020-May-24 00:43:59 AM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoGShContentRoot completed. New catalogpublishFile 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO/1_allmembersreadable/catalogpublishfolder/catalogDbPublishedCopyOfDemoGShContentRoot20200524004355
+2020-May-24 00:43:59 AM [Thread-2] WARN  CommonLogger -  rootNick DemoGShContentRoot has 1 unfinished requests. e.g. colbTrk.ReqTrackItem@244a1a31
+2020-May-24 00:44:00 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004400
+2020-May-24 00:44:00 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:44:00 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:44:00 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004400
+2020-May-24 00:44:00 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004400
+2020-May-24 00:44:02 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004402
+2020-May-24 00:44:02 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:44:02 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:44:02 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004402
+2020-May-24 00:44:02 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004402
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200524004405
+2020-May-24 00:44:05 AM [Thread-6] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004405
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004405
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004405
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004405
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004405
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200524004405
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004405
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004405
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004405
+2020-May-24 00:44:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004405
+2020-May-24 00:44:05 AM [Thread-123] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004405
+2020-May-24 00:44:05 AM [Thread-123] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:44:05 AM [Thread-123] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:44:05 AM [Thread-123] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004405
+2020-May-24 00:44:05 AM [Thread-6] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:44:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200524004405
+2020-May-24 00:44:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004405
+2020-May-24 00:44:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004405
+2020-May-24 00:44:05 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004405
+2020-May-24 00:44:05 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:44:05 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:44:05 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004405
+2020-May-24 00:44:05 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004405
+2020-May-24 00:44:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004406
+2020-May-24 00:44:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:44:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004406
+2020-May-24 00:44:09 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004409
+2020-May-24 00:44:09 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200524004409
+2020-May-24 00:44:09 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004409
+2020-May-24 00:44:09 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:44:09 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:44:09 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004409
+2020-May-24 00:44:09 AM [Thread-6] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:44:09 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004409
+2020-May-24 00:44:09 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004409
+2020-May-24 00:44:09 AM [Thread-124] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004409
+2020-May-24 00:44:09 AM [Thread-124] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:44:09 AM [Thread-124] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:44:09 AM [Thread-124] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004409
+2020-May-24 00:44:11 AM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:44:11 AM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:44:12 AM [Thread-6] INFO  CommonLogger - ResponseChecker checkResponsesOfArtifactsOfOneRoot complete for ProjDestiny
+2020-May-24 00:44:14 AM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoGShContentRoot completed. Nothing new to publish 
+2020-May-24 00:44:14 AM [Thread-2] WARN  CommonLogger -  rootNick DemoGShContentRoot has 1 unfinished requests. e.g. colbTrk.ReqTrackItem@244a1a31
+2020-May-24 00:44:20 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004420
+2020-May-24 00:44:20 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:44:20 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:44:20 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004420
+2020-May-24 00:44:20 AM [Thread-3] INFO  CommonLogger - CreateArtifactUI displayContent started at 20200524004420
+2020-May-24 00:44:24 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004424
+2020-May-24 00:44:24 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:44:24 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:44:24 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004424
+2020-May-24 00:44:24 AM [Thread-3] INFO  CommonLogger - CatelogPersistenceManager in setData start
+2020-May-24 00:44:24 AM [Thread-3] INFO  CommonLogger - inArtifactPojos at setArtifactValues is [colbTrk.ERLDownload@231737b6, colbTrk.ERLDownload@9dc4e2c, colbTrk.ERLDownload@4f46407b, colbTrk.ERLDownload@56ba47c2, colbTrk.ERLDownload@4c8a7024]
+2020-May-24 00:44:24 AM [Thread-3] INFO  CommonLogger - At ArtifactsDisplay DisplayContent Start
+2020-May-24 00:44:27 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004427
+2020-May-24 00:44:27 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:44:27 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:44:27 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004427
+2020-May-24 00:44:27 AM [Thread-3] INFO  CommonLogger - CatelogPersistenceManager in setData start
+2020-May-24 00:44:27 AM [Thread-3] INFO  CommonLogger - inArtifactPojos at setArtifactValues is [colbTrk.ERLDownload@274cfab7, colbTrk.ERLDownload@5af423bd, colbTrk.ERLDownload@5e74eb76, colbTrk.ERLDownload@4160abcc, colbTrk.ERLDownload@1b96815]
+2020-May-24 00:44:27 AM [Thread-3] INFO  CommonLogger - At ArtifactsDisplay DisplayContent Start
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200524004505
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:05 AM [Thread-6] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:05 AM [Thread-6] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:45:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200524004505
+2020-May-24 00:45:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:45:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:45:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:05 AM [Thread-6] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200524004505
+2020-May-24 00:45:05 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004505
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:45:05 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004505
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004505
+2020-May-24 00:45:05 AM [Thread-125] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004505
+2020-May-24 00:45:05 AM [Thread-125] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:45:05 AM [Thread-125] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:45:05 AM [Thread-125] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:05 AM [Thread-126] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:05 AM [Thread-126] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:45:05 AM [Thread-126] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:45:05 AM [Thread-126] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004505
+2020-May-24 00:45:11 AM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:45:11 AM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:45:14 AM [Thread-2] INFO  CommonLogger - RequestProcessor processRequestsOfOneRoot rootNick DemoGShContentRoot completed. Nothing new to publish 
+2020-May-24 00:45:14 AM [Thread-2] WARN  CommonLogger -  rootNick DemoGShContentRoot has 1 unfinished requests. e.g. colbTrk.ReqTrackItem@244a1a31
+2020-May-24 00:46:05 AM [Thread-6] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200524004605
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004605
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004605
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004605
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004605
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004605
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200524004605
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004605
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004605
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004605
+2020-May-24 00:46:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004605
+2020-May-24 00:46:05 AM [Thread-127] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004605
+2020-May-24 00:46:05 AM [Thread-127] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:46:05 AM [Thread-127] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:46:05 AM [Thread-127] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004605
+2020-May-24 00:46:05 AM [Thread-6] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:46:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200524004605
+2020-May-24 00:46:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004605
+2020-May-24 00:46:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004605
+2020-May-24 00:46:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004606
+2020-May-24 00:46:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:46:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004606
+2020-May-24 00:46:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004606
+2020-May-24 00:46:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200524004606
+2020-May-24 00:46:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004606
+2020-May-24 00:46:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:46:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:46:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004606
+2020-May-24 00:46:06 AM [Thread-6] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:46:07 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004607
+2020-May-24 00:46:07 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004607
+2020-May-24 00:46:07 AM [Thread-128] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004607
+2020-May-24 00:46:07 AM [Thread-128] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:46:07 AM [Thread-128] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:46:07 AM [Thread-128] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004607
+2020-May-24 00:46:11 AM [Thread-2] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:46:11 AM [Thread-2] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:46:16 AM [Thread-2] INFO  CommonLogger - At GenericGrouper processContentAtWeb start for VIBEESH_xTaskx_AllocatdTask_ProjDestiny_InnoForum
+2020-May-24 00:47:04 AM [Thread-2] INFO  CommonLogger - At GenericGrouper processContentAtWeb start for ProjDestiny_xTaskx_ProjTask_TrainingRec
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200524004705
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004705
+2020-May-24 00:47:05 AM [Thread-6] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004705
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004705
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004705
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004705
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200524004705
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004705
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004705
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004705
+2020-May-24 00:47:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004705
+2020-May-24 00:47:05 AM [Thread-129] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004705
+2020-May-24 00:47:05 AM [Thread-129] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:47:05 AM [Thread-129] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:47:05 AM [Thread-129] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004705
+2020-May-24 00:47:05 AM [Thread-6] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:47:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200524004705
+2020-May-24 00:47:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004705
+2020-May-24 00:47:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004705
+2020-May-24 00:47:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004707
+2020-May-24 00:47:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:47:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004707
+2020-May-24 00:47:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004707
+2020-May-24 00:47:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200524004707
+2020-May-24 00:47:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004707
+2020-May-24 00:47:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:47:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:47:07 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004707
+2020-May-24 00:47:07 AM [Thread-6] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:47:07 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004707
+2020-May-24 00:47:07 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004707
+2020-May-24 00:47:07 AM [Thread-130] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004707
+2020-May-24 00:47:07 AM [Thread-130] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:47:07 AM [Thread-130] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:47:07 AM [Thread-130] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004707
+2020-May-24 00:47:48 AM [Thread-2] INFO  CommonLogger - At GenericGrouper processContentAtWeb start for ProjDestiny_xTaskx_ProjTask_StudyPlan
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200524004805
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:05 AM [Thread-6] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200524004805
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004805
+2020-May-24 00:48:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004805
+2020-May-24 00:48:05 AM [Thread-131] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:05 AM [Thread-131] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:48:05 AM [Thread-131] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:48:05 AM [Thread-131] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:05 AM [Thread-6] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:48:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200524004805
+2020-May-24 00:48:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:48:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:48:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:05 AM [Thread-6] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:48:05 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004805
+2020-May-24 00:48:05 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004805
+2020-May-24 00:48:05 AM [Thread-132] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:05 AM [Thread-132] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:48:05 AM [Thread-132] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:48:05 AM [Thread-132] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004805
+2020-May-24 00:48:32 AM [Thread-2] INFO  CommonLogger - At GenericGrouper processContentAtWeb start for ProjDestiny_xTaskx_ProjTask_InnoForum
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200524004905
+2020-May-24 00:49:05 AM [Thread-6] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004905
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004905
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004905
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004905
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004905
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200524004905
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004905
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004905
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004905
+2020-May-24 00:49:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004905
+2020-May-24 00:49:05 AM [Thread-133] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004905
+2020-May-24 00:49:05 AM [Thread-133] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:49:05 AM [Thread-133] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:49:05 AM [Thread-133] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004905
+2020-May-24 00:49:05 AM [Thread-6] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:49:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200524004905
+2020-May-24 00:49:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004905
+2020-May-24 00:49:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004905
+2020-May-24 00:49:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004906
+2020-May-24 00:49:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:49:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004906
+2020-May-24 00:49:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004906
+2020-May-24 00:49:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200524004906
+2020-May-24 00:49:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004906
+2020-May-24 00:49:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:49:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:49:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004906
+2020-May-24 00:49:06 AM [Thread-6] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:49:06 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524004906
+2020-May-24 00:49:06 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524004906
+2020-May-24 00:49:07 AM [Thread-134] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004907
+2020-May-24 00:49:07 AM [Thread-134] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:49:07 AM [Thread-134] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:49:07 AM [Thread-134] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004907
+2020-May-24 00:49:57 AM [Thread-2] INFO  CommonLogger - At GenericGrouper processContentAtWeb start for KANNANV_xTaskx_AllocatdTask_ProjDestiny_InnoForum
+2020-May-24 00:49:59 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004959
+2020-May-24 00:49:59 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:49:59 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:49:59 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524004959
+2020-May-24 00:49:59 AM [Thread-3] INFO  CommonLogger - CatelogPersistenceManager in setData start
+2020-May-24 00:49:59 AM [Thread-3] INFO  CommonLogger - inArtifactPojos at setArtifactValues is [colbTrk.ERLDownload@7a2b5a54, colbTrk.ERLDownload@37d313c, colbTrk.ERLDownload@4787d454, colbTrk.ERLDownload@d34e571, colbTrk.ERLDownload@2d6de779]
+2020-May-24 00:49:59 AM [Thread-3] INFO  CommonLogger - At ArtifactsDisplay DisplayContent Start
+2020-May-24 00:50:02 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005002
+2020-May-24 00:50:02 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:50:02 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:50:02 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005002
+2020-May-24 00:50:02 AM [Thread-3] INFO  CommonLogger - CatelogPersistenceManager in setData start
+2020-May-24 00:50:02 AM [Thread-3] INFO  CommonLogger - inArtifactPojos at setArtifactValues is [colbTrk.ERLDownload@47f3d739, colbTrk.ERLDownload@3eaf9ee7, colbTrk.ERLDownload@141afb2e, colbTrk.ERLDownload@568e80fb, colbTrk.ERLDownload@f9dcf0c]
+2020-May-24 00:50:02 AM [Thread-3] INFO  CommonLogger - At ArtifactsDisplay DisplayContent Start
+2020-May-24 00:50:04 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005004
+2020-May-24 00:50:04 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:50:04 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:50:04 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005004
+2020-May-24 00:50:04 AM [Thread-3] INFO  CommonLogger - CatelogPersistenceManager in setData start
+2020-May-24 00:50:04 AM [Thread-3] INFO  CommonLogger - inArtifactPojos at setArtifactValues is [colbTrk.ERLDownload@4d0720be, colbTrk.ERLDownload@e0761bb, colbTrk.ERLDownload@2c2ca1d8, colbTrk.ERLDownload@4da8eefe, colbTrk.ERLDownload@39de3525]
+2020-May-24 00:50:04 AM [Thread-3] INFO  CommonLogger - At ArtifactsDisplay DisplayContent Start
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200524005005
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005005
+2020-May-24 00:50:05 AM [Thread-6] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005005
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005005
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005005
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005005
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200524005005
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005005
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005005
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524005005
+2020-May-24 00:50:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524005005
+2020-May-24 00:50:05 AM [Thread-135] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005005
+2020-May-24 00:50:05 AM [Thread-135] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:50:05 AM [Thread-135] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:50:05 AM [Thread-135] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005005
+2020-May-24 00:50:05 AM [Thread-6] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:50:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200524005005
+2020-May-24 00:50:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005005
+2020-May-24 00:50:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005005
+2020-May-24 00:50:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005006
+2020-May-24 00:50:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:50:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005006
+2020-May-24 00:50:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005006
+2020-May-24 00:50:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200524005006
+2020-May-24 00:50:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005006
+2020-May-24 00:50:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:50:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:50:06 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005006
+2020-May-24 00:50:06 AM [Thread-6] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:50:06 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524005006
+2020-May-24 00:50:10 AM [Thread-6] INFO  CommonLogger - At ArtifactMover downloadTo start inSourceFilePath is C:\Users\kvasavaiah\ColbTrkUserArtifacts\clientMc\downloadedcontent\DemoGShContentRoot\MyOrg\Divisions\HR\ProjDestiny_20200524004316.zip inDestERLDownload is ProjDestiny
+2020-May-24 00:50:10 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524005010
+2020-May-24 00:50:10 AM [Thread-136] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005010
+2020-May-24 00:50:10 AM [Thread-136] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:50:10 AM [Thread-136] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:50:10 AM [Thread-136] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005010
+2020-May-24 00:50:11 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005011
+2020-May-24 00:50:11 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:50:11 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:50:11 AM [Thread-3] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005011
+2020-May-24 00:50:11 AM [Thread-3] INFO  CommonLogger - CatelogPersistenceManager in setData start
+2020-May-24 00:50:11 AM [Thread-3] INFO  CommonLogger - inArtifactPojos at setArtifactValues is [colbTrk.ERLDownload@c61811c, colbTrk.ERLDownload@450ad329, colbTrk.ERLDownload@4fdf0a68, colbTrk.ERLDownload@76079ab, colbTrk.ERLDownload@789713a]
+2020-May-24 00:50:11 AM [Thread-3] INFO  CommonLogger - At ArtifactsDisplay DisplayContent Start
+2020-May-24 00:50:14 AM [Thread-3] INFO  CommonLogger - At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload
+2020-May-24 00:50:14 AM [Thread-3] INFO  CommonLogger - At start of startupWithERLpojo ProjTasksList_HR_ProjDestiny
+2020-May-24 00:50:14 AM [Thread-3] INFO  CommonLogger - At xxa displayContent
+2020-May-24 00:50:14 AM [Thread-3] INFO  CommonLogger - ReviewHandler initReviewHandler starting for ProjTasksList_HR_ProjDestiny
+2020-May-24 00:50:16 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is ProjTasksList_HR_ProjDestiny
+2020-May-24 00:50:16 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo ProjTasksList_HR_ProjDestiny
+2020-May-24 00:50:16 AM [Thread-3] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\ColbTrkUserArtifacts\clientMc\downloadedcontent\DemoGShContentRoot\MyOrg\Divisions\HR\ProjTasksList_HR_ProjDestiny_20200523232756.json inStandAloneFlag false
+2020-May-24 00:50:16 AM [Thread-3] INFO  CommonLogger - GenericGrouper doCommonInit starting up at 20200524005016
+2020-May-24 00:50:16 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is ProjTasksList_HR_ProjDestiny
+2020-May-24 00:50:16 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo ProjTasksList_HR_ProjDestiny
+2020-May-24 00:50:16 AM [Thread-3] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\ColbTrkUserArtifacts\clientMc\downloadedcontent\DemoGShContentRoot\MyOrg\Divisions\HR\ProjTasksList_HR_ProjDestiny_20200523232756.json inStandAloneFlag false
+2020-May-24 00:50:16 AM [Thread-3] INFO  CommonLogger - addlCommonInit allocatedTasksAll size is 1
+2020-May-24 00:50:22 AM [Thread-3] INFO  CommonLogger - ReviewHandler initReviewHandler starting for ProjTasksList_HR_ProjDestiny
+2020-May-24 00:50:30 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is ProjTasksList_HR_ProjDestiny
+2020-May-24 00:50:30 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo ProjTasksList_HR_ProjDestiny
+2020-May-24 00:50:30 AM [Thread-3] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\ColbTrkUserArtifacts\clientMc\downloadedcontent\DemoGShContentRoot\MyOrg\Divisions\HR\ProjTasksList_HR_ProjDestiny_20200523232756.json inStandAloneFlag false
+2020-May-24 00:50:30 AM [Thread-3] INFO  CommonLogger - GenericGrouper doCommonInit starting up at 20200524005030
+2020-May-24 00:50:30 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is ProjTasksList_HR_ProjDestiny
+2020-May-24 00:50:30 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo ProjTasksList_HR_ProjDestiny
+2020-May-24 00:50:30 AM [Thread-3] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\ColbTrkUserArtifacts\clientMc\downloadedcontent\DemoGShContentRoot\MyOrg\Divisions\HR\ProjTasksList_HR_ProjDestiny_20200523232756.json inStandAloneFlag false
+2020-May-24 00:50:30 AM [Thread-3] INFO  CommonLogger - addlCommonInit allocatedTasksAll size is 1
+2020-May-24 00:50:32 AM [Thread-2] INFO  CommonLogger - At GenericGrouper processContentAtWeb start for DEMOUSER_xTaskx_AllocatdTask_ProjDestiny_InnoForum
+2020-May-24 00:50:32 AM [Thread-3] INFO  CommonLogger - ReviewHandler initReviewHandler starting for ProjTasksList_HR_ProjDestiny
+2020-May-24 00:50:42 AM [Thread-3] INFO  CommonLogger - At ArtifactPrepper initProcess start targetArtifactKeyPojo ProjDestiny_xTaskx_ProjTask_TrainingRec inItemID TrainingRec20200513025451 inNewAuthor null
+2020-May-24 00:50:42 AM [Thread-3] INFO  CommonLogger - GenericGrouper doCommonInit starting up at 20200524005042
+2020-May-24 00:50:42 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is ProjTasksList_HR_ProjDestiny
+2020-May-24 00:50:42 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo ProjTasksList_HR_ProjDestiny
+2020-May-24 00:50:42 AM [Thread-3] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\ColbTrkUserArtifacts\clientMc\downloadedcontent\DemoGShContentRoot\MyOrg\Divisions\HR\ProjTasksList_HR_ProjDestiny_20200523232756.json inStandAloneFlag false
+2020-May-24 00:50:42 AM [Thread-3] INFO  CommonLogger - addlCommonInit allocatedTasksAll size is 1
+2020-May-24 00:50:44 AM [Thread-3] INFO  CommonLogger - At ArtifactPrepper initProcess end  useErlDownloadRolledupChild true useActiveDraft false useErlDownloadStandalone false useTemplate false
+2020-May-24 00:50:44 AM [Thread-3] INFO  CommonLogger - At ArtifactPrepper createDraft start 
+2020-May-24 00:50:44 AM [Thread-3] INFO  CommonLogger - At ArtifactMover createDraftFromBaseContent start inDestArtifactPojo is ProjDestiny_xTaskx_ProjTask_TrainingRec
+2020-May-24 00:50:44 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo ProjDestiny_xTaskx_ProjTask_TrainingRec
+2020-May-24 00:50:44 AM [Thread-3] INFO  CommonLogger - At xxa ArtifactWrapperUI invoke CommonUIData inCommonUIData,ERLDownload inERLDownload
+2020-May-24 00:50:44 AM [Thread-3] INFO  CommonLogger - At start of startupWithERLpojo ProjDestiny_xTaskx_ProjTask_TrainingRec
+2020-May-24 00:50:44 AM [Thread-3] INFO  CommonLogger - At xxa displayContent
+2020-May-24 00:50:51 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is ProjDestiny_xTaskx_ProjTask_TrainingRec
+2020-May-24 00:50:51 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo ProjDestiny_xTaskx_ProjTask_TrainingRec
+2020-May-24 00:50:51 AM [Thread-3] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\ColbTrkUserArtifacts\clientMc\newartifacts\DemoGShContentRoot\MyOrg\Divisions\HR\ProjDestiny_xTaskx_ProjTask_TrainingRec.json inStandAloneFlag false
+2020-May-24 00:50:51 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getPrimeFilePath start inSrcArtifactPojo is ProjDestiny_xTaskx_ProjTask_TrainingRec
+2020-May-24 00:50:51 AM [Thread-3] INFO  CommonLogger - At ArtifactMover getFullFilePath start inArtifactPojo ProjDestiny_xTaskx_ProjTask_TrainingRec
+2020-May-24 00:50:51 AM [Thread-3] INFO  CommonLogger - At getPrimeFilePathWithStandAloneChk start inArtifactPath is C:\Users\kvasavaiah\ColbTrkUserArtifacts\clientMc\newartifacts\DemoGShContentRoot\MyOrg\Divisions\HR\ProjDestiny_xTaskx_ProjTask_TrainingRec.json inStandAloneFlag false
+2020-May-24 00:50:51 AM [Thread-3] INFO  CommonLogger - At ArtifactPrepper initProcess start targetArtifactKeyPojo DefectsList_HR_ProjDestiny inItemID  inNewAuthor null
+2020-May-24 00:50:51 AM [Thread-3] INFO  CommonLogger - At ArtifactPrepper initProcess end  useErlDownloadRolledupChild false useActiveDraft false useErlDownloadStandalone false useTemplate true
+2020-May-24 00:50:51 AM [Thread-3] INFO  CommonLogger - At ArtifactPrepper initProcess start targetArtifactKeyPojo ImpedimentsList_HR_ProjDestiny inItemID  inNewAuthor null
+2020-May-24 00:50:51 AM [Thread-3] INFO  CommonLogger - At ArtifactPrepper initProcess end  useErlDownloadRolledupChild false useActiveDraft false useErlDownloadStandalone false useTemplate true
+2020-May-24 00:50:51 AM [Thread-3] INFO  CommonLogger - ReviewHandler initReviewHandler starting for ProjDestiny_xTaskx_ProjTask_TrainingRec
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoWinContentRoot at 20200524005105
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005105
+2020-May-24 00:51:05 AM [Thread-6] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005105
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005105
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005105
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005105
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoWinContentRoot at 20200524005105
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005105
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005105
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524005105
+2020-May-24 00:51:05 AM [Thread-4] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524005105
+2020-May-24 00:51:05 AM [Thread-137] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005105
+2020-May-24 00:51:05 AM [Thread-137] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoWinContentRoot
+2020-May-24 00:51:05 AM [Thread-137] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoWinContentRoot
+2020-May-24 00:51:05 AM [Thread-137] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005105
+2020-May-24 00:51:05 AM [Thread-6] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-24 00:51:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200524005105
+2020-May-24 00:51:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005105
+2020-May-24 00:51:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005105
+2020-May-24 00:51:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005105
+2020-May-24 00:51:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-24 00:51:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-24 00:51:05 AM [Thread-6] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005105
+2020-May-24 00:51:05 AM [Thread-6] INFO  CommonLogger - at AssignedContentSubscriber subscribeToAssignedContent start
+2020-May-24 00:51:05 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200524005105
+2020-May-24 00:51:09 AM [Thread-6] INFO  CommonLogger - At ArtifactMover downloadTo start inSourceFilePath is C:\Users\kvasavaiah\ColbTrkUserArtifacts\clientMc\downloadedcontent\DemoGShContentRoot\MyOrg\General\AllocatedTasks\AllocatedTasks_ADMIN_20200513030015.json inDestERLDownload is AllocatedTasks_ADMIN
+2020-May-24 00:51:09 AM [Thread-6] INFO  CommonLogger - ContentDownloader downloadRemarksFilesForOneRoot Started at 20200524005109
+2020-May-24 00:51:09 AM [Thread-138] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200524005109

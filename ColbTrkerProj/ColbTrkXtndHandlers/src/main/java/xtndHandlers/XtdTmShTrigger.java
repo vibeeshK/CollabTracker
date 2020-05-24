@@ -145,7 +145,8 @@ public class XtdTmShTrigger extends TimeShTrigger implements ExtendedHandler {
 		commonData.getCatelogPersistenceManager()
 		.updateArtifactStatus(
 				inSelfAuthoredArtifactpojo,
-				SelfAuthoredArtifactpojo.ArtifactStatusToBeUploaded);
+				//SelfAuthoredArtifactpojo.ArtifactStatusToBeUploaded);
+				SelfAuthoredArtifactpojo.ArtifactStatusToBeBatchUploaded);
 		if (inSelfAuthoredArtifactpojo.unpulishedVerNum > 0) {
 			commonData.getCatelogPersistenceManager()
 				.updateOlderArtifact(

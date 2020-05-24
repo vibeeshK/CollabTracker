@@ -201,7 +201,7 @@ public class ExcelJavaObj {
 	}
 	
 	public int getKeyShColPosition() {
-	// Gets the key column's position in the excel
+		// Gets the key column's position in the excel
 		return keyColObj.shColPosition;
 	}
 

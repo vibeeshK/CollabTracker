@@ -137,7 +137,7 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 
 	public void initializeExtendedHandlerForExtdSrvrProcess(CommonData inCommonData, 
 			ArtifactPojo inArtifactPojo) {
-		System.out.println("At initializeExtendedHandlerForExtdSrvrProcess");
+		System.out.println("At initializeExtendedHandlerForExtdSrvrProcess of XtdProjTracker");
 		initializeContentHandlerForExtdSrvrProcess(inCommonData, inArtifactPojo);		
 		xtdCommons = (XtdCommons) inCommonData.getCommons();
 		try {
@@ -276,6 +276,9 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 			projTrackerPojo.corePlanChanged = false; // reset the flag once taken for extended processing completed.
 
 			commonData.getCommons().putJsonDocToFile(contentPathFileName,getPrimerDoc());
+			
+			System.out.println("at end of 23454233 processxtdStdProcessRec projTrackerPojo.corePlanChanged = " + projTrackerPojo.corePlanChanged);
+			
 		} catch (IOException e) {
 			ErrorHandler.showErrorAndQuit(commons, "Error in XtdProjTracker processXtdStdProcessRec " + inXtdProcStatus, e);			
 		}
@@ -322,6 +325,8 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 
 		System.out.println("at 1234AB of XtdProjTracker absorbInput inInstruction is " + inInstruction);
 
+		System.out.println("at1 absorbInput of processxtdStdProcessRec projTrackerPojo.corePlanChanged = " + projTrackerPojo.corePlanChanged);
+		
 		try {
 
 			if (inInstruction.equalsIgnoreCase(INSTRUCTION_ABSORB_ProjTaskItemList)){
@@ -352,7 +357,9 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 					System.out.println("at 1234AD of XtdProjTracker absorbInput error leaving");
 					return processEndingStatus;
 				}
-	
+
+				System.out.println("at2 absorbInput of processxtdStdProcessRec projTrackerPojo.corePlanChanged = " + projTrackerPojo.corePlanChanged);
+				
 				System.out.println("at 1234AE of XtdProjTracker absorbInput projTasksItemList size is " + projTasksItemList.size());
 				for (ProjTaskItemPojo projTaskItemPojo : projTasksItemList) {
 					// all tasks are expected to be present in the tracker plan sheet
@@ -365,12 +372,16 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 					}
 				}
 				System.out.println("at 1234AF of XtdProjTracker absorbInput");
-	
+
+				System.out.println("at3 absorbInput of processxtdStdProcessRec projTrackerPojo.corePlanChanged = " + projTrackerPojo.corePlanChanged);
+				
 				excelHandler.replaceFromXlJavaObj(projTasksXlJavaObj, ProjPlan_SHEETNAME);
 				
 				//Labor cost update starts
 				//Labor cost update starts
 				//Whenever tasklist is updated, also refresh the labor cost in resource sheet
+
+				System.out.println("at4 absorbInput of processxtdStdProcessRec projTrackerPojo.corePlanChanged = " + projTrackerPojo.corePlanChanged);
 				
 				ProjTaskItemPojo firstTaskItemPojo = projTasksItemList.get(0);
 				HashMap<String, Double> effortsOfUsersInTeam = ((XtdTmShCatlogPersistenceMgr) catelogPersistenceManager).
@@ -385,6 +396,8 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 					return processEndingStatus;
 				}
 
+				System.out.println("at5 absorbInput of processxtdStdProcessRec projTrackerPojo.corePlanChanged = " + projTrackerPojo.corePlanChanged);
+				
 				System.out.println("XtdProjTracker effortsOfUsersInTeam size " + effortsOfUsersInTeam.size());
 
 				for (Entry<String, Double> effortsOfUsersEntrySet : effortsOfUsersInTeam.entrySet()) {
@@ -398,11 +411,14 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 					moveResourceEffortIntoResourcePlanShRowObj(userID, hoursBooked,resourcePlanWithCostXlJavaObj,resourceRowNum);
 				}
 				System.out.println("at 1234AF of XtdProjTracker absorbInput");
-	
+
+				System.out.println("at6 absorbInput of processxtdStdProcessRec projTrackerPojo.corePlanChanged = " + projTrackerPojo.corePlanChanged);
+				
 				excelHandler.replaceFromXlJavaObj(resourcePlanWithCostXlJavaObj, ResourcePl_SHEETNAME);
 				//Labor cost update ends
 				//Labor cost update ends
 				
+				System.out.println("at7 absorbInput of processxtdStdProcessRec projTrackerPojo.corePlanChanged = " + projTrackerPojo.corePlanChanged);
 	
 			} else if (inInstruction.equalsIgnoreCase(INSTRUCTION_ABSORB_ImpedimentItemsList)){
 	
@@ -802,8 +818,16 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 		} else {
 			inProjTaskItem.description = "";
 		}
-		inProjTaskItem.author = (String) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_Owner_COLHDR);
-		inProjTaskItem.lead = (String) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_Lead_COLHDR);
+		if (inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_Owner_COLHDR)!=null) {
+			inProjTaskItem.author = (String) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_Owner_COLHDR);
+		} else {
+			inProjTaskItem.author = "";
+		}
+		if (inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_Lead_COLHDR)!=null) {
+			inProjTaskItem.lead = (String) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_Lead_COLHDR);
+		} else {
+			inProjTaskItem.lead = "";
+		}
 		if (inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_PlannedHours_COLHDR)!=null) {
 			inProjTaskItem.plannedHours = (double) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_PlannedHours_COLHDR);
 		} else {

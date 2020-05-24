@@ -837,6 +837,11 @@ public class CommonTechs {
 		zis.close();
 	}
 
+	public String getParentFolderName(String inFileName) {
+		File parentFolder = (new File(inFileName)).getParentFile();
+		return parentFolder.getParent();
+	}
+	
 	public String getDirectoryOfZipFile(String inZipFile) {
 		String directoryOfZipFile = StringUtils.left(inZipFile, inZipFile.length() - 4);
 		return directoryOfZipFile;

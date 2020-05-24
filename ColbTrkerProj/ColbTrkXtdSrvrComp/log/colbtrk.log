@@ -1,305 +1,527 @@
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030444
-2020-May-13 03:04:44 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030444
-2020-May-13 03:04:49 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:50 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:50 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030450
-2020-May-13 03:04:50 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030450
-2020-May-13 03:04:50 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030450
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030451
-2020-May-13 03:04:51 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:52 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:52 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030452
-2020-May-13 03:04:52 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030452
-2020-May-13 03:04:52 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030452
-2020-May-13 03:04:52 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030452
-2020-May-13 03:04:52 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:52 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:52 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030452
-2020-May-13 03:04:52 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030452
-2020-May-13 03:04:57 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:57 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:57 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030457
-2020-May-13 03:04:57 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030457
-2020-May-13 03:04:57 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030457
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030458
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:58 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030458
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030459
-2020-May-13 03:04:59 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030459
-2020-May-13 03:05:04 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:05:04 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:05:04 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030504
-2020-May-13 03:05:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030504
-2020-May-13 03:05:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030504
-2020-May-13 03:05:05 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030505
-2020-May-13 03:05:05 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:05:05 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030505
-2020-May-13 03:05:05 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030505
-2020-May-13 03:05:05 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200513030505
-2020-May-13 03:05:05 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030505
-2020-May-13 03:05:05 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:05:05 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:05:05 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030505
-2020-May-13 03:05:05 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030505
-2020-May-13 03:05:05 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030506
-2020-May-13 03:05:06 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030506
-2020-May-13 03:05:11 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:05:11 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:05:11 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030511
-2020-May-13 03:05:11 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030511
-2020-May-13 03:05:11 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030511
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200513030513
-2020-May-13 03:05:13 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200513030513
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003648
+2020-May-25 00:36:48 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003648
+2020-May-25 00:36:53 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:36:53 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:36:53 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003653
+2020-May-25 00:36:53 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003653
+2020-May-25 00:36:53 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003653
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003655
+2020-May-25 00:36:55 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003655
+2020-May-25 00:37:00 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:01 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:01 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003701
+2020-May-25 00:37:01 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003701
+2020-May-25 00:37:01 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003701
+2020-May-25 00:37:26 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 0; rootPojo.rootPrefix is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 1; rootPojo.rootPrefix is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 10blH8j97mrcL5fehK4tbDBX5zU3_2XEw
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 2; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinPlatformRoot
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 3; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\DemoWinContentRoot
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 4; rootPojo.rootPrefix is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1rjgy5Fu7H1PbkCHdKWGku-NmaUlQWCZ4
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 5; rootPojo.rootPrefix is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is 1m_bP_GX_9GNqc2YvH0If7VWXTxTgbjo8
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 6; rootPojo.rootPrefix is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is https://testaaaaaaaaaaaaaa.aaaaaaaaa.com
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootCount 7; rootPojo.rootPrefix is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - PublishedRootsHandler rootPojo.rootString is C:\Kannan\Java\ColbTrk\WindowsRoots\KKTestWinRoot
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - At checkSetProxy proxy not yet set
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - At Commons checkSetProxy about to check via http://www.google.com
+2020-May-25 00:37:27 AM [main] INFO  CommonLogger - At commons checkSetProxy able to connect to http://www.google.com without proxy
+2020-May-25 00:37:29 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShPlatformRoot
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030716
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger -  source location: Templates\DefaultDocTestDownload.docx
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20170923030717
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger -  source location: Config\dynamicJars\TestDownload.jar
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180206010120
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger -  source location: SQLiteDB\SysDBDownloadFolder\sysdbfile
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger -  setLaterUpdateElements. uptd Tm: 20180207010119
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger -  current tm: Thu Jul 25 03:07:16 GMT+05:30 2019
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger -  source location: Templates\DeckerGrouperTemplate.zip
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger - XtdProjTrackingSrvrOrchestrator starting up - logging set to info at 20200525003731
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger - XtdProjTrackingSrvrOrchestrator has started - logging set to info
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003731
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:31 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003731
+2020-May-25 00:37:33 AM [main] INFO  CommonLogger - XtdStdContentProcMaster starting up at 20200525003733
+2020-May-25 00:37:33 AM [main] INFO  CommonLogger - RemoteAccessManager getRemoteAccesser set for inRootText DemoGShContentRoot
+2020-May-25 00:37:33 AM [main] INFO  CommonLogger - ContentDownloader Started at 20200525003733
+2020-May-25 00:37:33 AM [main] INFO  CommonLogger - XtdStdContentProcessor starting up at 20200525003733
+2020-May-25 00:37:33 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:33 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:33 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003733
+2020-May-25 00:37:33 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003733
+2020-May-25 00:37:33 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003733
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - XtdStdContentProcMaster starting up at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - ContentDownloader Started at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - XtdStdContentProcessor starting up at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003734
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:34 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003734
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - XtdStdContentProcMaster starting up at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - ContentDownloader Started at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - XtdStdContentProcessor starting up at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - XtdStdContentProcMaster starting up at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - ContentDownloader Started at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - XtdStdContentProcessor starting up at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - XtdStdContentProcMaster starting up at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - ContentDownloader Started at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - XtdStdContentProcessor starting up at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - XtdStdContentProcMaster starting up at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - ContentDownloader Started at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - XtdStdContentProcessor starting up at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003735
+2020-May-25 00:37:35 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003735
+2020-May-25 00:37:40 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:40 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:40 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003740
+2020-May-25 00:37:40 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003740
+2020-May-25 00:37:40 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003740
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003742
+2020-May-25 00:37:42 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003742
+2020-May-25 00:37:47 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:48 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:48 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003748
+2020-May-25 00:37:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003748
+2020-May-25 00:37:48 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003748
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003749
+2020-May-25 00:37:49 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:50 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:50 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003750
+2020-May-25 00:37:50 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003750
+2020-May-25 00:37:50 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003750
+2020-May-25 00:37:50 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003750
+2020-May-25 00:37:50 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:50 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:50 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003750
+2020-May-25 00:37:50 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003750
+2020-May-25 00:37:55 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:55 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:55 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003755
+2020-May-25 00:37:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003755
+2020-May-25 00:37:55 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003755
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003756
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:56 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003756
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003757
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003757
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003757
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003757
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003757
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003757
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003757
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003757
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003757
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003757
+2020-May-25 00:37:57 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003757
+2020-May-25 00:38:02 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:38:02 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:38:02 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003802
+2020-May-25 00:38:02 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003802
+2020-May-25 00:38:02 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003802
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler updateCatalogDownloadDetail for inRootNick DemoGShContentRoot at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003803
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:38:03 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003803
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - At Commons isInternetAvailable about to check via http://www.google.com
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - At commons isInternetAvailable able to connect to http://www.google.com
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloader start of downloadCatalog root :DemoGShContentRoot at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileName for inRootNick DemoGShContentRoot
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler getCatalogDownLoadedFileNameIfAvailable. rootNick : DemoGShContentRoot
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - CatalogDownloadDtlsHandler refreshCatalogDownloadDetailsMap start at 20200525003804
+2020-May-25 00:38:04 AM [main] INFO  CommonLogger - ContentDownloader downloadContentFilesForOneRoot Started at 20200525003804
