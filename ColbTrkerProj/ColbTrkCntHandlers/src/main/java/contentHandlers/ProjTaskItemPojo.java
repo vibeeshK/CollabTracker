@@ -21,7 +21,8 @@ public class ProjTaskItemPojo extends ItemPojo{
 	public String projectName;
 
 	public String taskID;
-	public String description;
+	//changed to user generic title
+	//public String description;
 	public String lead;
 	public double plannedHours;
 	public Date plannedStart;
@@ -45,7 +46,8 @@ public class ProjTaskItemPojo extends ItemPojo{
 		System.out.println("@@123 ProjTaskItemPojo initializeAdditionalItemPojoFields done");
 		projectName="";
 		taskID="";
-		description="";
+		//changed to user generic title
+		//description="";
 		lead="";
 		plannedHours=0.0;
 		plannedStart=null;

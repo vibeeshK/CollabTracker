@@ -67,10 +67,12 @@ import com.google.gson.stream.JsonReader;
  */
 public class CommonTechs {
 
-	public static final Logger logger = LogManager.getLogger("CommonLogger");
-	public static String SIMPL_DTE_FORMAT = "yyyyMMddHHmmss";
-	public static String SIMPL_DTEONLY_FORMAT = "yyyyMMdd";
+	public static Logger logger = LogManager.getLogger("CommonLogger");
+	public static final String SIMPL_DTE_FORMAT = "yyyyMMddHHmmss";
+	public static final String SIMPL_DTEONLY_FORMAT = "yyyyMMdd";
 	public static Gson gson = null;
+	//byte[] bytes = new byte[1024];
+	public static final int BYTEREADBUFFERSIZE = 64*1024;
 	
 	public static String setUniqueSubfix(String inName, ArrayList<String> inOutCurrentNames, String inAppendStub){
 		// Affixes the inName with the appendStub + an integer increment w.r.t inOutCurrentNames
@@ -499,7 +501,8 @@ public class CommonTechs {
 		// read this file into InputStream
 		outputStream = new FileOutputStream(file);
 		int read = 0;
-		byte[] bytes = new byte[1024];
+		//byte[] bytes = new byte[1024];
+		byte[] bytes = new byte[BYTEREADBUFFERSIZE];
 
 		System.out.println("reading....");
 		while ((read = inInputStream.read(bytes)) != -1) {

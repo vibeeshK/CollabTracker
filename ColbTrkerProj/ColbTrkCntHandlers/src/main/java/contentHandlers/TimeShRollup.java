@@ -52,12 +52,13 @@ public class TimeShRollup extends GenericGrouper {
 		editor.setEditor(requestFor_Tx, tableItem, ++inLastColLocation);
 		tableItem.setText(inLastColLocation, requestFor_Tx.getText());
 
-		editor = new TableEditor(table);
-		Text description_Tx = new Text(table, SWT.READ_ONLY);
-		description_Tx.setText(timeSheetPojo.description);
-		editor.grabHorizontal = true;
-		editor.setEditor(description_Tx, tableItem, ++inLastColLocation);
-		tableItem.setText(inLastColLocation, description_Tx.getText());
+		//changed to user generic title		
+		//editor = new TableEditor(table);
+		//Text description_Tx = new Text(table, SWT.READ_ONLY);
+		//description_Tx.setText(timeSheetPojo.description);
+		//editor.grabHorizontal = true;
+		//editor.setEditor(description_Tx, tableItem, ++inLastColLocation);
+		//tableItem.setText(inLastColLocation, description_Tx.getText());
 
 		editor = new TableEditor(table);
 		Text author_Tx = new Text(table, SWT.READ_ONLY);

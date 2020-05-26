@@ -23,7 +23,7 @@ public class TimeSheet extends GenericItemHandler {
 
 	Text applicationText;
 	Text reviewerText;
-	Text descriptionText;
+	//Text descriptionText;
 
 	public void setInitialItemPojoAddlFields(){
 		TimeSheetPojo timeSheetPojo = (TimeSheetPojo) primerDoc.getItem();
@@ -48,17 +48,17 @@ public class TimeSheet extends GenericItemHandler {
 
 		TimeSheetPojo timeSheetPojo = (TimeSheetPojo) itemPojo;
 
-		Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
-		descriptionInfo.setText("Description");
-		descriptionInfo.setLayout(new FillLayout());
-		descriptionText = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER);
-		descriptionText.setText(timeSheetPojo.description);
-		
-		formData = new FormData();
-		formData.top = new FormAttachment(inPrevGroup);
-		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		descriptionInfo.setLayoutData(formData);
-		inPrevGroup = descriptionInfo;
+		//Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
+		//descriptionInfo.setText("Description");
+		//descriptionInfo.setLayout(new FillLayout());
+		//descriptionText = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER);
+		//descriptionText.setText(timeSheetPojo.description);
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(inPrevGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//descriptionInfo.setLayoutData(formData);
+		//inPrevGroup = descriptionInfo;
 
 		Group reviewerInfo = new Group(itemContentGroup, SWT.LEFT
 				| SWT.WRAP | SWT.READ_ONLY);
@@ -79,7 +79,8 @@ public class TimeSheet extends GenericItemHandler {
 	public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
 		TimeSheetPojo timeSheetPojo = (TimeSheetPojo) inItemPojo;
 		timeSheetPojo.reviewer = reviewerText.getText();
-		timeSheetPojo.description = descriptionText.getText();
+		//changed to user generic title		
+		//timeSheetPojo.description = descriptionText.getText();
 	}
 
 	public String validateBeforeUIEdit() {

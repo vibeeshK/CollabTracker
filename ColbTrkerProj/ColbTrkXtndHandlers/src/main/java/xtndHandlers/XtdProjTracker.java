@@ -65,7 +65,7 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 	public static final int PROJPLANSH_KICKOFF_ROWNUM = 0;
 
 	public static final String PROJPLANSH_TaskID_COLHDR = "TaskID";
-	public static final String PROJPLANSH_TaskDesc_COLHDR = "Task Desc";
+	public static final String PROJPLANSH_TaskTitle_COLHDR = "TaskTitle";
 	public static final String PROJPLANSH_Owner_COLHDR = "OwnerID";
 	public static final String PROJPLANSH_Lead_COLHDR = "LeadID";
 	public static final String PROJPLANSH_PlannedHours_COLHDR = "PlannedHours";
@@ -102,7 +102,7 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 
 	//Impediments sheet start
 	public static final String IMPEDIMENTSH_ImpedimentID_COLHDR = "ImpedimentID";
-	public static final String IMPEDIMENTSH_ImpedimentDesc_COLHDR = "Impediment Desc";
+	public static final String IMPEDIMENTSH_ImpedimentTitle_COLHDR = "ImpedimentTitle";
 	public static final String IMPEDIMENTSH_Severity_COLHDR = "Severity (High/Medium/Low)";
 	public static final String IMPEDIMENTSH_Owner_COLHDR = "OwnerID";
 	public static final String IMPEDIMENTSH_OpenedDate_COLHDR = "OpenedDate";
@@ -116,7 +116,7 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 
 	//Defects sheet start
 	public static final String DEFECTSH_DefectID_COLHDR = "DefectID";
-	public static final String DEFECTSH_DefectDesc_COLHDR = "Defect Desc";
+	public static final String DEFECTSH_DefectTitle_COLHDR = "DefectTitle";
 	public static final String DEFECTSH_Severity_COLHDR = "Severity (High/Medium/Low)";
 	public static final String DEFECTSH_RaisedBy_COLHDR = "RaisedBy";
 	public static final String DEFECTSH_Owner_COLHDR = "OwnerID";
@@ -576,7 +576,7 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 		ExcelJavaObj defectsXlObj = new ExcelJavaObj();
 
 		defectsXlObj.addColOfInterest(DEFECTSH_DefectID_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
-		defectsXlObj.addColOfInterest(DEFECTSH_DefectDesc_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
+		defectsXlObj.addColOfInterest(DEFECTSH_DefectTitle_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		defectsXlObj.addColOfInterest(DEFECTSH_Severity_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		defectsXlObj.addColOfInterest(DEFECTSH_RaisedBy_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		defectsXlObj.addColOfInterest(DEFECTSH_Owner_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
@@ -610,7 +610,7 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 		ExcelJavaObj impedimentsXlObj = new ExcelJavaObj();
 
 		impedimentsXlObj.addColOfInterest(IMPEDIMENTSH_ImpedimentID_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
-		impedimentsXlObj.addColOfInterest(IMPEDIMENTSH_ImpedimentDesc_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
+		impedimentsXlObj.addColOfInterest(IMPEDIMENTSH_ImpedimentTitle_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		impedimentsXlObj.addColOfInterest(IMPEDIMENTSH_Severity_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		impedimentsXlObj.addColOfInterest(IMPEDIMENTSH_Owner_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		impedimentsXlObj.addColOfInterest(IMPEDIMENTSH_OpenedDate_COLHDR, ExcelColJavaObj.COLTYPE_DATE);
@@ -644,7 +644,7 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 		ExcelJavaObj projTasksXlObj = new ExcelJavaObj();
 
 		projTasksXlObj.addColOfInterest(PROJPLANSH_TaskID_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
-		projTasksXlObj.addColOfInterest(PROJPLANSH_TaskDesc_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
+		projTasksXlObj.addColOfInterest(PROJPLANSH_TaskTitle_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		projTasksXlObj.addColOfInterest(PROJPLANSH_Owner_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		projTasksXlObj.addColOfInterest(PROJPLANSH_Lead_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		projTasksXlObj.addColOfInterest(PROJPLANSH_PlannedHours_COLHDR, ExcelColJavaObj.COLTYPE_NUMERIC);
@@ -781,7 +781,7 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 		ExcelJavaObj projTasksXlObj = new ExcelJavaObj();
 
 		projTasksXlObj.addColOfInterest(PROJPLANSH_TaskID_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
-		projTasksXlObj.addColOfInterest(PROJPLANSH_TaskDesc_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
+		projTasksXlObj.addColOfInterest(PROJPLANSH_TaskTitle_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		projTasksXlObj.addColOfInterest(PROJPLANSH_Owner_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		projTasksXlObj.addColOfInterest(PROJPLANSH_Lead_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		projTasksXlObj.addColOfInterest(PROJPLANSH_Status_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
@@ -802,7 +802,8 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 		inAllocatedTaskItem.updatedAt = commons.getDateTS();
 		inAllocatedTaskItem.teamID = inProjTrackerPojo.artifactName;
 		inAllocatedTaskItem.taskID = (String) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_TaskID_COLHDR);
-		inAllocatedTaskItem.description = (String) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_TaskDesc_COLHDR);
+		//changed to user generic title		
+		inAllocatedTaskItem.title = (String) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_TaskTitle_COLHDR);
 		inAllocatedTaskItem.timeEstimated = (Double) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_PlannedHours_COLHDR);
 		inAllocatedTaskItem.plannedStart = (Date) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_PlannedStart_COLHDR);
 		inAllocatedTaskItem.plannedEnd = (Date) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_PlannedEnd_COLHDR);
@@ -813,10 +814,11 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 		inProjTaskItem.projectName = inProjTrackerPojo.artifactName;
 		inProjTaskItem.taskID = (String) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum,PROJPLANSH_TaskID_COLHDR);
 
-		if (inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_TaskDesc_COLHDR)!=null){
-			inProjTaskItem.description = (String) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_TaskDesc_COLHDR);
+		//changed to user generic title
+		if (inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_TaskTitle_COLHDR)!=null){
+			inProjTaskItem.title = (String) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_TaskTitle_COLHDR);
 		} else {
-			inProjTaskItem.description = "";
+			inProjTaskItem.title = "";
 		}
 		if (inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_Owner_COLHDR)!=null) {
 			inProjTaskItem.author = (String) inProjTasksXlJavaObj.getColValAtObjRowNumFor(inTaskRowNum, PROJPLANSH_Owner_COLHDR);
@@ -874,7 +876,8 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 	
 	private void moveImpedimentItemDataIntoImpedimentShRowObj(ImpedimentItemPojo inImpedimentItemPojo,ExcelJavaObj inImpedimentsXlJavaObj,int inImpledimentXlObjRowNum) {
 		inImpedimentsXlJavaObj.setColValAtObjRowNumFor(inImpledimentXlObjRowNum, IMPEDIMENTSH_ImpedimentID_COLHDR, inImpedimentItemPojo.impedimentID);
-		inImpedimentsXlJavaObj.setColValAtObjRowNumFor(inImpledimentXlObjRowNum, IMPEDIMENTSH_ImpedimentDesc_COLHDR, inImpedimentItemPojo.description);
+		//changed to user generic title		
+		inImpedimentsXlJavaObj.setColValAtObjRowNumFor(inImpledimentXlObjRowNum, IMPEDIMENTSH_ImpedimentTitle_COLHDR, inImpedimentItemPojo.title);
 		inImpedimentsXlJavaObj.setColValAtObjRowNumFor(inImpledimentXlObjRowNum, IMPEDIMENTSH_Severity_COLHDR, inImpedimentItemPojo.severity);
 		inImpedimentsXlJavaObj.setColValAtObjRowNumFor(inImpledimentXlObjRowNum, IMPEDIMENTSH_Owner_COLHDR, inImpedimentItemPojo.author);
 		inImpedimentsXlJavaObj.setColValAtObjRowNumFor(inImpledimentXlObjRowNum, IMPEDIMENTSH_OpenedDate_COLHDR, inImpedimentItemPojo.openedDate);
@@ -888,7 +891,8 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 	
 	private void moveDefectItemDataIntoDefectShRowObj(DefectItemPojo inDefectItemPojo, ExcelJavaObj inDefectsXlJavaObj, int inDefectXlRowNum) {		
 		inDefectsXlJavaObj.setColValAtObjRowNumFor(inDefectXlRowNum, DEFECTSH_DefectID_COLHDR, inDefectItemPojo.defectID);
-		inDefectsXlJavaObj.setColValAtObjRowNumFor(inDefectXlRowNum, DEFECTSH_DefectDesc_COLHDR, inDefectItemPojo.description);
+		//changed to user generic title		
+		inDefectsXlJavaObj.setColValAtObjRowNumFor(inDefectXlRowNum, DEFECTSH_DefectTitle_COLHDR, inDefectItemPojo.title);
 		inDefectsXlJavaObj.setColValAtObjRowNumFor(inDefectXlRowNum, DEFECTSH_Severity_COLHDR, inDefectItemPojo.severity);
 		inDefectsXlJavaObj.setColValAtObjRowNumFor(inDefectXlRowNum, DEFECTSH_RaisedBy_COLHDR, inDefectItemPojo.raisedBy);
 		inDefectsXlJavaObj.setColValAtObjRowNumFor(inDefectXlRowNum, DEFECTSH_Owner_COLHDR, inDefectItemPojo.author);

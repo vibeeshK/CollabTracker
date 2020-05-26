@@ -25,7 +25,7 @@ public class Defect extends GenericItemHandler {
 
 	public final static String DEFECTPREFIX = "Dfct";
 	public final static String DEFECTTASKSEPARATOR = "_";
-	Text description_Tx;
+	//Text description_Tx;
 
 	public static String getDefectArtifactName(ContentHandlerSpecs inContentHandlerSpecs, String inProjID, String inTaskID, String inUser, String inTimeStamp) {
 		System.out.println("At getDefectArtifactName inProjID " + inProjID);
@@ -103,30 +103,32 @@ public class Defect extends GenericItemHandler {
  		DefectItemPojo defectItemPojo = (DefectItemPojo) inItemPojo;
 		Group lastGroup = inPrevGroup;
 
-		Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
-		descriptionInfo.setText("Description");
-		descriptionInfo.setLayout(new FillLayout());
-		if (invokedForEdit) {
-			description_Tx = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER);
-		} else {
-			description_Tx = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);			
-		}
-		description_Tx.setText(defectItemPojo.description!=null?defectItemPojo.description:"");
-		
-		formData = new FormData();
-		formData.top = new FormAttachment(lastGroup);
-		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		descriptionInfo.setLayoutData(formData);
-		lastGroup = descriptionInfo;
+		//changed to user generic title
+		//Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
+		//descriptionInfo.setText("Description");
+		//descriptionInfo.setLayout(new FillLayout());
+		//if (invokedForEdit) {
+		//	description_Tx = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER);
+		//} else {
+		//	description_Tx = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);			
+		//}
+		//description_Tx.setText(defectItemPojo.description!=null?defectItemPojo.description:"");
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//descriptionInfo.setLayoutData(formData);
+		//lastGroup = descriptionInfo;
 
 		return lastGroup;
 	}
 	
 	public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
 		DefectItemPojo defectItemPojo = (DefectItemPojo) primerDoc.getItem();
-		if (description_Tx != null) {
-			defectItemPojo.description = description_Tx.getText();
-		}		
+		//changed to user generic title
+		//if (description_Tx != null) {
+		//	defectItemPojo.description = description_Tx.getText();
+		//}		
 	}
 	
 	public DefectItemPojo getItem() {

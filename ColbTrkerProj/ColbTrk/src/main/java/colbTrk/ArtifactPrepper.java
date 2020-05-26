@@ -6,6 +6,9 @@ import java.util.HashMap;
 /**
  * Simplifier to build new artifacts from different sources
  * 
+ * It takes care of picking up the source smartly based on the availability of the latest content in
+ * erlDownloads, existing local drafts or a template making the developer's life simpler.
+ * 
  * @author Vibeesh Kamalakannan
  *
  */

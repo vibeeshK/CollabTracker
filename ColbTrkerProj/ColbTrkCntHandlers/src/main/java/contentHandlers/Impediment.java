@@ -26,7 +26,7 @@ public class Impediment extends GenericItemHandler {
 
 	public final static String IMPPREFIX = "Impdmt";
 	public final static String IMPTASKSEPARATOR = "_";
-	Text description_Tx;
+	//Text description_Tx;
 
 	public static String getImpedimentArtifactName(ContentHandlerSpecs inContentHandlerSpecs, String inProjID, String inTaskID, String inUser, String inTimeStamp) {
 		return inProjID + inContentHandlerSpecs.rollAddSeparator 
@@ -102,30 +102,32 @@ public class Impediment extends GenericItemHandler {
 		ImpedimentItemPojo impedimentItemPojo = (ImpedimentItemPojo) inItemPojo;
 		Group lastGroup = inPrevGroup;
 
-		Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
-		descriptionInfo.setText("Description");
-		descriptionInfo.setLayout(new FillLayout());
-		if (invokedForEdit) {
-			description_Tx = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER);
-		} else {
-			description_Tx = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);			
-		}
-		description_Tx.setText(impedimentItemPojo.description!=null?impedimentItemPojo.description:"");
-		
-		formData = new FormData();
-		formData.top = new FormAttachment(lastGroup);
-		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		descriptionInfo.setLayoutData(formData);
-		lastGroup = descriptionInfo;
+		//changed to user generic title
+		//Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
+		//descriptionInfo.setText("Description");
+		//descriptionInfo.setLayout(new FillLayout());
+		//if (invokedForEdit) {
+		//	description_Tx = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER);
+		//} else {
+		//	description_Tx = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);			
+		//}
+		//description_Tx.setText(impedimentItemPojo.description!=null?impedimentItemPojo.description:"");
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//descriptionInfo.setLayoutData(formData);
+		//lastGroup = descriptionInfo;
 
 		return lastGroup;
 	}
 	
 	public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
 		ImpedimentItemPojo impedimentItemPojo = (ImpedimentItemPojo) primerDoc.getItem();
-		if (description_Tx != null) {
-			impedimentItemPojo.description = description_Tx.getText();
-		}		
+		//changed to user generic title		
+		//if (description_Tx != null) {
+		//	impedimentItemPojo.description = description_Tx.getText();
+		//}		
 	}
 	
 	public ImpedimentItemPojo getItem() {

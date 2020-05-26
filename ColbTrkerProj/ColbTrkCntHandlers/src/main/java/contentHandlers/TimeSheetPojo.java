@@ -16,7 +16,8 @@ public class TimeSheetPojo extends ItemPojo{
 
 	public String taskID;
 	public String teamID;
-	public String description;
+	//changed to user generic title		
+	//public String description;
 	public String capturedAt;
 	public int hoursLogged;
 	public String attachments;
@@ -31,7 +32,8 @@ public class TimeSheetPojo extends ItemPojo{
 	void initializeAdditionalItemPojoFields(){
 		taskID = "";
 		teamID = "";
-		description = "";
+		//changed to user generic title		
+		//description = "";
 		hoursLogged = 0; // keep the default as 1 hour for each time someone clicks on timeSheet popup
 		capturedAt = null;
 		attachments = "";

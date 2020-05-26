@@ -462,7 +462,8 @@ public class TimeShCapture extends GenericItemHandler {
 		TimeSheetPojo timeSheetPojo = (TimeSheetPojo) timeSheetItemDoc.getItem();
 		timeSheetPojo.taskID = inTaskID;
 		timeSheetPojo.teamID = inTeamID;
-		timeSheetPojo.description = inTaskDescription;
+		//changed to user generic title		
+		//timeSheetPojo.description = inTaskDescription;
 		timeSheetPojo.timeAllocationType = inAllocationType;
 		timeSheetPojo.capturedAt = triggerAt;
 		
@@ -593,7 +594,9 @@ public class TimeShCapture extends GenericItemHandler {
 																allocation.taskID,
 																allocation.relevance,
 																allocation.teamID,																
-																allocation.description,
+																//changed to user generic title
+																//allocation.description,
+																allocation.title,
 																triggerAt,
 																"",
 																"",
@@ -655,7 +658,9 @@ public class TimeShCapture extends GenericItemHandler {
 																			timeSheetPojo.taskID,
 																			timeSheetPojo.relevance,
 																			timeSheetPojo.teamID,
-																			timeSheetPojo.description,
+																			//changed to user generic title		
+																			//timeSheetPojo.description,
+																			timeSheetPojo.title,
 																			triggerAt,
 																			"",
 																			"",
@@ -709,7 +714,9 @@ public class TimeShCapture extends GenericItemHandler {
 																	prevTimeSheetPojo.taskID,
 																	prevTimeSheetPojo.relevance,
 																	prevTimeSheetPojo.teamID,
-																	prevTimeSheetPojo.description,
+																	//changed to user generic title		
+																	//prevTimeSheetPojo.description,
+																	prevTimeSheetPojo.title,
 																	prevTimeSheetPojo.capturedAt,
 																	"",
 																	"",

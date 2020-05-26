@@ -15,7 +15,8 @@ public class AllocatdTaskItemPojo extends ItemPojo{
 	public String teamID;	// team ID represents the project or 
 							// the maintenance engagement under which the task is defined 
 	public String taskID;
-	public String description;
+	//changed to user generic title
+	//public String description;
 	public Double timeEstimated;
 	public Date plannedStart;
 	public Date plannedEnd;
@@ -30,7 +31,7 @@ public class AllocatdTaskItemPojo extends ItemPojo{
 	public void initializeAdditionalItemPojoFields(){
 		System.out.println("@@123 AllocatedTaskItemPojo initializeAdditionalItemPojoFields done");
 		taskID = "";
-		description = "";
+		//description = "";
 		timeEstimated = 0.0;
 		plannedStart = null;
 		plannedEnd = null;

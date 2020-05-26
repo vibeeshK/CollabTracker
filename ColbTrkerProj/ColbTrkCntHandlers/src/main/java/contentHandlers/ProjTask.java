@@ -46,7 +46,7 @@ public class ProjTask extends GenericItemHandler {
 
 	Text projectID_Tx;
 	Text taskID_Tx;
-	Text description_Tx;
+	//Text description_Tx;
 	Text owner_Tx;
 	Text lead_Tx;
 	Text plannedHours_Tx;
@@ -189,29 +189,31 @@ public class ProjTask extends GenericItemHandler {
 		taskIDInfo.setLayoutData(formData);
 		lastGroup = taskIDInfo;
 
-		Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
-		descriptionInfo.setText("Description");
-		descriptionInfo.setLayout(new FillLayout());
-		description_Tx = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-		description_Tx.setText(projTaskItemPojo.description);
-		
-		formData = new FormData();
-		formData.top = new FormAttachment(lastGroup);
-		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		descriptionInfo.setLayoutData(formData);
-		lastGroup = descriptionInfo;
+		//changed to user generic title
+		//Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
+		//descriptionInfo.setText("Description");
+		//descriptionInfo.setLayout(new FillLayout());
+		//description_Tx = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+		//description_Tx.setText(projTaskItemPojo.description);
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//descriptionInfo.setLayoutData(formData);
+		//lastGroup = descriptionInfo;
 
-		Group ownerInfo = new Group(itemContentGroup, SWT.LEFT);
-		ownerInfo.setText("Owner");
-		ownerInfo.setLayout(new FillLayout());
-		owner_Tx = new Text(ownerInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-		owner_Tx.setText(projTaskItemPojo.author);
-		
-		formData = new FormData();
-		formData.top = new FormAttachment(lastGroup);
-		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		ownerInfo.setLayoutData(formData);
-		lastGroup = ownerInfo;
+		//Owner is same as Author and it is diplayed by default generic handler already
+		//Group ownerInfo = new Group(itemContentGroup, SWT.LEFT);
+		//ownerInfo.setText("Owner");
+		//ownerInfo.setLayout(new FillLayout());
+		//owner_Tx = new Text(ownerInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+		//owner_Tx.setText(projTaskItemPojo.author);
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//ownerInfo.setLayoutData(formData);
+		//lastGroup = ownerInfo;
 
 		Group leadInfo = new Group(itemContentGroup, SWT.LEFT);
 		leadInfo.setText("Lead");
@@ -406,8 +408,8 @@ public class ProjTask extends GenericItemHandler {
 
 		System.out.println("projTaskItemPojo = "
 				+ projTaskItemPojo);
-		System.out.println("projTaskItemPojo.description = "
-				+ projTaskItemPojo.description);
+		//System.out.println("projTaskItemPojo.description = "
+		//		+ projTaskItemPojo.description);
 		
 		System.out.println("projTaskItemPojo = "
 				+ projTaskItemPojo);
@@ -445,12 +447,12 @@ public class ProjTask extends GenericItemHandler {
 			table.setLinesVisible(true);
 			table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 	
-			String[] columnHeaders = new String[] { "ImpedimentID", "Description", "" /* action for first row */};
+			String[] columnHeaders = new String[] { "ImpedimentID", "Title", "" /* action for first row */};
 	
 			for (int i = 0; i < columnHeaders.length; i++) {
 				TableColumn column = new TableColumn(table, SWT.NONE);
 				column.setText(columnHeaders[i]);
-				if (columnHeaders[i].equalsIgnoreCase("Description")) {
+				if (columnHeaders[i].equalsIgnoreCase("Title")) {
 					column.setWidth(200);
 				} else {
 					column.setWidth(100);
@@ -522,15 +524,16 @@ public class ProjTask extends GenericItemHandler {
 				impedimentVwButtonEditor.horizontalAlignment = SWT.CENTER;
 				impedimentVwButtonEditor.setEditor(impedimentViewButton, items[ScreenRowNum],0);
 	
+				//changed to user generic title
 				TableEditor impDescEditor = new TableEditor(table);
-				Text descriptionTx = new Text(table, SWT.READ_ONLY);
-				descriptionTx.setText(impedimentItemPojo.description);
+				Text impTitleTx = new Text(table, SWT.READ_ONLY);
+				impTitleTx.setText(impedimentItemPojo.title);
 				impDescEditor.grabHorizontal = true;
-				impDescEditor.setEditor(descriptionTx, items[ScreenRowNum], 1);
+				impDescEditor.setEditor(impTitleTx, items[ScreenRowNum], 1);
 	
 				TableEditor impStatusEditor = new TableEditor(table);
 				Text impStatusTx = new Text(table, SWT.READ_ONLY);
-				descriptionTx.setText(impedimentItemPojo.impedimentStatus);
+				impStatusTx.setText(impedimentItemPojo.impedimentStatus);
 				impStatusEditor.grabHorizontal = true;
 				impStatusEditor.setEditor(impStatusTx, items[ScreenRowNum], 2);
 				
@@ -563,12 +566,12 @@ public class ProjTask extends GenericItemHandler {
 			table.setLinesVisible(true);
 			table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 	
-			String[] columnHeaders = new String[] { "Defect ID", "Description", "" /* action for first row */};
+			String[] columnHeaders = new String[] { "Defect ID", "Title", "" /* action for first row */};
 	
 			for (int i = 0; i < columnHeaders.length; i++) {
 				TableColumn column = new TableColumn(table, SWT.NONE);
 				column.setText(columnHeaders[i]);
-				if (columnHeaders[i].equalsIgnoreCase("Description")) {
+				if (columnHeaders[i].equalsIgnoreCase("Title")) {
 					column.setWidth(200);
 				} else {
 					column.setWidth(100);
@@ -626,15 +629,17 @@ public class ProjTask extends GenericItemHandler {
 				defectVwButtonEditor.horizontalAlignment = SWT.CENTER;
 				defectVwButtonEditor.setEditor(defectViewButton, items[ScreenRowNum],0);
 	
+				//changed to user generic title
 				TableEditor defDescEditor = new TableEditor(table);
-				Text descriptionTx = new Text(table, SWT.READ_ONLY);
-				descriptionTx.setText(defectItemPojo.description);
+				Text defTitleTx = new Text(table, SWT.READ_ONLY);
+				defTitleTx.setText(defectItemPojo.title);
 				defDescEditor.grabHorizontal = true;
-				defDescEditor.setEditor(descriptionTx, items[ScreenRowNum], 1);
+				defDescEditor.setEditor(defTitleTx, items[ScreenRowNum], 1);
 	
+				//changed to user generic title
 				TableEditor defStatusEditor = new TableEditor(table);
 				Text defStatusTx = new Text(table, SWT.READ_ONLY);
-				descriptionTx.setText(defectItemPojo.defectStatus);
+				defStatusTx.setText(defectItemPojo.defectStatus);
 				defStatusEditor.grabHorizontal = true;
 				defStatusEditor.setEditor(defStatusTx, items[ScreenRowNum], 2);
 				
@@ -736,9 +741,10 @@ public class ProjTask extends GenericItemHandler {
 	
 	public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
 		ProjTaskItemPojo projTaskItemPojo = (ProjTaskItemPojo) primerDoc.getItem();
-		if (description_Tx != null) {
-			projTaskItemPojo.description = description_Tx.getText();
-		}		
+		//changed to user generic title
+		//if (description_Tx != null) {
+		//	projTaskItemPojo.description = description_Tx.getText();
+		//}		
 		try {
 			projTaskItemPojo.expectedEnd = commons.getDate(
 												expectedEnd_DateDisplay.getYear(),

@@ -19,7 +19,8 @@ public class DefectItemPojo extends ItemPojo {
 	public final static String DEFECTSTATUSVALUES_InProgress = "InProgress";
 	public final static String DEFECTSTATUSVALUES_ReadyForReview = "ReadyForReview";
 	public final static String DEFECTSTATUSVALUES_Completed = "Completed";
-	public String description;
+	//changed to user generic title
+	//public String description;
 	public String projectName;
 	public String defectID;
 	public String severity;
@@ -66,7 +67,9 @@ public class DefectItemPojo extends ItemPojo {
 	public static String getDefectsText(ArrayList<DefectItemPojo> inDefectItems){
 		String defectsText = "";
 		for (DefectItemPojo defectItem : inDefectItems) {
-			defectsText = defectsText + "%n" + defectItem.itemID + " OpenedOn :" + defectItem.openedDate + ": " + defectItem.description;
+			//changed to user generic title
+			//defectsText = defectsText + "%n" + defectItem.itemID + " OpenedOn :" + defectItem.openedDate + ": " + defectItem.description;
+			defectsText = defectsText + "%n" + defectItem.itemID + " OpenedOn :" + defectItem.openedDate + ": " + defectItem.title;
 		}
 		return defectsText;
 	}	

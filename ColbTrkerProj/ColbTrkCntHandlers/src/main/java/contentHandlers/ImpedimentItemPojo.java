@@ -20,7 +20,8 @@ public class ImpedimentItemPojo extends ItemPojo{
 	public final static String IMPEDIMENTSTATUSVALUES_ReadyForReview = "ReadyForReview";
 	public final static String IMPEDIMENTSTATUSVALUES_Completed = "Completed";
 
-	public String description;
+	//changed to user generic title
+	//public String description;
 	public String projectName;	
 	public String impedimentID;
 	public String severity;
@@ -67,8 +68,11 @@ public class ImpedimentItemPojo extends ItemPojo{
 	public static String getImpedimentsText(ArrayList<ImpedimentItemPojo> inImpedimentItems){
 		String impedimentsText = "";
 		for (ImpedimentItemPojo impedimentItem : inImpedimentItems) {
+			//changed to user generic title
+			//impedimentsText = impedimentsText + "%n" + impedimentItem.itemID + " OpenedOn: " 
+			//					+ impedimentItem.openedDate + ": " + impedimentItem.description;
 			impedimentsText = impedimentsText + "%n" + impedimentItem.itemID + " OpenedOn: " 
-								+ impedimentItem.openedDate + ": " + impedimentItem.description;
+					+ impedimentItem.openedDate + ": " + impedimentItem.title;
 		}
 		return impedimentsText;
 	}	

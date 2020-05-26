@@ -161,12 +161,13 @@ public class ProjTasksList extends GenericGrouper {
 		inEditor.setEditor(requestFor_Tx, inTableItem, ++inLastColLocation);
 		inTableItem.setText(inLastColLocation, requestFor_Tx.getText());
 
-		inEditor = new TableEditor(inTable);
-		Text description_Tx = new Text(inTable, SWT.READ_ONLY);
-		description_Tx.setText(projTaskPojo.description);
-		inEditor.grabHorizontal = true;
-		inEditor.setEditor(description_Tx, inTableItem, ++inLastColLocation);
-		inTableItem.setText(inLastColLocation, description_Tx.getText());
+		//changed to user generic title
+		//inEditor = new TableEditor(inTable);
+		//Text description_Tx = new Text(inTable, SWT.READ_ONLY);
+		//description_Tx.setText(projTaskPojo.description);
+		//inEditor.grabHorizontal = true;
+		//inEditor.setEditor(description_Tx, inTableItem, ++inLastColLocation);
+		//inTableItem.setText(inLastColLocation, description_Tx.getText());
 
 		inEditor = new TableEditor(inTable);
 		Text author_Tx = new Text(inTable, SWT.READ_ONLY);
@@ -188,17 +189,18 @@ public class ProjTasksList extends GenericGrouper {
 
 		ProjTaskItemPojo projTaskPojo = (ProjTaskItemPojo) inItemPojo;
 
-		Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
-		descriptionInfo.setText("Description");
-		descriptionInfo.setLayout(new FillLayout());
-		Text descriptionText = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-		descriptionText.setText(projTaskPojo.description);
-		
-		inFormData = new FormData();
-		inFormData.top = new FormAttachment(inPrevGroup);
-		descriptionInfo.setLayoutData(inFormData);
-
-		inPrevGroup = descriptionInfo;
+		//changed to user generic title
+		//Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
+		//descriptionInfo.setText("Description");
+		//descriptionInfo.setLayout(new FillLayout());
+		//Text descriptionText = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+		//descriptionText.setText(projTaskPojo.description);
+		//
+		//inFormData = new FormData();
+		//inFormData.top = new FormAttachment(inPrevGroup);
+		//descriptionInfo.setLayoutData(inFormData);
+		//
+		//inPrevGroup = descriptionInfo;
 
 		Group authorInfo = new Group(itemContentGroup, SWT.LEFT);
 		authorInfo.setText("Author");
@@ -287,7 +289,7 @@ public class ProjTasksList extends GenericGrouper {
 
 		ProjTaskItemPojo projTaskPojo = (ProjTaskItemPojo) inItemPojo;
 
-		System.out.println("Starting setDisplay for Dare to join the party on : " + projTaskPojo.description);
+		//System.out.println("Starting setDisplay for Dare to join the party on : " + projTaskPojo.description);
 
 		inEditor = new TableEditor(inTable);
 		Button linkTextButton = new Button(inTable, SWT.PUSH);
@@ -326,7 +328,9 @@ public class ProjTasksList extends GenericGrouper {
 		inEditor.setEditor(linkTextButton, inTableItem, ++inLastColLocation);
 		inTableItem.setText(inLastColLocation, linkTextButton.getText());
 
-		linkTextButton.setToolTipText("Dare to join the party on : " + projTaskPojo.description);
+		//changed to user generic title
+		//linkTextButton.setToolTipText("Dare to join the party on : " + projTaskPojo.description);
+		linkTextButton.setToolTipText("Dare to join the party on : " + projTaskPojo.title);
 		
 		linkTextButton.setData(EVENTDATA_ProjTaskItemPojo, projTaskPojo);
 		linkTextButton.addSelectionListener(new SelectionAdapter() {
@@ -354,7 +358,11 @@ public class ProjTasksList extends GenericGrouper {
 
 				allocatdTaskItemPojo.teamID = projTaskPojo.artifactName;
 				allocatdTaskItemPojo.taskID = projTaskPojo.taskID;
-				allocatdTaskItemPojo.description = projTaskPojo.description;
+
+				//changed to user generic title
+				//allocatdTaskItemPojo.title = projTaskPojo.description;
+				allocatdTaskItemPojo.title = projTaskPojo.title;
+				
 				allocatdTaskItemPojo.timeEstimated = projTaskPojo.plannedHours;
 				allocatdTaskItemPojo.plannedStart = projTaskPojo.plannedStart;
 				allocatdTaskItemPojo.plannedEnd = projTaskPojo.plannedEnd;

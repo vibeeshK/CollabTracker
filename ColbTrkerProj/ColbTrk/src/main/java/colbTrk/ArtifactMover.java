@@ -4,7 +4,11 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Simplifier to build artifacts from different sources
+ * Simplifier to build artifacts from different sources.
+ * It takes care of zipping and unzipping during upload and downloads of contents when needed.
+ * In other times it smartly splits out the zip extensions and treats the contents within their extracted folders.
+ * Also, based on artifact type, it finds the appropriate folder path download folder or newDraft folder, 
+ * making the developer's life simpler.
  * 
  * @author Vibeesh Kamalakannan
  *
