@@ -24,6 +24,7 @@ public class ImpedimentItemPojo extends ItemPojo{
 	//public String description;
 	public String projectName;	
 	public String impedimentID;
+	public String impedimentDetail;
 	public String severity;
 	public Date openedDate;
 	public String impedimentStatus;
@@ -43,6 +44,7 @@ public class ImpedimentItemPojo extends ItemPojo{
 		System.out.println("@@123 ImpedimentItemPojo initializeAdditionalItemPojoFields done");
 		projectName="";
 		impedimentID="";
+		impedimentDetail="";
 		severity="";
 		openedDate=null;
 		impedimentStatus="";

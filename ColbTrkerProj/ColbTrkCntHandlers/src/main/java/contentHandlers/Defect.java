@@ -25,7 +25,7 @@ public class Defect extends GenericItemHandler {
 
 	public final static String DEFECTPREFIX = "Dfct";
 	public final static String DEFECTTASKSEPARATOR = "_";
-	//Text description_Tx;
+	Text defectDetail_Tx;
 
 	public static String getDefectArtifactName(ContentHandlerSpecs inContentHandlerSpecs, String inProjID, String inTaskID, String inUser, String inTimeStamp) {
 		System.out.println("At getDefectArtifactName inProjID " + inProjID);
@@ -103,32 +103,32 @@ public class Defect extends GenericItemHandler {
  		DefectItemPojo defectItemPojo = (DefectItemPojo) inItemPojo;
 		Group lastGroup = inPrevGroup;
 
-		//changed to user generic title
-		//Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
-		//descriptionInfo.setText("Description");
-		//descriptionInfo.setLayout(new FillLayout());
-		//if (invokedForEdit) {
-		//	description_Tx = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER);
-		//} else {
-		//	description_Tx = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);			
-		//}
-		//description_Tx.setText(defectItemPojo.description!=null?defectItemPojo.description:"");
-		//
-		//formData = new FormData();
-		//formData.top = new FormAttachment(lastGroup);
-		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		//descriptionInfo.setLayoutData(formData);
-		//lastGroup = descriptionInfo;
+		Group defectDetailInfo = new Group(itemContentGroup, SWT.LEFT);
+		defectDetailInfo.setText("Description");
+		defectDetailInfo.setLayout(new FillLayout());
+		if (invokedForEdit) {
+			defectDetail_Tx = new Text(defectDetailInfo, SWT.WRAP | SWT.CENTER);
+		} else {
+			defectDetail_Tx = new Text(defectDetailInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);			
+		}
+		defectDetail_Tx.setText(defectItemPojo.defectDetail!=null?defectItemPojo.defectDetail:"");
+		
+		formData = new FormData();
+		formData.top = new FormAttachment(lastGroup);
+		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		formData.height = PREFERED_DESC_HEIGHT;	// this height setting is to show meaningful size for viewing
+
+		defectDetailInfo.setLayoutData(formData);
+		lastGroup = defectDetailInfo;
 
 		return lastGroup;
 	}
 	
 	public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
 		DefectItemPojo defectItemPojo = (DefectItemPojo) primerDoc.getItem();
-		//changed to user generic title
-		//if (description_Tx != null) {
-		//	defectItemPojo.description = description_Tx.getText();
-		//}		
+		if (defectDetail_Tx != null) {
+			defectItemPojo.defectDetail = defectDetail_Tx.getText();
+		}		
 	}
 	
 	public DefectItemPojo getItem() {

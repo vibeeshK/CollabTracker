@@ -22,9 +22,6 @@ import colbTrk.UsersDisplay;
  */
 public class IdeaGenerator extends GenericItemHandler {
 
-	public static final int PREFERED_DESC_WIDTH = 600;
-	public static final int PREFERED_DESC_HEIGHT = 100;
-
 	Text applicationText;
 	Text descriptionText;
 
@@ -83,7 +80,7 @@ public class IdeaGenerator extends GenericItemHandler {
 		
 		if (ideaPojo.description == null || ideaPojo.description.equalsIgnoreCase("")) {
 			formData.height = PREFERED_DESC_HEIGHT;
-			formData.width = PREFERED_DESC_WIDTH;
+			formData.width = PREFERED_ITEM_PANEL_WIDTH;
 		}
 
 		descriptionInfo.setLayoutData(formData);

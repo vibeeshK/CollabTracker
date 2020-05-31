@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface RemoteAccesser {
 
-	public void intiateCommunications(RootPojo inRootPojo,Commons inCommons);
+	public void initiateCommunications(RootPojo inRootPojo,Commons inCommons);
 	public boolean exists(String inRemoteURL) throws IOException;
 	public InputStream getRemoteFileStream(String inRemoteFileName);
 	public ArrayList<String> getRemoteList(String inRemoteDropBox);
@@ -22,4 +22,5 @@ public interface RemoteAccesser {
 	public void moveToRemoteLocation(String inSourceFileRemoteLocation, String inDestinationFileRemoteLocation);
 	public void uploadToRemote(String inDestinationFileAtRemote, String inSourceFileAtLocal);
 	public void downloadFile(Commons commons, String inRootString, String inRemoteFileName, String inLocalFileName);
+	public void endCommunications() throws IOException;
 }

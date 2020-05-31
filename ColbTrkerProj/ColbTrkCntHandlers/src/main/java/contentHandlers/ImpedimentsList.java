@@ -67,13 +67,12 @@ public class ImpedimentsList extends GenericGrouper {
 		editor.setEditor(requestFor_Tx, tableItem, ++inLastColLocation);
 		tableItem.setText(inLastColLocation, requestFor_Tx.getText());
 
-		//changed to user generic title
-		//editor = new TableEditor(table);
-		//Text description_Tx = new Text(table, SWT.READ_ONLY);
-		//description_Tx.setText(impedimentPojo.description);
-		//editor.grabHorizontal = true;
-		//editor.setEditor(description_Tx, tableItem, ++inLastColLocation);
-		//tableItem.setText(inLastColLocation, description_Tx.getText());
+		editor = new TableEditor(table);
+		Text impedimentDetail_Tx = new Text(table, SWT.READ_ONLY);
+		impedimentDetail_Tx.setText(impedimentPojo.impedimentDetail);
+		editor.grabHorizontal = true;
+		editor.setEditor(impedimentDetail_Tx, tableItem, ++inLastColLocation);
+		tableItem.setText(inLastColLocation, impedimentDetail_Tx.getText());
 
 		editor = new TableEditor(table);
 		Text author_Tx = new Text(table, SWT.READ_ONLY);
@@ -94,18 +93,17 @@ public class ImpedimentsList extends GenericGrouper {
 
 		ImpedimentItemPojo impedimentPojo = (ImpedimentItemPojo) itemPojo;
 
-		//changed to user generic title
-		//Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
-		//descriptionInfo.setText("Application");
-		//descriptionInfo.setLayout(new FillLayout());
-		//Text descriptionText = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER);
-		//descriptionText.setText(impedimentPojo.description);
-		//
-		//formData = new FormData();
-		//formData.top = new FormAttachment(inPrevGroup);
-		//descriptionInfo.setLayoutData(formData);
-		//
-		//inPrevGroup = descriptionInfo;
+		Group impedimentDetailInfo = new Group(itemContentGroup, SWT.LEFT);
+		impedimentDetailInfo.setText("ImpedimentDetail");
+		impedimentDetailInfo.setLayout(new FillLayout());
+		Text descriptionText = new Text(impedimentDetailInfo, SWT.WRAP | SWT.CENTER);
+		descriptionText.setText(impedimentPojo.impedimentDetail);
+		
+		formData = new FormData();
+		formData.top = new FormAttachment(inPrevGroup);
+		impedimentDetailInfo.setLayoutData(formData);
+		
+		inPrevGroup = impedimentDetailInfo;
 
 		Group authorInfo = new Group(itemContentGroup, SWT.LEFT);
 		authorInfo.setText("Author");

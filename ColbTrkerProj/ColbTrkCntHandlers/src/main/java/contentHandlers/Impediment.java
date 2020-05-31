@@ -26,7 +26,7 @@ public class Impediment extends GenericItemHandler {
 
 	public final static String IMPPREFIX = "Impdmt";
 	public final static String IMPTASKSEPARATOR = "_";
-	//Text description_Tx;
+	Text impedimentDetail_Tx;
 
 	public static String getImpedimentArtifactName(ContentHandlerSpecs inContentHandlerSpecs, String inProjID, String inTaskID, String inUser, String inTimeStamp) {
 		return inProjID + inContentHandlerSpecs.rollAddSeparator 
@@ -102,32 +102,30 @@ public class Impediment extends GenericItemHandler {
 		ImpedimentItemPojo impedimentItemPojo = (ImpedimentItemPojo) inItemPojo;
 		Group lastGroup = inPrevGroup;
 
-		//changed to user generic title
-		//Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
-		//descriptionInfo.setText("Description");
-		//descriptionInfo.setLayout(new FillLayout());
-		//if (invokedForEdit) {
-		//	description_Tx = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER);
-		//} else {
-		//	description_Tx = new Text(descriptionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);			
-		//}
-		//description_Tx.setText(impedimentItemPojo.description!=null?impedimentItemPojo.description:"");
-		//
-		//formData = new FormData();
-		//formData.top = new FormAttachment(lastGroup);
-		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		//descriptionInfo.setLayoutData(formData);
-		//lastGroup = descriptionInfo;
+		Group impedimentDetailInfo = new Group(itemContentGroup, SWT.LEFT);
+		impedimentDetailInfo.setText("Description");
+		impedimentDetailInfo.setLayout(new FillLayout());
+		if (invokedForEdit) {
+			impedimentDetail_Tx = new Text(impedimentDetailInfo, SWT.WRAP | SWT.CENTER);
+		} else {
+			impedimentDetail_Tx = new Text(impedimentDetailInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);			
+		}
+		impedimentDetail_Tx.setText(impedimentItemPojo.impedimentDetail!=null?impedimentItemPojo.impedimentDetail:"");
+		
+		formData = new FormData();
+		formData.top = new FormAttachment(lastGroup);
+		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		impedimentDetailInfo.setLayoutData(formData);
+		lastGroup = impedimentDetailInfo;
 
 		return lastGroup;
 	}
 	
 	public void getAddlFieldsOfItemPojo(ItemPojo inItemPojo){
 		ImpedimentItemPojo impedimentItemPojo = (ImpedimentItemPojo) primerDoc.getItem();
-		//changed to user generic title		
-		//if (description_Tx != null) {
-		//	impedimentItemPojo.description = description_Tx.getText();
-		//}		
+		if (impedimentDetail_Tx != null) {
+			impedimentItemPojo.impedimentDetail = impedimentDetail_Tx.getText();
+		}		
 	}
 	
 	public ImpedimentItemPojo getItem() {

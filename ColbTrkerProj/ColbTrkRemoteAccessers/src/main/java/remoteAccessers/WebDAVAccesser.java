@@ -356,7 +356,7 @@ public class WebDAVAccesser extends AbstractRemoteAccesser {
 	}
 
 	@Override
-	public void intiateCommunications(RootPojo inRootPojo, Commons inCommons) {
+	public void initiateCommunications(RootPojo inRootPojo, Commons inCommons) {
 		intiateCommunications(inRootPojo.rootString, inCommons, inRootPojo.fileSeparator);
 	}
 

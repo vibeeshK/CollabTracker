@@ -83,7 +83,14 @@ public class Commons extends CommonTechs {
 	public String xtdCatalogSrvrFolder = "extdSrvr";
 
 	private String localArchive = null;
+	
 	private int archiveDupeMax;			// for archivals in within same txn, subfix added to prevent duplicates
+	private String localFoldersCacheDocsFolder = null;
+	private String localFoldersCacheDocFileStub = null;
+	
+	private String remoteFoldersCacheDocsFolder = null;
+	private String remoteFoldersCacheDocFile = null;
+	
 	private String remoteArchive = null;
 	private String remoteErroredRequests = null;
 	private String remoteInactiveERLsArchive = null;
@@ -251,6 +258,10 @@ public class Commons extends CommonTechs {
 		downloadedReviewsFolder = artifactsFolder + localFileSeparator + commonPropObject.getProperty("downloadedReviewsFolder");
 		localArchive = artifactsFolder + localFileSeparator + commonPropObject.getProperty("localArchive");
 		archiveDupeMax = Integer.parseInt(commonPropObject.getProperty("archiveDupeMax"));
+		
+        localFoldersCacheDocsFolder = artifactsFolder + localFileSeparator + commonPropObject.getProperty("localFoldersCacheDocsFolder");
+        localFoldersCacheDocFileStub = commonPropObject.getProperty("localFoldersCacheDocFileStub");
+
 		//folders and content that sit within Artifacts path ends///////////////
 		////////////////////////////////////////////////////////////////////////
 
@@ -271,8 +282,11 @@ public class Commons extends CommonTechs {
 		contributorsWritableFolder = commonPropObject.getProperty("contributorsWritableFolder");		
 		requestdropbox = commonPropObject.getProperty("requestdropbox");
 		contentdropbox = commonPropObject.getProperty("contentdropbox");
+		
+        remoteFoldersCacheDocsFolder = commonPropObject.getProperty("remoteFoldersCacheDocsFolder");
+        remoteFoldersCacheDocFile = commonPropObject.getProperty("remoteFoldersCacheDocFile");
 
-		catalogDbPublishFilePrefix = commonPropObject.getProperty("catalogDbPublishFilePrefix");
+        catalogDbPublishFilePrefix = commonPropObject.getProperty("catalogDbPublishFilePrefix");
 
 		System.out.println("catalogDbPublishFilePrefix = " + catalogDbPublishFilePrefix);
 
@@ -582,7 +596,11 @@ public class Commons extends CommonTechs {
 	public String getServerSideSideCatalogDbPublishFolderOfRoot(String inRemoteFileSeparator){
 		return allMembersReadableFolder + inRemoteFileSeparator + serverSideSideCatalogDbPublishFolder;
 	}
-
+		
+	public String getLocalFoldersCacheDocsFileNameOfRoot(String inRootNick){
+        return localFoldersCacheDocsFolder + localFileSeparator +  inRootNick + localFoldersCacheDocFileStub;
+	}
+	
 	public String getServersMasterCopyofCatalogDbLocalFileOfRoot(String inRootNick){
 		System.out.println("inRootNick = " + inRootNick);
 		String serversMasterCopyofCatalogDbLocalFolderOfRoot = serversMasterCopyofCatalogDbLocalFolder + localFileSeparator + serversMasterCopyofCatalogDbPrefix + inRootNick;
@@ -934,7 +952,15 @@ public class Commons extends CommonTechs {
 									+ allMembersReadableFolder + inRemoteFileSeparator + responsepickbox;
 		return remoteFileString;
 	}
-
+	
+	public String getRemoteFoldersCacheDocsFolderOfRoot(String inRootString, String inRemoteFileSeparator){
+		return inRootString + inRemoteFileSeparator + allMembersReadableFolder + inRemoteFileSeparator + remoteFoldersCacheDocsFolder;
+	}
+	
+	public String getRemoteFoldersCacheDocFileOfRoot(String inRootString, String inRemoteFileSeparator){
+		return getRemoteFoldersCacheDocsFolderOfRoot(inRootString, inRemoteFileSeparator) + inRemoteFileSeparator + remoteFoldersCacheDocFile;
+	}
+	
 	public String getRemotePathFileName(String inRootString, String inRelevance, String inFileName, String inRemoteFileSeparator){
 
 		String remotePathFileName = "" ;

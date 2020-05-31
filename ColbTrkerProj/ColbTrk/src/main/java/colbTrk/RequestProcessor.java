@@ -479,6 +479,7 @@ public class RequestProcessor {
 				+ " unfinished requests. e.g. " 
 				+ reqProcTracking.reqTrackItems.get(reqProcTracking.reqTrackItems.keySet().toArray()[0]));
 		}
+		remoteAccesser.endCommunications();
 	}
 
 	public boolean updateTargetContent(RequestProcesserPojo requestProcesserPojo,ArtifactKeyPojo finalArtifactKeyPojo) throws IOException{

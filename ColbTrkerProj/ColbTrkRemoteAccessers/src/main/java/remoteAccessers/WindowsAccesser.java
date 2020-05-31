@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 
 import org.apache.commons.io.FileUtils;
@@ -27,8 +28,14 @@ public class WindowsAccesser extends AbstractRemoteAccesser {
 	public WindowsAccesser (){
 	}
 
-	public void intiateCommunications(RootPojo inRootPojo, Commons inCommons) {
-		commonInit(inRootPojo,inCommons);
+	public void initiateCommunications(RootPojo inRootPojo, Commons inCommons) {
+		try {
+			commonInit(inRootPojo,inCommons);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			ErrorHandler.showErrorAndQuit(commons, "Error in WindowsAccesser intiateCommunications."
+					+ " Check connection issues and port lockups. Root: " + inRootPojo.rootNick, e);
+		}
 		System.out.println("initiated windows File at getTransportHandler ");
 	}
 

@@ -136,7 +136,7 @@ public class ContentHandlerSpecs {
 				//ROLLUP ----- rollup artifacts rollsup upto the nth level parent folder			
 				//SlashFix starts
 				//rejointRelevanceString = StringUtils.join(splitStrings,inSeparator,0,rollupLevel);
-				rejointRelevanceString = StringUtils.join(splitStrings,commons.localFileSeparator,0,rollupLevel);
+				rejointRelevanceString = StringUtils.join(splitStrings,commons.localFileSeparator,0,rollupLevel); // end index is one based and not zero based
 				//SlashFix ends
 			} else {
 				//ADDUP ----- addup artifacts just adds at the same relevance path as its child

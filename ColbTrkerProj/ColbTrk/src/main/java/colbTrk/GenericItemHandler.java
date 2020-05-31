@@ -39,6 +39,8 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 		ContentHandlerInterface {
 
 	public static final int PREFERED_ITEM_PANEL_WIDTH = 600;
+	public static final int PREFERED_DESC_HEIGHT = 100;
+
 	public ArtifactPojo invokedArtifactPojo = null;
 	DownloadedReviewsHandler downloadedReviewsHandler = null;
 	

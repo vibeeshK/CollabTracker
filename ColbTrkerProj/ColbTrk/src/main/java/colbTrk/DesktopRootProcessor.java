@@ -24,7 +24,7 @@ public class DesktopRootProcessor implements Runnable {
 	CommonUIData commonUIData = null;	
 	RootPojo rootPojo = null;
 
-	RemoteAccesser remoteAccesser = null;
+	RemoteAccesser contentRootRemoteAccesser = null;
 	
 	CatalogDownloader catalogDownloader = null;
 	Uploader uploader = null;
@@ -39,6 +39,8 @@ public class DesktopRootProcessor implements Runnable {
 	public DesktopRootProcessor(RootPojo inRootPojo,OrchestrationData inOrchestrationData) throws IOException, ParseException {
 		System.out.println("initiating DesktopRootProcessor rootNick11a: " +  inRootPojo.rootNick);
 		rootPojo = inRootPojo;
+		System.out.println("DesktopRootProcessor rootPojo.cachingFolderPathsRecommended: " +  rootPojo.cachingFolderPathsRecommended);
+		
 		commons = Commons.getInstance(Commons.CLIENT_MACHINE,rootPojo.rootNick);
 
 		Commons.logger.info("DesktopRootProcessor contructed at " + commons.getCurrentTimeStamp());
@@ -50,10 +52,10 @@ public class DesktopRootProcessor implements Runnable {
 
 		System.out.println("at 21");
 
-		remoteAccesser = RemoteAccessManager.getInstance(commons, rootPojo.rootNick);
-		System.out.println("at 222221 remoteAccesser = " + remoteAccesser);
+		contentRootRemoteAccesser = RemoteAccessManager.getInstance(commons, rootPojo.rootNick);
+		System.out.println("at 222221 remoteAccesser = " + contentRootRemoteAccesser);
 
-		catalogDownloader = new CatalogDownloader(commons, rootPojo, remoteAccesser);
+		catalogDownloader = new CatalogDownloader(commons, rootPojo, contentRootRemoteAccesser);
 		catalogDownloader.downloadCatalog();	
 
 		System.out.println("at 222221 1 catalogDownloader " + catalogDownloader);
@@ -72,24 +74,24 @@ public class DesktopRootProcessor implements Runnable {
 
 		System.out.println("catalogDBAlias232323cd123: " + catelogPersistenceManager.catalogDBAlias);
 
-		uploader = new Uploader(commonUIData, remoteAccesser);
+		uploader = new Uploader(commonUIData, contentRootRemoteAccesser);
 		System.out.println("at 222221.2" );
 
 		
 		System.out.println("catalogDBAlias343434cd: " + catelogPersistenceManager.catalogDBAlias);
 
-		responseChecker = new ResponseChecker(commonUIData, remoteAccesser);
+		responseChecker = new ResponseChecker(commonUIData, contentRootRemoteAccesser);
 		System.out.println("at 222221.3" );
 
 		System.out.println("catalogDBAlias454545d: " + catelogPersistenceManager.catalogDBAlias);
 
 		assignedContentSubscriber = new AssignedContentSubscriber(commonUIData);
 
-		contentDownloader = new ContentDownloader(commonUIData, remoteAccesser);
+		contentDownloader = new ContentDownloader(commonUIData, contentRootRemoteAccesser);
 
 		System.out.println("at 222221.4" );
 
-		contntHandlrTriggr = new ContntHandlrTriggr(rootPojo, commons.readRootSysLoginIDFromClienSideProperties(rootPojo.rootNick), commonUIData, remoteAccesser);
+		contntHandlrTriggr = new ContntHandlrTriggr(rootPojo, commons.readRootSysLoginIDFromClienSideProperties(rootPojo.rootNick), commonUIData, contentRootRemoteAccesser);
 
 		System.out.println("at 222221 4 autoTriggerSubThreads after ContntHandlrTriggr initiation" );
 		
@@ -105,12 +107,15 @@ public class DesktopRootProcessor implements Runnable {
 		System.out.println("catalogDBAlias676767: " + catelogPersistenceManager.catalogDBAlias);
 
 		while (orchestrationData.getOkayToContinue()) {
+			
+			System.out.println("Run part of DesktopRootProcessor rootNick: " +  rootPojo.rootNick);
+			System.out.println("rootPojo.cachingFolderPathsRecommended: " +  rootPojo.cachingFolderPathsRecommended);
+
 			if (rootPojo.requiresInternet && !commons.isInternetAvailable()){
 				Commons.logger.warn(" Internet umavailable, hence skipping DesktopRootProcess for " + rootPojo.rootNick);	
 				System.out.println(" Internet umavailable, hence skipping DesktopRootProcess for " + rootPojo.rootNick);
 				break;
 			}
-
 			rootProcessCount++;
 			System.out.println("ROOTPROCESSCOUNTAS=" + rootProcessCount);
 			System.out.println("ROOTPROCESSCOUNTAS=" + rootProcessCount);
@@ -154,6 +159,11 @@ public class DesktopRootProcessor implements Runnable {
 		 		}
 				responseChecker.checkResponsesForOneRoot();
 
+				System.out.println("End of communications about to be called from DesktopProcessor for root " + rootPojo.rootNick);
+				System.out.println("cachingFolderPathsRecommended is " + rootPojo.cachingFolderPathsRecommended);
+				
+				contentRootRemoteAccesser.endCommunications();
+				
 			} catch (IOException | ClassNotFoundException | TransformerException | ParserConfigurationException | SAXException | ParseException e) {
 				System.out.println("EXITING THE CURRENT LOOP3");
 				ErrorHandler.showErrorAndQuit(commons, "Error in DesktopRootProcessor run ", e);

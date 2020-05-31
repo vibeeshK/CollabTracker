@@ -77,10 +77,16 @@ public class PublishedRootsHandler {
 			if (requiresInternetAsTx.equalsIgnoreCase("Yes")) {
 				rootPojo.requiresInternet = true;
 			}
+
+			String cachingFolderPathsRecommendedAsTx = rootElement.getAttribute("CachingFolderPathsRecommended");
+			if (cachingFolderPathsRecommendedAsTx.equalsIgnoreCase("Yes")) {
+				rootPojo.cachingFolderPathsRecommended = true;
+			}
 			
 			System.out.println("@ PublishedRootsHandler Loop rootCount = " + rootCount);
 			System.out.println("@ PublishedRootsHandler rootPojo.rootNick = " + rootPojo.rootNick);
 			System.out.println("@ PublishedRootsHandler rootPojo.rootString = " + rootPojo.rootString);
+			System.out.println("@ PublishedRootsHandler rootPojo.cachingFolderPathsRecommended = " + rootPojo.cachingFolderPathsRecommended);
 			
 			if (commons.isWebURI(rootPojo.rootString)){
 				rootPojo.rootPrefix = commons.getHostName(rootPojo.rootString);

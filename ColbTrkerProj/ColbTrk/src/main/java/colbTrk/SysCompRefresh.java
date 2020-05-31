@@ -20,7 +20,7 @@ public class SysCompRefresh {
 	private static SysCompRefresh sysCompRefresh = null;
 
 	Commons commons = null;
-	RemoteAccesser remoteAccesser = null;
+	RemoteAccesser platformRootRemoteAccesser = null;
 	RootPojo sysRootPojo = null;
 	UpdatesLogPojo updatesLogPojo = null;
 	
@@ -50,13 +50,13 @@ public class SysCompRefresh {
 		System.out.println("sysRootPojo is = " + sysRootPojo);
 		System.out.println("sysRootPojo.rootNick is = " + sysRootPojo.rootNick);
 		
-		remoteAccesser = RemoteAccessManager.getInstance(commons, sysRootPojo.rootNick);
+		platformRootRemoteAccesser = RemoteAccessManager.getInstance(commons, sysRootPojo.rootNick);
 		String updateLogDocFileName = sysRootPojo.rootString + sysRootPojo.fileSeparator + commons.sysUpdateLogDoc;
 		System.out.println("updateLogDocFileName = " + updateLogDocFileName);
 		System.out.println("sysRootPojo.rootString = " + sysRootPojo.rootString);
 		System.out.println("commons.sysUpdateLogDoc = " + commons.sysUpdateLogDoc);
 
-		InputStream updateLogDocInputStream = remoteAccesser.getRemoteFileStream(updateLogDocFileName);
+		InputStream updateLogDocInputStream = platformRootRemoteAccesser.getRemoteFileStream(updateLogDocFileName);
 		Document updateLogDoc = null;
 		try {
 			updateLogDoc = commons.getDocumentFromXMLFileStream(updateLogDocInputStream);		
@@ -73,7 +73,7 @@ public class SysCompRefresh {
 				System.out.println("(String) transferObject.destinationObj = " + (String) transferObject.destinationObj);
 				System.out.println("localFileLocation = " + localFileLocation);
 				commons.archiveLocalFile(localFileLocation);
-				remoteAccesser.downloadFile(commons,sysRootPojo.rootString, remoteFileLocation, localFileLocation);
+				platformRootRemoteAccesser.downloadFile(commons,sysRootPojo.rootString, remoteFileLocation, localFileLocation);
 				Commons.logger.info(" Downloaded " + remoteFileLocation 
 											+ " into " + localFileLocation
 											+ " at " + commons.getCurrentTimeStamp());

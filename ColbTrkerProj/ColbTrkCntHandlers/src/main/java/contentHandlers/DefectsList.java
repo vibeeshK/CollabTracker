@@ -68,13 +68,12 @@ public class DefectsList extends GenericGrouper {
 		editor.setEditor(requestFor_Tx, tableItem, ++inLastColLocation);
 		tableItem.setText(inLastColLocation, requestFor_Tx.getText());
 
-		//changed to user generic title		
-		//editor = new TableEditor(table);
-		//Text description_Tx = new Text(table, SWT.READ_ONLY);
-		//description_Tx.setText(defectPojo.description);
-		//editor.grabHorizontal = true;
-		//editor.setEditor(description_Tx, tableItem, ++inLastColLocation);
-		//tableItem.setText(inLastColLocation, description_Tx.getText());
+		editor = new TableEditor(table);
+		Text defectDetail_Tx = new Text(table, SWT.READ_ONLY);
+		defectDetail_Tx.setText(defectPojo.defectDetail);
+		editor.grabHorizontal = true;
+		editor.setEditor(defectDetail_Tx, tableItem, ++inLastColLocation);
+		tableItem.setText(inLastColLocation, defectDetail_Tx.getText());
 
 		editor = new TableEditor(table);
 		Text author_Tx = new Text(table, SWT.READ_ONLY);
@@ -95,18 +94,17 @@ public class DefectsList extends GenericGrouper {
 
 		DefectItemPojo defectPojo = (DefectItemPojo) itemPojo;
 
-		//changed to user generic title		
-		//Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
-		//descriptionInfo.setText("Application");
-		//descriptionInfo.setLayout(new FillLayout());
-		//Text descriptionText = new Text(descriptionInfo, SWT.WRAP | SWT.READ_ONLY | SWT.CENTER);
-		//descriptionText.setText(defectPojo.description);
-		//
-		//formData = new FormData();
-		//formData.top = new FormAttachment(inPrevGroup);
-		//descriptionInfo.setLayoutData(formData);
-		//
-		//inPrevGroup = descriptionInfo;
+		Group defectDetailInfo = new Group(itemContentGroup, SWT.LEFT);
+		defectDetailInfo.setText("DefectDetail");
+		defectDetailInfo.setLayout(new FillLayout());
+		Text descriptionText = new Text(defectDetailInfo, SWT.WRAP | SWT.READ_ONLY | SWT.CENTER);
+		descriptionText.setText(defectPojo.defectDetail);
+		
+		formData = new FormData();
+		formData.top = new FormAttachment(inPrevGroup);
+		defectDetailInfo.setLayoutData(formData);
+		
+		inPrevGroup = defectDetailInfo;
 
 		Group authorInfo = new Group(itemContentGroup, SWT.LEFT);
 		authorInfo.setText("Author");

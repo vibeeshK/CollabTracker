@@ -103,6 +103,7 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 	//Impediments sheet start
 	public static final String IMPEDIMENTSH_ImpedimentID_COLHDR = "ImpedimentID";
 	public static final String IMPEDIMENTSH_ImpedimentTitle_COLHDR = "ImpedimentTitle";
+	public static final String IMPEDIMENTSH_ImpedimentDetail_COLHDR = "ImpedimentDetail";
 	public static final String IMPEDIMENTSH_Severity_COLHDR = "Severity (High/Medium/Low)";
 	public static final String IMPEDIMENTSH_Owner_COLHDR = "OwnerID";
 	public static final String IMPEDIMENTSH_OpenedDate_COLHDR = "OpenedDate";
@@ -117,6 +118,7 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 	//Defects sheet start
 	public static final String DEFECTSH_DefectID_COLHDR = "DefectID";
 	public static final String DEFECTSH_DefectTitle_COLHDR = "DefectTitle";
+	public static final String DEFECTSH_DefectDetail_COLHDR = "DefectDetail";
 	public static final String DEFECTSH_Severity_COLHDR = "Severity (High/Medium/Low)";
 	public static final String DEFECTSH_RaisedBy_COLHDR = "RaisedBy";
 	public static final String DEFECTSH_Owner_COLHDR = "OwnerID";
@@ -577,6 +579,7 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 
 		defectsXlObj.addColOfInterest(DEFECTSH_DefectID_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		defectsXlObj.addColOfInterest(DEFECTSH_DefectTitle_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
+		defectsXlObj.addColOfInterest(DEFECTSH_DefectDetail_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		defectsXlObj.addColOfInterest(DEFECTSH_Severity_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		defectsXlObj.addColOfInterest(DEFECTSH_RaisedBy_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		defectsXlObj.addColOfInterest(DEFECTSH_Owner_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
@@ -611,6 +614,7 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 
 		impedimentsXlObj.addColOfInterest(IMPEDIMENTSH_ImpedimentID_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		impedimentsXlObj.addColOfInterest(IMPEDIMENTSH_ImpedimentTitle_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
+		impedimentsXlObj.addColOfInterest(IMPEDIMENTSH_ImpedimentDetail_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		impedimentsXlObj.addColOfInterest(IMPEDIMENTSH_Severity_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		impedimentsXlObj.addColOfInterest(IMPEDIMENTSH_Owner_COLHDR, ExcelColJavaObj.COLTYPE_STRING);
 		impedimentsXlObj.addColOfInterest(IMPEDIMENTSH_OpenedDate_COLHDR, ExcelColJavaObj.COLTYPE_DATE);
@@ -878,6 +882,7 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 		inImpedimentsXlJavaObj.setColValAtObjRowNumFor(inImpledimentXlObjRowNum, IMPEDIMENTSH_ImpedimentID_COLHDR, inImpedimentItemPojo.impedimentID);
 		//changed to user generic title		
 		inImpedimentsXlJavaObj.setColValAtObjRowNumFor(inImpledimentXlObjRowNum, IMPEDIMENTSH_ImpedimentTitle_COLHDR, inImpedimentItemPojo.title);
+		inImpedimentsXlJavaObj.setColValAtObjRowNumFor(inImpledimentXlObjRowNum, IMPEDIMENTSH_ImpedimentDetail_COLHDR, inImpedimentItemPojo.impedimentDetail);
 		inImpedimentsXlJavaObj.setColValAtObjRowNumFor(inImpledimentXlObjRowNum, IMPEDIMENTSH_Severity_COLHDR, inImpedimentItemPojo.severity);
 		inImpedimentsXlJavaObj.setColValAtObjRowNumFor(inImpledimentXlObjRowNum, IMPEDIMENTSH_Owner_COLHDR, inImpedimentItemPojo.author);
 		inImpedimentsXlJavaObj.setColValAtObjRowNumFor(inImpledimentXlObjRowNum, IMPEDIMENTSH_OpenedDate_COLHDR, inImpedimentItemPojo.openedDate);
@@ -893,6 +898,7 @@ public class XtdProjTracker extends ProjTracker implements ExtendedHandler {
 		inDefectsXlJavaObj.setColValAtObjRowNumFor(inDefectXlRowNum, DEFECTSH_DefectID_COLHDR, inDefectItemPojo.defectID);
 		//changed to user generic title		
 		inDefectsXlJavaObj.setColValAtObjRowNumFor(inDefectXlRowNum, DEFECTSH_DefectTitle_COLHDR, inDefectItemPojo.title);
+		inDefectsXlJavaObj.setColValAtObjRowNumFor(inDefectXlRowNum, DEFECTSH_DefectDetail_COLHDR, inDefectItemPojo.defectDetail);
 		inDefectsXlJavaObj.setColValAtObjRowNumFor(inDefectXlRowNum, DEFECTSH_Severity_COLHDR, inDefectItemPojo.severity);
 		inDefectsXlJavaObj.setColValAtObjRowNumFor(inDefectXlRowNum, DEFECTSH_RaisedBy_COLHDR, inDefectItemPojo.raisedBy);
 		inDefectsXlJavaObj.setColValAtObjRowNumFor(inDefectXlRowNum, DEFECTSH_Owner_COLHDR, inDefectItemPojo.author);

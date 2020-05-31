@@ -46,7 +46,7 @@ public class RemoteAccessManager {
 				ErrorHandler.showErrorAndQuit(commons, "Error in AccessManager main getRemoteAccesser " + inRootText, e);
 			}
 			remoteAccessManager.transportHandlerMap.put(rootPojo.rootNick,remoteAccesser);
-			remoteAccesser.intiateCommunications(rootPojo,commons);
+			remoteAccesser.initiateCommunications(rootPojo,commons);
 
 			Commons.logger.info("RemoteAccessManager getRemoteAccesser set for inRootText " + inRootText);
 		}

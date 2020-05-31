@@ -31,16 +31,18 @@ import com.google.api.services.drive.model.FileList;
 import colbTrk.AbstractRemoteAccesser;
 import colbTrk.Commons;
 import colbTrk.ErrorHandler;
+import colbTrk.FolderPathCacheDocPojo;
 import colbTrk.RootPojo;
 import commonTechs.ParentChildObject;
 
 /**
  * This class provides the means to access files on a Google Drive
- * 
+ * IMPORTANT: This processor needs cachingFolderPaths enabled at root
+ *
  * @author Vibeesh Kamalakannan
  *
  */
-public class GDriveShAccesser extends AbstractRemoteAccesser {
+public class GDriveShAccesser extends AbstractRemoteAccesser {	
 
     private static final String APPLICATION_NAME = "Google Drive API Java GoogleDriveAccesser";
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
@@ -50,7 +52,8 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
     
     NetHttpTransport HTTP_TRANSPORT = null;  
     Drive service = null;
-
+    String remoteCacheFileLocation = null;
+    
     // Global instance of the scopes required by this quickstart.
     // If modifying these scopes, delete your previously saved tokens/ folder.
     private static final List<String> SCOPES = Arrays.asList(DriveScopes.DRIVE_METADATA_READONLY,DriveScopes.DRIVE_FILE,DriveScopes.DRIVE_READONLY);
@@ -91,7 +94,8 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
         return credential;
     }
 
-    public static boolean checkFileExistence(Drive service, String inRemoteURL) throws IOException {
+    // this method is only for testing purpose; its only used by main of this class.
+    public static boolean checkContentExistenceInRemoteFolder(Drive service, String inRemoteURL) throws IOException {
     	boolean fileFound = false;
 
         String pageToken = null;
@@ -136,7 +140,7 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 
         commons.checkSetProxy();
 
-    	g1.intiateCommunications(null, commons);
+    	g1.initiateCommunications(null, commons);
 
 		InputStream ins = g1.get("1DnfPrmgScI2AggSRRhGDhJod4Us8KBYC/testdoc.txt");
 
@@ -183,11 +187,11 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
             }
         }
 
-        System.out.printf("file " + files.get(1).getName() + " really exists " + checkFileExistence(service, "root"));
+        System.out.printf("file " + files.get(1).getName() + " really exists " + checkContentExistenceInRemoteFolder(service, "root"));
     }
 
 	//@Override
-	public void intiateCommunications(RootPojo inRootPojo, Commons inCommons) {
+	public void initiateCommunications(RootPojo inRootPojo, Commons inCommons) {
 
 		if (inRootPojo == null) {
 			inRootPojo = new RootPojo();
@@ -195,12 +199,13 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 			inRootPojo.fileSeparator = "/";
 		}
 
-		System.out.println("inRootPojo.rootString is " + inRootPojo.rootString);
-		commonInit(inRootPojo,inCommons);
-		System.out.println("rootPojo.rootString is " + rootPojo.rootString);
-
         try {
-    		System.out.println("calling checkSetProxy");
+
+    		System.out.println("inRootPojo.rootString is " + inRootPojo.rootString);
+    		commonInit(inRootPojo,inCommons);
+    		System.out.println("rootPojo.rootString is " + rootPojo.rootString);
+
+        	System.out.println("calling checkSetProxy");
 
             commons.checkSetProxy();
     		//set the proxy when the user is within a firewall
@@ -211,9 +216,77 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 	        service = new Drive.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
 	                .setApplicationName(APPLICATION_NAME)
 	                .build();
+
+	        if (rootPojo.cachingFolderPathsRecommended) {
+
+	        	remoteCacheFileLocation = commons.getRemoteFoldersCacheDocFileOfRoot(
+						rootPojo.rootString,rootPojo.fileSeparator);
+
+	        	if (commons.processMode!=Commons.BASE_CATALOG_SERVER){
+		        // Content server orchestrator uses the cache saved locally which it keeps it uptodate anyway.
+		        // Other content orchestrators can use the server's cache saved in the doc central
+
+		        	//find cacheFileRemoteID and store for referencing during end of communication.
+		        	
+		    		InputStream remoteFolderPathCacheDocInStream = 
+							getRemoteFileStream(remoteCacheFileLocation);
+		        	folderPathCacheDoc = (FolderPathCacheDocPojo) commons.getJsonDocFromInputStream(
+		        													remoteFolderPathCacheDocInStream,
+		        														FolderPathCacheDocPojo.class);
+		    		remoteFolderPathCacheDocInStream.close();
+
+		    		System.out.println("At GSH initiateCommunications remote folderPathCacheDoc read = " + folderPathCacheDoc);
+
+		    		if (folderPathCacheDoc==null){
+						folderPathCacheDoc = new FolderPathCacheDocPojo(); // for first run
+					}
+		    		
+	        	}
+	        }
 		} catch (GeneralSecurityException | IOException e) {
 			ErrorHandler.showErrorAndQuit(commons, "Error in GDriveShAccesser intiateCommunications."
 					+ " Check connection issues and port lockups. Root: " + inRootPojo.rootNick, e);
+		}
+	}
+
+	public void specificRemoteEndProcess() throws IOException {
+
+		if (rootPojo.cachingFolderPathsRecommended
+		&& commons.processMode==Commons.BASE_CATALOG_SERVER){
+
+			// find fileID to replace file starts
+
+			System.out.println("At specificRemoteEndProcess start");
+
+		    //ParentChildObject parentChildObject = getFileResourceIDFromCanoniPostString(remoteCacheFileLocation);
+		    ParentChildObject parentChildObject = getParentChildObjectForURL(remoteCacheFileLocation);
+
+			System.out.println("At specificRemoteEndProcess parent " + (String) parentChildObject.parentObj);
+			System.out.println("At specificRemoteEndProcess child" + (String) parentChildObject.childObj);
+		    
+			if (parentChildObject != null && parentChildObject.childObj != null) {
+				System.out.println("At specificRemoteEndProcess going to replace cachefile");
+				
+			    String existingRemoteCacheFileID = null;
+			    existingRemoteCacheFileID = (String) parentChildObject.childObj;
+				updateFileWithID(existingRemoteCacheFileID,commons.getLocalFoldersCacheDocsFileNameOfRoot(rootPojo.rootNick));
+			} else {
+				System.out.println("At specificRemoteEndProcess going to create cachefile ");
+				InputStream folderPathCacheDocInStream = commons.sysGetJsonDocInStream(folderPathCacheDoc);
+				//putInStreamIntoRemoteLocation(remoteCacheFileLocation,folderPathCacheDocInStream);
+			    String newRemoteCacheFileID = putInStreamIntoRemoteLocationAndGetID(remoteCacheFileLocation,
+																			folderPathCacheDocInStream);
+
+			    String remoteCacheFileCanonicPath = StringUtils.stripStart(
+			    										getCanonicPostBaseString(remoteCacheFileLocation),rootPojo.fileSeparator);
+				folderPathCacheDoc.addPath(remoteCacheFileCanonicPath, newRemoteCacheFileID);
+				folderPathCacheDocInStream.close();
+				
+				// As the cache's own path is used often its added to server's local path so in next run it would get added to doc central
+				commons.putJsonDocToFile(commons.getLocalFoldersCacheDocsFileNameOfRoot(rootPojo.rootNick),
+						folderPathCacheDoc);			
+			}
+			// find fileID to replace file ends
 		}
 	}
 
@@ -258,6 +331,7 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		if (parentChildObject!= null && parentChildObject.parentObj!= null) {
 			remoteFolderID = (String) parentChildObject.parentObj;
 		}
+		System.out.println(" At getRemoteFolderID inRemoteURL " + inRemoteURL);
 		System.out.println(" remoteFolderID is " + remoteFolderID);
 		return remoteFolderID;
 	}
@@ -282,12 +356,36 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
         System.out.println("\n at 0a splitFolderNodes[0] is " + splitFolderNodes[0]);
 		
 		ParentChildObject currentNodeParentChildObject = null;
-		for (String node : splitFolderNodes) {
+
+		//Cache introduce starts
+		String cumulativePath = "";
+		String cacheValue = null;
+		String node = "";
+
+		//for (String node : splitFolderNodes) {
+		for (int nodeCount = 0; nodeCount < splitFolderNodes.length; nodeCount++){
+			node = splitFolderNodes[nodeCount];
+			cumulativePath = StringUtils.join(splitFolderNodes,rootPojo.fileSeparator,0,nodeCount+1); // end index is one based and not zero based
+			//Cache introduce ends
+			
 	        System.out.println("\n at 0a prevNodeResourceID is " + prevNodeResourceID);
 	        System.out.println("\n at 0a node to find is " + node);
 	        currentNodeParentChildObject = 
 					new ParentChildObject(prevNodeResourceID,null); // at this time we know parent id
-	        findChildNodeID(currentNodeParentChildObject, node);
+
+			//Cache introduce starts
+        	//findChildNodeID(currentNodeParentChildObject, node);
+	        if (rootPojo.cachingFolderPathsRecommended) {
+	        	cacheValue = folderPathCacheDoc.getPath(cumulativePath);
+	        }
+	        if (cacheValue != null) {
+	        	currentNodeParentChildObject.childObj = cacheValue;
+				System.out.println("caching used for " + cumulativePath);	        	
+	        } else {	        
+				System.out.println("no cache available for " + cumulativePath);
+	        	findChildNodeID(currentNodeParentChildObject, node);
+	        }	        
+			//Cache introduce ends
 
 	        System.out.println("\n at 0a currentNodeParentChildObject.childObj is " + currentNodeParentChildObject.childObj);
 	        System.out.println("\n at 0a inside node " + node);
@@ -317,6 +415,23 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 	        
 			System.out.println("\n at 0a got fileResourceID as " + prevNodeResourceID);
 			prevNodeResourceID = (String) currentNodeParentChildObject.childObj;
+
+			//Cache introduce starts
+	        if (rootPojo.cachingFolderPathsRecommended
+	        && cacheValue == null
+	        && currentNodeParentChildObject.childObj != null) {
+	        
+				System.out.println("caching done for " + cumulativePath);
+	        	
+	        	folderPathCacheDoc.addPath(cumulativePath,(String) currentNodeParentChildObject.childObj);
+	        } else {
+				System.out.println("caching not done for " + cumulativePath);
+				System.out.println("currentNodeParentChildObject " + (String) currentNodeParentChildObject.childObj);
+				System.out.println("cacheValue was " + cacheValue);
+				System.out.println("rootPojo.cachingFolderPathsRecommended was " + rootPojo.cachingFolderPathsRecommended);
+				System.out.println("rootPojo.root " + rootPojo.rootNick);
+	        }
+			//Cache introduce ends
 		}
 		return;
 	}
@@ -345,19 +460,66 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 
 		ParentChildObject currentNodeParentChildObject = new ParentChildObject(prevNodeResourceID,null);;
 
-		for (String node : splitFolderNodes) {
-	        System.out.println("\n at 00 prevNodeResourceID is " + prevNodeResourceID);
-	        System.out.println("\n at 00 node to find is " + node);
+		//Cache introduce starts
+		if (splitFolderNodes.length == 0) {
+		// In case the path passed is blank, it would mean seeking the root itself
+			currentNodeParentChildObject.childObj = prevNodeResourceID;
+		}
+
+		String cumulativePath = "";
+		String cacheValue = null;
+		String node = "";
+		
+		//for (String node : splitFolderNodes) {
+		for (int nodeCount = 0; nodeCount < splitFolderNodes.length; nodeCount++){
+			node = splitFolderNodes[nodeCount];
+			cumulativePath = StringUtils.join(splitFolderNodes,rootPojo.fileSeparator,0,nodeCount+1); // end index is one based and not zero based
+			//Cache introduce ends
+				
+	        System.out.println("\n at 00ab inCanonicPostBaseString is " + inCanonicPostBaseString);
+	        System.out.println("\n at 00ab prevNodeResourceID is " + prevNodeResourceID);
+	        System.out.println("\n at 00ab nodeCount is " + nodeCount);
+	        System.out.println("\n at 00ab cumulativePath is " + cumulativePath);
+	        System.out.println("\n at 00ab node to find is " + node);
 
 	        if (prevNodeResourceID == null) { 
-				System.out.println("\n at 00 got fileResourceID as null hence breaking");
+				System.out.println("\n at 00b got fileResourceID as null hence breaking");
 				currentNodeParentChildObject = null;
 	        	break;
 	        }
 
 	        currentNodeParentChildObject = 
 					new ParentChildObject(prevNodeResourceID,null); // at this time we know parent id
-	        findChildNodeID(currentNodeParentChildObject, node);
+
+	        //Cache introduce starts
+	        //findChildNodeID(currentNodeParentChildObject, node);
+	        if (rootPojo.cachingFolderPathsRecommended) {
+	        	cacheValue = folderPathCacheDoc.getPath(cumulativePath);
+			}
+	        if (cacheValue != null) {
+	        	currentNodeParentChildObject.childObj = cacheValue;
+				System.out.println("caching used for " + cumulativePath);	        	
+	        } else {
+				System.out.println("no cache available for " + cumulativePath);
+	        	findChildNodeID(currentNodeParentChildObject, node);
+		        if (rootPojo.cachingFolderPathsRecommended
+	        	&& currentNodeParentChildObject.childObj != null
+	        	&& nodeCount < splitFolderNodes.length-1) {	// Skip caching last node to avoid caching file names
+	        												// otherwise the cache will become too large.
+	        												// If speed not achieved, then revisit to include file's level, but
+	        												// when files are moved the caching has to be carefully cleaned.		        	
+		        	folderPathCacheDoc.addPath(cumulativePath,(String) currentNodeParentChildObject.childObj);
+					System.out.println("caching done for " + cumulativePath);
+		        } else {
+
+		        	System.out.println("caching not done for " + cumulativePath);
+					System.out.println("currentNodeParentChildObject " + (String) currentNodeParentChildObject.childObj);
+					System.out.println("cacheValue was " + cacheValue);
+					System.out.println("rootPojo.cachingFolderPathsRecommended was " + rootPojo.cachingFolderPathsRecommended);
+					System.out.println("rootPojo.root " + rootPojo.rootNick);
+		        }
+	        }
+			//Cache introduce ends	        
 
 	        if (currentNodeParentChildObject.childObj != null) {
 	        	prevNodeResourceID = (String) currentNodeParentChildObject.childObj;
@@ -496,8 +658,24 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		return arrayListOfFiles;
 	}
 
+	//@Override
+	//public void put(String inNewContentRemoteLocation, byte[] inBytes) {
+	//	String fileName = commons.getFileNameFromFullPath(inNewContentRemoteLocation, fileSeparator);
+	//	String tempPathFileName = commons.getFullLocalPathFileNameOfTempFile(rootPojo.rootNick,fileName);
+	//	try {
+	//		commons.storeByteArrayIntoFile(inBytes, tempPathFileName);			
+	//	} catch (IOException e) {
+	//		ErrorHandler.showErrorAndQuit(commons, "error in GDriveAccess put of inNewContentRemoteLocation " + inNewContentRemoteLocation, e);
+	//	}
+	//	uploadToRemote(inNewContentRemoteLocation, tempPathFileName);
+	//}
+
 	@Override
 	public void put(String inNewContentRemoteLocation, byte[] inBytes) {
+		putAndGetID(inNewContentRemoteLocation, inBytes);
+	}
+	
+	private String putAndGetID(String inNewContentRemoteLocation, byte[] inBytes) {
 		String fileName = commons.getFileNameFromFullPath(inNewContentRemoteLocation, fileSeparator);
 		String tempPathFileName = commons.getFullLocalPathFileNameOfTempFile(rootPojo.rootNick,fileName);
 		try {
@@ -505,10 +683,14 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		} catch (IOException e) {
 			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAccess put of inNewContentRemoteLocation " + inNewContentRemoteLocation, e);
 		}
-		uploadToRemote(inNewContentRemoteLocation, tempPathFileName);
+		return uploadToRemoteAndGetID(inNewContentRemoteLocation, tempPathFileName);
 	}
 
 	public void uploadToRemote(String inRemoteLocation, String inLocalFileToBeUploaded){
+		uploadToRemoteAndGetID(inRemoteLocation,inLocalFileToBeUploaded);
+	}
+
+	private String uploadToRemoteAndGetID(String inRemoteLocation, String inLocalFileToBeUploaded){
 		//refer https://developers.google.com/drive/api/v3/folder
 
 		createFolderOfFileIfDontExist(inRemoteLocation);
@@ -518,12 +700,13 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		File fileMetadata = new File();
 		fileMetadata.setParents(Collections.singletonList(remoteFolderID));
 
-		System.out.println("trying to upload file: " + inLocalFileToBeUploaded );
+		System.out.println("GDriveC Trying to upload file: " + inLocalFileToBeUploaded );
+		System.out.println("GDriveC folderID remoteFolderID: " + remoteFolderID );
 		String remoteFileName = commons.getFileNameFromFullPath(inRemoteLocation,rootPojo.fileSeparator);		
 
 		System.out.println("inRemoteLocation is : " + inRemoteLocation);
 		System.out.println("remoteFileName is : " + remoteFileName);
-		
+
 		fileMetadata.setName(remoteFileName);
 
 		java.io.File filePath = new java.io.File(inLocalFileToBeUploaded);
@@ -537,10 +720,47 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		} catch (IOException e) {
 			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAccess uploadToRemote " + inLocalFileToBeUploaded, e);
 		}
+		System.out.println(" GDriveC file saved. inRemoteLocation " + inRemoteLocation);
+		System.out.println(" GDriveC file saved. ID assigned was " + file.getId());
+		
+		return file.getId();
 	}
+
+	//@Override
+	//public void putInStreamIntoRemoteLocation(String inNewContentRemoteLocation,
+	//		InputStream inUpdatedContentByteArray) {
+	//	String fileName = commons.getFileNameFromFullPath(inNewContentRemoteLocation, fileSeparator);
+	//	String tempPathFileName = commons.getFullLocalPathFileNameOfTempFile(rootPojo.rootNick,fileName);
+	//	try {
+	//		commons.storeInStream(inUpdatedContentByteArray, tempPathFileName);
+	//	} catch (IOException e) {
+	//		ErrorHandler.showErrorAndQuit(commons, "error in GDriveAhAccesser putInStreamIntoRemoteLocation inNewContentRemoteLocation " + inNewContentRemoteLocation, e);
+	//	}
+	//	uploadToRemote(inNewContentRemoteLocation, tempPathFileName);
+	//}
 
 	@Override
 	public void putInStreamIntoRemoteLocation(String inNewContentRemoteLocation,
+			InputStream inUpdatedContentByteArray) {
+		putInStreamIntoRemoteLocationAndGetID(inNewContentRemoteLocation,inUpdatedContentByteArray);
+	}
+	
+	private String putInStreamIntoRemoteLocationAndGetID(String inNewContentRemoteLocation,
+			InputStream inUpdatedContentByteArray) {
+		//String fileName = commons.getFileNameFromFullPath(inNewContentRemoteLocation, fileSeparator);
+		//String tempPathFileName = commons.getFullLocalPathFileNameOfTempFile(rootPojo.rootNick,fileName);
+		//try {
+		//	commons.storeInStream(inUpdatedContentByteArray, tempPathFileName);
+		//} catch (IOException e) {
+		//	ErrorHandler.showErrorAndQuit(commons, "error in GDriveAhAccesser putInStreamIntoRemoteLocation inNewContentRemoteLocation " + inNewContentRemoteLocation, e);
+		//}
+		String tempPathFileName = convertByteArrayToFile(inNewContentRemoteLocation,
+				inUpdatedContentByteArray);
+		return uploadToRemoteAndGetID(inNewContentRemoteLocation, tempPathFileName);
+	}
+	
+	
+	public String convertByteArrayToFile(String inNewContentRemoteLocation,
 			InputStream inUpdatedContentByteArray) {
 		String fileName = commons.getFileNameFromFullPath(inNewContentRemoteLocation, fileSeparator);
 		String tempPathFileName = commons.getFullLocalPathFileNameOfTempFile(rootPojo.rootNick,fileName);
@@ -549,11 +769,13 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		} catch (IOException e) {
 			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAhAccesser putInStreamIntoRemoteLocation inNewContentRemoteLocation " + inNewContentRemoteLocation, e);
 		}
-		uploadToRemote(inNewContentRemoteLocation, tempPathFileName);
+		return tempPathFileName;
 	}
-
+	
 	@Override
 	public void moveToRemoteLocation(String inSourceFileRemoteLocation, String inDestinationFileRemoteLocation) {
+	// Note: the folder caching is assumed not impacted since the moves are always at file level
+		
 		System.out.println(" a2 moveToRemoteLocation from " + inSourceFileRemoteLocation);
 		System.out.println(" a2 moveToRemoteLocation to " + inDestinationFileRemoteLocation);
 
@@ -564,7 +786,7 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 		
 		System.out.println(" a2 payloadFileId is " + payloadFileId);
 
-		createFolderOfFileIfDontExist(inDestinationFileRemoteLocation);
+		//createFolderOfFileIfDontExist(inDestinationFileRemoteLocation);
 		
 		ParentChildObject targetParentChildObject =  getParentChildObjectForURL(inDestinationFileRemoteLocation);
 		String targetFolderId = (String) targetParentChildObject.parentObj;
@@ -589,28 +811,65 @@ public class GDriveShAccesser extends AbstractRemoteAccesser {
 			  previousParents.append(',');
 			}
 
-			// Move the file to the new folder
-			paylodfile = service.files().update(payloadFileId, null)
+			//changes to update the file location and file name in one stroke - starts
+			//// Move the file to the new folder
+			//paylodfile = service.files().update(payloadFileId, null)
+			//    .setAddParents(targetFolderId)
+			//    .setRemoveParents(previousParents.toString())
+			//    .setFields("id, parents")
+			//    .execute();
+			//
+			//System.out.println(" a2 parents  changed ");
+			//
+			//File fileMetadata = new File();
+			//fileMetadata.setName(newFileName);
+			//
+			//Drive.Files.Update update = service.files().update(payloadFileId, fileMetadata);
+			//update.execute();			
+
+			// Move the file to the new folder and with arrived file name
+			File fileMetadata = new File();
+		    fileMetadata.setName(newFileName);
+			
+			paylodfile = service.files().update(payloadFileId, fileMetadata)
 			    .setAddParents(targetFolderId)
 			    .setRemoveParents(previousParents.toString())
 			    .setFields("id, parents")
 			    .execute();
 
-			System.out.println(" a2 parents  changed ");
-
-		    File fileMetadata = new File();
-		    fileMetadata.setName(newFileName);
-
-		    Drive.Files.Update update = service.files().update(payloadFileId, fileMetadata);
-		    update.execute();			
-
+			System.out.println(" a2 parents changed ");
 			System.out.println(" a2 name changed ");
+			
+			//changes to update the file location and file name in one stroke - ends
 			
 		} catch (IOException e) {
 			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAccess moveToRemoteLocation from " + inSourceFileRemoteLocation + " to " + inDestinationFileRemoteLocation, e);
 		}
 	}
 
+	public void updateFileWithID(String inFileID, String inJavaFileName) {
+	// Note: the folder caching is assumed not impacted since the moves are always at file level
+
+		System.out.println(" starting updateFileWithID for " + inJavaFileName);
+		
+		java.io.File javaFile = new java.io.File(inJavaFileName);
+		FileContent mediaContent = new FileContent(null, javaFile);
+
+		System.out.println(" mediaContent is " + mediaContent);
+
+		File fileMetadata = new File();
+		
+	    try {
+			File paylodfile = service.files().update(inFileID, fileMetadata, mediaContent)
+											    .setFields("id, parents")
+											    .execute();
+		} catch (IOException e) {
+			ErrorHandler.showErrorAndQuit(commons, "error in GDriveAccess updateFileWithID for " + inJavaFileName, e);
+		}
+
+		System.out.println(" ending updateFileWithID for " + inJavaFileName);
+	}
+	
 	@Override
 	public InputStream getRemoteFileStream(String inRemoteFileName) {
 		System.out.println("At getRemoteFileStream inRemoteFileName is " + inRemoteFileName);

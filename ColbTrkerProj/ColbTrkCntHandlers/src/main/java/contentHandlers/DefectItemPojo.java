@@ -23,6 +23,7 @@ public class DefectItemPojo extends ItemPojo {
 	//public String description;
 	public String projectName;
 	public String defectID;
+	public String defectDetail;
 	public String severity;
 	public String raisedBy;
 	public Date openedDate;
@@ -43,6 +44,7 @@ public class DefectItemPojo extends ItemPojo {
 		System.out.println("@@123 DefectItemPojo initializeAdditionalItemPojoFields done");
 		projectName="";
 		defectID="";
+		defectDetail="";
 		severity="";
 		raisedBy="";
 		openedDate=null;

@@ -18,6 +18,7 @@ public class RootPojo {
 	public String fileSeparator = null;
 	public String rootPrefix = "";
 	public boolean requiresInternet = false;
+	public boolean cachingFolderPathsRecommended = false;
 	
 	public RootPojo() {
 	}
@@ -29,7 +30,8 @@ public class RootPojo {
 			String inRootType,
 			String inFileSeparator,
 			String inRootPrefix,
-			boolean inRequiresInternet
+			boolean inRequiresInternet,
+			boolean inCachingFolderPathsRecommended
 		) {
 		setRootPojo(
 				inRootNick, 
@@ -38,7 +40,8 @@ public class RootPojo {
 				inRootType,
 				inFileSeparator,
 				inRootPrefix,
-				inRequiresInternet
+				inRequiresInternet,
+				inCachingFolderPathsRecommended
 				);
 	}
 
@@ -49,7 +52,8 @@ public class RootPojo {
 			String inRootType,
 			String inFileSeparator,
 			String inRootPrefix,
-			boolean inRequiresInternet
+			boolean inRequiresInternet,
+			boolean inCachingFolderPathsRecommended
 	) {
 		rootNick = inRootNick;
 		rootString = inRootString;
@@ -58,5 +62,6 @@ public class RootPojo {
 		fileSeparator = inFileSeparator;
 		rootPrefix = inRootPrefix;
 		requiresInternet = inRequiresInternet;
+		cachingFolderPathsRecommended = inCachingFolderPathsRecommended;
 	}
 }
