@@ -137,20 +137,24 @@ public class XtdStdContentProcessor {
 			System.out.println("at 32432 extendedContentProcessing4 updated xtdProcStatus " + xtdProcStatus);
 
 			if (!xtdProcStatus.equalsIgnoreCase(XtdStdProcessRecord.ERLRecord_SKIP)) {
-				ArtifactMover artifactMover = ArtifactMover.getInstance(commonData);
-				System.out.println("at 32432 extendedContentProcessing4 artifactMover " + artifactMover);
-				artifactMover.prepForUpload(parentDraft,commonData.getContentHandlerSpecsMap().get(contentType).extension);
-				System.out.println("at 32432 extendedContentProcessing4 artifactMover.lastProcessStatus " + artifactMover.lastProcessStatus);
-							
-				if (artifactMover.lastProcessStatus != ArtifactMover.PROCESSED_OK) {
-					System.out.println("at 32432 extendedContentProcessing4 artifactMover.lastProcessStatus not ok");
-					ErrorHandler.showErrorAndQuit(commons, "Error17 at ArtifactWrapper artifactMover " + artifactMover.lastProcessStatus +  artifactMover.lastProcessStatus + " while prepForUpload : ");
-					return;
-				}
-				System.out.println("at 32432 extendedContentProcessing4 artifactMover done ");
-	
-				xtdCatlogPersistenceManager.updateArtifactStatus(parentDraft,SelfAuthoredArtifactpojo.ArtifactStatusToBeUploaded);
-				System.out.println("at 32432 extendedContentProcessing4 updateArtifactStatus with " + SelfAuthoredArtifactpojo.ArtifactStatusToBeUploaded);
+
+				//3May2020: Fix where the record required for further process, but already locked for upload				
+				//ArtifactMover artifactMover = ArtifactMover.getInstance(commonData);
+				//System.out.println("at 32432 extendedContentProcessing4 artifactMover " + artifactMover);
+				//artifactMover.prepForUpload(parentDraft,commonData.getContentHandlerSpecsMap().get(contentType).extension);
+				//System.out.println("at 32432 extendedContentProcessing4 artifactMover.lastProcessStatus " + artifactMover.lastProcessStatus);
+				//			
+				//if (artifactMover.lastProcessStatus != ArtifactMover.PROCESSED_OK) {
+				//	System.out.println("at 32432 extendedContentProcessing4 artifactMover.lastProcessStatus not ok");
+				//	ErrorHandler.showErrorAndQuit(commons, "Error17 at ArtifactWrapper artifactMover " + artifactMover.lastProcessStatus +  artifactMover.lastProcessStatus + " while prepForUpload : ");
+				//	return;
+				//}
+				//System.out.println("at 32432 extendedContentProcessing4 artifactMover done ");
+				//
+				//xtdCatlogPersistenceManager.updateArtifactStatus(parentDraft,SelfAuthoredArtifactpojo.ArtifactStatusToBeUploaded);
+				xtdCatlogPersistenceManager.updateArtifactStatus(parentDraft,SelfAuthoredArtifactpojo.ArtifactStatusToBeBatchUploaded);
+
+				System.out.println("at 32432a extendedContentProcessing4 updateArtifactStatus done as " + parentDraft.draftingState);
 			}
 		}
 	}

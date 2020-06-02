@@ -199,13 +199,16 @@ public class XtdDeckerProcessor {
 				xtdDeckerProcCatlogPersistenceMgr.updateDeckerChildStatus(childERLDownload.artifactKeyPojo,parentERLDownload.artifactKeyPojo,ExtendedChildPojo.CHILD_PROCESSED);
 			}
 			xtdDeckerProcCatlogPersistenceMgr.updateDeckerParent(erlGrouperParent.artifactKeyPojo, erlGrouperParent.childTotal,erlGrouperParent.parentUpdateTimeStamp,ERLGrouperParent.PARENT_PROCESSED);
-			ArtifactMover artifactMover = ArtifactMover.getInstance(commonData);
-			artifactMover.prepForUpload(parentDraft,commonData.getContentHandlerSpecsMap().get(contentType).extension);
-			if (artifactMover.lastProcessStatus != ArtifactMover.PROCESSED_OK) {
-				ErrorHandler.showErrorAndQuit(commons, "Error17 at ArtifactWrapper artifactMover " + artifactMover.lastProcessStatus +  artifactMover.lastProcessStatus + " while prepForUpload : ");
-				return;
-			}
-			xtdDeckerProcCatlogPersistenceMgr.updateArtifactStatus(parentDraft,SelfAuthoredArtifactpojo.ArtifactStatusToBeUploaded);
+			//3May2020: Fix where the record required for further process, but already locked for upload				
+			//ArtifactMover artifactMover = ArtifactMover.getInstance(commonData);
+			//artifactMover.prepForUpload(parentDraft,commonData.getContentHandlerSpecsMap().get(contentType).extension);
+			//if (artifactMover.lastProcessStatus != ArtifactMover.PROCESSED_OK) {
+			//	ErrorHandler.showErrorAndQuit(commons, "Error17 at ArtifactWrapper artifactMover " + artifactMover.lastProcessStatus +  artifactMover.lastProcessStatus + " while prepForUpload : ");
+			//	return;
+			//}
+			//xtdDeckerProcCatlogPersistenceMgr.updateArtifactStatus(parentDraft,SelfAuthoredArtifactpojo.ArtifactStatusToBeUploaded);
+			xtdDeckerProcCatlogPersistenceMgr.updateArtifactStatus(parentDraft,SelfAuthoredArtifactpojo.ArtifactStatusToBeBatchUploaded);
+			System.out.println("at 32432 extendedContentProcessing4 updateArtifactStatus done as " + parentDraft.draftingState);
 		}
 	}
 
