@@ -16,6 +16,7 @@ import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Group;
@@ -165,29 +166,59 @@ public class ProjTask extends GenericItemHandler {
 		ProjTaskItemPojo projTaskItemPojo = (ProjTaskItemPojo) inItemPojo;
 		Group lastGroup = inPrevGroup;
 
-		Group projectIDInfo = new Group(itemContentGroup, SWT.LEFT);
-		projectIDInfo.setText("ProjectID");
-		projectIDInfo.setLayout(new FillLayout());
-		projectID_Tx = new Text(projectIDInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-		projectID_Tx.setText(projTaskItemPojo.projectName);
-		
-		formData = new FormData();
-		formData.top = new FormAttachment(lastGroup);
-		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		projectIDInfo.setLayoutData(formData);
-		lastGroup = projectIDInfo;
+		//Group projectIDInfo = new Group(itemContentGroup, SWT.LEFT);
+		//projectIDInfo.setText("ProjectID");
+		//projectIDInfo.setLayout(new FillLayout());
+		//projectID_Tx = new Text(projectIDInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+		//projectID_Tx.setText(projTaskItemPojo.projectName);
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//projectIDInfo.setLayoutData(formData);
+		//lastGroup = projectIDInfo;
+		//
+		//Group taskIDInfo = new Group(itemContentGroup, SWT.LEFT);
+		//taskIDInfo.setText("TaskID");
+		//taskIDInfo.setLayout(new FillLayout());
+		//taskID_Tx = new Text(taskIDInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+		//taskID_Tx.setText(projTaskItemPojo.taskID);
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//taskIDInfo.setLayoutData(formData);
+		//lastGroup = taskIDInfo;
 
-		Group taskIDInfo = new Group(itemContentGroup, SWT.LEFT);
-		taskIDInfo.setText("TaskID");
-		taskIDInfo.setLayout(new FillLayout());
-		taskID_Tx = new Text(taskIDInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-		taskID_Tx.setText(projTaskItemPojo.taskID);
-		
+		Group projectTaskLeadIDsWrapper = new Group(itemContentGroup, SWT.LEFT);
+		projectTaskLeadIDsWrapper.setLayout(new RowLayout());
+
+		{
+			Group projectIDInfo = new Group(projectTaskLeadIDsWrapper, SWT.LEFT);
+			projectIDInfo.setText("ProjectID");
+			projectIDInfo.setLayout(new FillLayout());
+			projectID_Tx = new Text(projectIDInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+			projectID_Tx.setText(projTaskItemPojo.projectName);
+	
+			Group taskIDInfo = new Group(projectTaskLeadIDsWrapper, SWT.LEFT);
+			taskIDInfo.setText("TaskID");
+			taskIDInfo.setLayout(new FillLayout());
+			taskID_Tx = new Text(taskIDInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+			taskID_Tx.setText(projTaskItemPojo.taskID);		
+			
+			Group leadInfo = new Group(projectTaskLeadIDsWrapper, SWT.LEFT);
+			leadInfo.setText("Lead");
+			leadInfo.setLayout(new FillLayout());
+			lead_Tx = new Text(leadInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+			lead_Tx.setText(projTaskItemPojo.lead);
+			
+		}
+
 		formData = new FormData();
 		formData.top = new FormAttachment(lastGroup);
 		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		taskIDInfo.setLayoutData(formData);
-		lastGroup = taskIDInfo;
+		projectTaskLeadIDsWrapper.setLayoutData(formData);
+		lastGroup = projectTaskLeadIDsWrapper;
 
 		//changed to user generic title
 		//Group descriptionInfo = new Group(itemContentGroup, SWT.LEFT);
@@ -215,196 +246,348 @@ public class ProjTask extends GenericItemHandler {
 		//ownerInfo.setLayoutData(formData);
 		//lastGroup = ownerInfo;
 
-		Group leadInfo = new Group(itemContentGroup, SWT.LEFT);
-		leadInfo.setText("Lead");
-		leadInfo.setLayout(new FillLayout());
-		lead_Tx = new Text(leadInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-		lead_Tx.setText(projTaskItemPojo.lead);
-		
-		formData = new FormData();
-		formData.top = new FormAttachment(lastGroup);
-		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		leadInfo.setLayoutData(formData);
-		lastGroup = leadInfo;
+		//Group leadInfo = new Group(itemContentGroup, SWT.LEFT);
+		//leadInfo.setText("Lead");
+		//leadInfo.setLayout(new FillLayout());
+		//lead_Tx = new Text(leadInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+		//lead_Tx.setText(projTaskItemPojo.lead);
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//leadInfo.setLayoutData(formData);
+		//lastGroup = leadInfo;
 
-		Group plannedHoursInfo = new Group(itemContentGroup, SWT.LEFT);
-		plannedHoursInfo.setText("PlannedHours");
-		plannedHoursInfo.setLayout(new FillLayout());
-		plannedHours_Tx = new Text(plannedHoursInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-		plannedHours_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.plannedHours));
-		
-		formData = new FormData();
-		formData.top = new FormAttachment(lastGroup);
-		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		plannedHoursInfo.setLayoutData(formData);
-		lastGroup = plannedHoursInfo;
+		//Group plannedHoursInfo = new Group(itemContentGroup, SWT.LEFT);
+		//plannedHoursInfo.setText("PlannedHours");
+		//plannedHoursInfo.setLayout(new FillLayout());
+		//plannedHours_Tx = new Text(plannedHoursInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+		//plannedHours_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.plannedHours));
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//plannedHoursInfo.setLayoutData(formData);
+		//lastGroup = plannedHoursInfo;
 
-		Group plannedStartInfo = new Group(itemContentGroup, SWT.LEFT);
-		plannedStartInfo.setText("PlannedStart");
-		plannedStartInfo.setLayout(new FillLayout());
-		plannedStart_Tx = new Text(plannedStartInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-		plannedStart_Tx.setText(commons.getDateString(projTaskItemPojo.plannedStart));
-		
-		formData = new FormData();
-		formData.top = new FormAttachment(lastGroup);
-		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		plannedStartInfo.setLayoutData(formData);
-		lastGroup = plannedStartInfo;
+		Group planAndForecastAtComplAndBurntHrsWrap = new Group(itemContentGroup, SWT.LEFT);
+		planAndForecastAtComplAndBurntHrsWrap.setLayout(new RowLayout());
+		{
+			Group plannedHoursInfo = new Group(planAndForecastAtComplAndBurntHrsWrap, SWT.LEFT);
+			plannedHoursInfo.setText("PlannedHours");
+			plannedHoursInfo.setLayout(new FillLayout());
+			plannedHours_Tx = new Text(plannedHoursInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+			plannedHours_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.plannedHours));
+			
+			Group burntHoursInfo = new Group(planAndForecastAtComplAndBurntHrsWrap, SWT.LEFT);
+			burntHoursInfo.setText("BurntHours");
+			burntHoursInfo.setLayout(new FillLayout());
+			burntHours_Tx = new Text(burntHoursInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+			burntHours_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.burntHours));
 
-		Group plannedEndInfo = new Group(itemContentGroup, SWT.LEFT);
-		plannedEndInfo.setText("PlannedEnd");
-		plannedEndInfo.setLayout(new FillLayout());
-		plannedEnd_Tx = new Text(plannedEndInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-		plannedEnd_Tx.setText(commons.getDateString(projTaskItemPojo.plannedEnd));
-		
-		formData = new FormData();
-		formData.top = new FormAttachment(lastGroup);
-		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		plannedEndInfo.setLayoutData(formData);
-		lastGroup = plannedEndInfo;
-
-		Group statusInfo = new Group(itemContentGroup, SWT.LEFT);
-		statusInfo.setText("Status");
-		statusInfo.setLayout(new FillLayout());
-		CCombo statusDropDownList = new CCombo(statusInfo, SWT.DROP_DOWN | SWT.CENTER | SWT.READ_ONLY);
-		statusDropDownList.setItems(TASKSTATUSVALUES);
-		if (projTaskItemPojo.taskStatus == null || projTaskItemPojo.taskStatus.equalsIgnoreCase("")) {
-			statusDropDownList.select(statusDropDownList.indexOf(ProjTaskItemPojo.TASKSTATUSVALUES_InProgress));
-		} else {
-			statusDropDownList.select(statusDropDownList.indexOf(projTaskItemPojo.taskStatus));
+			Group forecastTotalHoursAtCompletionInfo = new Group(planAndForecastAtComplAndBurntHrsWrap, SWT.LEFT);
+			forecastTotalHoursAtCompletionInfo.setText("ForecastTotalHoursAtCompletion");
+			forecastTotalHoursAtCompletionInfo.setLayout(new FillLayout());
+			forecastTotalHoursAtCompletion_Tx = new Text(forecastTotalHoursAtCompletionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+			forecastTotalHoursAtCompletion_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.forecastTotalHoursAtCompletion));
+			
 		}
-		if (invokedForEdit) {
-			statusDropDownList.addSelectionListener(new SelectionAdapter() {
-				@Override
-				public void widgetSelected(SelectionEvent e) {
-					CCombo dropDownList = (CCombo) e.getSource();
-					System.out.println("dropDown selection = " + dropDownList.getSelectionIndex());
-					System.out.println("dropDown selected Item = " + dropDownList.getItem((dropDownList.getSelectionIndex())));
-					String selectedStatus = dropDownList.getItem((dropDownList.getSelectionIndex()));
-					projTaskItemPojo.taskStatus = selectedStatus;
-					if (selectedStatus.equalsIgnoreCase(ProjTaskItemPojo.TASKSTATUSVALUES_Completed)) {
-						projTaskItemPojo.actualEnd = commons.getDateString();
+		formData = new FormData();
+		formData.top = new FormAttachment(lastGroup);
+		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		planAndForecastAtComplAndBurntHrsWrap.setLayoutData(formData);
+		lastGroup = planAndForecastAtComplAndBurntHrsWrap;
+
+		Group plannedStartAndEndWrap = new Group(itemContentGroup, SWT.LEFT);
+		plannedStartAndEndWrap.setLayout(new RowLayout());
+		{
+			Group plannedStartInfo = new Group(plannedStartAndEndWrap, SWT.LEFT);
+			plannedStartInfo.setText("PlannedStart");
+			plannedStartInfo.setLayout(new FillLayout());
+			plannedStart_Tx = new Text(plannedStartInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+			plannedStart_Tx.setText(commons.getDateString(projTaskItemPojo.plannedStart));
+
+			Group plannedEndInfo = new Group(plannedStartAndEndWrap, SWT.LEFT);
+			plannedEndInfo.setText("PlannedEnd");
+			plannedEndInfo.setLayout(new FillLayout());
+			plannedEnd_Tx = new Text(plannedEndInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+			plannedEnd_Tx.setText(commons.getDateString(projTaskItemPojo.plannedEnd));
+			
+			if (projTaskItemPojo.actualStart != null) {
+				Group actualStartInfo = new Group(plannedStartAndEndWrap, SWT.LEFT);
+				actualStartInfo.setText("ActualStart");
+				actualStartInfo.setLayout(new FillLayout());
+				actualStart_Tx = new Text(actualStartInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+				actualStart_Tx.setText(projTaskItemPojo.actualStart);				
+			}
+
+			if (projTaskItemPojo.actualEnd != null) {
+				Group actualEndInfo = new Group(plannedStartAndEndWrap, SWT.LEFT);
+				actualEndInfo.setText("ActualEnd");
+				actualEndInfo.setLayout(new FillLayout());
+				actualEnd_Tx = new Text(actualEndInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+				actualEnd_Tx.setText(projTaskItemPojo.actualEnd);			
+			}			
+			
+		}		
+		formData = new FormData();
+		formData.top = new FormAttachment(lastGroup);
+		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		plannedStartAndEndWrap.setLayoutData(formData);
+		lastGroup = plannedStartAndEndWrap;
+		
+		//Group plannedStartInfo = new Group(itemContentGroup, SWT.LEFT);
+		//plannedStartInfo.setText("PlannedStart");
+		//plannedStartInfo.setLayout(new FillLayout());
+		//plannedStart_Tx = new Text(plannedStartInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+		//plannedStart_Tx.setText(commons.getDateString(projTaskItemPojo.plannedStart));
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//plannedStartInfo.setLayoutData(formData);
+		//lastGroup = plannedStartInfo;
+		//
+		//Group plannedEndInfo = new Group(itemContentGroup, SWT.LEFT);
+		//plannedEndInfo.setText("PlannedEnd");
+		//plannedEndInfo.setLayout(new FillLayout());
+		//plannedEnd_Tx = new Text(plannedEndInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+		//plannedEnd_Tx.setText(commons.getDateString(projTaskItemPojo.plannedEnd));
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//plannedEndInfo.setLayoutData(formData);
+		//lastGroup = plannedEndInfo;
+
+		//Group statusInfo = new Group(itemContentGroup, SWT.LEFT);
+		//statusInfo.setText("TaskStatus");
+		//statusInfo.setLayout(new FillLayout());
+		//CCombo statusDropDownList = new CCombo(statusInfo, SWT.DROP_DOWN | SWT.CENTER | SWT.READ_ONLY);
+		//statusDropDownList.setItems(TASKSTATUSVALUES);
+		//if (projTaskItemPojo.taskStatus == null || projTaskItemPojo.taskStatus.equalsIgnoreCase("")) {
+		//	statusDropDownList.select(statusDropDownList.indexOf(ProjTaskItemPojo.TASKSTATUSVALUES_InProgress));
+		//} else {
+		//	statusDropDownList.select(statusDropDownList.indexOf(projTaskItemPojo.taskStatus));
+		//}
+		//if (invokedForEdit) {
+		//	statusDropDownList.addSelectionListener(new SelectionAdapter() {
+		//		@Override
+		//		public void widgetSelected(SelectionEvent e) {
+		//			CCombo dropDownList = (CCombo) e.getSource();
+		//			System.out.println("dropDown selection = " + dropDownList.getSelectionIndex());
+		//			System.out.println("dropDown selected Item = " + dropDownList.getItem((dropDownList.getSelectionIndex())));
+		//			String selectedStatus = dropDownList.getItem((dropDownList.getSelectionIndex()));
+		//			projTaskItemPojo.taskStatus = selectedStatus;
+		//			if (selectedStatus.equalsIgnoreCase(ProjTaskItemPojo.TASKSTATUSVALUES_Completed)) {
+		//				projTaskItemPojo.actualEnd = commons.getDateString();
+		//			}
+		//		}
+		//	});
+		//} else {
+		//	statusDropDownList.setEnabled(false);
+		//}
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//statusInfo.setLayoutData(formData);
+		//lastGroup = statusInfo;
+
+		//if (projTaskItemPojo.actualStart != null) {
+		//	Group actualStartInfo = new Group(itemContentGroup, SWT.LEFT);
+		//	actualStartInfo.setText("ActualStart");
+		//	actualStartInfo.setLayout(new FillLayout());
+		//	actualStart_Tx = new Text(actualStartInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+		//	actualStart_Tx.setText(projTaskItemPojo.actualStart);
+		//	
+		//	formData = new FormData();
+		//	formData.top = new FormAttachment(lastGroup);
+		//	formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//	actualStartInfo.setLayoutData(formData);
+		//	lastGroup = actualStartInfo;
+		//}
+		//
+		//if (projTaskItemPojo.actualEnd != null) {
+		//	Group actualEndInfo = new Group(itemContentGroup, SWT.LEFT);
+		//	actualEndInfo.setText("ActualEnd");
+		//	actualEndInfo.setLayout(new FillLayout());
+		//	actualEnd_Tx = new Text(actualEndInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+		//	actualEnd_Tx.setText(projTaskItemPojo.actualEnd);			
+		//	
+		//	formData = new FormData();
+		//	formData.top = new FormAttachment(lastGroup);
+		//	formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//	actualEndInfo.setLayoutData(formData);
+		//	lastGroup = actualEndInfo;
+		//}
+
+		Group statusForcastOverrunAtComplnExpectedEndWrap = new Group(itemContentGroup, SWT.LEFT);
+		statusForcastOverrunAtComplnExpectedEndWrap.setLayout(new RowLayout());
+		{
+			Group statusInfo = new Group(statusForcastOverrunAtComplnExpectedEndWrap, SWT.LEFT);
+			statusInfo.setText("TaskStatus");
+			statusInfo.setLayout(new FillLayout());
+			CCombo statusDropDownList = new CCombo(statusInfo, SWT.DROP_DOWN | SWT.CENTER | SWT.READ_ONLY);
+			statusDropDownList.setItems(TASKSTATUSVALUES);
+			if (projTaskItemPojo.taskStatus == null || projTaskItemPojo.taskStatus.equalsIgnoreCase("")) {
+				statusDropDownList.select(statusDropDownList.indexOf(ProjTaskItemPojo.TASKSTATUSVALUES_InProgress));
+			} else {
+				statusDropDownList.select(statusDropDownList.indexOf(projTaskItemPojo.taskStatus));
+			}
+			if (invokedForEdit) {
+				statusDropDownList.addSelectionListener(new SelectionAdapter() {
+					@Override
+					public void widgetSelected(SelectionEvent e) {
+						CCombo dropDownList = (CCombo) e.getSource();
+						System.out.println("dropDown selection = " + dropDownList.getSelectionIndex());
+						System.out.println("dropDown selected Item = " + dropDownList.getItem((dropDownList.getSelectionIndex())));
+						String selectedStatus = dropDownList.getItem((dropDownList.getSelectionIndex()));
+						projTaskItemPojo.taskStatus = selectedStatus;
+						if (selectedStatus.equalsIgnoreCase(ProjTaskItemPojo.TASKSTATUSVALUES_Completed)) {
+							projTaskItemPojo.actualEnd = commons.getDateString();
+						}
 					}
+				});
+			} else {
+				statusDropDownList.setEnabled(false);
+			}
+
+			
+			Group forcastOverrunHoursAtCompletionInfo = new Group(statusForcastOverrunAtComplnExpectedEndWrap, SWT.LEFT);
+			forcastOverrunHoursAtCompletionInfo.setText("ForecastOverrunHoursAtCompletion");
+			forcastOverrunHoursAtCompletionInfo.setLayout(new FillLayout());
+			if (invokedForEdit) {
+				forecastOverrunHoursAtCompletion_Tx = new Text(forcastOverrunHoursAtCompletionInfo, SWT.WRAP | SWT.CENTER);
+			} else {
+				forecastOverrunHoursAtCompletion_Tx = new Text(forcastOverrunHoursAtCompletionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);			
+			}
+			forecastOverrunHoursAtCompletion_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.forecastOverrunHoursAtCompletion));
+			forecastOverrunHoursAtCompletion_Tx.addModifyListener(new ModifyListener() {
+				@Override
+				public void modifyText(ModifyEvent e) {
+
+					System.out.println("forcastOverrunHoursAtCompletion_Tx.getText() is " + forecastOverrunHoursAtCompletion_Tx.getText());
+					if (forecastOverrunHoursAtCompletion_Tx.getText().equals("")) return;
+
+					if (!StringUtils.isNumeric(forecastOverrunHoursAtCompletion_Tx.getText())) {
+						ErrorHandler.messageBoxNumericOnly(mainShell, commons);
+						return;
+					}
+					System.out.println(" numeric check passed for " + forecastOverrunHoursAtCompletion_Tx.getText());
+					projTaskItemPojo.forecastOverrunHoursAtCompletion = 
+							commons.convertStringToDouble(forecastOverrunHoursAtCompletion_Tx.getText());
+					projTaskItemPojo.forecastTotalHoursAtCompletion = getForecastTotalHoursAtCompletion();
+					forecastTotalHoursAtCompletion_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.forecastTotalHoursAtCompletion));
 				}
 			});
-		} else {
-			statusDropDownList.setEnabled(false);
-		}
-		formData = new FormData();
-		formData.top = new FormAttachment(lastGroup);
-		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		statusInfo.setLayoutData(formData);
-		lastGroup = statusInfo;
 
-		if (projTaskItemPojo.actualStart != null) {
-			Group actualStartInfo = new Group(itemContentGroup, SWT.LEFT);
-			actualStartInfo.setText("ActualStart");
-			actualStartInfo.setLayout(new FillLayout());
-			actualStart_Tx = new Text(actualStartInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-			actualStart_Tx.setText(projTaskItemPojo.actualStart);
 			
-			formData = new FormData();
-			formData.top = new FormAttachment(lastGroup);
-			formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-			actualStartInfo.setLayoutData(formData);
-			lastGroup = actualStartInfo;
-		}
-
-		if (projTaskItemPojo.actualEnd != null) {
-			Group actualEndInfo = new Group(itemContentGroup, SWT.LEFT);
-			actualEndInfo.setText("ActualEnd");
-			actualEndInfo.setLayout(new FillLayout());
-			actualEnd_Tx = new Text(actualEndInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-			actualEnd_Tx.setText(projTaskItemPojo.actualEnd);			
-			
-			formData = new FormData();
-			formData.top = new FormAttachment(lastGroup);
-			formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-			actualEndInfo.setLayoutData(formData);
-			lastGroup = actualEndInfo;
-		}
-
-		Group burntHoursInfo = new Group(itemContentGroup, SWT.LEFT);
-		burntHoursInfo.setText("BurntHours");
-		burntHoursInfo.setLayout(new FillLayout());
-		burntHours_Tx = new Text(burntHoursInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-		burntHours_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.burntHours));
-		
-		formData = new FormData();
-		formData.top = new FormAttachment(lastGroup);
-		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		burntHoursInfo.setLayoutData(formData);
-		lastGroup = burntHoursInfo;
-
-		Group forcastOverrunHoursAtCompletionInfo = new Group(itemContentGroup, SWT.LEFT);
-		forcastOverrunHoursAtCompletionInfo.setText("ForecastOverrunHoursAtCompletion");
-		forcastOverrunHoursAtCompletionInfo.setLayout(new FillLayout());
-		if (invokedForEdit) {
-			forecastOverrunHoursAtCompletion_Tx = new Text(forcastOverrunHoursAtCompletionInfo, SWT.WRAP | SWT.CENTER);
-		} else {
-			forecastOverrunHoursAtCompletion_Tx = new Text(forcastOverrunHoursAtCompletionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);			
-		}
-		forecastOverrunHoursAtCompletion_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.forecastOverrunHoursAtCompletion));
-		forecastOverrunHoursAtCompletion_Tx.addModifyListener(new ModifyListener() {
-			@Override
-			public void modifyText(ModifyEvent e) {
-
-				System.out.println("forcastOverrunHoursAtCompletion_Tx.getText() is " + forecastOverrunHoursAtCompletion_Tx.getText());
-				if (forecastOverrunHoursAtCompletion_Tx.getText().equals("")) return;
-
-				if (!StringUtils.isNumeric(forecastOverrunHoursAtCompletion_Tx.getText())) {
-					ErrorHandler.messageBoxNumericOnly(mainShell, commons);
-					return;
-				}
-				System.out.println(" numeric check passed for " + forecastOverrunHoursAtCompletion_Tx.getText());
-				projTaskItemPojo.forecastOverrunHoursAtCompletion = 
-						commons.convertStringToDouble(forecastOverrunHoursAtCompletion_Tx.getText());
-				projTaskItemPojo.forecastTotalHoursAtCompletion = getForecastTotalHoursAtCompletion();
-				forecastTotalHoursAtCompletion_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.forecastTotalHoursAtCompletion));
+			Group expectedEndInfo = new Group(statusForcastOverrunAtComplnExpectedEndWrap, SWT.LEFT);
+			expectedEndInfo.setText("ExpectedEnd");
+			expectedEndInfo.setLayout(new FillLayout());
+			if (invokedForEdit) {
+				expectedEnd_DateDisplay = new DateTime(expectedEndInfo, SWT.DATE | SWT.CENTER);
+				System.out.println("its an editable date now");
+			} else {
+				expectedEnd_DateDisplay = new DateTime(expectedEndInfo, SWT.DATE | SWT.CENTER | SWT.READ_ONLY);
+				expectedEnd_DateDisplay.setEnabled(false);
+				System.out.println("its notEditable date now");
 			}
-		});
-
-		formData = new FormData();
-		formData.top = new FormAttachment(lastGroup);
-		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		forcastOverrunHoursAtCompletionInfo.setLayoutData(formData);
-		lastGroup = forcastOverrunHoursAtCompletionInfo;
-
-		Group estimatedEffortToCompleteInfo = new Group(itemContentGroup, SWT.LEFT);
-		estimatedEffortToCompleteInfo.setText("ForecastTotalHoursAtCompletion");
-		estimatedEffortToCompleteInfo.setLayout(new FillLayout());
-		forecastTotalHoursAtCompletion_Tx = new Text(estimatedEffortToCompleteInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
-		forecastTotalHoursAtCompletion_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.forecastTotalHoursAtCompletion));
-		
-		formData = new FormData();
-		formData.top = new FormAttachment(lastGroup);
-		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		estimatedEffortToCompleteInfo.setLayoutData(formData);
-		lastGroup = estimatedEffortToCompleteInfo;
-
-		Group expectedEndInfo = new Group(itemContentGroup, SWT.LEFT);
-		expectedEndInfo.setText("ExpectedEnd");
-		expectedEndInfo.setLayout(new FillLayout());
-		if (invokedForEdit) {
-			expectedEnd_DateDisplay = new DateTime(expectedEndInfo, SWT.DATE | SWT.CENTER);
-			System.out.println("its an editable date now");
-		} else {
-			expectedEnd_DateDisplay = new DateTime(expectedEndInfo, SWT.DATE | SWT.CENTER | SWT.READ_ONLY);
-			System.out.println("its notEditable date now");
+			SimpleDateObj startDateSimpleObj;
+			if (projTaskItemPojo.expectedEnd != null) {
+				startDateSimpleObj = new SimpleDateObj(projTaskItemPojo.expectedEnd);
+			} else {
+				startDateSimpleObj = new SimpleDateObj(projTaskItemPojo.plannedEnd);
+			}			
+			expectedEnd_DateDisplay.setDate(startDateSimpleObj.year,startDateSimpleObj.month-1,startDateSimpleObj.day);
 		}
-		SimpleDateObj startDateSimpleObj;
-		if (projTaskItemPojo.expectedEnd != null) {
-			startDateSimpleObj = new SimpleDateObj(projTaskItemPojo.expectedEnd);
-		} else {
-			startDateSimpleObj = new SimpleDateObj(projTaskItemPojo.plannedEnd);
-		}			
-		expectedEnd_DateDisplay.setDate(startDateSimpleObj.year,startDateSimpleObj.month-1,startDateSimpleObj.day);
-
 		formData = new FormData();
 		formData.top = new FormAttachment(lastGroup);
 		formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-		expectedEndInfo.setLayoutData(formData);
-		lastGroup = expectedEndInfo;
+		statusForcastOverrunAtComplnExpectedEndWrap.setLayoutData(formData);
+		lastGroup = statusForcastOverrunAtComplnExpectedEndWrap;
+
+		//Group burntHoursInfo = new Group(itemContentGroup, SWT.LEFT);
+		//burntHoursInfo.setText("BurntHours");
+		//burntHoursInfo.setLayout(new FillLayout());
+		//burntHours_Tx = new Text(burntHoursInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+		//burntHours_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.burntHours));
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//burntHoursInfo.setLayoutData(formData);
+		//lastGroup = burntHoursInfo;
+
+		//Group forcastOverrunHoursAtCompletionInfo = new Group(itemContentGroup, SWT.LEFT);
+		//forcastOverrunHoursAtCompletionInfo.setText("ForecastOverrunHoursAtCompletion");
+		//forcastOverrunHoursAtCompletionInfo.setLayout(new FillLayout());
+		//if (invokedForEdit) {
+		//	forecastOverrunHoursAtCompletion_Tx = new Text(forcastOverrunHoursAtCompletionInfo, SWT.WRAP | SWT.CENTER);
+		//} else {
+		//	forecastOverrunHoursAtCompletion_Tx = new Text(forcastOverrunHoursAtCompletionInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);			
+		//}
+		//forecastOverrunHoursAtCompletion_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.forecastOverrunHoursAtCompletion));
+		//forecastOverrunHoursAtCompletion_Tx.addModifyListener(new ModifyListener() {
+		//	@Override
+		//	public void modifyText(ModifyEvent e) {
+		//
+		//		System.out.println("forcastOverrunHoursAtCompletion_Tx.getText() is " + forecastOverrunHoursAtCompletion_Tx.getText());
+		//		if (forecastOverrunHoursAtCompletion_Tx.getText().equals("")) return;
+		//
+		//		if (!StringUtils.isNumeric(forecastOverrunHoursAtCompletion_Tx.getText())) {
+		//			ErrorHandler.messageBoxNumericOnly(mainShell, commons);
+		//			return;
+		//		}
+		//		System.out.println(" numeric check passed for " + forecastOverrunHoursAtCompletion_Tx.getText());
+		//		projTaskItemPojo.forecastOverrunHoursAtCompletion = 
+		//				commons.convertStringToDouble(forecastOverrunHoursAtCompletion_Tx.getText());
+		//		projTaskItemPojo.forecastTotalHoursAtCompletion = getForecastTotalHoursAtCompletion();
+		//		forecastTotalHoursAtCompletion_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.forecastTotalHoursAtCompletion));
+		//	}
+		//});
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//forcastOverrunHoursAtCompletionInfo.setLayoutData(formData);
+		//lastGroup = forcastOverrunHoursAtCompletionInfo;
+
+		//Group estimatedEffortToCompleteInfo = new Group(itemContentGroup, SWT.LEFT);
+		//estimatedEffortToCompleteInfo.setText("ForecastTotalHoursAtCompletion");
+		//estimatedEffortToCompleteInfo.setLayout(new FillLayout());
+		//forecastTotalHoursAtCompletion_Tx = new Text(estimatedEffortToCompleteInfo, SWT.WRAP | SWT.CENTER | SWT.READ_ONLY);
+		//forecastTotalHoursAtCompletion_Tx.setText(commons.convertDoubleToString(projTaskItemPojo.forecastTotalHoursAtCompletion));
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//estimatedEffortToCompleteInfo.setLayoutData(formData);
+		//lastGroup = estimatedEffortToCompleteInfo;
+
+		//Group expectedEndInfo = new Group(itemContentGroup, SWT.LEFT);
+		//expectedEndInfo.setText("ExpectedEnd");
+		//expectedEndInfo.setLayout(new FillLayout());
+		//if (invokedForEdit) {
+		//	expectedEnd_DateDisplay = new DateTime(expectedEndInfo, SWT.DATE | SWT.CENTER);
+		//	System.out.println("its an editable date now");
+		//} else {
+		//	expectedEnd_DateDisplay = new DateTime(expectedEndInfo, SWT.DATE | SWT.CENTER | SWT.READ_ONLY);
+		//	System.out.println("its notEditable date now");
+		//}
+		//SimpleDateObj startDateSimpleObj;
+		//if (projTaskItemPojo.expectedEnd != null) {
+		//	startDateSimpleObj = new SimpleDateObj(projTaskItemPojo.expectedEnd);
+		//} else {
+		//	startDateSimpleObj = new SimpleDateObj(projTaskItemPojo.plannedEnd);
+		//}			
+		//expectedEnd_DateDisplay.setDate(startDateSimpleObj.year,startDateSimpleObj.month-1,startDateSimpleObj.day);
+		//
+		//formData = new FormData();
+		//formData.top = new FormAttachment(lastGroup);
+		//formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//expectedEndInfo.setLayoutData(formData);
+		//lastGroup = expectedEndInfo;
 
 		System.out.println("projTaskItemPojo = "
 				+ projTaskItemPojo);
