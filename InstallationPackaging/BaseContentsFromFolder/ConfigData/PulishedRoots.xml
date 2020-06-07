@@ -10,6 +10,7 @@ RootString="${INSTALL_PATH}\WindowsRoots\DemoWinPlatformRoot"
 RemoteAccesserType="remoteAccessers.WindowsAccesser"
 FileSeparator="/"
 RequiresInternet="No"
+CachingFolderPathsRecommended="No"
 />
 <Root 
 RootNick="DemoWinContentRoot"
@@ -18,6 +19,7 @@ RootString="${INSTALL_PATH}\WindowsRoots\DemoWinContentRoot"
 RemoteAccesserType="remoteAccessers.WindowsAccesser"
 FileSeparator="\"
 RequiresInternet="No"
+CachingFolderPathsRecommended="No"
 />
 <Root 
 RootNick="DemoGShContentRoot"
@@ -26,6 +28,7 @@ RootString="1uatO7bSBSm3zZMPtrIWA97LUrBAmugbO"
 RemoteAccesserType="remoteAccessers.GDriveShAccesser"
 FileSeparator="/"
 RequiresInternet="Yes"
+CachingFolderPathsRecommended="Yes"
 />
 <Root 
 RootNick="DemoGShPlatformRoot"
@@ -34,5 +37,6 @@ RootString="10blH8j97mrcL5fehK4tbDBX5zU3_2XEw"
 RemoteAccesserType="remoteAccessers.GDriveShAccesser"
 FileSeparator="/"
 RequiresInternet="Yes"
+CachingFolderPathsRecommended="No"
 />
 </PulishedRoots>
