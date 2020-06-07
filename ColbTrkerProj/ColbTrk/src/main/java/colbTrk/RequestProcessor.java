@@ -463,7 +463,7 @@ public class RequestProcessor {
 
 			reqProcTracking.dbTobeRenewed = false;
 			commons.putJsonDocToFile(reqProcTrackingPathFileName,reqProcTracking);
-
+			
 			Commons.logger.info("RequestProcessor processRequestsOfOneRoot rootNick " + rootPojo.rootNick 
 					+ " completed. New catalogpublishFile " + catalogpublishFile);
 			
@@ -479,6 +479,40 @@ public class RequestProcessor {
 				+ " unfinished requests. e.g. " 
 				+ reqProcTracking.reqTrackItems.get(reqProcTracking.reqTrackItems.keySet().toArray()[0]));
 		}
+
+		// Note: at this point as the catalog publication is already done, few house keeping tasks can be done
+		// before going on wait state until next run.
+		{
+		// Archive oldest catalog db file
+			
+			ArrayList<String> publishCatalogDbFileNames = new ArrayList<String>();
+			publishCatalogDbFileNames.addAll(remoteAccesser.getRemoteList(catalogpublishFolder));
+			ArrayList<String> chronologicalDbFil = commons.sortDescending(publishCatalogDbFileNames);
+			if (chronologicalDbFil.size() > commons.catalogDbFilesMaxVersions){
+				//String oldestCatalogDbFile = catalogpublishFolder
+				//								+ rootPojo.fileSeparator
+				//								+ chronologicalDbFil.get(chronologicalDbFil.size()-1);
+				
+				String oldestCatalogDbFile = chronologicalDbFil.get(chronologicalDbFil.size()-1);
+				System.out.println("oldestCatalogDbFile to archive...=" + oldestCatalogDbFile);
+				
+				String remoteReqArchiveFile = rootPojo.rootString
+						+ rootPojo.fileSeparator + commons.getRemoteArchivePath(rootPojo.fileSeparator)
+						+ rootPojo.fileSeparator
+						+ commons.archivedCatalogDbsFolder					
+						+ rootPojo.fileSeparator
+						+ commons.getFileNameFromURL(chronologicalDbFil.get(chronologicalDbFil.size()-1),rootPojo.fileSeparator);
+				//String remoteReqArchiveFile = chronologicalDbFil.get(chronologicalDbFil.size()-1);
+	
+				System.out.println("remoteArchiveFile...=" + remoteReqArchiveFile);
+				remoteAccesser.moveToRemoteLocation(oldestCatalogDbFile, remoteReqArchiveFile);
+				
+				System.out.println("At processRequestsOfOneRoot oldest catalogDbFileArchived "
+											+ oldestCatalogDbFile + " into " + remoteReqArchiveFile);
+			}
+		}
+
+		
 		remoteAccesser.endCommunications();
 	}
 

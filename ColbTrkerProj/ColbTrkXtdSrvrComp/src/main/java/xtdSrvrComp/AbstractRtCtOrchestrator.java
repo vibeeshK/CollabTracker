@@ -2,6 +2,7 @@ package xtdSrvrComp;
 
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.Date;
 import java.util.HashMap;
 
 import colbTrk.Commons;
@@ -76,6 +77,10 @@ public abstract class AbstractRtCtOrchestrator {
 			System.out.println("Abstract Orchestrator begins at 1 at commons is " + initialCommons);
 
 			while (orchestrationData.getOkayToContinue()) {
+
+				Date startTime = initialCommons.getDateTS();
+				System.out.println("Extended Processor started for " + " at " + startTime);
+				
 				rootPojosFromDBmap = PublishedRootsHandler.getPublishedRoots(initialCommons);
 				for (int rootCount = 0; rootCount < initialCommons.extendedSrvrRtNicks.length; rootCount++) {
 					String processingRootNick = initialCommons.extendedSrvrRtNicks[rootCount];
@@ -129,8 +134,12 @@ public abstract class AbstractRtCtOrchestrator {
 					System.out.println("***********Orchestrator endProcessOfRec completed as well ");
 				}
 
-				System.out.println("Sleeping AbstractRtCtOrchestrator");
-				Thread.sleep(getSleepInterval());
+				long elapsedMS = initialCommons.getElapsedSecs(startTime);
+				long sleepMS = getSleepInterval()-elapsedMS;
+				System.out.println("Sleeping AbstractRtCtOrchestrator for sleepMS MS" + sleepMS);
+				
+				Thread.sleep(sleepMS);
+				
 				System.out.println("resuming AbstractRtCtOrchestrator");
 			}
 		} catch (InterruptedException e) {

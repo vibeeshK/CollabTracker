@@ -2,6 +2,7 @@ package colbTrk;
 
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.Date;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -107,6 +108,9 @@ public class DesktopRootProcessor implements Runnable {
 		System.out.println("catalogDBAlias676767: " + catelogPersistenceManager.catalogDBAlias);
 
 		while (orchestrationData.getOkayToContinue()) {
+
+			Date startTime = commons.getDateTS();
+			System.out.println("DesktopRootProcessor started for " + rootPojo.rootNick + " at " + startTime);
 			
 			System.out.println("Run part of DesktopRootProcessor rootNick: " +  rootPojo.rootNick);
 			System.out.println("rootPojo.cachingFolderPathsRecommended: " +  rootPojo.cachingFolderPathsRecommended);
@@ -171,10 +175,11 @@ public class DesktopRootProcessor implements Runnable {
 			synchronized (this) {
 				System.out.println("GONNA WAIT22");
 				try {
-
-					System.out.println("goint to wait " + orchestrationData.getRepeatIntervalInSeconds() + " seconds");
-
-					wait(orchestrationData.getRepeatIntervalInSeconds() * 1000);				
+					long elapsedMS = commons.getElapsedSecs(startTime);
+					long sleepMS = orchestrationData.getRepeatIntervalInSeconds() * 1000 - elapsedMS;
+					
+					System.out.println("going to wait " + sleepMS + " milli seconds");					
+					wait(sleepMS);
 
 				} catch (InterruptedException e) {
 

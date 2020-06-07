@@ -611,11 +611,13 @@ public class ProjTask extends GenericItemHandler {
 		remarkInfo.setLayoutData(formData);
 		lastGroup = remarkInfo;
 
+		// Impediments display block starts
 		if (associatedImpediments != null) {
 			Group impedimentsInfo = new Group(itemContentGroup, SWT.LEFT
 					| SWT.WRAP | SWT.READ_ONLY);
 			impedimentsInfo.setText("Impediments");
-			impedimentsInfo.setLayout(new GridLayout());
+			impedimentsInfo.setLayout(new GridLayout(1,false));
+			
 			Table table = new Table(impedimentsInfo, SWT.BORDER);
 			
 			formData = new FormData();
@@ -734,7 +736,8 @@ public class ProjTask extends GenericItemHandler {
 			Group defectsInfo = new Group(itemContentGroup, SWT.LEFT
 					| SWT.WRAP | SWT.READ_ONLY);
 			defectsInfo.setText("Defects");
-			defectsInfo.setLayout(new GridLayout());
+			defectsInfo.setLayout(new GridLayout(1,false));
+
 			Table table = new Table(defectsInfo, SWT.BORDER);
 			
 			formData = new FormData();
@@ -834,84 +837,148 @@ public class ProjTask extends GenericItemHandler {
 		}
 		// Defects display block ends
 						
-		// New Defect&Impediment group starts
-		// New Defect&Impediment group starts
-		{
-			Group initDefectImpedimentnButtonGrp = null;
-
-			initDefectImpedimentnButtonGrp = new Group(itemContentGroup, SWT.LEFT
-					| SWT.WRAP | SWT.READ_ONLY);
-			initDefectImpedimentnButtonGrp.setText("New Defect&Impediment inits");
-			initDefectImpedimentnButtonGrp.setLayout(new FillLayout());
-			formData = new FormData();
-			formData.top = new FormAttachment(lastGroup);
-			formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
-			initDefectImpedimentnButtonGrp.setLayoutData(formData);
-			
-			Button newDefectButton = new Button(initDefectImpedimentnButtonGrp, SWT.PUSH);
-			newDefectButton.setText("New Defect");
-	
-			newDefectButton.addSelectionListener(new SelectionAdapter() {
-				public void widgetSelected(SelectionEvent event) {
-					testPrinter("From New Defect Action");
-					System.out.println("starting New Defect Action");
-
-					ProjTaskItemPojo projTaskItemPojo = (ProjTaskItemPojo) primerDoc.getItem();
-
-					System.out.println("At ProjTask New Defect Action inProjID " + projTaskItemPojo.projectName);
-					System.out.println("At ProjTask New Defect Action projTaskItemPojo.taskID " + projTaskItemPojo.taskID);
-					
-					ContentHandlerSpecs defectSpecs = commonData.getContentHandlerSpecsMap().get(INITIATED_TYPE1CONTENT_Defect);
-					String defectArtifactName = Defect.getDefectArtifactName(defectSpecs, projTaskItemPojo.projectName, 
-																	projTaskItemPojo.taskID, commons.userName, commons.getCurrentTimeStamp());
-
-					System.out.println("At ProjTask received defectArtifactName " + defectArtifactName);
-					ArtifactKeyPojo defectArtifactKey = new ArtifactKeyPojo(invokedArtifactPojo.artifactKeyPojo.rootNick, 
-							invokedArtifactPojo.artifactKeyPojo.relevance, 
-							defectArtifactName, defectSpecs.contentType);
-
-					SelfAuthoredArtifactpojo newDefectSelfAuthoredArtifactpojo = setupDraftArtifact(defectArtifactKey);
-
-					ArtifactWrapperUI artifactWrapperUI = new 
-						ArtifactWrapperUI((CommonUIData) commonData,newDefectSelfAuthoredArtifactpojo);
-					System.out.println("at3a newDefectButtonProcess going to display the artifactWrapperUI for new defect");
-					artifactWrapperUI.displayArtifactWrapperUI();
-				}
-			});
-
-			Button newImpedimentButton = new Button(initDefectImpedimentnButtonGrp, SWT.PUSH);
-			newImpedimentButton.setText("New Impediment");
-	
-			newImpedimentButton.addSelectionListener(new SelectionAdapter() {
-				public void widgetSelected(SelectionEvent event) {
-					testPrinter("From New Impediment Action");
-					System.out.println("starting New Impediment Action");
-
-					ProjTaskItemPojo projTaskItemPojo = (ProjTaskItemPojo) primerDoc.getItem();
-					ContentHandlerSpecs impedimentSpecs = commonData.getContentHandlerSpecsMap().get(INITIATED_TYPE2CONTENT_Impediment);
-					String impedimentArtifactName = Impediment.getImpedimentArtifactName(impedimentSpecs, projTaskItemPojo.projectName, 
-																	projTaskItemPojo.taskID, commons.userName, commons.getCurrentTimeStamp());
-
-					ArtifactKeyPojo impedimentArtifactKey = new ArtifactKeyPojo(invokedArtifactPojo.artifactKeyPojo.rootNick, 
-							invokedArtifactPojo.artifactKeyPojo.relevance, 
-							impedimentArtifactName, impedimentSpecs.contentType);
-
-					SelfAuthoredArtifactpojo newImpedimentSelfAuthoredArtifactpojo = setupDraftArtifact(impedimentArtifactKey);
-
-					ArtifactWrapperUI artifactWrapperUI = new 
-						ArtifactWrapperUI((CommonUIData) commonData,newImpedimentSelfAuthoredArtifactpojo);
-					System.out.println("at3a newImpedimentButtonProcess going to display the artifactWrapperUI for new impediment");
-					artifactWrapperUI.displayArtifactWrapperUI();
-				}
-			});
-			lastGroup = initDefectImpedimentnButtonGrp;
-			System.out.println("at3a after initDefectImpedimentnButtonGrp is " + lastGroup);
-		}
-		// New Defect&Impediment group ends
-		// New Defect&Impediment group ends
+		//// New Defect&Impediment group starts
+		//// New Defect&Impediment group starts
+		//{
+		//	Group initDefectImpedimentnButtonGrp = null;
+		//
+		//	initDefectImpedimentnButtonGrp = new Group(itemContentGroup, SWT.LEFT
+		//			| SWT.WRAP | SWT.READ_ONLY);
+		//	//initDefectImpedimentnButtonGrp.setText("New Defect&Impediment inits");
+		//	initDefectImpedimentnButtonGrp.setLayout(new FillLayout());
+		//	formData = new FormData();
+		//	formData.top = new FormAttachment(lastGroup);
+		//	formData.width = PREFERED_ITEM_PANEL_WIDTH;	// this width setting is to show meaningful size for viewing
+		//	initDefectImpedimentnButtonGrp.setLayoutData(formData);
+		//	
+		//	Button newDefectButton = new Button(initDefectImpedimentnButtonGrp, SWT.PUSH);
+		//	newDefectButton.setText("New Defect");
+		//	newDefectButton.setToolTipText("Log New Defect");
+		//
+		//	newDefectButton.addSelectionListener(new SelectionAdapter() {
+		//		public void widgetSelected(SelectionEvent event) {
+		//			testPrinter("From New Defect Action");
+		//			System.out.println("starting New Defect Action");
+		//
+		//			ProjTaskItemPojo projTaskItemPojo = (ProjTaskItemPojo) primerDoc.getItem();
+		//
+		//			System.out.println("At ProjTask New Defect Action inProjID " + projTaskItemPojo.projectName);
+		//			System.out.println("At ProjTask New Defect Action projTaskItemPojo.taskID " + projTaskItemPojo.taskID);
+		//			
+		//			ContentHandlerSpecs defectSpecs = commonData.getContentHandlerSpecsMap().get(INITIATED_TYPE1CONTENT_Defect);
+		//			String defectArtifactName = Defect.getDefectArtifactName(defectSpecs, projTaskItemPojo.projectName, 
+		//															projTaskItemPojo.taskID, commons.userName, commons.getCurrentTimeStamp());
+		//
+		//			System.out.println("At ProjTask received defectArtifactName " + defectArtifactName);
+		//			ArtifactKeyPojo defectArtifactKey = new ArtifactKeyPojo(invokedArtifactPojo.artifactKeyPojo.rootNick, 
+		//					invokedArtifactPojo.artifactKeyPojo.relevance, 
+		//					defectArtifactName, defectSpecs.contentType);
+		//
+		//			SelfAuthoredArtifactpojo newDefectSelfAuthoredArtifactpojo = setupDraftArtifact(defectArtifactKey);
+		//
+		//			ArtifactWrapperUI artifactWrapperUI = new 
+		//				ArtifactWrapperUI((CommonUIData) commonData,newDefectSelfAuthoredArtifactpojo);
+		//			System.out.println("at3a newDefectButtonProcess going to display the artifactWrapperUI for new defect");
+		//			artifactWrapperUI.displayArtifactWrapperUI();
+		//		}
+		//	});
+		//
+		//	Button newImpedimentButton = new Button(initDefectImpedimentnButtonGrp, SWT.PUSH);
+		//	newImpedimentButton.setText("New Impediment");
+		//	newDefectButton.setToolTipText("Log New Impediment");
+		//
+		//	newImpedimentButton.addSelectionListener(new SelectionAdapter() {
+		//		public void widgetSelected(SelectionEvent event) {
+		//			testPrinter("From New Impediment Action");
+		//			System.out.println("starting New Impediment Action");
+		//
+		//			ProjTaskItemPojo projTaskItemPojo = (ProjTaskItemPojo) primerDoc.getItem();
+		//			ContentHandlerSpecs impedimentSpecs = commonData.getContentHandlerSpecsMap().get(INITIATED_TYPE2CONTENT_Impediment);
+		//			String impedimentArtifactName = Impediment.getImpedimentArtifactName(impedimentSpecs, projTaskItemPojo.projectName, 
+		//															projTaskItemPojo.taskID, commons.userName, commons.getCurrentTimeStamp());
+		//
+		//			ArtifactKeyPojo impedimentArtifactKey = new ArtifactKeyPojo(invokedArtifactPojo.artifactKeyPojo.rootNick, 
+		//					invokedArtifactPojo.artifactKeyPojo.relevance, 
+		//					impedimentArtifactName, impedimentSpecs.contentType);
+		//
+		//			SelfAuthoredArtifactpojo newImpedimentSelfAuthoredArtifactpojo = setupDraftArtifact(impedimentArtifactKey);
+		//
+		//			ArtifactWrapperUI artifactWrapperUI = new 
+		//				ArtifactWrapperUI((CommonUIData) commonData,newImpedimentSelfAuthoredArtifactpojo);
+		//			System.out.println("at3a newImpedimentButtonProcess going to display the artifactWrapperUI for new impediment");
+		//			artifactWrapperUI.displayArtifactWrapperUI();
+		//		}
+		//	});
+		//	lastGroup = initDefectImpedimentnButtonGrp;
+		//	System.out.println("at3a after initDefectImpedimentnButtonGrp is " + lastGroup);
+		//}
+		//// New Defect&Impediment group ends
+		//// New Defect&Impediment group ends
 		return lastGroup;
 	}
 
+	public void setAdditionalActions(Group inActionButtonGrp) {
+		Button newDefectButton = new Button(inActionButtonGrp, SWT.PUSH);
+		newDefectButton.setText("New Defect");
+		newDefectButton.setToolTipText("Log New Defect");
+
+		newDefectButton.addSelectionListener(new SelectionAdapter() {
+			public void widgetSelected(SelectionEvent event) {
+				testPrinter("From New Defect Action");
+				System.out.println("starting New Defect Action");
+
+				ProjTaskItemPojo projTaskItemPojo = (ProjTaskItemPojo) primerDoc.getItem();
+
+				System.out.println("At ProjTask New Defect Action inProjID " + projTaskItemPojo.projectName);
+				System.out.println("At ProjTask New Defect Action projTaskItemPojo.taskID " + projTaskItemPojo.taskID);
+				
+				ContentHandlerSpecs defectSpecs = commonData.getContentHandlerSpecsMap().get(INITIATED_TYPE1CONTENT_Defect);
+				String defectArtifactName = Defect.getDefectArtifactName(defectSpecs, projTaskItemPojo.projectName, 
+																projTaskItemPojo.taskID, commons.userName, commons.getCurrentTimeStamp());
+
+				System.out.println("At ProjTask received defectArtifactName " + defectArtifactName);
+				ArtifactKeyPojo defectArtifactKey = new ArtifactKeyPojo(invokedArtifactPojo.artifactKeyPojo.rootNick, 
+						invokedArtifactPojo.artifactKeyPojo.relevance, 
+						defectArtifactName, defectSpecs.contentType);
+
+				SelfAuthoredArtifactpojo newDefectSelfAuthoredArtifactpojo = setupDraftArtifact(defectArtifactKey);
+
+				ArtifactWrapperUI artifactWrapperUI = new 
+					ArtifactWrapperUI((CommonUIData) commonData,newDefectSelfAuthoredArtifactpojo);
+				System.out.println("at3a newDefectButtonProcess going to display the artifactWrapperUI for new defect");
+				artifactWrapperUI.displayArtifactWrapperUI();
+			}
+		});
+
+		Button newImpedimentButton = new Button(inActionButtonGrp, SWT.PUSH);
+		newImpedimentButton.setText("New Impediment");
+		newImpedimentButton.setToolTipText("Log New Impediment");
+
+		newImpedimentButton.addSelectionListener(new SelectionAdapter() {
+			public void widgetSelected(SelectionEvent event) {
+				testPrinter("From New Impediment Action");
+				System.out.println("starting New Impediment Action");
+
+				ProjTaskItemPojo projTaskItemPojo = (ProjTaskItemPojo) primerDoc.getItem();
+				ContentHandlerSpecs impedimentSpecs = commonData.getContentHandlerSpecsMap().get(INITIATED_TYPE2CONTENT_Impediment);
+				String impedimentArtifactName = Impediment.getImpedimentArtifactName(impedimentSpecs, projTaskItemPojo.projectName, 
+																projTaskItemPojo.taskID, commons.userName, commons.getCurrentTimeStamp());
+
+				ArtifactKeyPojo impedimentArtifactKey = new ArtifactKeyPojo(invokedArtifactPojo.artifactKeyPojo.rootNick, 
+						invokedArtifactPojo.artifactKeyPojo.relevance, 
+						impedimentArtifactName, impedimentSpecs.contentType);
+
+				SelfAuthoredArtifactpojo newImpedimentSelfAuthoredArtifactpojo = setupDraftArtifact(impedimentArtifactKey);
+
+				ArtifactWrapperUI artifactWrapperUI = new 
+					ArtifactWrapperUI((CommonUIData) commonData,newImpedimentSelfAuthoredArtifactpojo);
+				System.out.println("at3a newImpedimentButtonProcess going to display the artifactWrapperUI for new impediment");
+				artifactWrapperUI.displayArtifactWrapperUI();
+			}
+		});
+		System.out.println("at3a after initDefectImpedimentnButtons");
+	}
+	
 
 	private SelfAuthoredArtifactpojo setupDraftArtifact(ArtifactKeyPojo inArtifactKeyPojo){
 		ArtifactPrepper artifactPrepper = new ArtifactPrepper(inArtifactKeyPojo, commonData);

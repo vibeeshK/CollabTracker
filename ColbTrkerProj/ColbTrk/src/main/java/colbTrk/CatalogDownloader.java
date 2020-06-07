@@ -55,7 +55,7 @@ public class CatalogDownloader {
 		System.out.println("listing done");
 		
 		publishFileNameURLs = commons
-				.sortLatestRemoteCatalogPublishFile(publishFileNameURLs);
+				.sortDescending(publishFileNameURLs);
 
 		System.out.println("after sorting:");
 
@@ -149,7 +149,7 @@ public class CatalogDownloader {
 		System.out.println("before sorting: fileCount = " + publishFileNameURLs.size());
 
 		publishFileNameURLs = commons
-				.sortLatestRemoteCatalogPublishFile(publishFileNameURLs);
+				.sortDescending(publishFileNameURLs);
 
 		System.out.println("after sorting:");
 		

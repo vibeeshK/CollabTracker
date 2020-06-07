@@ -402,7 +402,12 @@ public class CommonTechs {
 		}
 		return dateString;
 	}
-	
+
+	public synchronized long getElapsedSecs(Date inStartTime){
+		long startTimeInMS = getCalendarDteFromDate(inStartTime).getTimeInMillis();
+		long currTimeInMS = getCalendarTS().getTimeInMillis();
+		return currTimeInMS - startTimeInMS;
+	}
 	
 	public synchronized boolean hasTimeSecElapsed(Date inStartTime, int inSec){
 		System.out.println("hasTimeSecElapsed?? inStartTime is " + inStartTime);

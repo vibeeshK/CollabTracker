@@ -544,7 +544,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 
 		childCompositeOfMultiView.setLayoutData(gridData);
 		
-		table = new Table(childCompositeOfMultiView, SWT.BORDER| SWT.V_SCROLL | SWT.H_SCROLL);
+		table = new Table(childCompositeOfMultiView, SWT.BORDER | SWT.V_SCROLL | SWT.H_SCROLL);
 
 		table.setHeaderVisible(true);
 		table.setLinesVisible(true);

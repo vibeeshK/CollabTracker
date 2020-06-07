@@ -94,9 +94,11 @@ public class Commons extends CommonTechs {
 	private String remoteArchive = null;
 	private String remoteErroredRequests = null;
 	private String remoteInactiveERLsArchive = null;
-	public int erlMaxVersions;			// max versions before archivals
+	public int erlMaxVersions;				// max versions before archivals
+	public int catalogDbFilesMaxVersions;	// max versions of catalogDbFiles to maintain without archiving
 	public int inactiveAgingDaysLimit;	// days to keep before archiving inactive erls
-
+	public String archivedCatalogDbsFolder;
+	
 	public static Commons baseCatalogServerCommonsInstance = null;
 	public static Commons clientMachineCommonsInstance = null;
 	public static Commons extendedCatalogServerCommonsInstance = null;
@@ -439,6 +441,12 @@ public class Commons extends CommonTechs {
 
 		erlMaxVersions = Integer.parseInt(serverPropObject.getProperty("erlMaxVersions"));
 		System.out.println(" erlMaxVersions is " + erlMaxVersions);
+
+		catalogDbFilesMaxVersions = Integer.parseInt(serverPropObject.getProperty("catalogDbFilesMaxVersions"));
+		System.out.println(" catalogDbFilesMaxVersions is " + catalogDbFilesMaxVersions);
+
+		archivedCatalogDbsFolder = serverPropObject.getProperty(serverPropObject.getProperty("archivedCatalogDbsFolder"));
+		System.out.println(" catalogDbFilesMaxVersions is " + archivedCatalogDbsFolder);
 		
 		inactiveAgingDaysLimit = Integer.parseInt(serverPropObject.getProperty("inactiveAgingDaysLimit"));
 		System.out.println(" inactiveAgingDaysLimit is " + inactiveAgingDaysLimit);
@@ -1218,7 +1226,7 @@ public class Commons extends CommonTechs {
 		return remoteFileString;
 	}
 
-	public ArrayList<String> sortLatestRemoteCatalogPublishFile(
+	public ArrayList<String> sortDescending(
 			ArrayList<String> inPublishFileNameURLs) {
 		Collections.sort(inPublishFileNameURLs, new CompareForLaterName());
 		return inPublishFileNameURLs;

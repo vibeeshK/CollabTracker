@@ -466,6 +466,7 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 		if (invokedForEdit) {
 			Button saveItemButton = new Button(actionButtonGrp, SWT.PUSH | SWT.CENTER);
 			saveItemButton.setText("SaveDraft");
+			saveItemButton.setToolTipText("Save the draft (in this machine)");
 	
 			saveItemButton.addSelectionListener(new SelectionAdapter() {
 				public void widgetSelected(SelectionEvent event) {
@@ -510,6 +511,7 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 		
 		Button closeItemButton = new Button(actionButtonGrp, SWT.PUSH);
 		closeItemButton.setText("Close");
+		closeItemButton.setToolTipText("Close screen and go back");
 		
 		closeItemButton.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -519,6 +521,9 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 				closeScreen();
 			}
 		});
+		
+		setAdditionalActions(actionButtonGrp);
+		
 		lastGroup = actionButtonGrp;
 
 		if (!standaloneReadingMode && downloadedReviewsHandler.canBeReviewed()) {
@@ -558,6 +563,10 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 		System.out.println("end of......displayContent");
 	}
 
+	public void setAdditionalActions(Group inActionButtonGrp) {
+	// dummy method to be overridden by contentHandlers that require adding more action buttons
+	}
+	
 	public void closeScreen(){
 		System.out.println("disposeMainShell via closeScreen started mainShell is " + mainShell);
 		Control[] oldControls = mainShell.getChildren();

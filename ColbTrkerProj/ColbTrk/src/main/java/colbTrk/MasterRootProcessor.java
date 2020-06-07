@@ -2,6 +2,7 @@ package colbTrk;
 
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.Date;
 import java.util.HashMap;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -58,11 +59,16 @@ public class MasterRootProcessor implements Runnable {
 		System.out.println(" At vsc51 MasterRootProcessor commons is " + commons);
 		
 		while (orchestrationData.getOkayToContinue()) {
+			
+			Date startTime = commons.getDateTS();
+			System.out.println("MasterRootProcessor started for " + rootPojo.rootNick + " at " + startTime);
+			
 			if (rootPojo.requiresInternet && !commons.isInternetAvailable()){
 				Commons.logger.warn(" Internet umavailable, hence skipping MasterRootProcess for " + rootPojo.rootNick);	
 				System.out.println(" Internet umavailable, hence skipping MasterRootProcess for " + rootPojo.rootNick);
 				break;
 			}
+
 			
 			try {
 				System.out.println("inside masterRootProcessr for = "
@@ -76,8 +82,12 @@ public class MasterRootProcessor implements Runnable {
 			synchronized (this) {
 				System.out.println("GONNA WAIT");
 				try {
-					System.out.println("goint to wait " + orchestrationData.getRepeatIntervalInSeconds() + " seconds");
-					wait(orchestrationData.getRepeatIntervalInSeconds() * 1000);								
+					long elapsedMS = commons.getElapsedSecs(startTime);					
+					long sleepMS = orchestrationData.getRepeatIntervalInSeconds() * 1000 - elapsedMS;
+					
+					System.out.println("going to wait " + sleepMS + " milli seconds");
+					wait(sleepMS);
+					
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 					System.out.println("EXITING THE CURRENT LOOP1");
