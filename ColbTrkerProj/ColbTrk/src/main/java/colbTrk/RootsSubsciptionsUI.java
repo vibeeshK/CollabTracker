@@ -175,6 +175,7 @@ public class RootsSubsciptionsUI {
 				editor = new TableEditor(table);
 				Button userNameSaveButton = new Button(table, SWT.PUSH);
 				userNameSaveButton.setText("Save");
+				userNameSaveButton.setToolTipText("Save the user name for " + dbRootPojo.rootNick);
 				userNameSaveButton.setData(Commons.SCREENROWNUMLIT, ScreenRowNum);
 
 				System.out.println("RootNum = "
@@ -260,6 +261,7 @@ public class RootsSubsciptionsUI {
 
 				} else {
 					maintainRootButton.setText("Subscribe");
+					maintainRootButton.setToolTipText("Subscribe to " + dbRootPojo.rootNick);
 					maintainRootButton
 							.addSelectionListener(new SelectionAdapter() {
 
@@ -331,6 +333,7 @@ public class RootsSubsciptionsUI {
 					System.out.println("RootNum = "
 							+ defaultNickSettingButton.getData(Commons.SCREENROWNUMLIT));
 					defaultNickSettingButton.setText("Set as Default");
+					defaultNickSettingButton.setToolTipText("Set " + dbRootPojo.rootNick + " as the Default Root");
 					defaultNickSettingButton
 							.addSelectionListener(new SelectionAdapter() {
 
@@ -386,7 +389,7 @@ public class RootsSubsciptionsUI {
 					editor = new TableEditor(table);
 					Text defaultNickSettingButtonTx = new Text(table,
 							SWT.READ_ONLY);
-					defaultNickSettingButtonTx.setText("Default");
+					defaultNickSettingButtonTx.setText("Default-Root");
 					editor.grabHorizontal = true;
 					editor.setEditor(defaultNickSettingButtonTx, items[ScreenRowNum],
 							columnCount++);

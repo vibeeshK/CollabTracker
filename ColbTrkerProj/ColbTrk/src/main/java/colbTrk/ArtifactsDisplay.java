@@ -124,7 +124,7 @@ public abstract class ArtifactsDisplay {
 		});
 		btnRefresh.setBounds(10, 10, 120, 25);
 		btnRefresh.setText("Refresh");
-		btnRefresh.setToolTipText("Refresh screen");
+		btnRefresh.setToolTipText("Refresh Screen");
 
 		final Composite composite = new Composite(mainShell, SWT.NONE);
 		//composite.setLayout(new GridLayout());

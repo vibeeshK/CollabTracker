@@ -115,34 +115,62 @@ public class CatalogDisplay extends ArtifactsDisplay implements Runnable {
 		});
 		btnAssignedArtifact.setBounds(10, 10, 120, 25);
 		btnAssignedArtifact.setText("Assigned Tasks");
-		btnAssignedArtifact.setToolTipText("Navigate to view assigned simple artifacts to author");
+		btnAssignedArtifact.setToolTipText("Navigate to view assigned simple artifacts to author");		
+		//Assigned Work button end		
 		
-		//Assigned Work button end
+		{
+			Button btnRelevanceSelection = new Button(buttonRibbon, SWT.NONE);
+			btnRelevanceSelection.addSelectionListener(new SelectionAdapter() {
+				@Override
+				public void widgetSelected(SelectionEvent e) {
+					System.out.println("getting into the Relevance Selection");
+
+					RelevancePickUI relevancePickUI = new RelevancePickUI(commonUIData);
+
+					lblMessageToUser.setText("CHILD WINDOW OPEN");
+					lblMessageToUser.setForeground(commonUIData.getColbTrkDisplay().getSystemColor(SWT.COLOR_DARK_RED));
+					lblMessageToUser.redraw();
+					
+					relevancePickUI.displayRelevancePickUI();
+					System.out.println("after triggering RelevanceSelectionUI");
+					refreshScreen();				
+	
+					lblMessageToUser.setText("Welcome Back");
+					lblMessageToUser.setForeground(commonUIData.getColbTrkDisplay().getSystemColor(SWT.COLOR_DARK_GREEN));
+					lblMessageToUser.redraw();
+				}
+			});
+			btnRelevanceSelection.setBounds(10, 10, 120, 25);
+			btnRelevanceSelection.setText("Choose Relevances");
+			btnRelevanceSelection.setToolTipText("Choose Relevances to view in Catalog Display");
+		}
 		
-		Button btnRootsSubscriptions = new Button(buttonRibbon, SWT.NONE);
-		btnRootsSubscriptions.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				System.out.println("getting into the RootsSubsriptions");
-
-				RootsSubsciptionsUI rootsSubscriptionsUI = new RootsSubsciptionsUI(commonUIData);
-
-				lblMessageToUser.setText("CHILD WINDOW OPEN");
-				lblMessageToUser.setForeground(commonUIData.getColbTrkDisplay().getSystemColor(SWT.COLOR_DARK_RED));
-				lblMessageToUser.redraw();
-				
-				rootsSubscriptionsUI.displayRootsSubsriptionsUI();
-				System.out.println("after triggering RootsSubsriptionsUI");
-				refreshScreen();				
-
-				lblMessageToUser.setText("Welcome Back");
-				lblMessageToUser.setForeground(commonUIData.getColbTrkDisplay().getSystemColor(SWT.COLOR_DARK_GREEN));
-				lblMessageToUser.redraw();
-			}
-		});
-		btnRootsSubscriptions.setBounds(10, 10, 120, 25);
-		btnRootsSubscriptions.setText("Root Maintenance");
-		btnRootsSubscriptions.setToolTipText("Navigate to choose roots and relevances");
+		{			
+			Button btnRootsSubscriptions = new Button(buttonRibbon, SWT.NONE);
+			btnRootsSubscriptions.addSelectionListener(new SelectionAdapter() {
+				@Override
+				public void widgetSelected(SelectionEvent e) {
+					System.out.println("getting into the RootsSubsriptions");
+	
+					RootsSubsciptionsUI rootsSubscriptionsUI = new RootsSubsciptionsUI(commonUIData);
+	
+					lblMessageToUser.setText("CHILD WINDOW OPEN");
+					lblMessageToUser.setForeground(commonUIData.getColbTrkDisplay().getSystemColor(SWT.COLOR_DARK_RED));
+					lblMessageToUser.redraw();
+					
+					rootsSubscriptionsUI.displayRootsSubsriptionsUI();
+					System.out.println("after triggering RootsSubsriptionsUI");
+					refreshScreen();				
+	
+					lblMessageToUser.setText("Welcome Back");
+					lblMessageToUser.setForeground(commonUIData.getColbTrkDisplay().getSystemColor(SWT.COLOR_DARK_GREEN));
+					lblMessageToUser.redraw();
+				}
+			});
+			btnRootsSubscriptions.setBounds(10, 10, 120, 25);
+			btnRootsSubscriptions.setText("Choose Root");
+			btnRootsSubscriptions.setToolTipText("Navigate to choose roots and relevances");
+		}
 
 		//Delete ALL ESPoT Artifacts starts
 		Button btnDeleteArtifacts = new Button(buttonRibbon, SWT.NONE);

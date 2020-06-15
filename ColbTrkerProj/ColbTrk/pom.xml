@@ -71,16 +71,16 @@
 
   <build>
     <plugins>
-      <plugin>
+        <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <version>3.1.1</version>
-	    <executions>
+	      <executions>
 	        <execution>
 	            <phase>package</phase>
 	            <goals>
 	                <goal>single</goal>
 	            </goals>        
-	        <configuration>
+	         <configuration>
 	          <archive>
 	            <manifest>
               		<mainClass>colbTrk.ColbTrkClientUI</mainClass>
@@ -90,10 +90,10 @@
 	            <descriptorRef>jar-with-dependencies</descriptorRef>
 	          </descriptorRefs>
               <outputDirectory>${execsFolder}</outputDirectory>
-	        </configuration>
+	         </configuration>
 	        </execution>
-	    </executions>        
-      </plugin> 
+	      </executions>        
+        </plugin> 
     </plugins>
   </build>
 
