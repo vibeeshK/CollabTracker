@@ -85,7 +85,7 @@ public class RelevancePickUI {
 
 					System.out.println("Selecting all");
 
-					// before adding all revelance, delete current relevances any to avoid duplicates
+					// before adding all relevances, delete current relevances any to avoid duplicates
 					commonUIData.getCatelogPersistenceManager()
 					.unPickAllRelevance(commonUIData.getCommons().getCurrentRootNick());
 

@@ -62,7 +62,7 @@ public class StandaloneReaderUI implements Runnable {
 		}
 		mainShell.setText("ArtifactWrapperUI");
 
-		mainShell.setLayout(new GridLayout());
+		mainShell.setLayout(new GridLayout(1,false));
 		displayContent();
 	}
 

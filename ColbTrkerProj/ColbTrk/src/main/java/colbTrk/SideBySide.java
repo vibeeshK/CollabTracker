@@ -51,7 +51,7 @@ public class SideBySide {
     protected Control createDialogArea(Composite parent) 
     {
         final Composite area = new Composite(parent, SWT.NONE);
-        final GridLayout gridLayout = new GridLayout();
+        final GridLayout gridLayout = new GridLayout(1,false);
         gridLayout.marginWidth = 15;
         gridLayout.marginHeight = 10;
         area.setLayout(gridLayout);

@@ -159,7 +159,7 @@ public class TimeShCapture extends GenericItemHandler {
 		Group timeShEntryOptionsInfo = new Group(itemContentGroup, SWT.LEFT
 				| SWT.WRAP | SWT.READ_ONLY);
 		timeShEntryOptionsInfo.setText("TimeShEntryOptions");
-		timeShEntryOptionsInfo.setLayout(new GridLayout());
+		timeShEntryOptionsInfo.setLayout(new GridLayout(1,false));
 		Table table = new Table(timeShEntryOptionsInfo, SWT.BORDER | SWT.CENTER);
 		
 		formData = new FormData();

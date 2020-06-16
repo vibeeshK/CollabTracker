@@ -166,7 +166,7 @@ public class ReviewHandler {
 		reviewFrameOutmostScroller = new Composite(wrappingExtlComposite,SWT.BORDER);
 		GridData gridDataOuterScrl = new GridData(SWT.FILL, SWT.FILL, true, true);
 		reviewFrameOutmostScroller.setLayoutData(gridDataOuterScrl);	// setting layout parameters for itself
-		reviewFrameOutmostScroller.setLayout(new GridLayout());			// setting layout to be used by children
+		reviewFrameOutmostScroller.setLayout(new GridLayout(1,false));			// setting layout to be used by children
 		
 		reviewFrameOutmostWrapper = new Composite(reviewFrameOutmostScroller, SWT.NONE);
 		GridData gridDatagridDataOuterWrpr = new GridData(SWT.FILL, SWT.FILL, true, true);
@@ -212,18 +212,20 @@ public class ReviewHandler {
 					reviewFrameOutmostWrapper.pack();
 					reviewFrameOutmostScroller.pack();
 					wrappingExtlComposite.pack();
-					wrappingExtlComposite.layout(true);
+					//wrappingExtlComposite.layout(true);
 				} else {
 					((Button) event.getSource()).setText(hideReviewLIT);
 					displayContent();
 					reviewVisible = true;
 				}
 				outerMainShell.pack();
-				outerMainShell.layout();				
+				outerMainShell.layout(true);
 			}
 		});
 		hideReviewButton.pack();
 		hideReviewGrp.pack();
+		reviewFrameOutmostWrapper.pack();
+		reviewFrameOutmostScroller.pack();
 	}
 
 	public void displayContent() {
@@ -231,7 +233,7 @@ public class ReviewHandler {
 		System.out.println("at 1 displayContent of reviewHandler");
 		reviewContentScroller = new Composite(reviewFrameOutmostWrapper,SWT.BORDER);
 		reviewContentScroller.setLayoutData(new RowData());
-		reviewContentScroller.setLayout(new GridLayout());
+		reviewContentScroller.setLayout(new GridLayout(1,false));
 		
 		reviewContntHolder = new Composite(reviewContentScroller, SWT.NONE); 
 		GridData gridData = new GridData(SWT.FILL, SWT.FILL, true, true);

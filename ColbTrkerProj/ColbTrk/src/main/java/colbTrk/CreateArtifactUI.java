@@ -120,7 +120,7 @@ public class CreateArtifactUI {
 		.readInProgressArtfictsForOneRoot(commonUIData.getCommons().getCurrentRootNick());
 
 		final Composite composite = new Composite(mainShell, SWT.NONE);
-		composite.setLayout(new GridLayout());
+		composite.setLayout(new GridLayout(1,false));
 		composite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 
 		Table table = new Table(composite, SWT.BORDER);

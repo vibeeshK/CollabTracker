@@ -82,7 +82,7 @@ public class RootsSubsciptionsUI {
 
 		String[] columnHeaders = new String[] {"RootNick", "RootString",
 				"RootType", "RemoteAccesserType", "FileSeparator", "SysLogin", "SaveID", 
-				"Subscriptions", "Default", "RelevancePick" };
+				"Subscriptions", "Default"};
 
 		for (int i = 0; i < columnHeaders.length; i++) {
 			TableColumn column = new TableColumn(table, SWT.NONE);
@@ -302,7 +302,17 @@ public class RootsSubsciptionsUI {
 									Commons.logger.info("RootsSubsciptionsUI displayRootsSubsriptionsUI subscription added for "
 											+ allRootNicksList.get(screenRowNum)
 											+ " at " + commonUIData.getCommons().getCurrentTimeStamp());
+
+									// Set all relevances to be shown in catalog display by
+									// refreshing pickedRelevance table
 									
+									// Before adding all relevance, delete current relevances any to avoid duplicates
+									commonUIData.getCatelogPersistenceManager()
+									.unPickAllRelevance(commonUIData.getCommons().getCurrentRootNick());
+
+									commonUIData.getCatelogPersistenceManager()
+									.pickAllRelevances(commonUIData.getCommons().getCurrentRootNick());
+
 									refreshRootsSubsriptionsUI();
 								}
 							});
@@ -368,9 +378,10 @@ public class RootsSubsciptionsUI {
 
 									commonUIData.refresh();
 									
-									MessageBox alertMessageBox = new MessageBox(mainShell, SWT.ICON_WARNING | SWT.OK);
-									alertMessageBox.setMessage("Please Choose Relevances now for the artifacts to be shown in Catalogue Display screen");
-									alertMessageBox.open();
+									//16June2020: moved relevance pick option to catalog display screen	
+									//MessageBox alertMessageBox = new MessageBox(mainShell, SWT.ICON_WARNING | SWT.OK);
+									//alertMessageBox.setMessage("Please Choose Relevances now for the artifacts to be shown in Catalogue Display screen");
+									//alertMessageBox.open();
 									
 									refreshRootsSubsriptionsUI();
 								}
@@ -398,45 +409,45 @@ public class RootsSubsciptionsUI {
 
 				// Default rootnick setting ends
 
-				if (commonUIData.getCurrentRootNick()
-						.equalsIgnoreCase(dbRootPojo.rootNick)) {
-					editor = new TableEditor(table);
-					Button relevancebutton = new Button(table, SWT.PUSH);
-					relevancebutton.setText("Choose");
-					relevancebutton.pack();
-					relevancebutton.setToolTipText(
-							"To choose Relevances of the artifacts to be shown in Catalogue Display screen");
-					
-					editor.minimumWidth = relevancebutton.getSize().x;
-					editor.horizontalAlignment = SWT.LEFT;
-					editor.setEditor(relevancebutton,
-							items[ScreenRowNum], columnCount++);
-	
-					relevancebutton.setData(Commons.SCREENROWNUMLIT, ScreenRowNum);
-	
-					System.out.println("set data = "
-							+ relevancebutton.getData(Commons.SCREENROWNUMLIT));
-	
-					relevancebutton.addSelectionListener(new SelectionAdapter() {
-
-						public void widgetSelected(SelectionEvent e) {
-							Button eventButton = (Button) e.getSource();
-
-							System.out.println("invoking Relevance Pick UI");
-	
-							System.out.println("eventButton = " + eventButton);
-							Integer ScreenRowNum = (Integer) eventButton
-									.getData(Commons.SCREENROWNUMLIT);
-							System.out.println("selectedRowNum = " + ScreenRowNum);
-							String rootNick = allRootNicksList.get(ScreenRowNum);
-							System.out.println("rootNik = " + rootNick);
-	
-							RelevancePickUI relevancePickUI = new RelevancePickUI(commonUIData);
-							relevancePickUI.displayRelevancePickUI();
-							refreshRootsSubsriptionsUI();
-						}
-					});
-				}
+				//if (commonUIData.getCurrentRootNick()
+				//		.equalsIgnoreCase(dbRootPojo.rootNick)) {
+				//	editor = new TableEditor(table);
+				//	Button relevancebutton = new Button(table, SWT.PUSH);
+				//	relevancebutton.setText("Choose");
+				//	relevancebutton.pack();
+				//	relevancebutton.setToolTipText(
+				//			"To choose Relevances of the artifacts to be shown in Catalogue Display screen");
+				//	
+				//	editor.minimumWidth = relevancebutton.getSize().x;
+				//	editor.horizontalAlignment = SWT.LEFT;
+				//	editor.setEditor(relevancebutton,
+				//			items[ScreenRowNum], columnCount++);
+				//
+				//	relevancebutton.setData(Commons.SCREENROWNUMLIT, ScreenRowNum);
+				//
+				//	System.out.println("set data = "
+				//			+ relevancebutton.getData(Commons.SCREENROWNUMLIT));
+				//
+				//	relevancebutton.addSelectionListener(new SelectionAdapter() {
+				//
+				//		public void widgetSelected(SelectionEvent e) {
+				//			Button eventButton = (Button) e.getSource();
+				//
+				//			System.out.println("invoking Relevance Pick UI");
+				//
+				//			System.out.println("eventButton = " + eventButton);
+				//			Integer ScreenRowNum = (Integer) eventButton
+				//					.getData(Commons.SCREENROWNUMLIT);
+				//			System.out.println("selectedRowNum = " + ScreenRowNum);
+				//			String rootNick = allRootNicksList.get(ScreenRowNum);
+				//			System.out.println("rootNik = " + rootNick);
+				//
+				//			RelevancePickUI relevancePickUI = new RelevancePickUI(commonUIData);
+				//			relevancePickUI.displayRelevancePickUI();
+				//			refreshRootsSubsriptionsUI();
+				//		}
+				//	});
+				//}
 			}
 		}
 

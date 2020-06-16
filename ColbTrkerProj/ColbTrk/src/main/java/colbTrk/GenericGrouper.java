@@ -233,7 +233,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		ribbonScrollPane.setLayoutData(gridData2);
 		buttonRibbon = new Composite(ribbonScrollPane, SWT.NONE); 
 		ribbonScrollPane.setContent(buttonRibbon);
-		ribbonScrollPane.setLayout(new GridLayout());
+		ribbonScrollPane.setLayout(new GridLayout(1,false));
 
 		GridData buttonGridData = new GridData(SWT.FILL, SWT.FILL, true, true);
 		buttonRibbon.setLayoutData(buttonGridData);
@@ -263,7 +263,7 @@ public abstract class GenericGrouper extends SelectionAdapter implements
 		artifactRwScrollPane.setLayoutData(gridData);		
 		final Composite childCompositOfSingleView2 = new Composite(artifactRwScrollPane, SWT.NONE); 
 		artifactRwScrollPane.setContent(childCompositOfSingleView2);
-		artifactRwScrollPane.setLayout(new GridLayout());
+		artifactRwScrollPane.setLayout(new GridLayout(1, false));
 		
  		ReviewHandler reviewHander = new ReviewHandler
  		((CommonUIData) commonData, 

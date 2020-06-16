@@ -353,7 +353,7 @@ public class ArtifactWrapperUI {
 		}
 		mainShell.setText("ArtifactWrapperUI");
 		//mainShell.setLayout(new FillLayout());
-		mainShell.setLayout(new GridLayout());
+		mainShell.setLayout(new GridLayout(1,false));
 		displayContent();
 	}
 
@@ -970,17 +970,17 @@ public class ArtifactWrapperUI {
 			GridData gridDataRight = new GridData(SWT.FILL, SWT.FILL, true, true);
 	
 			childCompositeOfRightView.setLayoutData(gridDataRight);		
-	
+
 			if (!calledFor.equalsIgnoreCase(CALLED_For_NewDraftSetup) 
 				&& !calledFor.equalsIgnoreCase(CALLED_ForCloning)
 				&& !contentHandlerSpecs.rollupAddupType) {	// rollAddType reviews should go inside the item level
 			
-				childCompositeOfRightView.setLayout(new GridLayout());
+				childCompositeOfRightView.setLayout(new GridLayout(1, false));
 				ReviewHandler reviewHander = new ReviewHandler(commonUIData, childCompositeOfRightView, invokedArtifactPojo, mainShell);
 				reviewHander.displayContent();
 	
 				childCompositeOfRightView.pack();
-				mainShell.layout(true);			
+				//mainShell.layout(true);			
 			}
 		}
 		//review group integration ends
