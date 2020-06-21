@@ -976,7 +976,7 @@ public class ArtifactWrapperUI {
 				&& !contentHandlerSpecs.rollupAddupType) {	// rollAddType reviews should go inside the item level
 			
 				childCompositeOfRightView.setLayout(new GridLayout(1, false));
-				ReviewHandler reviewHander = new ReviewHandler(commonUIData, childCompositeOfRightView, invokedArtifactPojo, mainShell);
+				ReviewHandler reviewHander = new ReviewHandler(commonUIData, childCompositeOfRightView, childCompositeOfDuplexView, scrolledComposite_1, invokedArtifactPojo, mainShell);
 				reviewHander.displayContent();
 	
 				childCompositeOfRightView.pack();

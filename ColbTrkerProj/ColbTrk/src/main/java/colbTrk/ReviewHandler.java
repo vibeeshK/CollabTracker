@@ -39,6 +39,9 @@ public class ReviewHandler {
 	private static final String hideReviewLIT = "HideReview";
 
 	private Composite wrappingExtlComposite;
+	private Composite extlLevel2Wrapper;
+	private Composite extlLevel3Wrapper;
+	
 	private Composite reviewFrameOutmostScroller;
 	private Composite reviewFrameOutmostWrapper;	// in grid layout
 	private Composite reviewContentScroller; 		// in grid layout
@@ -71,11 +74,15 @@ public class ReviewHandler {
 
 	public ReviewHandler(CommonUIData inCommonUIData,
 			Composite inWrappingComposite,
+			Composite inLevel2Wrapper,
+			Composite inLevel3Wrapper,
 			ArtifactPojo inArtifactPojo, 
 			Shell inMainShell) {
 
 		initReviewHandler(inCommonUIData,
 				inWrappingComposite,
+				inLevel2Wrapper,
+				inLevel3Wrapper,
 				inArtifactPojo, 
 				null,
 				inMainShell);
@@ -83,11 +90,15 @@ public class ReviewHandler {
 
 	public ReviewHandler(CommonUIData inCommonUIData,
 			Composite inWrappingComposite,
+			Composite inLevel2Wrapper,
+			Composite inLevel3Wrapper,
 			ArtifactPojo inArtifactPojo, 
 			ItemPojo inItemPojo,
 			Shell inMainShell){
 		initReviewHandler(inCommonUIData,
 				inWrappingComposite,
+				inLevel2Wrapper,
+				inLevel3Wrapper,
 				inArtifactPojo, 
 				inItemPojo,
 				inMainShell);		
@@ -95,12 +106,16 @@ public class ReviewHandler {
 	
 	public void initReviewHandler(CommonUIData inCommonUIData,
 							Composite inWrappingComposite,
+							Composite inLevel2Wrapper,
+							Composite inLevel3Wrapper,
 							ArtifactPojo inArtifactPojo, 
 							ItemPojo inItemPojo,
 							Shell inMainShell)
 	{
 		commonUIData = inCommonUIData;
 		wrappingExtlComposite = inWrappingComposite;
+		extlLevel2Wrapper = inLevel2Wrapper;
+		extlLevel3Wrapper = inLevel3Wrapper;
 
 		Commons.logger.info("ReviewHandler initReviewHandler starting for "
 								+ inArtifactPojo.artifactKeyPojo.artifactName);
@@ -212,6 +227,13 @@ public class ReviewHandler {
 					reviewFrameOutmostWrapper.pack();
 					reviewFrameOutmostScroller.pack();
 					wrappingExtlComposite.pack();
+
+					if (extlLevel2Wrapper != null) {
+						extlLevel2Wrapper.pack();
+						if (extlLevel3Wrapper != null){
+							extlLevel3Wrapper.pack();							
+						}
+					}					
 					//wrappingExtlComposite.layout(true);
 				} else {
 					((Button) event.getSource()).setText(hideReviewLIT);
@@ -226,6 +248,13 @@ public class ReviewHandler {
 		hideReviewGrp.pack();
 		reviewFrameOutmostWrapper.pack();
 		reviewFrameOutmostScroller.pack();
+		wrappingExtlComposite.pack();
+		if (extlLevel2Wrapper != null) {
+			extlLevel2Wrapper.pack();
+			if (extlLevel3Wrapper != null){
+				extlLevel3Wrapper.pack();							
+			}
+		}
 	}
 
 	public void displayContent() {
@@ -510,5 +539,11 @@ public class ReviewHandler {
 		reviewFrameOutmostWrapper.pack();	// in grid layout
 		reviewFrameOutmostScroller.pack();
 		wrappingExtlComposite.pack();
+		if (extlLevel2Wrapper != null) {
+			extlLevel2Wrapper.pack();
+			if (extlLevel3Wrapper != null){
+				extlLevel3Wrapper.pack();							
+			}
+		}		
 	}
 }

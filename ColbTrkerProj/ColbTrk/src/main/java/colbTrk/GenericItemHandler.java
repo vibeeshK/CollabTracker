@@ -537,7 +537,7 @@ public abstract class GenericItemHandler extends SelectionAdapter implements
 	
 			System.out.println("itemPojo.itemID=" + primerDoc.getItem().itemID);
 			
-	 		ReviewHandler reviewHander = new ReviewHandler((CommonUIData) commonData,reviewGrp,invokedArtifactPojo,primerDoc.getItem(),mainShell);
+	 		ReviewHandler reviewHander = new ReviewHandler((CommonUIData) commonData,reviewGrp,childCompositeOfSingleView,scrolledComposite_1,invokedArtifactPojo,primerDoc.getItem(),mainShell);
 			reviewHander.displayContent();
 			reviewGrp.pack();
 		}
