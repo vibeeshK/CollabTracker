@@ -79,7 +79,14 @@ public class ColbTrkClientOrchestrator implements Runnable {
 
 					String currentRoot = commons.getCurrentRootNick();
 
-					if (subscribedRootsPojo.getRootNickList().size() == 0 || subscribedRootsPojo.getRootNickList().contains(currentRoot)){
+					System.out.println("At aa1 ColbTrkClientOrchestrator currentRoot is = " + currentRoot);
+
+					if (subscribedRootsPojo.getRootNickList().size() == 0 || !subscribedRootsPojo.getRootNickList().contains(currentRoot)){
+					// As the root is not available in subscription, include it as subscription only for this run
+					// Not adding to the subscription file since its root sys user id is not available yet
+					// This workaround is only given as last resort to avoid a fatal error.
+					// Ideally this path should not execute as all initial root should be set up as part of installation.
+						
 						System.out.println("At ColbTrkClientOrchestrator Subscribed roots size is = " + subscribedRootsPojo.getRootNickList().size());
 						System.out.println("At ColbTrkClientOrchestrator missing currentRoot is = " + currentRoot);
 						
@@ -88,24 +95,24 @@ public class ColbTrkClientOrchestrator implements Runnable {
 //						SubscribedRootsPojo tempSubscribedRootsPojo = new SubscribedRootsPojo(tempCommonData);
 //
 //						tempSubscribedRootsPojo.addSubscription(currentRoot);
-						System.out.println("At ColbTrkClientOrchestrator Subscribed roots size after adding currentRoot is = " + subscribedRootsPojo.getRootNickList().size());
-				
-						
+
 						rootsNicks = new String[subscribedRootsPojo.getRootNickList().size() + 1];
 						subscribedRootsPojo.getRootNickList().toArray(rootsNicks);
-						rootsNicks[subscribedRootsPojo.getRootNickList().size()] = currentRoot;
+						System.out.println("At ColbTrkClientOrchestrator Subscribed roots size after adding currentRoot is = " + subscribedRootsPojo.getRootNickList().size());
+
+						rootsNicks[rootsNicks.length-1] = currentRoot;
 						System.out.println("AAA At ColbTrkClientOrchestrator subscribedRootsPojo.getRootNickList().size() is = " + subscribedRootsPojo.getRootNickList().size());
-						System.out.println("AAA At ColbTrkClientOrchestrator Subscribed roots rootsNicks[subscribedRootsPojo.getRootNickList().size()] is = " + rootsNicks[subscribedRootsPojo.getRootNickList().size()]);
+						System.out.println("AAA At ColbTrkClientOrchestrator Subscribed roots rootsNicks[" + (rootsNicks.length-1) + "] is = " + rootsNicks[rootsNicks.length-1]);
 						System.out.println("AAA At ColbTrkClientOrchestrator Subscribed roots rootsNicks[0] is = " + rootsNicks[0]);
 
 					} else {
-						rootsNicks = new String[subscribedRootsPojo.getRootNickList().size()];						
+						rootsNicks = new String[subscribedRootsPojo.getRootNickList().size()];
 						subscribedRootsPojo.getRootNickList().toArray(rootsNicks);
 						System.out.println("BBB At ColbTrkClientOrchestrator subscribedRootsPojo.getRootNickList().size() is = " + subscribedRootsPojo.getRootNickList().size());
-						System.out.println("BBB At ColbTrkClientOrchestrator Subscribed roots rootsNicks[subscribedRootsPojo.getRootNickList().size()] is = " + rootsNicks[subscribedRootsPojo.getRootNickList().size()]);
+						System.out.println("BBB At ColbTrkClientOrchestrator Subscribed roots rootsNicks[subscribedRootsPojo.getRootNickList().size()-1] is = " + rootsNicks[subscribedRootsPojo.getRootNickList().size()-1]);
 					}
 				}
-				System.out.println("CCC At ColbTrkClientOrchestrator Subscribed roots rootsNicks[0] is = " + rootsNicks[0]);
+				System.out.println("CCC At ColbTrkClientOrchestrator Subscribed roots rootsNicks[" + (rootsNicks.length-1) + "] is = " + rootsNicks[rootsNicks.length-1]);
 
 				//System.exit(8);
 
