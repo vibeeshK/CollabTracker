@@ -63,6 +63,11 @@ public class CatalogDownloader {
 			System.out.println("remoteAccesser file= "
 					+ publishFileNameURLs.get(fileCount2));
 		}
+		
+		if (publishFileNameURLs.size() == 0) {
+			System.out.println("at CatalogDownloader downloadCatalog no publishFileNameURLs available for " + rootPojo.rootNick);
+			ErrorHandler.showErrorAndQuit(commons, "Error at CatalogDownloader downloadCatalog. No catalogs published yet by root: " + rootPojo.rootNick + ". You need to wait.");
+		}
 
 		String latestDbFileName = commons.getFileNameFromURL(publishFileNameURLs.get(0), rootPojo.fileSeparator);
 

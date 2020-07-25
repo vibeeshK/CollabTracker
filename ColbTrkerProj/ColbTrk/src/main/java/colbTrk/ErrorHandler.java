@@ -128,7 +128,7 @@ public class ErrorHandler {
 		}
 
 		final StackTraceElement[] ste = Thread.currentThread().getStackTrace();
-		displayError(mainShell, inCommons, inMsg + " from method " + callingMethodName  + exceptionString);
+		displayError(mainShell, inCommons, inMsg + " Errored method: " + callingMethodName + ". "+ exceptionString);
 		System.out.println("showErrorAndQuit2");
 		System.out.println(inMsg);
 		inCommons.logger.error(inMsg, inException);
