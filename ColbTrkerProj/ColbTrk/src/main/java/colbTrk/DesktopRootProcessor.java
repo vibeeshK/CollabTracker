@@ -179,7 +179,7 @@ public class DesktopRootProcessor implements Runnable {
 					long sleepMS = orchestrationData.getRepeatIntervalInSeconds() * 1000 - elapsedMS;
 					
 					System.out.println("going to wait " + sleepMS + " milli seconds");					
-					wait(sleepMS);
+					wait(commons.getPositiveOnly(sleepMS));
 
 				} catch (InterruptedException e) {
 

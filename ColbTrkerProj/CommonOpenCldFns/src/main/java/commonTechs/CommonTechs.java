@@ -448,6 +448,17 @@ public class CommonTechs {
 		System.out.println("Days elapsed");
 		return true;
 	}
+	
+	/**
+	 * Changes any negative value to zero
+	 * 
+	 * @param inLong
+	 * @return
+	 */
+	public long getPositiveOnly(long inLong){
+		long outLongOnlyPositive = (inLong < 0)? 0 : inLong;
+		return outLongOnlyPositive;
+	}
 
 	public String getFileNameFromFullPath(String inFullPath, String inFileSeperator) {
 		return getLastNodeFromFullFilePath(inFullPath, inFileSeperator);

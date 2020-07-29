@@ -138,7 +138,7 @@ public abstract class AbstractRtCtOrchestrator {
 				long sleepMS = getSleepInterval()-elapsedMS;
 				System.out.println("Sleeping AbstractRtCtOrchestrator for sleepMS MS" + sleepMS);
 				
-				Thread.sleep(sleepMS);
+				Thread.sleep(initialCommons.getPositiveOnly(sleepMS));
 				
 				System.out.println("resuming AbstractRtCtOrchestrator");
 			}
